@@ -17,6 +17,8 @@
 
 #define Register @BaseUrl"/index/login/register"
 
+#define ForGet @BaseUrl"/index/login/forget"
+
 #define Logurl @BaseUrl"/index/login/login"
 
 #define fdsfdsf @BaseUrl"/index/login/test_login"

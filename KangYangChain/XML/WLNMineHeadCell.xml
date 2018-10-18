@@ -24,32 +24,32 @@
 
         <FlexTouchView name="" layout="width:25%,marginTop:10,height:60,alignItems:center" attr="tag:0" onPress="click:">
             <UIImageView attr="source:wallethead" layout="marginTop:10" />
-            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:我的钱包"/>
+            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:@我的钱包"/>
         </FlexTouchView>
 
         <FlexTouchView name="" layout="width:25%,marginTop:10, height:60,alignItems:center" attr="tag:1" onPress="click:">
             <UIImageView attr="source:shequ" layout="marginTop:10" />
-            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:我的社区"/>
+            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:@我的社区"/>
         </FlexTouchView>
 
         <FlexTouchView name="" layout="width:25%,marginTop:10, height:60,alignItems:center" attr="tag:2" onPress="click:">
             <UIImageView attr="source:dingdan" layout="marginTop:10" />
-            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:我的订单"/>
+            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:@我的订单"/>
         </FlexTouchView>
 
         <FlexTouchView name="" layout="width:25%,marginTop:10, height:60,alignItems:center" attr="tag:3" onPress="click:">
             <UIImageView attr="source:rere" layout="marginTop:10" />
-            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:商学院"/>
+            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:@商学院"/>
         </FlexTouchView>
 
         <FlexTouchView name="" layout="width:25%,marginTop:10,marginBottom:10, height:60,alignItems:center" attr="tag:4" onPress="click:">
             <UIImageView attr="source:dingyue" layout="marginTop:10" />
-            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:我的订阅"/>
+            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:@我的订阅"/>
         </FlexTouchView>
 
         <FlexTouchView name="" layout="width:25%,marginTop:10,marginBottom:10 ,height:60,alignItems:center" attr="tag:5" onPress="click:">
             <UIImageView attr="source:address" layout="marginTop:10" />
-            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:我的地址"/>
+            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:#333333,linesNum:0,text:@我的地址"/>
         </FlexTouchView>
 
 

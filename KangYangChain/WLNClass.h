@@ -21,7 +21,7 @@
 /**
  模型
  */
-#import "ModelProtocol.h"
+#import "WLNModelProtocol.h"
 #import "WLNPassValueProtocol.h"
 
 #import "User.h"
@@ -60,7 +60,6 @@
 
 #import "WLNMainTabBarCtr.h"
 #import "WLNQRCode.h"
-#import "ZYLAlert.h"
 #import "WLNKeyChain.h"
 
 
@@ -73,7 +72,6 @@
 #import "WLNHomeCountCell.h"
 #import "WLNHomeHeadView.h"
 #import "WLNMineSimpleCell.h"
-#import "WLNMineHeadView.h"
 #import "WLNMineHeadCell.h"
 #import "WLNShopItemCell.h"
 #import "WLNShopADView.h"
@@ -152,4 +150,6 @@
 #import "WLNMineGHBBodyCell.h"
 #import "WLNWalletHeadView.h"
 #import "WLNOrderCell.h"
+#import "WLNRechargeCtr.h"
+
 #endif /* WLNClass_h */

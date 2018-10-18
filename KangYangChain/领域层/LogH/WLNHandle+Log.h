@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)getCode:(NSMutableDictionary *)dic;
 
+- (void)forGet:(NSMutableDictionary *)dic;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

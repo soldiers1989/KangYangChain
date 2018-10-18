@@ -58,8 +58,8 @@
     weakSelf(self);
     [cell setDidClickBlock:^(NSInteger tag) {
         
-    
-        [weakself.navigationController pushViewController:@"WLNLockCtr".instance animated:YES];
+        [weakself.navigationController pushViewController:tag == 0 ?
+        @"WLNRechargeCtr".instance: @"WLNLockCtr".instance animated:YES];
         
     }];
     

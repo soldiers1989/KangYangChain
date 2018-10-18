@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<UIImageView name="backImg" layout="flex:1,justifyContent:center,alignItems:center" attr="source:gerentoubu">
-
-    <UIImageView name="headImg" attr="source:,borderRadius:40,clipsToBounds:true" layout="width:80,height:80" />
-    <UILabel name="nameLab" layout="" attr="fontSize:14,color:white,linesNum:0,text:"/>
-
-</UIImageView>

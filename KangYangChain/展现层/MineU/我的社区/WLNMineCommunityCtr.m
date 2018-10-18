@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"我的社区".Intl;
     self.tab.dataSource = self;
     self.tab.delegate = self;
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;

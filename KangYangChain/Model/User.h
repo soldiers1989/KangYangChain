@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface User : NSObject <ModelProtocol>
+@interface User : NSObject <WLNModelProtocol>
 
 //@property (nonatomic, strong) NSString *userID:
 @property (nonatomic, strong) NSString *userid;

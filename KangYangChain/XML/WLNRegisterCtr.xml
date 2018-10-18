@@ -19,7 +19,7 @@
         <UITextField name="codeT" layout="justifyContent:center, height:40,flex:1,marginLeft:10" attr="keyboardType:numberPad,fontSize:14,color:white,textAlign:left,placeholder:验证码"/>
 
         <FlexTouchView name="" onPress="getCodeAction:" layout="width:50,height:30,justifyContent:center,alignItems:center" attr="underlayColor:darkGray">
-            <UILabel name="codeLab" layout="" attr="textAlign:center, fontSize:16,color:white,linesNum:0,text:获取验证码"/>
+            <UILabel name="codeLab" layout="" attr="textAlign:center, fontSize:16,color:white,linesNum:0,text:获取"/>
         </FlexTouchView>
 
     </UIView>

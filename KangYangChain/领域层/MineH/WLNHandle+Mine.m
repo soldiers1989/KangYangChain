@@ -20,9 +20,9 @@
 - (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel isPost:(BOOL)isPost{
     
     
-    id <WLNReqstProtocol> delegate = dic[@"delegate"];
+    id <WLNReqstProtocol> delegate = dic[DELEGATES];
     
-    [dic removeObjectForKey:@"delegate"];
+    [dic removeObjectForKey:DELEGATES];
     
     
     if (isPost) { //post请求

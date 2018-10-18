@@ -71,7 +71,7 @@
 - (void)registerAction{
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[@"delegate"] = self;
+    dic[DELEGATES] = self;
     
     if (self.phoneT.text.length != 11) {
         [SVProgressHUD showErrorWithStatus:@"手机格式不正确".Intl];
@@ -97,15 +97,16 @@
 }
 - (void)getCodeAction:(UITapGestureRecognizer *)tap{
     
-    _codeView = tap.view;
-    
-    NSMutableDictionary *dic = @{}.mutableCopy;
-    
-    dic[@"delegate"] = self;
     if (self.phoneT.text.length != 11) {
         [SVProgressHUD showErrorWithStatus:@"手机格式不正确"];
         return;
     }
+    _codeView = tap.view;
+    
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    
+    dic[DELEGATES] = self;
+   
     dic[@"phone"] = self.phoneT.text;
     
     [self routeTargetName:@"WLNHandle" actionName:@"getCode:" param:dic];

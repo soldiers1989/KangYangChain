@@ -100,7 +100,7 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    NSArray *leftArr = @[@"",@"最新行情",@"热门帖子"];
+    NSArray *leftArr = @[@"",@"最新行情".Intl,@"热门帖子".Intl];
     NSArray *rightArr = @[@"",@"New",@"Hot"];
     
     WLNHomeSectionHeadView *view = [[WLNHomeSectionHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 40)];
@@ -109,16 +109,6 @@
     return view;
     
 }
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        return nil;
-    }
-    if (section == 1) {
-        return @"最新行情";
-    }
-    return @"热门帖子";
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_secitonArrs[section]count];
 }

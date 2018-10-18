@@ -15,9 +15,9 @@
     
     
     
-    id <WLNReqstProtocol> delegate = dic[@"delegate"];
+    id <WLNReqstProtocol> delegate = dic[DELEGATES];
     
-    [dic removeObjectForKey:@"delegate"];
+    [dic removeObjectForKey:DELEGATES];
     
     [[WLNDataNet new]postWithUrl:url params:dic resultBlock:^(id result) {
         
@@ -76,6 +76,11 @@
     
     
     [self requestWith:fdsfdsf dic:dic sel:@selector(fafdasfdasfds:)];
+    
+}
+- (void)forGet:(NSMutableDictionary *)dic{
+    
+    [self requestWith:ForGet dic:dic sel:@selector(forGet:)];
     
 }
 @end

@@ -117,8 +117,8 @@
     dic[@"account"] = self.phoneTxt.text;
     dic[@"pass"] = self.pwdTxt.text;
     dic[@"verification_code"] = self.codeTxt.text;
-
-    [self routeTargetName:@"WLNHandle" actionName:@"registers:" param:dic];
+    
+    [self routeTargetName:@"WLNHandle" actionName:@"forGet:" param:dic];
     
     
 }
@@ -128,7 +128,7 @@
         [SVProgressHUD showErrorWithStatus:@"手机号格式不正确"];
         return;
         
-    }else if (self.phoneTxt.text.length == 1){
+    }else if (self.pwdTxt.text.length == 1){
         [SVProgressHUD showErrorWithStatus:@"请输入密码"];
         return;
     }

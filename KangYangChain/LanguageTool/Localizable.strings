@@ -13,15 +13,25 @@
 "我的" = "Mine";
 "法币账户" = "Currency account";
 "合约账户" = "Contract account";
-"身份认证" = "identity authentication";
+"身份认证" = "Identity authentication";
 "账户安全" = "Account security";
 "支付设置" = "Payment setting";
 "手续费等级" = "Fee grade";
-"币币账户" = "bibi account";
+"币币账户" = "BiBi account";
 "扫码推广" = "Sweep code popularization";
 "互助推广" = "Mutual assistance promotion";
 "GHB钱包" = "GHB Wallet";
-"退出"  = "Sign out";
+"退出登录"  = "Sign out";
+"取消" = "Cancle";
+"我的钱包" = "Wallet";
+"我的订单" = "Order";
+"我的社区" = "Community";
+"最新行情" = "The latest quotes";
+"热门帖子" = "Hot post";
+"我的地址" = "Address";
+"我的订阅" = "Subscribe";
+"商学院" = "Schools";
+
 
 
 

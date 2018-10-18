@@ -48,7 +48,7 @@
     
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[@"delegate"] = self;
+    dic[DELEGATES] = self;
     
     if (self.phoneT.text.length != 11) {
         

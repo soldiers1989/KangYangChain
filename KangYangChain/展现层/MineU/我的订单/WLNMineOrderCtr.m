@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的订单";
+    self.title = @"我的订单".Intl;
     self.tab.delegate = self;
     self.tab.dataSource = self;
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;

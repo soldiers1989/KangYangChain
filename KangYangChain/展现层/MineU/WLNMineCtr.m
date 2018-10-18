@@ -28,7 +28,7 @@
     
     
     
-    _outLogSheet = [[WMYActionSheet alloc]initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"退出登录", nil];
+    _outLogSheet = [[WMYActionSheet alloc]initWithTitle:@"" delegate:self cancelButtonTitle:@"取消".Intl destructiveButtonTitle:nil otherButtonTitles:@"退出登录".Intl, nil];
 
     [_outLogSheet show];
 
@@ -91,15 +91,13 @@
     [self.tab registerClass:WLNMineHeadCell.class forCellReuseIdentifier:@"WLNMineHeadCell"];
     
     
-//    self.tab.tableHeaderView = [[WLNMineHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 150)];
-    
     
     UIView *outView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth,60)];
     outView.backgroundColor =rgba(245, 245, 245, 1);
     
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"退出".Intl forState:UIControlStateNormal];
+    [button setTitle:@"退出登录".Intl forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.backgroundColor = rgba(225, 225, 225, 1);
     button.layer.cornerRadius= 7;

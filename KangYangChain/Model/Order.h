@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Order : NSObject <ModelProtocol>
+@interface Order : NSObject <WLNModelProtocol>
 
 @property (nonatomic, strong) NSString *add_time;
 @property (nonatomic, strong) NSString *add_type;
