@@ -47,7 +47,7 @@
         [SVProgressHUD showSuccessWithStatus:@"获取验证码成功"];
 
         
-    }else if ([sel isEqualToString:@"registers:"]){
+    }else if ([sel isEqualToString:@"forGet:"]){
         
         [SVProgressHUD showSuccessWithStatus:@"操作成功"];
         
