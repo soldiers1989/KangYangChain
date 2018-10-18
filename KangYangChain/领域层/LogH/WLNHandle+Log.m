@@ -26,7 +26,9 @@
         
         if ([result isKindOfClass:[NSError class]]) {
             
-            [SVProgressHUD showErrorWithStatus:@"内部错误"];
+            NSError *error = (NSError *)result;
+            
+            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld",error.code]];
             
             return;
             

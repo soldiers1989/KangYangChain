@@ -45,7 +45,6 @@
     if ([sel isEqualToString:@"getCode:"]) {
         
         [SVProgressHUD showSuccessWithStatus:@"获取验证码成功"];
-        [self timeCut];
 
         
     }else if ([sel isEqualToString:@"registers:"]){
@@ -142,7 +141,8 @@
     
     [self routeTargetName:@"WLNHandle" actionName:@"getCode:" param:dic];
  
-    
+    [self timeCut];
+
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

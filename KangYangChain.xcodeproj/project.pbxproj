@@ -106,7 +106,6 @@
 		236347122163873200CFF257 /* Snip20181002_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2363470B2163873200CFF257 /* Snip20181002_2.png */; };
 		236347132163873200CFF257 /* Snip20181002_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2363470C2163873200CFF257 /* Snip20181002_7.png */; };
 		236347142163873200CFF257 /* Snip20181002_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2363470D2163873200CFF257 /* Snip20181002_1.png */; };
-		236347172163873200CFF257 /* Snip20181002_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 236347102163873200CFF257 /* Snip20181002_3.png */; };
 		237BA3B62170730A00C71283 /* WLNMineExtensionCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 237BA3B52170730A00C71283 /* WLNMineExtensionCtr.m */; };
 		237BA3C1217076A000C71283 /* WLNMineExtensionInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237BA3C0217076A000C71283 /* WLNMineExtensionInfoCell.m */; };
 		237BA3C6217079AF00C71283 /* WLNMineExtensionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 237BA3C5217079AF00C71283 /* WLNMineExtensionInfoView.m */; };
@@ -211,7 +210,6 @@
 		23F9C9262163E09F000EDFC4 /* WLNShopItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C9252163E09F000EDFC4 /* WLNShopItemCell.m */; };
 		23F9C9292163E0C8000EDFC4 /* WLNShopIntegralCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C9282163E0C8000EDFC4 /* WLNShopIntegralCell.m */; };
 		23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C92B2163E13A000EDFC4 /* WLNShopADView.m */; };
-		23F9C9322163F825000EDFC4 /* Snip20181003_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F9C9312163F825000EDFC4 /* Snip20181003_19.png */; };
 		23F9C9342163FCD5000EDFC4 /* Snip20181003_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F9C9332163FCD5000EDFC4 /* Snip20181003_20.png */; };
 /* End PBXBuildFile section */
 
@@ -429,7 +427,6 @@
 		2363470B2163873200CFF257 /* Snip20181002_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181002_2.png; sourceTree = "<group>"; };
 		2363470C2163873200CFF257 /* Snip20181002_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181002_7.png; sourceTree = "<group>"; };
 		2363470D2163873200CFF257 /* Snip20181002_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181002_1.png; sourceTree = "<group>"; };
-		236347102163873200CFF257 /* Snip20181002_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181002_3.png; sourceTree = "<group>"; };
 		237BA3B42170730A00C71283 /* WLNMineExtensionCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineExtensionCtr.h; sourceTree = "<group>"; };
 		237BA3B52170730A00C71283 /* WLNMineExtensionCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineExtensionCtr.m; sourceTree = "<group>"; };
 		237BA3BF217076A000C71283 /* WLNMineExtensionInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineExtensionInfoCell.h; sourceTree = "<group>"; };
@@ -575,7 +572,6 @@
 		23F9C9282163E0C8000EDFC4 /* WLNShopIntegralCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNShopIntegralCell.m; sourceTree = "<group>"; };
 		23F9C92A2163E13A000EDFC4 /* WLNShopADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNShopADView.h; sourceTree = "<group>"; };
 		23F9C92B2163E13A000EDFC4 /* WLNShopADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNShopADView.m; sourceTree = "<group>"; };
-		23F9C9312163F825000EDFC4 /* Snip20181003_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181003_19.png; sourceTree = "<group>"; };
 		23F9C9332163FCD5000EDFC4 /* Snip20181003_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181003_20.png; sourceTree = "<group>"; };
 		7116EC6F909A487B8F245C22 /* Pods-KangYangChain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangYangChain.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangYangChain/Pods-KangYangChain.release.xcconfig"; sourceTree = "<group>"; };
 		758F12EEA60DB921DFF132A7 /* Pods-KangYangChain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangYangChain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangYangChain/Pods-KangYangChain.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1056,10 +1052,8 @@
 				238F54F72165380600A9EB7F /* Snip20181004_36.png */,
 				234F1D9521651A7E00BA61AF /* Snip20181003_35.png */,
 				23F9C9332163FCD5000EDFC4 /* Snip20181003_20.png */,
-				23F9C9312163F825000EDFC4 /* Snip20181003_19.png */,
 				2363470D2163873200CFF257 /* Snip20181002_1.png */,
 				2363470B2163873200CFF257 /* Snip20181002_2.png */,
-				236347102163873200CFF257 /* Snip20181002_3.png */,
 				2363470C2163873200CFF257 /* Snip20181002_7.png */,
 			);
 			path = "测试";
@@ -1511,7 +1505,6 @@
 				00CC76142174A2350053E546 /* WLNMineSellOutCtr.xml in Resources */,
 				238F556B21697A2700A9EB7F /* Snip20181007_52.png in Resources */,
 				23C8288F21717F020086C253 /* WLNForgetCell.xml in Resources */,
-				236347172163873200CFF257 /* Snip20181002_3.png in Resources */,
 				23C8287F21717F020086C253 /* WLNMineGLiveCtr.xml in Resources */,
 				23C8287421717F020086C253 /* WLNHomeCountCell.xml in Resources */,
 				236347132163873200CFF257 /* Snip20181002_7.png in Resources */,
@@ -1536,7 +1529,6 @@
 				00A5EBE02176DB9E00FED04D /* WLNMineFormDetailHeadView.xml in Resources */,
 				23C8288921717F020086C253 /* WLNMineOrderHeadView.xml in Resources */,
 				23CF8F9D216E007300CCF4C4 /* Snip20181010_34.png in Resources */,
-				23F9C9322163F825000EDFC4 /* Snip20181003_19.png in Resources */,
 				23D17B4721742DD60004D877 /* WLNWalletHeadCell.xml in Resources */,
 				23C8288221717F020086C253 /* WLNMineCtr.xml in Resources */,
 				23C828A421717F020086C253 /* WLNMineGLiveCell.xml in Resources */,

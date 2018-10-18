@@ -11,7 +11,7 @@
 
 //#define BaseUrl "http://kylvue.cpyu8.com/adminServer/public/index.php/"
 //#define BaseUrl "http://kylvue.cpyu8.com/"
-#define BaseUrl "http://kylvue.cpyu8.com/adminServer/public/index.php/"
+#define BaseUrl "http://192.168.0.184"
 
 #define Getcode  @BaseUrl"/index/login/send_verification_code"
 
