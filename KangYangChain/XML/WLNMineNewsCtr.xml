@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<UIView layout="" attr="bgColor:#f5f5f5">
+    
+    
+    
+    <FlexTouchView onPress="tuiguangAction" layout="margin:10,height:50,justifyContent:center" attr="bgColor:white,borderRadius:7">
+        
+        <UIImageView attr="source:"/>
+        <UILabel name="" layout="" attr="fontSize:14,color:red,linesNum:0,text:GHB相关"/>
+    </FlexTouchView>
+    
+    
+    <FlexTouchView onPress="fatieAction" layout="margin:10,height:50,justifyContent:center" attr="bgColor:white,borderRadius:7">
+        <UIImageView attr="source:"/>
+        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:虚拟货币相关"/>
+    </FlexTouchView>
+    
+    
+    
+</UIView>
+
+

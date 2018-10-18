@@ -1,0 +1,67 @@
+//
+//  WLNMineSellOutCtr.m
+//  KangYangChain
+//
+//  Created by edz on 2018/10/15.
+//  Copyright © 2018 furao. All rights reserved.
+//
+
+#import "WLNMineSellOutCtr.h"
+
+@interface WLNMineSellOutCtr ()<WLNReqstProtocol>
+@property (nonatomic, strong) UITextField *countTxt;
+@property (nonatomic, strong) NSMutableDictionary *lastDic;
+
+
+@end
+
+@implementation WLNMineSellOutCtr
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = @"卖出".Intl;
+    
+    [self sellInfo];
+    
+    
+}
+- (id)initWithDic:(NSMutableDictionary *)dic{
+    self = [super init];
+    if (self) {
+        
+        self.lastDic = dic;
+    
+    }
+    return self;
+    
+}
+- (void)sellInfo{
+    
+    
+    
+}
+- (void)sellAction{
+    
+    NSMutableDictionary *dic =@{}.mutableCopy;
+    dic[@"uid"] = self.userModel.userid;
+    dic[@"num"] = self.countTxt.text;
+    dic[@"id"] = self.lastDic[@"id"];
+    
+    [self routeTargetName:@"WLNHandle" actionName:@"buyGHB:" param:dic];
+    
+    
+}
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    [SVProgressHUD showSuccessWithStatus:@"发布成功"];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+}
+
+
+@end

@@ -1,0 +1,75 @@
+//
+//  WLNTradeCtr.m
+//  KangYangChain
+//
+//  Created by furao on 2018/9/27.
+//  Copyright © 2018年 furao. All rights reserved.
+//
+
+#import "WLNTradeCtr.h"
+
+@interface WLNTradeCtr ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tab;
+@end
+
+@implementation WLNTradeCtr
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"交易所".Intl;
+    
+    self.tab.delegate = self;
+    self.tab.dataSource = self;
+    [self.tab registerClass:WLNTradeCell.class forCellReuseIdentifier:@"WLNTradeCell"];
+
+    WLNTradeHeadView *view = [WLNTradeHeadView shared];
+    view.topArr = @[@"行情",@"法币",@"币币",@"合约"].mutableCopy;
+    view.bottomArr = @[@"ETC",@"USDT",@"BTC",@"ETH",@"自选"].mutableCopy;
+    
+    
+    [view setDidClickTopBLock:^(NSInteger tag) {
+    
+        
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    self.tab.tableHeaderView = view;
+
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"RGH";
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 5;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    WLNTradeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeCell"];
+    
+    return cell;
+    
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+}
+
+
+
+
+
+@end

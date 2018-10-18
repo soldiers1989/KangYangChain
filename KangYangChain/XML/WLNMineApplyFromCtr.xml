@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   WLNMineApplyFromCtr.xml
+   KangYangChain
+
+   Created by edz on 2018/10/15.
+   Copyright (c) 2018 furao. All rights reserved.
+-->
+<UIView layout="marginTop:30" attr="bgColor:#f5f5f5">
+
+
+        <UIView layout="flexDirection:row,height:40,marginTop:2" attr="bgColor:white">
+            <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:#333333,linesNum:0,text:数量(GHB)"/>
+            <UITextField name="countTxt" layout="marginLeft:10,flex:1" attr="fontSize:14,color:black,textAlign:left,placeholder:请输入交易数量,text:,
+            keyboardType:numberPad"/>
+        </UIView>
+
+        <UIView layout="flexDirection:row,height:40,marginTop:2" attr="bgColor:white">
+
+            <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:#333333,linesNum:0,text:利息"/>
+            <UILabel name="interestLab" layout="marginLeft:10" attr="fontSize:14,color:gray,linesNum:0,text:"/>
+
+        </UIView>
+
+        <UIView layout="flexDirection:row,height:40,marginTop:2" attr="bgColor:white">
+            <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:gray,linesNum:0,text:预计收益"/>
+            <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:gray,linesNum:0,text:0.00000"/>
+        </UIView>
+
+
+    
+
+    <UILabel name="lowBuyLab" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:最低可购买:0.0GHB"/>
+
+
+    <UIView layout="flexDirection:row,height:100," attr="bgColor:white">
+        <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:#333333,linesNum:0,text:交易说明"/>
+        <FlexTextView name="" layout="flex:1" attr="fontSize:14,color:black,textAlign:left"/>
+    </UIView>
+
+
+    <FlexTouchView onPress="buyAction" layout="margin:10,height:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#1E253D,
+    borderRadius:7">
+        <UILabel name="" layout="" attr="fontSize:14,color:white,linesNum:0,text:发布"/>
+    </FlexTouchView>
+
+</UIView>
+
+

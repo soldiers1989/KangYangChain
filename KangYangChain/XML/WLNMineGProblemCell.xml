@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<UIView layout="" attr="@:WLNView/colors">
+
+    <UIView layout="margin:10,height:" attr="bgColor:white,borderRadius:7">
+
+         <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:Q:为什么最近暴涨1"/>
+         <UILabel name="" layout="margin:10,marginTop:0" attr="fontSize:14,color:#333333,linesNum:0,text:content"/>
+    
+    </UIView>
+
+
+</UIView>
+
+
+

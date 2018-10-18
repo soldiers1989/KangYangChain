@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  LanguageSettingsDemo
+
+  Created by DarkAngel on 2017/5/4.
+  Copyright © 2017年 暗の天使. All rights reserved.
+*/
+
+"首页" = "Home";
+"商城" = "Shop";
+"交易所" = "Exchange";
+"资产" = "Assets";
+"我的" = "Mine";
+"法币账户" = "Currency account";
+"合约账户" = "Contract account";
+"身份认证" = "identity authentication";
+"账户安全" = "Account security";
+"支付设置" = "Payment setting";
+"手续费等级" = "Fee grade";
+"币币账户" = "bibi account";
+"扫码推广" = "Sweep code popularization";
+"互助推广" = "Mutual assistance promotion";
+"GHB钱包" = "GHB Wallet";
+"退出"  = "Sign out";
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+    <UIView layout="marginLeft:10,marginRight:10, flexDirection:row,alignItems:center" attr="">
+    
+
+    <UIView layout="flex:1,margin:10" attr="">
+
+        <UIView layout="flexDirection:row,justifyContent:space-between,marginRight:10">
+
+            <UIView layout="flexDirection:row," attr="">
+                <UILabel name="bizhongLab" attr="text:Present" />
+                <UILabel name="bizhong2Lab" attr="color:#D0D0D0,fontSize:15"/>    
+            </UIView>
+            
+            <UILabel name="moneyLab" layout="" attr="color:#3AB874"/>
+
+
+        </UIView>
+        
+        <UIView layout="flexDirection:row,justifyContent:space-between,marginRight:10">
+
+            <UILabel name="dealCountLab" attr="color:#D0D0D0,font:12"/>
+            <UILabel name="money2Lab" attr="color:#D0D0D0,font:12"/>
+
+        </UIView>
+
+    </UIView>
+    
+    <UIView layout="width=60,height:20,justifyContent:center,marginRight:10" attr="bgColor:#3AB874,borderRadius:3,clipsToBounds:true">
+        
+        <UILabel name="waveLab" attr="color:white,font:12" />
+
+    </UIView>
+
+    </UIView>
+
+

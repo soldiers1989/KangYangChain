@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<UIView layout="" attr="bgColor:#F5F5F5">
+
+    <UIView layout="margin:10,marginBottom:0,alignItems:center,justifyContent:center,height:100" attr="bgColor:white,borderRadius:7">
+
+        <UIView layout="flexDirection:row" attr="">
+
+            <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:账户估值"/>
+            <FlexTouchView attr="borderRadius:10,bgColor:#F5F5F5" layout="height:20,width:50,marginLeft:10,alignItems:center,justifyContent:center">
+                <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:BTC"/>
+            </FlexTouchView>
+
+        </UIView>
+        
+        <UILabel name="" layout="marginTop:10" attr="fontSize:20,color:blue,linesNum:0,text:0.00000"/>
+
+    </UIView>
+
+
+</UIView>

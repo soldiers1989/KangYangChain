@@ -1,0 +1,121 @@
+//
+//  WLNMainTabBarCtr.m
+//  KangYangChain
+//
+//  Created by furao on 2018/9/27.
+//  Copyright © 2018年 furao. All rights reserved.
+//
+
+#import "WLNMainTabBarCtr.h"
+@interface WLNMainTabBarCtr ()<UITabBarControllerDelegate>
+{
+    NSArray *_logArr;
+    NSArray *_unLogArr;
+    BOOL _islog;
+}
+@end
+
+@implementation WLNMainTabBarCtr
+- (id)init{
+    self = [super init];
+    if (self){
+        
+        self.delegate = self;
+        self.tabBar.barTintColor = [UIColor whiteColor];
+//        self.tabBar.translucent = NO;
+
+        UIViewController *homePageViewCtr =  [NSClassFromString(@"WLNHomeCtr") new];
+        UIViewController *tradePageViewCtr =  [NSClassFromString(@"WLNTradeCtr") new];
+        UIViewController *propertyViewCtr =   [NSClassFromString(@"WLNPropertyCtr") new];
+        UIViewController *shopCtr =  [NSClassFromString(@"WLNShopCtr") new];
+        UIViewController *mineCtr   =  [NSClassFromString(@"WLNMineCtr") new];
+        UIViewController *log = [NSClassFromString(@"WLNLogCtr") new];
+        log.hidesBottomBarWhenPushed = YES;
+        
+        
+        UINavigationController *baseNavOne   = [[UINavigationController alloc] initWithRootViewController:homePageViewCtr];
+        UITabBarItem *baseNavOneBar = [[UITabBarItem alloc]initWithTitle:@"首页".Intl image:[[UIImage imageNamed:@"home"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"homes"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        baseNavOne.tabBarItem = baseNavOneBar;
+        
+        
+        
+        UINavigationController *tradeNavTwo   = [[UINavigationController alloc] initWithRootViewController:tradePageViewCtr];
+         UITabBarItem *tradeNavTwoBar = [[UITabBarItem alloc]initWithTitle:@"交易所".Intl image:[[UIImage imageNamed:@"exchange"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"exchanges"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        tradeNavTwo.tabBarItem = tradeNavTwoBar;
+        
+        
+        
+        UINavigationController *propertyNavTwo = [[UINavigationController alloc] initWithRootViewController:propertyViewCtr];
+        UITabBarItem *propertyNavTwoBar = [[UITabBarItem alloc]initWithTitle:@"资产".Intl image:[[UIImage imageNamed:@"assets"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"assetss"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        propertyNavTwo.tabBarItem = propertyNavTwoBar;
+        
+        
+        
+
+        UINavigationController *shopNavTwo  = [[UINavigationController alloc] initWithRootViewController:shopCtr];
+        UITabBarItem *shopNavTwoBar = [[UITabBarItem alloc]initWithTitle:@"商城".Intl image:[[UIImage imageNamed:@"shop"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"shops"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        shopNavTwo.tabBarItem = shopNavTwoBar;
+        
+        
+        
+
+        UINavigationController *mineNavFour  = [[UINavigationController alloc] initWithRootViewController:mineCtr];
+        UITabBarItem *mineNavFourBar = [[UITabBarItem alloc]initWithTitle:@"我的".Intl image:[[UIImage imageNamed:@"mine"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"mines"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        mineNavFour.tabBarItem = mineNavFourBar;
+        
+        
+        UINavigationController *logNav  = [[UINavigationController alloc] initWithRootViewController:log];
+   
+        
+        _unLogArr = @[logNav];
+        _logArr = @[baseNavOne, tradeNavTwo, propertyNavTwo, shopNavTwo,mineNavFour];
+    
+        
+        NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
+        id data = [de objectForKey:@"log"];
+        [self isLog:data ? YES : NO];
+
+    }
+    
+    return self;
+
+}
+
+- (void)isLog:(BOOL)bol{
+    
+    _islog = bol;
+    self.viewControllers = bol ? _logArr : _unLogArr;
+    self.tabBar.hidden = bol ? NO :YES;
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.tabBar.hidden = _islog ? NO :YES;
+    
+
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    
+    
+    if (TARGET_IPHONE_SIMULATOR) {
+        if (self.selectedViewController == viewController) {
+            
+            UINavigationController *nav = (UINavigationController *)viewController;
+            UIViewController *vc = nav.viewControllers.firstObject;
+            [vc viewDidLoad];
+            [vc viewWillAppear:YES];
+            
+            
+        }
+    }
+
+    
+    
+    
+
+}
+
+@end

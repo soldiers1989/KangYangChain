@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   WLNOrderCell.xml
+   KangYangChain
+
+   Created by edz on 2018/10/18.
+   Copyright (c) 2018 furao. All rights reserved.
+-->
+<UIView layout="flexDirection:row,justifyContent:space-around,height:40" attr="">
+
+    <UILabel name="timeLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:"/>
+    <UILabel name="addressLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:"/>
+    <UILabel name="numLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:"/>
+
+</UIView>
