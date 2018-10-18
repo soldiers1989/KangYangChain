@@ -21,18 +21,6 @@
     
     [[WLNDataNet new]postWithUrl:url params:dic resultBlock:^(id result) {
         
-        
-        [SVProgressHUD dismiss];
-        
-        if ([result isKindOfClass:[NSError class]]) {
-            
-            NSError *error = (NSError *)result;
-            
-            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld",error.code]];
-            
-            return;
-            
-        }
         if ([result[@"code"] integerValue] == 200) {
             
             if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {

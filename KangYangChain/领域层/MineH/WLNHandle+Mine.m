@@ -10,13 +10,6 @@
 
 @implementation WLNHandle (Mine)
 
-- (void)__showError:(id)result{
-    
-    [SVProgressHUD showErrorWithStatus:@"内部错误"];
-    NSError *error = (NSError *)result;
-    NSLog(@"报错code =  %ld",error.code);
-    
-}
 - (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel isPost:(BOOL)isPost{
     
     
@@ -30,14 +23,7 @@
         [[WLNDataNet new]postWithUrl:url params:dic resultBlock:^(id result) {
             
             
-            [SVProgressHUD dismiss];
             
-            if ([result isKindOfClass:[NSError class]]) {
-                
-                [self __showError:result];
-                return;
-                
-            }
             if ([result[@"code"] integerValue] == 200) {
                 
                 if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
@@ -87,15 +73,7 @@
         
         [[WLNDataNet new] getWithUrl:url resultBlock:^(id result) {
             
-            [SVProgressHUD dismiss];
-            
-            if ([result isKindOfClass:[NSError class]]) {
-                
-                [self __showError:result];
-                return;
-                
-                
-            }
+           
             if ([result[@"code"] integerValue] == 200) {
                 
                 if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {

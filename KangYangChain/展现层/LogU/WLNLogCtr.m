@@ -45,14 +45,9 @@
  */
 - (void)logAction{
     
-    
-    
-    NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[DELEGATES] = self;
-    
     if (self.phoneT.text.length != 11) {
         
-        [SVProgressHUD showErrorWithStatus:@"手机号码格式不正确".Intl];
+        [SVProgressHUD showErrorWithStatus:@"手机号格式不正确".Intl];
         return;
         
     }else if (self.pwdT.text.length == 0){
@@ -61,15 +56,19 @@
         return;
     }
     
+
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    
+    dic[DELEGATES] = self;
     dic[@"account"] = self.phoneT.text;
     dic[@"pass"] = self.pwdT.text;
     dic[@"app"] = @(1);
     
-    [SVProgressHUD show];
     
     [self routeTargetName:@"WLNHandle" actionName:@"log:" param:dic];
     
-    
+    [SVProgressHUD show];
+
     
     
 
@@ -84,6 +83,8 @@
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
+    [SVProgressHUD dismiss];
+
     if ([sel isEqualToString:@"log:"]) {
         
         

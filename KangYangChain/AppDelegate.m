@@ -20,6 +20,7 @@
     
     FlexRestorePreviewSetting(); //Debug模式下可以热更新UI，仅限于xml文件部分的UI，原生部分的UI刷新还是需要编译运行。
 
+    [NSURLProtocol registerClass:[WLNURLProtocol class]];
     
     [self chatSetup];
     

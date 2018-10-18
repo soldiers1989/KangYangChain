@@ -73,7 +73,9 @@
         
         NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
         id data = [de objectForKey:@"log"];
-        [self isLog:data ? YES : NO];
+//        [self isLog:data ? YES : NO];
+        [self isLog:YES];
+
 
     }
     
@@ -111,10 +113,6 @@
             
         }
     }
-
-    
-    
-    
 
 }
 

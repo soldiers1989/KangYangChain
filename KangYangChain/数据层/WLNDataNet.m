@@ -40,7 +40,7 @@
     
 }
 
-- (void)__postDataWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)(id result))failureblock{
+- (void)__postDataWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
     
    
     if (url.length == 0) {
@@ -72,7 +72,9 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         if (failureblock) {
+            
             failureblock(error);
+            
         }
         
     }];
@@ -91,11 +93,12 @@
             block(result);
         }
         
-    } failureBlock:^(id result) {
+    } failureBlock:^(NSError * _Nonnull error) {
         
-        if (block) {
-            block(result);
-        }
+        NSLog(@"%@",[NSString stringWithFormat:@"%ld",error.code]);
+        
+        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld",error.code]];
+
     }];
     
 }
@@ -111,12 +114,14 @@
             block(result);
         }
         
-    } failureBlock:^(id result) {
+    } failureBlock:^(NSError * _Nonnull error) {
         
-        if (block) {
-            block(result);
-        }
+        NSLog(@"%@",[NSString stringWithFormat:@"%ld",error.code]);
+        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%ld",error.code]];
+
+        
     }];
+    
     
     
 }

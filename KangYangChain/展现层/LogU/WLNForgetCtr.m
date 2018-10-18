@@ -36,7 +36,7 @@
     self.navigationController.navigationBar.translucent = NO;
     self.title = @"忘记密码".Intl;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(doneAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"完成".Intl style:UIBarButtonItemStyleDone target:self action:@selector(doneAction)];
 
 
 }

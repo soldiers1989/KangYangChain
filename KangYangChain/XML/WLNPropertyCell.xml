@@ -5,7 +5,7 @@
     <UIView layout="margin:10,marginBottom:0" attr="bgColor:white,borderRadius:10,clipsToBounds:true">
 
         <UIView layout="alignItems:center" attr="">
-             <UILabel name="" layout="marginTop:20,marginBottom:20" attr="fontSize:16,color:#333333,linesNum:0,text:账户估值"/>
+             <UILabel name="" layout="marginTop:20,marginBottom:20" attr="fontSize:16,color:#333333,linesNum:0,text:@账户估值"/>
              <UIView layout="flexDirection:row" attr="">
                 <UILabel name="" layout="marginBottom:20" attr="fontSize:30,color:#2151C2,linesNum:0,text:0.00"/>
                 <UILabel name="" layout="marginBottom:20" attr="fontSize:20,color:#2151C2,linesNum:0,text:BTC"/>
@@ -17,23 +17,23 @@
         
             <FlexTouchView layout="alignItems:center" attr="" onPress="pushVC:">
                   <UIImageView attr="source:Recharge" layout="width:20,height:20,marginBottom:10"/>  
-                  <UILabel attr="text:充币,font:15" />
+                  <UILabel attr="text:@充币,font:15" />
             </FlexTouchView>
              <FlexTouchView layout="alignItems:center" attr="" onPress="pushVC:">
                   <UIImageView attr="source:draw" layout="width:20,height:20,marginBottom:10"/>  
-                  <UILabel attr="text:提币,font:15" />
+                  <UILabel attr="text:@提币,font:15" />
             </FlexTouchView>
              <FlexTouchView layout="alignItems:center" attr="" onPress="pushVC:">
                   <UIImageView attr="source:lock" layout="width:20,height:20,marginBottom:10"/>  
-                  <UILabel attr="text:锁仓,font:15" />
+                  <UILabel attr="text:@锁仓,font:15" />
             </FlexTouchView>
              <FlexTouchView layout="alignItems:center" attr="" onPress="pushVC:">
                   <UIImageView attr="source:Capital_transfer" layout="width:20,height:20,marginBottom:10"/>  
-                  <UILabel attr="text:资金转化,font:15" />
+                  <UILabel attr="text:@资金转化,font:15" />
             </FlexTouchView>
              <FlexTouchView layout="alignItems:center" attr="" onPress="pushVC:">
                   <UIImageView attr="source:bill" layout="width:20,height:20,marginBottom:10"/>  
-                  <UILabel attr="text:账单,font:15" />
+                  <UILabel attr="text:@账单,font:15" />
             </FlexTouchView>
 
         </UIView>

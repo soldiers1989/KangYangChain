@@ -11,7 +11,7 @@
 <UIView layout="height:300" attr="bgColor:white">
 
     <UIView layout="flexDirection:row,justifyContent:center" attr="">
-        <UIImageView attr="source:Snip20181003_20" layout="width:150,height:150,marginTop:30,contentMode:"/>
+        <UIImageView attr="source:Snip20181003_35" layout="width:150,height:150,marginTop:30,contentMode:"/>
         <UIView layout="justifyContent:space-around" attr="">
             <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:huxi 呼吸 bad 题抱枕一只装"/>
             <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:GHB:158"/>

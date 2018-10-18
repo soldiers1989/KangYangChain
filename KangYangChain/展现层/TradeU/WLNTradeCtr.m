@@ -23,8 +23,8 @@
     [self.tab registerClass:WLNTradeCell.class forCellReuseIdentifier:@"WLNTradeCell"];
 
     WLNTradeHeadView *view = [WLNTradeHeadView shared];
-    view.topArr = @[@"行情",@"法币",@"币币",@"合约"].mutableCopy;
-    view.bottomArr = @[@"ETC",@"USDT",@"BTC",@"ETH",@"自选"].mutableCopy;
+    view.topArr = @[@"行情".Intl,@"法币".Intl,@"币币".Intl,@"合约".Intl].mutableCopy;
+    view.bottomArr = @[@"ETC",@"USDT",@"BTC",@"ETH",@"自选".Intl].mutableCopy;
     
     
     [view setDidClickTopBLock:^(NSInteger tag) {

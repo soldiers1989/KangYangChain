@@ -71,10 +71,14 @@
     if ([str isEqualToString:@"en"]) {
         
         [DAConfig setUserLanguage:@"zh-Hans"];
+        [SVProgressHUD showSuccessWithStatus:@"切换中文成功".Intl];
+        
 
     }else{
         
         [DAConfig setUserLanguage:@"en"];
+        [SVProgressHUD showSuccessWithStatus:@"切换英文成功".Intl];
+
 
     }
 

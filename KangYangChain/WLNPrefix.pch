@@ -14,7 +14,15 @@
 #import "WLNClass.h"
 #import "WLNRequst.h"
 #import "WLNConfig.h"
-#import "WLNWalletClass.h"
+
+#import "WLNLogUHeader.h"
+#import "WLNHomeUHeader.h"
+#import "WLNMineUHeader.h"
+#import "WLNShopUHeader.h"
+#import "WLNTradeUHeader.h"
+#import "WLNPropertyUHeader.h"
+
+
 
 
 #endif /* WLNPrefix_pch */
