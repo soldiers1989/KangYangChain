@@ -9,7 +9,7 @@
 #import "WLNWalletCtr.h"
 
 
-@interface WLNWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
+@interface WLNWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,WMYActionSheetDelegate>
 
 @property (strong, nonatomic) UITableView *tab;
 
@@ -45,8 +45,6 @@
         [WLNWalletSingle shared].address = data[@"address"];
         [WLNWalletSingle shared].words   = data[@"words"];
         [WLNWalletSingle shared].privatekey = data[@"private"];
-        
-        
         
         NSMutableDictionary *dic = @{}.mutableCopy;
         dic[DELEGATES] = self;
@@ -119,7 +117,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.img.image = [UIImage imageNamed:@"123"];
 
-    cell.balanceLab.text = [NSString stringWithFormat:@"%.5f BTC",[WLNWalletSingle shared].changeBalance];
+    cell.balanceLab.text = [NSString stringWithFormat:@"%.5f",[WLNWalletSingle shared].changeBalance];
     
 
     weakSelf(self);
@@ -130,7 +128,31 @@
         
     }];
     
+    
+    
+    [cell setDidChangeBiBlock:^{
+        
+        [weakself showSheet];
+        
+    }];
+    
+    
     return cell;
+    
+}
+- (void)showSheet{
+    
+    
+    WMYActionSheet *sheet = [[WMYActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"BTC",@"USDT", nil];
+    
+    [sheet show];
+    
+    
+}
+- (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    
+    
     
 }
 - (void)gotoNextWith:(NSInteger)tag{

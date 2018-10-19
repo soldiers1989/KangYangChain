@@ -25,6 +25,7 @@
     self.title = @"互助推广".Intl;
     
     self.dataArr = [NSMutableArray array];
+    [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self.tab registerClass:WLNMineExtensionInfoCell.class forCellReuseIdentifier:@"WLNMineExtensionInfoCell"];
@@ -37,8 +38,6 @@
     
     self.tab.tableHeaderView = view;
     
-    [self matchList];
-    
     
     
 }
@@ -48,6 +47,11 @@
  
     [self.tab reloadData];
     
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self matchList];
     
 }
 - (void)faild:(id)data sel:(NSString *)sel{
@@ -124,6 +128,7 @@
         WLNMineSellOutCtr *vc = [[WLNMineSellOutCtr alloc]initWithDic:weakself.dataArr[indexPath.row]];
         
         [weakself.navigationController pushViewController:vc animated:YES];
+    
         
     }];
     
@@ -139,23 +144,30 @@
         
         
         WLNMineApplyFromCtr *vc = [[WLNMineApplyFromCtr alloc]init];
-        
-        weakSelf(self);
-        
-        [vc setDidSucessBlock:^{
-            
-            [weakself matchList];
-            
-        }];
-        
+   
         [self.navigationController pushViewController:vc animated:YES];
+        
     }else{
         
         
         WLNMineFormDetailCtr *vc = [[WLNMineFormDetailCtr alloc]initWithDic:self.dataArr[indexPath.row]];
+     
         [self.navigationController pushViewController:vc animated:YES];
+        
+        
+        
+        
     }
 
 }
+- (UITableView *)tab{
+    if (_tab == nil) {
+        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
+        _tab.backgroundColor = maingray;
+        
+    }
+    return _tab;
+}
+
 
 @end

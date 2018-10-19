@@ -11,7 +11,7 @@
 
 //#define BaseUrl "http://kylvue.cpyu8.com/adminServer/public/index.php/"
 //#define BaseUrl "http://kylvue.cpyu8.com/"
-#define BaseUrl "http://192.168.14.153"
+#define BaseUrl "http://kyl.linkhb.com/adminServer/public/index.php/"
 
 #define Getcode  @BaseUrl"/index/login/send_verification_code"
 
@@ -27,6 +27,8 @@
 
 #define BuyGHB @BaseUrl"/index/match/buy"
 
+
+
 #define MatchList @BaseUrl"/index/match/list"
 
 #define MatchInfo @BaseUrl"/index/match/info"
@@ -37,6 +39,8 @@
 
 #define LockList @BaseUrl"/index/ghb/lock_index"  //锁仓列表
 
-#define PayGHB @BaseUrl"index/match/pay"  //排单支付
+#define PayGHB @BaseUrl"/index/match/pay"  //排单支付
 
 #define YaoqingList @BaseUrl"/index/userqrcode/list"
+
+#define OutLog @BaseUrl"/index/login/logout"

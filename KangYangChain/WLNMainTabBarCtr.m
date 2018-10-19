@@ -22,6 +22,7 @@
         
         self.delegate = self;
         self.tabBar.barTintColor = [UIColor whiteColor];
+        self.tabBar.tintColor = rgba(8, 36, 158, 1);
 //        self.tabBar.translucent = NO;
 
         UIViewController *homePageViewCtr =  [NSClassFromString(@"WLNHomeCtr") new];
@@ -73,8 +74,9 @@
         
         NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
         id data = [de objectForKey:@"log"];
-//        [self isLog:data ? YES : NO];
-        [self isLog:YES];
+        
+        [self isLog:data ? YES : NO];
+        
 
 
     }

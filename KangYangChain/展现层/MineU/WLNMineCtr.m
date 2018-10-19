@@ -8,7 +8,7 @@
 
 #import "WLNMineCtr.h"
 
-@interface WLNMineCtr ()<UITableViewDataSource, UITableViewDelegate ,WMYActionSheetDelegate>
+@interface WLNMineCtr ()<UITableViewDataSource, UITableViewDelegate ,WMYActionSheetDelegate,WLNReqstProtocol>
 {
     NSArray *_titleArr;
     NSArray *_imgArr;
@@ -45,22 +45,49 @@
 }
 - (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     
+    if (buttonIndex == 0) {
+        return;
+    }
     if (actionSheet == _headSheet) {
         
  
         
     }else if (actionSheet == _outLogSheet){
         
-        NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
         
-        [de removeObjectForKey:@"log"];
         
-        WLNMainTabBarCtr *tabbar = (WLNMainTabBarCtr *)self.tabBarController;
+        [self routeTargetName:@"WLNHandle" actionName:@"logout:" param:@{DELEGATES:self}.mutableCopy];
         
-        [tabbar isLog:NO];
+ 
         
         
     }
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    [self outLog];
+
+    
+}
+- (void)outLog{
+    NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
+    
+    [de removeObjectForKey:@"log"];
+    
+    WLNMainTabBarCtr *tabbar = (WLNMainTabBarCtr *)self.tabBarController;
+    
+    [tabbar isLog:NO];
+    
+    [SVProgressHUD showSuccessWithStatus:@"退出成功"];
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+    
+    [self outLog];
     
 }
 - (void)gotoNextWith:(NSInteger)tag{
@@ -81,10 +108,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的".Intl;
+    //,@[@"GHB钱包".Intl]
+    _titleArr =  @[@[@""],@[@"法币账户".Intl,@"币币账户".Intl,@"合约账户".Intl],@[@"扫码推广".Intl,@"互助推广".Intl],@[@"身份认证".Intl,@"账户安全".Intl,@"支付设置".Intl,@"手续费等级".Intl]];
     
-    _titleArr =  @[@[@""],@[@"法币账户".Intl,@"币币账户".Intl,@"合约账户".Intl],@[@"GHB钱包".Intl],@[@"扫码推广".Intl,@"互助推广".Intl],@[@"身份认证".Intl,@"账户安全".Intl,@"支付设置".Intl,@"手续费等级".Intl]];
-    _imgArr = @[@[@""],@[@"account",@"account",@"contract"],@[@"money"],@[@"tuiguang",@"fenxiang"],@[@"identity",@"suotou",@"pay",@"charge"]];
+    //,@[@"money"]
+    _imgArr = @[@[@""],@[@"account",@"account",@"contract"],@[@"tuiguang",@"fenxiang"],@[@"identity",@"suotou",@"pay",@"charge"]];
     
+    [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self.tab registerClass:WLNMineSimpleCell.class forCellReuseIdentifier:@"WLNMineSimpleCell"];
@@ -150,7 +180,8 @@
     
     [cell setDidClick:^(NSInteger tag){
         
-        [weakself gotoNextWith:tag];
+        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+//        [weakself gotoNextWith:tag];
 
     }];
     return cell;
@@ -169,12 +200,14 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0 || indexPath.section == 1) {
+    if (indexPath.section != 2) {
+        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+        
         return;
     }
     NSArray *arr = @[@[],
                      @[@"UIViewController",@"UIViewController",@"UIViewController"],
-                     @[@"WLNMineGHBWalletCtr".instance],
+//                     @[@"WLNMineGHBWalletCtr".instance],
 
                      @[@"WLNMineScavengingCtr".instance,@"WLNMineExtensionCtr".instance],
                   @[@"WLNMineIDCertifiedCtr".instance,@"WLNMineSecurityCtr".instance,@"WLNMinePaySetCtr".instance,@"WLNMineChargeCtr".instance]];
@@ -184,7 +217,14 @@
     
 }
 
-
+- (UITableView *)tab{
+    if (_tab == nil) {
+        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
+        _tab.backgroundColor = maingray;
+        
+    }
+    return _tab;
+}
 
 
 

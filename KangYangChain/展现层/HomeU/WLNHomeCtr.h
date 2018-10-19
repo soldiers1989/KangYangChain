@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WLNHomeCtr : FlexBaseVC
+@interface WLNHomeCtr : UIViewController
 
 @end

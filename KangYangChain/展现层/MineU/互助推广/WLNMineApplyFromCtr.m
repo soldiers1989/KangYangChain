@@ -9,11 +9,15 @@
 #import "WLNMineApplyFromCtr.h"
 
 
-@interface WLNMineApplyFromCtr ()<WLNReqstProtocol>
+@interface WLNMineApplyFromCtr ()<WLNReqstProtocol,UITextFieldDelegate>
 
 @property (nonatomic, strong) UILabel *lowBuyLab;
 @property (nonatomic, strong) UILabel *interestLab;
 @property (nonatomic, strong) UITextField *countTxt;
+@property (nonatomic, strong) UILabel *shouyiLab;
+@property (nonatomic, strong) id datas;
+
+
 
 
 @end
@@ -27,6 +31,9 @@
     
     [self baseInfo];
     
+    [self.countTxt addTarget:self action:@selector(textField1TextChange:) forControlEvents:UIControlEventEditingChanged];
+
+    
 }
 - (void)baseInfo{
     
@@ -37,9 +44,6 @@
     [self routeTargetName:@"WLNHandle" actionName:@"buyInfo:" param:dic];
     
     
-    
-    
-    
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
@@ -47,15 +51,11 @@
         
         self.lowBuyLab.text = [NSString stringWithFormat:@"最低可购买:%@GHB",data[@"minmum"]];
         self.interestLab.text = [NSString stringWithFormat:@"%@ %% ",data[@"scale"]];
-        
+        _datas = data;
         
     }else if ([sel isEqualToString:@"buyGHB:"]){
         
-      
-        if (_didSucessBlock) {
-            _didSucessBlock();
-            
-        }
+    
         [SVProgressHUD showSuccessWithStatus:@"购买成功!"];
         [self.navigationController popViewControllerAnimated:YES];
         
@@ -71,7 +71,11 @@
 }
 - (void)buyAction{
     
-    
+    if (self.countTxt.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入数量"];
+        return;
+        
+    }
     
     NSMutableDictionary *dic =@{}.mutableCopy;
   
@@ -83,10 +87,27 @@
     
     [self routeTargetName:@"WLNHandle" actionName:@"buyGHB:" param:dic];
     
+
     
     
     
+}
+
+
+-(void)textField1TextChange:(UITextField *)textField{
     
+    double  s = [_datas[@"scale"]doubleValue];
+    
+    double text  = textField.text.doubleValue;
+    
+    
+    self.shouyiLab.text = [NSString stringWithFormat:@"%.2f",s / 100 * text + text];
+    
+
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 
 

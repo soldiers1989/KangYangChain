@@ -34,7 +34,7 @@
 #import "NSObject+RouteRoot.h"
 #import "UIView+SYLayout.h"
 #import "NSString+Language.h"
-#import "UIViewController+VCUI.h"
+#import "UIViewController+hook.h"
 #import "UINavigationBar+Awesome.h"
 #import "AppDelegate+Chat.h"
 #import "UITableView+NewTableView.h"

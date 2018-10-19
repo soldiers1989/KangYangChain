@@ -34,9 +34,9 @@
     [self.tab registerClass:WLNMineScavengingCell.class forCellReuseIdentifier:@"WLNMineScavengingCell"];
     
     
-    self.img.image = [[WLNQRCode new] jy_QRCodeFromString:@"http://kylvue.cpyu8.com/#/register-moblie?parent=13" size:100];
+    self.img.image = [[WLNQRCode new] jy_QRCodeFromString:@"http://kyl.linkhb.com" size:100];
     
-    self.linkLab.text = @"http://kylvue.cpyu8.com/#/register-moblie?parent=13";
+    self.linkLab.text = @"http://kyl.linkhb.com";
     
   
     NSMutableDictionary *dic = @{}.mutableCopy;

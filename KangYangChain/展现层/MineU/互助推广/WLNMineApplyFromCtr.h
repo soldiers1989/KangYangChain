@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNMineApplyFromCtr : FlexBaseVC
 
-@property (nonatomic, strong) void (^didSucessBlock)(void);
-
 
 @end
 

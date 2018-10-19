@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WLNShopCtr : FlexBaseVC
+@interface WLNShopCtr : UIViewController
 
 @end

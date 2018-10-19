@@ -22,14 +22,25 @@
 
 @implementation WLNHomeCtr
 
+
+- (UITableView *)tab{
+    if (_tab == nil) {
+        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
+        _tab.backgroundColor = maingray;
+
+    }
+    return _tab;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
   
     self.title = @"首页".Intl;
 
+    [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
+    
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArr = [NSMutableArray array];
 
@@ -43,28 +54,30 @@
     WLNHomeHeadView *view = [[WLNHomeHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 150)];
 
     self.tab.tableHeaderView = view;
- 
+
+    
+
     NSString *str =  [NSBundle currentLanguage];
 
     UIImage *image;
-    
+
     if ([str isEqualToString:@"en"]) {
-        
+
         image = [UIImage imageNamed:@"chinese"];
-        
+
     }else{
         image = [UIImage imageNamed:@"english"];
-        
+
     }
-    
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStyleDone target:self action:@selector(changeLangage)];
     
 
-    
 }
 - (void)changeLangage{
     
     [SVProgressHUD showErrorWithStatus:@"此功能尚未映射完成"];
+//    return;
     
    NSString *str =  [NSBundle currentLanguage];
     
@@ -112,6 +125,9 @@
     view.rightLab.text = rightArr[section];
     return view;
     
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_secitonArrs[section]count];
@@ -168,6 +184,12 @@
     cell.rightLab.text = @"456";
     return cell;
   
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+    return;
+    
 }
 
 @end

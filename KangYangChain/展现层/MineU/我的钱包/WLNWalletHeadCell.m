@@ -21,5 +21,11 @@
     }
     
 }
+- (void)changeBiAction{
+    if (_didChangeBiBlock) {
+        _didChangeBiBlock();
+        
+    }
+}
 
 @end

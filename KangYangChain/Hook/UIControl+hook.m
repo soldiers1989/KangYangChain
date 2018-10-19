@@ -1,26 +1,26 @@
 //
-//  UIControl+furaohook.m
-//  bither-ios
+//  UIControl+hook.m
+//  KangYangChain
 //
-//  Created by furao on 2018/9/30.
-//  Copyright © 2018年 Bither. All rights reserved.
+//  Created by edz on 2018/10/19.
+//  Copyright © 2018 furao. All rights reserved.
 //
 
-#import "UIControl+furaohook.h"
+#import "UIControl+hook.h"
 #import <objc/runtime.h>
 
-@implementation UIControl (furaohook)
+@implementation UIControl (hook)
 
 +(void)load{
-
+    
     Method AMethod = class_getInstanceMethod([self class], @selector(sendAction:to:forEvent:));
     
     
     Method BMethod = class_getInstanceMethod([self class], @selector(fr_sendAction:to:forEvent:));
     
     method_exchangeImplementations(AMethod, BMethod);
-
-
+    
+    
     
     
     

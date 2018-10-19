@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00272E762179715000A5EBD4 /* Click.m in Sources */ = {isa = PBXBuildFile; fileRef = 00272E752179715000A5EBD4 /* Click.m */; };
 		00375439217818130025CD1D /* WLNWalletHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00375438217818130025CD1D /* WLNWalletHeadView.m */; };
 		0037543B217818480025CD1D /* WLNWalletHeadView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0037543A217818480025CD1D /* WLNWalletHeadView.xml */; };
 		00375441217833B80025CD1D /* UITextField+Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 00375440217833B80025CD1D /* UITextField+Set.m */; };
 		00375444217862420025CD1D /* WLNOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00375443217862420025CD1D /* WLNOrderCell.m */; };
 		003754462178624D0025CD1D /* WLNOrderCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 003754452178624D0025CD1D /* WLNOrderCell.xml */; };
+		003CB8F82179C096001DDA03 /* UIViewController+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8F72179C096001DDA03 /* UIViewController+hook.m */; };
+		003CB8FB2179C0DE001DDA03 /* UIControl+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */; };
+		003CB8FE2179C429001DDA03 /* UITableView+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8FD2179C429001DDA03 /* UITableView+hook.m */; };
+		003CB9002179D185001DDA03 /* Default-Port-hd55.png in Resources */ = {isa = PBXBuildFile; fileRef = 003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */; };
 		0089FB4D2175C0F4002C3465 /* WLNMineFormDetailCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0089FB4C2175C0F4002C3465 /* WLNMineFormDetailCtr.xml */; };
 		0089FB502175C151002C3465 /* WLNMineFormTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0089FB4F2175C151002C3465 /* WLNMineFormTopCell.m */; };
 		0089FB532175C15C002C3465 /* WLNMineFormBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0089FB522175C15C002C3465 /* WLNMineFormBottomCell.m */; };
@@ -86,10 +91,7 @@
 		234AA8EC216F4AD500A0866B /* WLNQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 234AA8EB216F4AD500A0866B /* WLNQRCode.m */; };
 		234B6EB521790991000B69AB /* WLNHandle+Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B6EB421790991000B69AB /* WLNHandle+Wallet.m */; };
 		234B6EBB21791E8C000B69AB /* WLNURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B6EBA21791E8C000B69AB /* WLNURLProtocol.m */; };
-		234B6EC02179270A000B69AB /* UIControl+furaohook.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B6EBC2179270A000B69AB /* UIControl+furaohook.m */; };
-		234B6EC12179270A000B69AB /* UIViewController+furaohook.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B6EBE2179270A000B69AB /* UIViewController+furaohook.m */; };
 		234F1D742164F4FF00BA61AF /* WLNPropertyValuationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 234F1D732164F4FF00BA61AF /* WLNPropertyValuationCell.m */; };
-		234F1D832164FF8500BA61AF /* UIViewController+VCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 234F1D822164FF8500BA61AF /* UIViewController+VCUI.m */; };
 		234F1D8F21650B1100BA61AF /* WLNMineOrderCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 234F1D8E21650B1100BA61AF /* WLNMineOrderCtr.m */; };
 		234F1D922165185B00BA61AF /* WLNMineOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 234F1D912165185B00BA61AF /* WLNMineOrderCell.m */; };
 		234F1D9621651A7E00BA61AF /* Snip20181003_35.png in Resources */ = {isa = PBXBuildFile; fileRef = 234F1D9521651A7E00BA61AF /* Snip20181003_35.png */; };
@@ -245,6 +247,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00272E742179715000A5EBD4 /* Click.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Click.h; sourceTree = "<group>"; };
+		00272E752179715000A5EBD4 /* Click.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Click.m; sourceTree = "<group>"; };
 		00375437217818130025CD1D /* WLNWalletHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNWalletHeadView.h; sourceTree = "<group>"; };
 		00375438217818130025CD1D /* WLNWalletHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNWalletHeadView.m; sourceTree = "<group>"; };
 		0037543A217818480025CD1D /* WLNWalletHeadView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNWalletHeadView.xml; sourceTree = "<group>"; };
@@ -253,6 +257,13 @@
 		00375442217862420025CD1D /* WLNOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNOrderCell.h; sourceTree = "<group>"; };
 		00375443217862420025CD1D /* WLNOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNOrderCell.m; sourceTree = "<group>"; };
 		003754452178624D0025CD1D /* WLNOrderCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNOrderCell.xml; sourceTree = "<group>"; };
+		003CB8F62179C096001DDA03 /* UIViewController+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+hook.h"; sourceTree = "<group>"; };
+		003CB8F72179C096001DDA03 /* UIViewController+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+hook.m"; sourceTree = "<group>"; };
+		003CB8F92179C0DE001DDA03 /* UIControl+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+hook.h"; sourceTree = "<group>"; };
+		003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+hook.m"; sourceTree = "<group>"; };
+		003CB8FC2179C429001DDA03 /* UITableView+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+hook.h"; sourceTree = "<group>"; };
+		003CB8FD2179C429001DDA03 /* UITableView+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+hook.m"; sourceTree = "<group>"; };
+		003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Port-hd55.png"; sourceTree = "<group>"; };
 		0089FB4C2175C0F4002C3465 /* WLNMineFormDetailCtr.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNMineFormDetailCtr.xml; sourceTree = "<group>"; };
 		0089FB4E2175C151002C3465 /* WLNMineFormTopCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineFormTopCell.h; sourceTree = "<group>"; };
 		0089FB4F2175C151002C3465 /* WLNMineFormTopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineFormTopCell.m; sourceTree = "<group>"; };
@@ -399,14 +410,8 @@
 		234B6EB421790991000B69AB /* WLNHandle+Wallet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLNHandle+Wallet.m"; sourceTree = "<group>"; };
 		234B6EB921791E8C000B69AB /* WLNURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNURLProtocol.h; sourceTree = "<group>"; };
 		234B6EBA21791E8C000B69AB /* WLNURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNURLProtocol.m; sourceTree = "<group>"; };
-		234B6EBC2179270A000B69AB /* UIControl+furaohook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+furaohook.m"; sourceTree = "<group>"; };
-		234B6EBD2179270A000B69AB /* UIControl+furaohook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+furaohook.h"; sourceTree = "<group>"; };
-		234B6EBE2179270A000B69AB /* UIViewController+furaohook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+furaohook.m"; sourceTree = "<group>"; };
-		234B6EBF2179270A000B69AB /* UIViewController+furaohook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+furaohook.h"; sourceTree = "<group>"; };
 		234F1D722164F4FF00BA61AF /* WLNPropertyValuationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNPropertyValuationCell.h; sourceTree = "<group>"; };
 		234F1D732164F4FF00BA61AF /* WLNPropertyValuationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNPropertyValuationCell.m; sourceTree = "<group>"; };
-		234F1D812164FF8500BA61AF /* UIViewController+VCUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+VCUI.h"; sourceTree = "<group>"; };
-		234F1D822164FF8500BA61AF /* UIViewController+VCUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+VCUI.m"; sourceTree = "<group>"; };
 		234F1D8D21650B1100BA61AF /* WLNMineOrderCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineOrderCtr.h; sourceTree = "<group>"; };
 		234F1D8E21650B1100BA61AF /* WLNMineOrderCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineOrderCtr.m; sourceTree = "<group>"; };
 		234F1D902165185B00BA61AF /* WLNMineOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineOrderCell.h; sourceTree = "<group>"; };
@@ -702,7 +707,6 @@
 				0089FB5D2175E1C9002C3465 /* Protocol */,
 				234B6EC221792DBA000B69AB /* Hook */,
 				00DE427821759438005DDEE0 /* Model */,
-				234F1D7D2164FF3A00BA61AF /* (禁止分发) */,
 				231A96F0217137660063587B /* (必须分发) */,
 				231A96EB217131230063587B /* (可分发) */,
 				237E1B82215E9D08002BC6F0 /* XML */,
@@ -734,6 +738,7 @@
 				234F1D9521651A7E00BA61AF /* Snip20181003_35.png */,
 				2363470D2163873200CFF257 /* Snip20181002_1.png */,
 				2363470B2163873200CFF257 /* Snip20181002_2.png */,
+				003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */,
 				00A5EBE12177026900FED04D /* BTCPack.framework */,
 				2309F8B6215D316300F156E8 /* Assets.xcassets */,
 				2309F8B8215D316300F156E8 /* LaunchScreen.storyboard */,
@@ -1051,21 +1056,16 @@
 		234B6EC221792DBA000B69AB /* Hook */ = {
 			isa = PBXGroup;
 			children = (
-				234B6EBD2179270A000B69AB /* UIControl+furaohook.h */,
-				234B6EBC2179270A000B69AB /* UIControl+furaohook.m */,
-				234B6EBF2179270A000B69AB /* UIViewController+furaohook.h */,
-				234B6EBE2179270A000B69AB /* UIViewController+furaohook.m */,
-				234F1D812164FF8500BA61AF /* UIViewController+VCUI.h */,
-				234F1D822164FF8500BA61AF /* UIViewController+VCUI.m */,
+				00272E742179715000A5EBD4 /* Click.h */,
+				00272E752179715000A5EBD4 /* Click.m */,
+				003CB8F92179C0DE001DDA03 /* UIControl+hook.h */,
+				003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */,
+				003CB8FC2179C429001DDA03 /* UITableView+hook.h */,
+				003CB8FD2179C429001DDA03 /* UITableView+hook.m */,
+				003CB8F62179C096001DDA03 /* UIViewController+hook.h */,
+				003CB8F72179C096001DDA03 /* UIViewController+hook.m */,
 			);
 			path = Hook;
-			sourceTree = "<group>";
-		};
-		234F1D7D2164FF3A00BA61AF /* (禁止分发) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "(禁止分发)";
 			sourceTree = "<group>";
 		};
 		235484722160C76200BCE879 /* LanguageTool */ = {
@@ -1538,6 +1538,7 @@
 				234F1D9621651A7E00BA61AF /* Snip20181003_35.png in Resources */,
 				23C8288121717F020086C253 /* WLNMineScavengingCtr.xml in Resources */,
 				23C8289521717F020086C253 /* WLNShopBuyHBGCtr.xml in Resources */,
+				003CB9002179D185001DDA03 /* Default-Port-hd55.png in Resources */,
 				00A5EBF921773AC600FED04D /* WLNMineGHBBodyCell.xml in Resources */,
 				23C8289B21717F020086C253 /* WLNShopChangeCtr.xml in Resources */,
 				238F54F82165380600A9EB7F /* Snip20181004_36.png in Resources */,
@@ -1654,9 +1655,10 @@
 				00CC76082174898C0053E546 /* WLNLockCell.m in Sources */,
 				00CC76122174A20D0053E546 /* WLNMineSellOutCtr.m in Sources */,
 				23D17B3721742C7F0004D877 /* WLNLockCtr.m in Sources */,
-				234F1D832164FF8500BA61AF /* UIViewController+VCUI.m in Sources */,
 				23D17B3C21742C7F0004D877 /* WLNReceiveMoneyCtr.m in Sources */,
 				236346E0216289C800CFF257 /* NSBundle+DAUtils.m in Sources */,
+				003CB8F82179C096001DDA03 /* UIViewController+hook.m in Sources */,
+				003CB8FE2179C429001DDA03 /* UITableView+hook.m in Sources */,
 				2309F918215D3F4E00F156E8 /* WLNMineCtr.m in Sources */,
 				237BA3B62170730A00C71283 /* WLNMineExtensionCtr.m in Sources */,
 				2340563721702C2200888D96 /* WLNHandle+Log.m in Sources */,
@@ -1671,6 +1673,7 @@
 				0089FB652175EA48002C3465 /* WLNMineGHBWalletCtr.m in Sources */,
 				2340564021702C3F00888D96 /* WLNHandle+Trade.m in Sources */,
 				238F555F2169757800A9EB7F /* WLNMineCommunityCtr.m in Sources */,
+				00272E762179715000A5EBD4 /* Click.m in Sources */,
 				23D17AF821742A7F0004D877 /* WLNWalletBodyCell.m in Sources */,
 				237BA3C6217079AF00C71283 /* WLNMineExtensionInfoView.m in Sources */,
 				233AAFF6216C9AAE007D12DD /* WLNForgetCell.m in Sources */,
@@ -1693,9 +1696,9 @@
 				23F9C9292163E0C8000EDFC4 /* WLNShopIntegralCell.m in Sources */,
 				231A96E421712D8C0063587B /* WLNDataBase.m in Sources */,
 				232FF547216AFABD00C71BCA /* WLNMineNewsCtr.m in Sources */,
+				003CB8FB2179C0DE001DDA03 /* UIControl+hook.m in Sources */,
 				23405618216F55E400888D96 /* WLNMineIntegralCtr.m in Sources */,
 				234F1D742164F4FF00BA61AF /* WLNPropertyValuationCell.m in Sources */,
-				234B6EC12179270A000B69AB /* UIViewController+furaohook.m in Sources */,
 				236346E1216289C800CFF257 /* DAConfig.m in Sources */,
 				23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */,
 				234AA8EC216F4AD500A0866B /* WLNQRCode.m in Sources */,
@@ -1711,7 +1714,6 @@
 				23C828B22171C9FD0086C253 /* WMYActionSheet.m in Sources */,
 				23118A6C216DED7A0014FB7E /* WLNShopSectionHeadView.m in Sources */,
 				23D17B3D21742C7F0004D877 /* WLNOrderCtr.m in Sources */,
-				234B6EC02179270A000B69AB /* UIControl+furaohook.m in Sources */,
 				237BA3C1217076A000C71283 /* WLNMineExtensionInfoCell.m in Sources */,
 				236346F92162D85D00CFF257 /* WLNHomeHotCell.m in Sources */,
 				23212A62216FE3C1008C8DD2 /* WLNHandle.m in Sources */,
@@ -1919,6 +1921,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VV89EF89NQ;
@@ -1929,7 +1932,7 @@
 					"$(PROJECT_DIR)/KangYangChain",
 					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
 				);
-				GCC_PREFIX_HEADER = /Users/furao/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,
@@ -1983,6 +1986,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VV89EF89NQ;
@@ -1993,7 +1997,7 @@
 					"$(PROJECT_DIR)/KangYangChain",
 					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
 				);
-				GCC_PREFIX_HEADER = /Users/furao/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,

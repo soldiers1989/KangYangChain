@@ -9,7 +9,7 @@
 
 
         
-        <UIView layout="flexDirection:row,margin:40,height:25" attr="borderRadius:10,
+        <UIView layout="flexDirection:row,margin:20,height:30" attr="borderRadius:10,
         borderColor:red,borderWidth:1,clipsToBounds:true">
 
             <UILabel name="linkLab" layout="marginLeft:5,marginRight:5" attr="fontSize:12,color:black,linesNum:0,text:link"/>
@@ -22,7 +22,6 @@
         </UIView>
         
         <UILabel name="" layout="" attr="fontSize:14,color:red,linesNum:0,text:通过二维码推荐给其他朋友同时赚取积分"/>
-
 
     </UIView>
 

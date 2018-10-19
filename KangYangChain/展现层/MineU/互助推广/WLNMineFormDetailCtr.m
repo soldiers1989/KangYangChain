@@ -38,6 +38,7 @@
     [super viewDidLoad];
     self.title = @"订单详情".Intl;
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self.tab registerClass:WLNMineFormTopCell.class forCellReuseIdentifier:@"WLNMineFormTopCell"];
@@ -71,7 +72,11 @@
 
     }else if([sel isEqualToString:@"payGHB:"]){
         
+        
+        
         [SVProgressHUD showSuccessWithStatus:@"支付成功"];
+        
+        
         
     }
 
@@ -83,7 +88,9 @@
     return [self.infoDic[@"status"] integerValue] == 6 ? YES :NO;
     
 }
-
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
     WLNMineFormDetailHeadView *view =[[WLNMineFormDetailHeadView alloc]init];
@@ -159,6 +166,14 @@
     
     
     
+}
+
+- (UITableView *)tab{
+    if (_tab == nil) {
+        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT) style:UITableViewStylePlain];
+        _tab.backgroundColor = maingray;
+    }
+    return _tab;
 }
 
 

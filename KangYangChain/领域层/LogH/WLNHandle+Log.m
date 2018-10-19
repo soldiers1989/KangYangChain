@@ -73,4 +73,11 @@
     [self requestWith:ForGet dic:dic sel:@selector(forGet:)];
     
 }
+
+- (void)logout:(NSMutableDictionary *)dic{
+    
+    
+    [self requestWith:OutLog dic:dic sel:@selector(logout:)];
+    
+}
 @end

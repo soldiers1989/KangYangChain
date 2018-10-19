@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNMineFormDetailCtr : FlexBaseVC<WLNPassValueProtocol>
+@interface WLNMineFormDetailCtr : UIViewController <WLNPassValueProtocol>
 
 @end
 

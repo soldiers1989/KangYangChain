@@ -43,6 +43,10 @@
 }
 - (void)topClick:(UIButton*)button{
     
+    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+
+    return;
+    
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.topBtnArr enumerateObjectsUsingBlock:^(UIButton *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (obj != button) {
@@ -60,6 +64,10 @@
     
 }
 - (void)bottomClick:(UIButton *)button{
+    
+    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+    
+    return;
     
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     

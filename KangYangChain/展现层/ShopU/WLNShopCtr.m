@@ -13,13 +13,20 @@
 @end
 
 @implementation WLNShopCtr
-
+- (UICollectionView *)collect{
+    if (_collect == nil) {
+        _collect = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth ,DEVICEHEIGHT - 64) collectionViewLayout:[UICollectionViewFlowLayout new]];
+        _collect.backgroundColor = UIColor.whiteColor;
+        
+    }
+    return _collect;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"商城".Intl;
     self.collect.delegate = self;
     self.collect.dataSource = self;
-    
+    [self.view addSubview:self.collect];
     
     [self.collect registerClass:WLNShopItemCell.class forCellWithReuseIdentifier:@"WLNShopItemCell"];
     [self.collect registerClass:WLNShopIntegralCell.class forCellWithReuseIdentifier:@"WLNShopIntegralCell"];
@@ -101,15 +108,18 @@
     
     [cell setDidClick:^(NSInteger tag) {
        
-        if (tag == 1) {
-            
-            [weakself.navigationController pushViewController:@"WLNShopBuyHBGCtr".instance animated:YES];
-            
-        }else{
-            
-            [weakself.navigationController pushViewController:@"WLNShopChangeCtr".instance animated:YES];
-            
-        }
+        
+        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+
+//        if (tag == 1) {
+//
+//            [weakself.navigationController pushViewController:@"WLNShopBuyHBGCtr".instance animated:YES];
+//
+//        }else{
+//
+//            [weakself.navigationController pushViewController:@"WLNShopChangeCtr".instance animated:YES];
+//
+//        }
         
     }];
     return cell;
@@ -127,12 +137,19 @@
     
     [cell setDidClickExBlock:^{
         
-        [weakself exChangeAction];
+        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+
+//        [weakself exChangeAction];
         
         
     }];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
 }
 - (void)exChangeAction{
     

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WLNMineCtr : FlexBaseVC
+@interface WLNMineCtr : UIViewController
 
 @end

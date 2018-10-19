@@ -17,6 +17,9 @@
 
 - (void)pushVC:(UITapGestureRecognizer *)tap{
     
+    
+    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+
 }
 
 @end

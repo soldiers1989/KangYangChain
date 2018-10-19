@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.title = @"交易所".Intl;
     
+    [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self.tab registerClass:WLNTradeCell.class forCellReuseIdentifier:@"WLNTradeCell"];
@@ -58,16 +59,22 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     WLNTradeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeCell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
     
 }
-
+- (UITableView *)tab{
+    if (_tab == nil) {
+        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
+        
+    }
+    return _tab;
+}
 
 
 

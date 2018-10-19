@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)log:(NSMutableDictionary *)dic;
 
+- (void)logout:(NSMutableDictionary *)dic;
+
+
 - (void)registers:(NSMutableDictionary *)dic;
 
 - (void)getCode:(NSMutableDictionary *)dic;

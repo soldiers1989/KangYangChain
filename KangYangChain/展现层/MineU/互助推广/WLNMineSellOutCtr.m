@@ -43,7 +43,15 @@
 }
 - (void)sellAction{
     
+    if (self.countTxt.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入数量"];
+        return;
+        
+    }
+    
     NSMutableDictionary *dic =@{}.mutableCopy;
+    
+    dic[DELEGATES] = self;
     dic[@"uid"] = self.userModel.userid;
     dic[@"num"] = self.countTxt.text;
     dic[@"id"] = self.lastDic[@"id"];
@@ -54,14 +62,19 @@
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
-    [SVProgressHUD showSuccessWithStatus:@"发布成功"];
     
+    
+    [SVProgressHUD showSuccessWithStatus:@"发布成功"];
+
     [self.navigationController popViewControllerAnimated:YES];
     
 }
 - (void)faild:(id)data sel:(NSString *)sel{
     
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self.view endEditing:YES];
+}
 
 @end

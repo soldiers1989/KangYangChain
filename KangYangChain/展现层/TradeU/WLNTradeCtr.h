@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WLNTradeCtr : FlexBaseVC
+@interface WLNTradeCtr : UIViewController
 
 @end
