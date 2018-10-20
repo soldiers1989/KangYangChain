@@ -7,17 +7,23 @@
 //
 
 #import "UIGestureRecognizer+hook.h"
-#import "MethodHook.h"
-#import <objc/runtime.h>
+
+#import "NSObject+Swizzle.h"
 
 @implementation UIGestureRecognizer (hook)
 +(void)load{
     
-    SEL oldSEL = @selector(initWithTarget:action:);
-    SEL newSEL = @selector(new_initWithTarget:action:);
-    
-    
-    [MethodHook swizzingForClass:self originalSel:oldSEL swizzingSel:newSEL];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        SEL oldSEL = @selector(initWithTarget:action:);
+        SEL newSEL = @selector(new_initWithTarget:action:);
+        
+        [self swizzleMethod:oldSEL swizzledSelector:newSEL];
+
+    });
+                  
+  
     
     
 }
@@ -37,7 +43,8 @@
     BOOL isAddMethod = class_addMethod(class, newSEL ,method_getImplementation(class_getInstanceMethod([self class], @selector(newAction:))), nil);
     
     if (isAddMethod) {
-        [MethodHook swizzingForClass:class originalSel:oldSEL swizzingSel:newSEL];
+        
+        [class swizzleMethod:oldSEL swizzledSelector:newSEL];
 
     }
     return [self new_initWithTarget:target action:action];

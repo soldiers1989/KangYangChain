@@ -9,6 +9,7 @@
 #import "WLNHandle.h"
 
 @interface WLNHandle (Wallet)
+
 - (void)getKeys:(NSMutableDictionary *)dic;
 
 - (void)balanceInquiry:(NSMutableDictionary *)dic;

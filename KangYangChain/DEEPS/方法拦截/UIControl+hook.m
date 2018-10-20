@@ -7,19 +7,25 @@
 //
 
 #import "UIControl+hook.h"
-#import <objc/runtime.h>
-#import "MethodHook.h"
+
+#import "NSObject+Swizzle.h"
 @implementation UIControl (hook)
 
 +(void)load{
    
-    
-    
-    SEL originalSelector = @selector(sendAction:to:forEvent:);
-    SEL swizzingSelector = @selector(fr_sendAction:to:forEvent:);
-    
-    [MethodHook swizzingForClass:self originalSel:originalSelector swizzingSel:swizzingSelector];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        SEL originalSelector = @selector(sendAction:to:forEvent:);
+        SEL swizzingSelector = @selector(fr_sendAction:to:forEvent:);
+        
+        [self swizzleMethod:originalSelector swizzledSelector:swizzingSelector];
+        
 
+    });
+                  
+    
+  
  
 }
 - (void)fr_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{

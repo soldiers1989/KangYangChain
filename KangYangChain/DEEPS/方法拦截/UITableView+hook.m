@@ -7,7 +7,7 @@
 //
 
 #import "UITableView+hook.h"
-#import "MethodHook.h"
+#import "NSObject+Swizzle.h"
 #import <objc/runtime.h>
 @implementation UITableView (hook)
 
@@ -18,7 +18,9 @@
         
         SEL originalSelector = @selector(setDelegate:);
         SEL swizzingSelector = @selector(newSetDelegate:);
-        [MethodHook swizzingForClass:[self class] originalSel:originalSelector swizzingSel:swizzingSelector];
+        
+        [self swizzleMethod:originalSelector swizzledSelector:swizzingSelector];
+
     });
 }
 
@@ -35,8 +37,10 @@
                     newSel,
                     method_getImplementation(class_getInstanceMethod([self class], @selector(newTableView:didSelectRowAtIndexPath:))),
                     nil);
-    
-    [MethodHook swizzingForClass:[delegate class] originalSel:sel swizzingSel:newSel];
+
+    [[delegate class] swizzleMethod:sel swizzledSelector:newSel];
+
+
 }
 
 -(void)newTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

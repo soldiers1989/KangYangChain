@@ -24,4 +24,8 @@
 
 #define OrderStatusArr  @[@"匹配中",@"交易中",@"完成",@"冻结",@"可卖出",@"去支付",@"收益中"]
 
+#define TK @"cell_title"
+#define PK @"cell_picture"
+#define BK @"cell_block"
+
 #endif /* WLNConfig_h */

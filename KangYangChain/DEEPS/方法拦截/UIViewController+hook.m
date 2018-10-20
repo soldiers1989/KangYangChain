@@ -8,17 +8,22 @@
 
 #import "UIViewController+hook.h"
 #import <objc/runtime.h>
-#import "MethodHook.h"
+#import "NSObject+Swizzle.h"
 @implementation UIViewController (hook)
 
 +(void)load{
     
- 
-    
-    [MethodHook swizzingForClass:self originalSel:@selector(viewDidLoad) swizzingSel:@selector(__viewDidLoad)];
-    
-    [MethodHook swizzingForClass:self originalSel:@selector(viewWillAppear:) swizzingSel:@selector(fr_viewWillAppear:)];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+  
+        [self swizzleMethod:@selector(viewDidLoad) swizzledSelector:@selector(__viewDidLoad)];
+        
+        [self swizzleMethod:@selector(viewWillAppear:) swizzledSelector:@selector(fr_viewWillAppear:)];
 
+    });
+                  
+    
+   
 
     
 }
@@ -52,16 +57,6 @@
 }
 
 
-//-(void)setTab:(UITableView *)tab{
-//    
-//    objc_setAssociatedObject(self, @selector(<#selector#>), box, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//
-//    
-//}
-//- (UITableView *)tab{
-//    
-//    
-//}
 
 
 

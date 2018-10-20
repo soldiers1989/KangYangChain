@@ -14,31 +14,24 @@
     NSArray *_secitonArrs;
     
 }
-@property (nonatomic, strong) UITableView *tab;
 @property (nonatomic, strong) NSMutableArray *dataArr;
 
 @end
 
 @implementation WLNHomeCtr
 
-
-- (UITableView *)tab{
-    if (_tab == nil) {
-        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
-        _tab.backgroundColor = maingray;
-
-    }
-    return _tab;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
   
     self.title = @"首页".Intl;
-
-    [self.view addSubview:self.tab];
+    
+    [self tabType:0];
+    
     self.tab.delegate = self;
     self.tab.dataSource = self;
+    
+   
     
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArr = [NSMutableArray array];

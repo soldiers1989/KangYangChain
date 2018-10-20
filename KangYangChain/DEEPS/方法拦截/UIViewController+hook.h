@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (hook) <UITableViewDelegate>
 
-//@property (nonatomic, strong) UITableView *tab;
 
 
 @end

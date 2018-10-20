@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "845C9EEB03B6700418AF92832AE07D8D"
+               BlueprintIdentifier = "D53EAE4A81DAB6A6957E3476EBD8761F"
                BlueprintName = "Bitheri"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libBitheri.a">
