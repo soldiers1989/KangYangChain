@@ -7,16 +7,15 @@
 //
 
 #import "WLNHomeCtr.h"
-#import "WLNHandle.h"
 
-@interface WLNHomeCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,Interface>
+
+@interface WLNHomeCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 {
     NSArray *_secitonArrs;
     
 }
 @property (nonatomic, strong) UITableView *tab;
 @property (nonatomic, strong) NSMutableArray *dataArr;
-@property (nonatomic, assign) id <Interface> pro;
 
 @end
 
@@ -186,10 +185,7 @@
   
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
-    return;
-    
+ 
 }
 
 @end

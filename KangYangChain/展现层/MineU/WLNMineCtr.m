@@ -200,11 +200,8 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section != 2) {
-        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
-        
-        return;
-    }
+ 
+    
     NSArray *arr = @[@[],
                      @[@"UIViewController",@"UIViewController",@"UIViewController"],
 //                     @[@"WLNMineGHBWalletCtr".instance],

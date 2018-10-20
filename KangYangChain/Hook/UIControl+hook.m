@@ -8,27 +8,24 @@
 
 #import "UIControl+hook.h"
 #import <objc/runtime.h>
-
+#import "MethodHook.h"
 @implementation UIControl (hook)
 
 +(void)load{
-    
-    Method AMethod = class_getInstanceMethod([self class], @selector(sendAction:to:forEvent:));
-    
-    
-    Method BMethod = class_getInstanceMethod([self class], @selector(fr_sendAction:to:forEvent:));
-    
-    method_exchangeImplementations(AMethod, BMethod);
+   
     
     
+    SEL originalSelector = @selector(sendAction:to:forEvent:);
+    SEL swizzingSelector = @selector(fr_sendAction:to:forEvent:);
     
-    
-    
+    [MethodHook swizzingForClass:self originalSel:originalSelector swizzingSel:swizzingSelector];
+
+ 
 }
 - (void)fr_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
     
     
-    NSLog(@"🍌🍌🍌当前点击方法 : %@-%@",self,NSStringFromSelector(action));
+    NSLog(@"🍌🍌🍌当前点击方法 : %@ - %@",target,NSStringFromSelector(action));
     
     [self fr_sendAction:action to:target forEvent:event];
     

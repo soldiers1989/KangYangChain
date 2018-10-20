@@ -65,7 +65,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+    
     
 }
 - (UITableView *)tab{

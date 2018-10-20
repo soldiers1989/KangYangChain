@@ -8,50 +8,27 @@
 
 #import "UIViewController+hook.h"
 #import <objc/runtime.h>
-
+#import "MethodHook.h"
 @implementation UIViewController (hook)
 
 +(void)load{
     
-    Method o = class_getInstanceMethod(self, @selector(viewDidLoad));
+ 
     
-    Method t = class_getInstanceMethod(self, @selector(__viewDidLoad));
+    [MethodHook swizzingForClass:self originalSel:@selector(viewDidLoad) swizzingSel:@selector(__viewDidLoad)];
     
-    method_exchangeImplementations(o, t);
-    
-    
-    Method AMethod = class_getInstanceMethod([self class], @selector(viewWillAppear:));
-    
-    
-    Method BMethod = class_getInstanceMethod([self class], @selector(fr_viewWillAppear:));
-    
-    method_exchangeImplementations(AMethod, BMethod);
-    
-    
-    
-    Method select = class_getInstanceMethod([self class], @selector(tableView:didSelectRowAtIndexPath:));
-    
-    Method selectc = class_getInstanceMethod([self class], @selector(fr_tableView:didSelectRowAtIndexPath:));
-    
-    method_exchangeImplementations(select, selectc);
+    [MethodHook swizzingForClass:self originalSel:@selector(viewWillAppear:) swizzingSel:@selector(fr_viewWillAppear:)];
+
 
     
-    
 }
-- (void)fr_tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    NSLog(@"fdsfasfsa");
-    
-}
+
 - (void)fr_viewWillAppear:(BOOL)animated{
     
     NSLog(@"🍓🍓🍓 当前控制器 : %@",NSStringFromClass([self class]));
     
     [self fr_viewWillAppear:animated];
-    
-    
-    
+
 }
 - (void)__resetNav{
     
