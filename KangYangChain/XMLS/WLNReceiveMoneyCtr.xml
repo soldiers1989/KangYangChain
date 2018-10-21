@@ -10,7 +10,7 @@
 <UIView layout="flex:1,marginTop:80" attr="bgColor:white">
 
     <UIView layout="alignItems:center" attr="">
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:向如下地址发送比特币"/>
+        <UILabel name="titleLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:向如下地址发送"/>
         <UIImageView name="img" attr="source:,bgColor:red" layout="width:100,height:100,marginTop:20"/>
 
     </UIView>
@@ -28,7 +28,7 @@
 
     </UIView>
 
-    <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:请确保向改地址发送的是比特币(BTC) 否则资产将会丢失且无法找回"/>
+    <UILabel name="bottomLab" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:请确保向改地址发送的是比特币(BTC) 否则资产将会丢失且无法找回"/>
 
 
 

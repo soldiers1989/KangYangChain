@@ -39,7 +39,39 @@
     return tempDic;
     
 }
-
+- (void)__getDataWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
+    
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = 10;
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSUTF8StringEncoding];
+    [manager.responseSerializer setAcceptableContentTypes: [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/css", nil]];
+    
+    [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (responseObject) {
+            
+            if (block) {
+                
+                block(responseObject);
+            }
+       
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        if (failureblock) {
+            failureblock(error);
+        }
+        
+        
+        
+        
+    }];
+    
+}
 - (void)__postDataWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
     
    
@@ -82,12 +114,13 @@
     
     
     
+    
 }
 - (void)getWithUrl:(NSString *)url resultBlock:(void(^)(id result))block{
     
     NSMutableDictionary *dic = [self __getParametersTransitionDic:url];
     
-    [self __postDataWithUrl:url params:dic resultBlock:^(id result) {
+    [self __getDataWithUrl:url params:dic resultBlock:^(id result) {
         
         if (block) {
             block(result);

@@ -49,35 +49,35 @@
 
 - (void)log:(NSMutableDictionary *)dic{
     
-    [self requestWith:Logurl dic:dic sel:@selector(log:)];
+    [self requestWith:Logurl dic:dic sel:_cmd];
     
 }
 - (void)registers:(NSMutableDictionary *)dic{
     
-    [self requestWith:Register dic:dic sel:@selector(registers:)];
+    [self requestWith:Register dic:dic sel:_cmd];
     
 }
 - (void)getCode:(NSMutableDictionary *)dic{
     
-    [self requestWith:Getcode dic:dic sel:@selector(getCode:)];
+    [self requestWith:Getcode dic:dic sel:_cmd];
     
 }
 - (void)fafdasfdasfds:(NSMutableDictionary *)dic{
     
     
-    [self requestWith:fdsfdsf dic:dic sel:@selector(fafdasfdasfds:)];
+    [self requestWith:fdsfdsf dic:dic sel:_cmd];
     
 }
 - (void)forGet:(NSMutableDictionary *)dic{
     
-    [self requestWith:ForGet dic:dic sel:@selector(forGet:)];
+    [self requestWith:ForGet dic:dic sel:_cmd];
     
 }
 
 - (void)logout:(NSMutableDictionary *)dic{
     
     
-    [self requestWith:OutLog dic:dic sel:@selector(logout:)];
+    [self requestWith:OutLog dic:dic sel:_cmd];
     
 }
 @end

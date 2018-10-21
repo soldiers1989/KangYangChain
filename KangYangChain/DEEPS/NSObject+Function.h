@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, TAB_FRAME_TYPE) {
     
     CUT_TOPDOWN = 0,
-    CUT_TOP,         /*字典*/
+    CUT_TOP,         
     CUT_DOWN,
     
 };
@@ -25,7 +25,6 @@ typedef NS_ENUM(NSInteger, TAB_FRAME_TYPE) {
  */
 @property (nonatomic, strong) UITableView *tab;
 
-- (void)tabType:(TAB_FRAME_TYPE)type;
 
 /**
  方法
@@ -35,6 +34,7 @@ typedef NS_ENUM(NSInteger, TAB_FRAME_TYPE) {
 
 - (void)push:(UIViewController *)vc;
 
+- (void)tabType:(TAB_FRAME_TYPE)type;
 
 @end
 

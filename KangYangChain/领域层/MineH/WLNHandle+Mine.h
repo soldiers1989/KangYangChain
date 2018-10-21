@@ -26,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)payGHB:(NSMutableDictionary *)dic;
 
-
 /**
  锁仓
  */

@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol WLNModelProtocol <NSObject>
+
 - (id)initWithDictionary:(NSDictionary*)dic;
 
 @end

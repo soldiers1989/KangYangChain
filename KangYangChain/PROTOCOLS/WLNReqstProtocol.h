@@ -15,6 +15,8 @@
 
 - (void)faild:(id)data sel:(NSString *)sel;
 
+- (void)fist:(id)data sel:(NSString *)sel;
+
 @end
 
 #endif /* WLNReqstProtocol_h */

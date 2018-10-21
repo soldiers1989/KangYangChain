@@ -30,15 +30,19 @@
     
     
     
-    [self routeTargetName:@"WLNHandle" actionName:@"orderSearch:" param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:@"WLNHandle" actionName:@"getOrder:" param:@{DELEGATES:self}.mutableCopy];
     
+    [SVProgressHUD show];
 }
 
 - (void)result:(id)data sel:(NSString *)sel{
     
     self.dataArrs = (NSMutableArray *)data;
+    
     [self.tab reloadData];
     
+    [SVProgressHUD dismiss];
+
     
 }
 - (void)faild:(id)data sel:(NSString *)sel{

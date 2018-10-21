@@ -48,5 +48,7 @@
 #import "WLNQRCode.h"
 #import "WMYActionSheet.h"
 #import "DAConfig.h"
+#import "HYAlertView.h"
+
 
 #endif

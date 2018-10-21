@@ -64,6 +64,7 @@
 		231A5DD9217BAEAA00EBD745 /* NSDictionary+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD5217BAEAA00EBD745 /* NSDictionary+SafeException.m */; };
 		231A5DDC217BAEBA00EBD745 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DDA217BAEB900EBD745 /* NSObject+Swizzle.m */; };
 		231A5DDE217BAED900EBD745 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DDD217BAED900EBD745 /* NullSafe.m */; };
+		231A5DE5217D262200EBD745 /* HYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DE4217D262200EBD745 /* HYAlertView.m */; };
 		231A96E421712D8C0063587B /* WLNDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E321712D8C0063587B /* WLNDataBase.m */; };
 		231A96E721712FFD0063587B /* WLNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E621712FFD0063587B /* WLNData.m */; };
 		231A96EA2171303D0063587B /* WLNDataNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E92171303D0063587B /* WLNDataNet.m */; };
@@ -361,6 +362,8 @@
 		231A5DDA217BAEB900EBD745 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
 		231A5DDB217BAEBA00EBD745 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
 		231A5DDD217BAED900EBD745 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
+		231A5DE3217D262200EBD745 /* HYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlertView.h; sourceTree = "<group>"; };
+		231A5DE4217D262200EBD745 /* HYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlertView.m; sourceTree = "<group>"; };
 		231A96E221712D8C0063587B /* WLNDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNDataBase.h; sourceTree = "<group>"; };
 		231A96E321712D8C0063587B /* WLNDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNDataBase.m; sourceTree = "<group>"; };
 		231A96E521712FFD0063587B /* WLNData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNData.h; sourceTree = "<group>"; };
@@ -1011,9 +1014,19 @@
 			path = "底部提示框";
 			sourceTree = "<group>";
 		};
+		231A5DE2217D261F00EBD745 /* 提示框 */ = {
+			isa = PBXGroup;
+			children = (
+				231A5DE3217D262200EBD745 /* HYAlertView.h */,
+				231A5DE4217D262200EBD745 /* HYAlertView.m */,
+			);
+			path = "提示框";
+			sourceTree = "<group>";
+		};
 		231A96EB217131230063587B /* CONTROLS */ = {
 			isa = PBXGroup;
 			children = (
+				231A5DE2217D261F00EBD745 /* 提示框 */,
 				231A5DCC217BA92B00EBD745 /* 二维码 */,
 				235484722160C76200BCE879 /* 国际化 */,
 				231A5DCD217BA92B00EBD745 /* 底部提示框 */,
@@ -1820,6 +1833,7 @@
 				23D17B3821742C7F0004D877 /* WLNChangeCtr.m in Sources */,
 				23C828B22171C9FD0086C253 /* WMYActionSheet.m in Sources */,
 				23118A6C216DED7A0014FB7E /* WLNShopSectionHeadView.m in Sources */,
+				231A5DE5217D262200EBD745 /* HYAlertView.m in Sources */,
 				23D17B3D21742C7F0004D877 /* WLNOrderCtr.m in Sources */,
 				237BA3C1217076A000C71283 /* WLNMineExtensionInfoCell.m in Sources */,
 				236346F92162D85D00CFF257 /* WLNHomeHotCell.m in Sources */,

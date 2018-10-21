@@ -27,5 +27,10 @@
         
     }
 }
-
+- (void)setCurrentType:(NSString *)currentType{
+    
+    self.bizhongChoseLab.text = currentType;
+    self.bizhongTypeLab.text = currentType;
+    
+}
 @end
