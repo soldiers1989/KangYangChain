@@ -27,12 +27,19 @@ typedef NS_ENUM(NSInteger, HSWalletError) {
     HSWalletImportPrivateKeySuc = 11,       //私钥导入成功
     
     HSWalletErrorNotGasPrice = 12,//获取GasPrice失败
-    HSWalletErrorMoneyMin = 13,//转账金额太小
-    HSWalletErrorNSOrderedDescending = 14, //余额不足
+    HSWalletErrorNotNonce = 18,//获取Nonce失败
+    HSWalletErrorMoneyMin = 13,//转账金额太小 取消使用
+    HSWalletErrorNSOrderedDescending = 14, //余额不足 取消使用
+    HSWalletErrorPWD = 15, //密码错误
+    HSWalletErrorSend = 16, //转账失败
+    
+    HSWalletSucSend = 17, //转账成功
 
 };
 
 @interface HSEther : NSObject
+
+// https://github.com/wolfhous/HSEther
 
 /**
  创建钱包
@@ -81,18 +88,28 @@ typedef NS_ENUM(NSInteger, HSWalletError) {
 /**
  查询余额
 
- @param arrayToken <#arrayToken description#>
- @param address <#address description#>
- @param block <#block description#>
+ @param arrayToken 查询的代币所有token
+ @param address eth地址
+ @param block 回调
  */
 +(void)hs_getBalanceWithTokens:(NSArray<NSString *> *)arrayToken
                    withAddress:(NSString *)address
                          block:(void(^)(NSArray *arrayBanlance,BOOL suc))block;
 
+/**
+ 转账
 
-
-
-+(void)hs_sendToAssress:(NSString *)toAddress money:(NSString *)money symbolETH:(BOOL )symbolETH decimal:(NSString *)decimal currentKeyStore:(NSString *)keyStore pwd:(NSString *)pwd block:(void(^)(NSString *hashStr,BOOL suc,HSWalletError error))block;
+ @param toAddress 转入地址
+ @param money 转入金额
+ @param tokenETH 代币token 传nil默认为eth
+ @param decimal 小数位数
+ @param keyStore keyStore
+ @param pwd 密码
+ @param gasPrice gasPrice （建议10-20）建议传nil，默认位当前节点安全gasPrice
+ @param gasLimit gasLimit 不传 默认eth 21000 token 60000
+ @param block 回调
+ */
++(void)hs_sendToAssress:(NSString *)toAddress money:(NSString *)money tokenETH:(NSString *)tokenETH decimal:(NSString *)decimal currentKeyStore:(NSString *)keyStore pwd:(NSString *)pwd gasPrice:(NSString *)gasPrice gasLimit:(NSString *)gasLimit block:(void(^)(NSString *hashStr,BOOL suc,HSWalletError error))block;
 
 
 

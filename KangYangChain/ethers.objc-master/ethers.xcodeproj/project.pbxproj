@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B9EC7F217E85680097D89D /* ccMemory_eth.h in Headers */ = {isa = PBXBuildFile; fileRef = 23B9EC7E217E85680097D89D /* ccMemory_eth.h */; };
 		5840C46120104DE1005331FA /* Erc20Token.h in Headers */ = {isa = PBXBuildFile; fileRef = 5840C45F20104DE1005331FA /* Erc20Token.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5840C46220104DE1005331FA /* Erc20Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 5840C46020104DE1005331FA /* Erc20Token.m */; };
 		5877596820132C4600F4B9F2 /* MTCProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5877596620132C4600F4B9F2 /* MTCProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -129,7 +130,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23B9EC7C217E82EE0097D89D /* ccMemory_eth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccMemory_eth.h; sourceTree = "<group>"; };
+		23B9EC7E217E85680097D89D /* ccMemory_eth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ccMemory_eth.h; path = ThirdParty/BreadWallet/ccMemory_eth.h; sourceTree = "<group>"; };
 		5840C45F20104DE1005331FA /* Erc20Token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Erc20Token.h; path = src/Erc20Token.h; sourceTree = "<group>"; };
 		5840C46020104DE1005331FA /* Erc20Token.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Erc20Token.m; path = src/Erc20Token.m; sourceTree = "<group>"; };
 		5877596620132C4600F4B9F2 /* MTCProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTCProvider.h; path = src/Providers/ApiProviders/MTCProvider.h; sourceTree = "<group>"; };
@@ -403,7 +404,7 @@
 		E2317EE31E31990200DBE3E4 /* breadwallet */ = {
 			isa = PBXGroup;
 			children = (
-				23B9EC7C217E82EE0097D89D /* ccMemory_eth.h */,
+				23B9EC7E217E85680097D89D /* ccMemory_eth.h */,
 			);
 			name = breadwallet;
 			sourceTree = "<group>";
@@ -538,6 +539,7 @@
 				E2317F1B1E31994500DBE3E4 /* aesopt.h in Headers */,
 				E2317F1E1E31994500DBE3E4 /* base58.h in Headers */,
 				E2317EC81E31987F00DBE3E4 /* LightClientProvider.h in Headers */,
+				23B9EC7F217E85680097D89D /* ccMemory_eth.h in Headers */,
 				E2317F251E31994500DBE3E4 /* hmac.h in Headers */,
 				E2317F381E31999E00DBE3E4 /* tommath_superclass.h in Headers */,
 				E2317F101E31994500DBE3E4 /* bip39.h in Headers */,
@@ -858,7 +860,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.o2o.ethers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7s";
+				VALID_ARCHS = "arm64 armv7s armv7";
 			};
 			name = Debug;
 		};
@@ -881,7 +883,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.o2o.ethers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7s";
+				VALID_ARCHS = "arm64 armv7s armv7";
 			};
 			name = Release;
 		};

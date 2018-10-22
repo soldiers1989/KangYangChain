@@ -184,7 +184,7 @@ static NSDateFormatter *TimeFormatter = nil;
     
     HDNode node;
     hdnode_from_seed([seed bytes], (int)[seed length], SECP256K1_NAME, &node);
-    
+    //助记词加密方式这里参考
     hdnode_private_ckd(&node, (0x80000000 | (44)));   // 44' - BIP 44 (purpose field)
     hdnode_private_ckd(&node, (0x80000000 | (60)));   // 60' - Ethereum (see SLIP 44)
     hdnode_private_ckd(&node, (0x80000000 | (0)));    // 0'  - Account 0
