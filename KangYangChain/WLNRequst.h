@@ -44,3 +44,11 @@
 #define YaoqingList @BaseUrl"/index/userqrcode/list"
 
 #define OutLog @BaseUrl"/index/login/logout"
+
+#define UpdateTicker @"http://bs.getcai.com/api/v1/exchange/ticker"
+
+
+
+
+
+

@@ -9,8 +9,6 @@
 #ifndef WLNPrefix_pch
 #define WLNPrefix_pch
 
-#import <UIKit/UIKit.h>
-
 #import "WLNClass.h"
 #import "WLNRequst.h"
 #import "WLNConfig.h"

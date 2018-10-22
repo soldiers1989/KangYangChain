@@ -7,6 +7,7 @@ pod 'AFNetworking', '~> 3.2.1'
 pod 'FlexLib'
 pod 'WechatOpenSDK'
 pod 'SVProgressHUD', '~> 2.2.5'
+pod 'Aspects', '~> 1.4.1'
 pod 'OpenSSL', :git => 'https://github.com/bither/OpenSSL.git'
 pod 'Bitheri', :git => 'https://github.com/bither/bitheri.git', :branch => 'develop'
 

@@ -8,115 +8,54 @@
 
 #import "WLNMineCtr.h"
 
+typedef void (^CellBlock)(void);
+
 @interface WLNMineCtr ()<UITableViewDataSource, UITableViewDelegate ,WMYActionSheetDelegate,WLNReqstProtocol>
 {
-    NSArray *_titleArr;
-    NSArray *_imgArr;
+ 
     WMYActionSheet *_headSheet;
     WMYActionSheet *_outLogSheet;
     
 }
-@property (nonatomic, strong) UITableView *tab;
+@property (nonatomic, nullable, strong) NSArray *t_p_a_Arr; //title picture action
 
 @end
 
 @implementation WLNMineCtr
-/**
- 退出登录
- */
-- (void)outAction{
-    
-    
-    
-    _outLogSheet = [[WMYActionSheet alloc]initWithTitle:@"" delegate:self cancelButtonTitle:@"取消".Intl destructiveButtonTitle:nil otherButtonTitles:@"退出登录".Intl, nil];
 
-    [_outLogSheet show];
-
-}
-/**
- 前往子页面
- */
-- (void)chooseHead{
-    
-    _headSheet = [[WMYActionSheet alloc]initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"从相册选择", nil];
-    
-    [_headSheet show];
-    
-}
-- (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
-    if (buttonIndex == 0) {
-        return;
-    }
-    if (actionSheet == _headSheet) {
+- (NSArray *)t_p_a_Arr{
+    if (!_t_p_a_Arr) {
+        _t_p_a_Arr = @[
+  @[@{}],
+  @[@{TK:@"法币账户".Intl,PK:@"account",BK:^{[self push:@"UIViewController".instance];}},
+  @{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"UIViewController".instance];}},
+  @{TK:@"合约账户".Intl,PK:@"contract",BK:^{[self push:@"UIViewController".instance];}}],
+  
+  @[@{TK:@"扫码推广".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
+  @{TK:@"互助推广".Intl,PK:@"fenxiang",BK:^{[self push:@"WLNMineExtensionCtr".instance];}}],
+  
+  @[@{TK:@"身份认证".Intl,PK:@"identity",BK:^{[self push:@"WLNMineIDCertifiedCtr".instance];}},
+  @{TK:@"账户安全".Intl,PK:@"suotou",BK:^{[self push:@"WLNMineSecurityCtr".instance];}},
+  @{TK:@"支付设置".Intl,PK:@"pay",BK:^{[self push:@"WLNMinePaySetCtr".instance];}},
+  @{TK:@"手续费等级".Intl,PK:@"charge",BK:^{[self push:@"WLNMineChargeCtr".instance];}}]];
         
+    }
  
-        
-    }else if (actionSheet == _outLogSheet){
-        
-        
-        
-        [self routeTargetName:@"WLNHandle" actionName:@"logout:" param:@{DELEGATES:self}.mutableCopy];
-        
- 
-        
-        
-    }
+    return _t_p_a_Arr;
     
 }
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
-}
-- (void)result:(id)data sel:(NSString *)sel{
-    
-    [self outLog];
 
-    
-}
-- (void)outLog{
-    NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
-    
-    [de removeObjectForKey:@"log"];
-    
-    WLNMainTabBarCtr *tabbar = (WLNMainTabBarCtr *)self.tabBarController;
-    
-    [tabbar isLog:NO];
-    
-    [SVProgressHUD showSuccessWithStatus:@"退出成功"];
-}
-- (void)faild:(id)data sel:(NSString *)sel{
-    
-    
-    [self outLog];
-    
-}
-- (void)gotoNextWith:(NSInteger)tag{
-    
-    if (tag == 7) {
-        
-        [self chooseHead];
-        
-        return;
-    }
-    
-    NSArray *arr = @[@"WLNWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"".instance,@"".instance,@"".instance,@"WLNMineEditCtr".instance];
-    
-    [self.navigationController pushViewController:arr[tag] animated:YES];
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的".Intl;
     //,@[@"GHB钱包".Intl]
-    _titleArr =  @[@[@""],@[@"法币账户".Intl,@"币币账户".Intl,@"合约账户".Intl],@[@"扫码推广".Intl,@"互助推广".Intl],@[@"身份认证".Intl,@"账户安全".Intl,@"支付设置".Intl,@"手续费等级".Intl]];
+  
+    [self tabType:0];
     
-    //,@[@"money"]
-    _imgArr = @[@[@""],@[@"account",@"account",@"contract"],@[@"tuiguang",@"fenxiang"],@[@"identity",@"suotou",@"pay",@"charge"]];
-    
-    [self.view addSubview:self.tab];
     self.tab.delegate = self;
     self.tab.dataSource = self;
+    
     [self.tab registerClass:WLNMineSimpleCell.class forCellReuseIdentifier:@"WLNMineSimpleCell"];
     [self.tab registerClass:WLNMineHeadCell.class forCellReuseIdentifier:@"WLNMineHeadCell"];
     
@@ -139,13 +78,22 @@
     self.tab.tableFooterView = outView;
 
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"  ";
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    [self outLog];
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+    [self outLog];
 }
 
 #pragma mark - UITableView dataSource & delegate
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"  ";
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView fr_willDisplayCell:cell forRowAtIndexPath:indexPath];
     
@@ -153,22 +101,20 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return section == 0 ? 0.1 : 10;
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return [_titleArr[section] count];
+    return [self.t_p_a_Arr[section] count];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return _titleArr.count;
+    return self.t_p_a_Arr.count;
 }
-- (UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (indexPath.section == 0) {
         return [self head_tableView:tableView cellForRowAtIndexPath:indexPath];
     }
     return [self simple_tableView:tableView cellForRowAtIndexPath:indexPath];
-    
-  
+
 }
  
 - (UITableViewCell *)head_tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -180,8 +126,7 @@
     
     [cell setDidClick:^(NSInteger tag){
         
-        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
-//        [weakself gotoNextWith:tag];
+        [weakself gotoNextWith:tag];
 
     }];
     return cell;
@@ -193,39 +138,85 @@
     WLNMineSimpleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineSimpleCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-    cell.img.image = [UIImage imageNamed:_imgArr[indexPath.section][indexPath.row]];
+    cell.img.image = [UIImage imageNamed:self.t_p_a_Arr[indexPath.section][indexPath.row][PK]];
     
-    cell.lab.text = _titleArr[indexPath.section][indexPath.row];
+    cell.lab.text = self.t_p_a_Arr[indexPath.section][indexPath.row][TK];
     
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section != 2) {
-        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+ 
+    CellBlock block = self.t_p_a_Arr[indexPath.section][indexPath.row][BK];
+    if (block) {
+        block();
+    }
+}
+#pragma mark - 自定义方法
+
+- (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex == 0) {
+        return;
+    }
+    if (actionSheet == _headSheet) {
+        
+        
+        
+    }else if (actionSheet == _outLogSheet){
+        
+        [self routeTargetName:@"WLNHandle" actionName:@"logout:" param:@{DELEGATES:self}.mutableCopy];
+        
+        
+    }
+    
+}
+- (void)gotoNextWith:(NSInteger)tag{
+    
+    if (tag == 7) {
+        
+        [self chooseHead];
         
         return;
     }
-    NSArray *arr = @[@[],
-                     @[@"UIViewController",@"UIViewController",@"UIViewController"],
-//                     @[@"WLNMineGHBWalletCtr".instance],
-
-                     @[@"WLNMineScavengingCtr".instance,@"WLNMineExtensionCtr".instance],
-                  @[@"WLNMineIDCertifiedCtr".instance,@"WLNMineSecurityCtr".instance,@"WLNMinePaySetCtr".instance,@"WLNMineChargeCtr".instance]];
     
-    [self.navigationController pushViewController:arr[indexPath.section][indexPath.row] animated:YES];
+    NSArray *arr = @[@"WLNWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"".instance,@"".instance,@"".instance,@"WLNMineEditCtr".instance];
     
+    [self.navigationController pushViewController:arr[tag] animated:YES];
     
 }
-
-- (UITableView *)tab{
-    if (_tab == nil) {
-        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
-        _tab.backgroundColor = maingray;
-        
-    }
-    return _tab;
+/**
+ 退出登录
+ */
+- (void)outAction{
+    
+    
+    
+    _outLogSheet = [[WMYActionSheet alloc]initWithTitle:@"" delegate:self cancelButtonTitle:@"取消".Intl destructiveButtonTitle:nil otherButtonTitles:@"退出登录".Intl, nil];
+    
+    [_outLogSheet show];
+    
 }
-
-
+/**
+ 前往子页面
+ */
+- (void)chooseHead{
+    
+    _headSheet = [[WMYActionSheet alloc]initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"从相册选择", nil];
+    
+    [_headSheet show];
+    
+}
+- (void)outLog{
+    
+    NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
+    
+    [de removeObjectForKey:@"log"];
+    
+    WLNMainTabBarCtr *tabbar = (WLNMainTabBarCtr *)self.tabBarController;
+    
+    [tabbar isLog:NO];
+    
+    [SVProgressHUD showSuccessWithStatus:@"退出成功"];
+}
 
 @end

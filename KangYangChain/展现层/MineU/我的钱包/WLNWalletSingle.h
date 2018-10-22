@@ -20,12 +20,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSNumber *balance; //余额
 
+@property (nonatomic, strong) NSNumber * rmb;
+
 @property (nonatomic, strong) NSString *n_tx;
 
 @property (nonatomic ,strong) NSString *total_received;
 
+@property (nonatomic, strong) NSString *currentType;
+
 
 @property (nonatomic, assign) double changeBalance; //换算后余额
+
 
 @property (nonatomic, strong) NSMutableDictionary *dic;
 

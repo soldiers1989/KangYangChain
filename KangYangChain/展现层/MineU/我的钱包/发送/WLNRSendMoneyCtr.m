@@ -10,9 +10,12 @@
 
 @interface WLNRSendMoneyCtr ()<WMYActionSheetDelegate,WLNReqstProtocol>
 
-@property (nonatomic,strong) UITableView *tab;
 @property (nonatomic, strong) UITextField *addressTxt;
 @property (nonatomic, strong) UITextField *numTxt;
+
+@property (nonatomic, strong) UILabel *typeLab;
+@property (nonatomic, strong) UILabel *bottomLab;
+
 
 
 @end
@@ -26,6 +29,9 @@
     
     self.addressTxt.text = @"1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY";
     
+    self.typeLab.text = [WLNWalletSingle shared].currentType;
+    
+    self.bottomLab.text = [NSString stringWithFormat:@"请确保正在发送的是一个 %@ 地址 否则字长丢失且无法找回",[WLNWalletSingle shared].currentType];
     
     [self.addressTxt letPadding:10];
     [self.numTxt letPadding:10];
@@ -80,6 +86,11 @@
 
 }
 - (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex == 0) {
+        return;
+    }
+    
     
     
     

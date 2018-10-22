@@ -15,7 +15,6 @@
 		003754462178624D0025CD1D /* WLNOrderCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 003754452178624D0025CD1D /* WLNOrderCell.xml */; };
 		003CB8F82179C096001DDA03 /* UIViewController+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8F72179C096001DDA03 /* UIViewController+hook.m */; };
 		003CB8FB2179C0DE001DDA03 /* UIControl+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */; };
-		003CB8FE2179C429001DDA03 /* UITableView+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8FD2179C429001DDA03 /* UITableView+hook.m */; };
 		003CB9002179D185001DDA03 /* Default-Port-hd55.png in Resources */ = {isa = PBXBuildFile; fileRef = 003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */; };
 		0089FB4D2175C0F4002C3465 /* WLNMineFormDetailCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0089FB4C2175C0F4002C3465 /* WLNMineFormDetailCtr.xml */; };
 		0089FB502175C151002C3465 /* WLNMineFormTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0089FB4F2175C151002C3465 /* WLNMineFormTopCell.m */; };
@@ -58,6 +57,14 @@
 		23118A69216DE7FB0014FB7E /* Snip20181010_30.png in Resources */ = {isa = PBXBuildFile; fileRef = 23118A68216DE7FB0014FB7E /* Snip20181010_30.png */; };
 		23118A6C216DED7A0014FB7E /* WLNShopSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23118A6B216DED7A0014FB7E /* WLNShopSectionHeadView.m */; };
 		23185FB1216E053C00ECD952 /* WLNMineGForumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23185FB0216E053C00ECD952 /* WLNMineGForumCell.m */; };
+		231A5DC4217BA7BF00EBD745 /* WLNUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DC3217BA7BF00EBD745 /* WLNUserDefaults.m */; };
+		231A5DD6217BAEAA00EBD745 /* NSArray+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD0217BAEA900EBD745 /* NSArray+SafeException.m */; };
+		231A5DD7217BAEAA00EBD745 /* NSMutableArray+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD2217BAEA900EBD745 /* NSMutableArray+SafeException.m */; };
+		231A5DD8217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD3217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m */; };
+		231A5DD9217BAEAA00EBD745 /* NSDictionary+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD5217BAEAA00EBD745 /* NSDictionary+SafeException.m */; };
+		231A5DDC217BAEBA00EBD745 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DDA217BAEB900EBD745 /* NSObject+Swizzle.m */; };
+		231A5DDE217BAED900EBD745 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DDD217BAED900EBD745 /* NullSafe.m */; };
+		231A5DE5217D262200EBD745 /* HYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DE4217D262200EBD745 /* HYAlertView.m */; };
 		231A96E421712D8C0063587B /* WLNDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E321712D8C0063587B /* WLNDataBase.m */; };
 		231A96E721712FFD0063587B /* WLNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E621712FFD0063587B /* WLNData.m */; };
 		231A96EA2171303D0063587B /* WLNDataNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E92171303D0063587B /* WLNDataNet.m */; };
@@ -110,6 +117,11 @@
 		236347092162F21300CFF257 /* WLNHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 236347082162F21300CFF257 /* WLNHomeHeadView.m */; };
 		236347122163873200CFF257 /* Snip20181002_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2363470B2163873200CFF257 /* Snip20181002_2.png */; };
 		236347142163873200CFF257 /* Snip20181002_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2363470D2163873200CFF257 /* Snip20181002_1.png */; };
+		23693CD7217AB8D30001A43A /* UITableView+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 23693CD6217AB8D30001A43A /* UITableView+hook.m */; };
+		23693CE3217ACC180001A43A /* UIGestureRecognizer+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 23693CE2217ACC180001A43A /* UIGestureRecognizer+hook.m */; };
+		23693CEA217ADDC00001A43A /* NSArray+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 23693CE5217ADDBF0001A43A /* NSArray+HYBUnicodeReadable.m */; };
+		23693CEB217ADDC00001A43A /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 23693CE8217ADDC00001A43A /* NSDictionary+HYBUnicodeReadable.m */; };
+		23693CEC217ADDC00001A43A /* NSSet+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 23693CE9217ADDC00001A43A /* NSSet+HYBUnicodeReadable.m */; };
 		237BA3B62170730A00C71283 /* WLNMineExtensionCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 237BA3B52170730A00C71283 /* WLNMineExtensionCtr.m */; };
 		237BA3C1217076A000C71283 /* WLNMineExtensionInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237BA3C0217076A000C71283 /* WLNMineExtensionInfoCell.m */; };
 		237BA3C6217079AF00C71283 /* WLNMineExtensionInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 237BA3C5217079AF00C71283 /* WLNMineExtensionInfoView.m */; };
@@ -261,8 +273,6 @@
 		003CB8F72179C096001DDA03 /* UIViewController+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+hook.m"; sourceTree = "<group>"; };
 		003CB8F92179C0DE001DDA03 /* UIControl+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+hook.h"; sourceTree = "<group>"; };
 		003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+hook.m"; sourceTree = "<group>"; };
-		003CB8FC2179C429001DDA03 /* UITableView+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+hook.h"; sourceTree = "<group>"; };
-		003CB8FD2179C429001DDA03 /* UITableView+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+hook.m"; sourceTree = "<group>"; };
 		003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Port-hd55.png"; sourceTree = "<group>"; };
 		0089FB4C2175C0F4002C3465 /* WLNMineFormDetailCtr.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNMineFormDetailCtr.xml; sourceTree = "<group>"; };
 		0089FB4E2175C151002C3465 /* WLNMineFormTopCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineFormTopCell.h; sourceTree = "<group>"; };
@@ -339,6 +349,21 @@
 		23118A6B216DED7A0014FB7E /* WLNShopSectionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNShopSectionHeadView.m; sourceTree = "<group>"; };
 		23185FAF216E053C00ECD952 /* WLNMineGForumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineGForumCell.h; sourceTree = "<group>"; };
 		23185FB0216E053C00ECD952 /* WLNMineGForumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineGForumCell.m; sourceTree = "<group>"; };
+		231A5DC2217BA7BF00EBD745 /* WLNUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNUserDefaults.h; sourceTree = "<group>"; };
+		231A5DC3217BA7BF00EBD745 /* WLNUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNUserDefaults.m; sourceTree = "<group>"; };
+		231A5DCE217BAEA800EBD745 /* NSMutableArray+SafeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeException.h"; sourceTree = "<group>"; };
+		231A5DCF217BAEA800EBD745 /* NSArray+SafeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeException.h"; sourceTree = "<group>"; };
+		231A5DD0217BAEA900EBD745 /* NSArray+SafeException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeException.m"; sourceTree = "<group>"; };
+		231A5DD1217BAEA900EBD745 /* NSMutableDictionary+SafeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SafeException.h"; sourceTree = "<group>"; };
+		231A5DD2217BAEA900EBD745 /* NSMutableArray+SafeException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeException.m"; sourceTree = "<group>"; };
+		231A5DD3217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SafeException.m"; sourceTree = "<group>"; };
+		231A5DD4217BAEAA00EBD745 /* NSDictionary+SafeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeException.h"; sourceTree = "<group>"; };
+		231A5DD5217BAEAA00EBD745 /* NSDictionary+SafeException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeException.m"; sourceTree = "<group>"; };
+		231A5DDA217BAEB900EBD745 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		231A5DDB217BAEBA00EBD745 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		231A5DDD217BAED900EBD745 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
+		231A5DE3217D262200EBD745 /* HYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlertView.h; sourceTree = "<group>"; };
+		231A5DE4217D262200EBD745 /* HYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlertView.m; sourceTree = "<group>"; };
 		231A96E221712D8C0063587B /* WLNDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNDataBase.h; sourceTree = "<group>"; };
 		231A96E321712D8C0063587B /* WLNDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNDataBase.m; sourceTree = "<group>"; };
 		231A96E521712FFD0063587B /* WLNData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNData.h; sourceTree = "<group>"; };
@@ -444,6 +469,16 @@
 		236347082162F21300CFF257 /* WLNHomeHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNHomeHeadView.m; sourceTree = "<group>"; };
 		2363470B2163873200CFF257 /* Snip20181002_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181002_2.png; sourceTree = "<group>"; };
 		2363470D2163873200CFF257 /* Snip20181002_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181002_1.png; sourceTree = "<group>"; };
+		23693CD5217AB8D30001A43A /* UITableView+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+hook.h"; sourceTree = "<group>"; };
+		23693CD6217AB8D30001A43A /* UITableView+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+hook.m"; sourceTree = "<group>"; };
+		23693CE1217ACC180001A43A /* UIGestureRecognizer+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+hook.h"; sourceTree = "<group>"; };
+		23693CE2217ACC180001A43A /* UIGestureRecognizer+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+hook.m"; sourceTree = "<group>"; };
+		23693CE4217ADDBE0001A43A /* NSDictionary+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		23693CE5217ADDBF0001A43A /* NSArray+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		23693CE6217ADDBF0001A43A /* NSArray+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		23693CE7217ADDBF0001A43A /* NSSet+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		23693CE8217ADDC00001A43A /* NSDictionary+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		23693CE9217ADDC00001A43A /* NSSet+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
 		237BA3B42170730A00C71283 /* WLNMineExtensionCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineExtensionCtr.h; sourceTree = "<group>"; };
 		237BA3B52170730A00C71283 /* WLNMineExtensionCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineExtensionCtr.m; sourceTree = "<group>"; };
 		237BA3BF217076A000C71283 /* WLNMineExtensionInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineExtensionInfoCell.h; sourceTree = "<group>"; };
@@ -622,16 +657,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0089FB5D2175E1C9002C3465 /* Protocol */ = {
+		0089FB5D2175E1C9002C3465 /* PROTOCOLS */ = {
 			isa = PBXGroup;
 			children = (
 				238F5575216A301900A9EB7F /* WLNReqstProtocol.h */,
 				00B76B0F2178909A00802011 /* WLNModelProtocol.h */,
 				0089FB5E2175E21B002C3465 /* WLNPassValueProtocol.h */,
-				234B6EB921791E8C000B69AB /* WLNURLProtocol.h */,
-				234B6EBA21791E8C000B69AB /* WLNURLProtocol.m */,
 			);
-			path = Protocol;
+			path = PROTOCOLS;
 			sourceTree = "<group>";
 		};
 		0089FB5F2175EA23002C3465 /* GHB钱包 */ = {
@@ -667,7 +700,7 @@
 			path = "充值";
 			sourceTree = "<group>";
 		};
-		00DE427821759438005DDEE0 /* Model */ = {
+		00DE427821759438005DDEE0 /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
 				00DE427921759447005DDEE0 /* User.h */,
@@ -675,7 +708,7 @@
 				0089FB5A2175CF45002C3465 /* Order.h */,
 				0089FB5B2175CF45002C3465 /* Order.m */,
 			);
-			path = Model;
+			path = MODELS;
 			sourceTree = "<group>";
 		};
 		2309F8A1215D316200F156E8 = {
@@ -703,13 +736,12 @@
 		2309F8AC215D316200F156E8 /* KangYangChain */ = {
 			isa = PBXGroup;
 			children = (
-				235484722160C76200BCE879 /* LanguageTool */,
-				0089FB5D2175E1C9002C3465 /* Protocol */,
-				234B6EC221792DBA000B69AB /* Hook */,
-				00DE427821759438005DDEE0 /* Model */,
 				231A96F0217137660063587B /* (必须分发) */,
-				231A96EB217131230063587B /* (可分发) */,
-				237E1B82215E9D08002BC6F0 /* XML */,
+				234B6EC221792DBA000B69AB /* DEEPS */,
+				00DE427821759438005DDEE0 /* MODELS */,
+				231A96EB217131230063587B /* CONTROLS */,
+				0089FB5D2175E1C9002C3465 /* PROTOCOLS */,
+				237E1B82215E9D08002BC6F0 /* XMLS */,
 				2309F904215D3F4E00F156E8 /* 展现层 */,
 				2309F902215D3F4E00F156E8 /* 领域层 */,
 				2309F903215D3F4E00F156E8 /* 数据层 */,
@@ -791,6 +823,8 @@
 				231A96E92171303D0063587B /* WLNDataNet.m */,
 				00A5EBE921770A8500FED04D /* WLNKeyChain.h */,
 				00A5EBEA21770A8500FED04D /* WLNKeyChain.m */,
+				231A5DC2217BA7BF00EBD745 /* WLNUserDefaults.h */,
+				231A5DC3217BA7BF00EBD745 /* WLNUserDefaults.m */,
 				231A96E221712D8C0063587B /* WLNDataBase.h */,
 				231A96E321712D8C0063587B /* WLNDataBase.m */,
 			);
@@ -907,15 +941,97 @@
 			path = MineU;
 			sourceTree = "<group>";
 		};
-		231A96EB217131230063587B /* (可分发) */ = {
+		231A5DBF217BA1A700EBD745 /* 方法拦截 */ = {
+			isa = PBXGroup;
+			children = (
+				00272E742179715000A5EBD4 /* Click.h */,
+				00272E752179715000A5EBD4 /* Click.m */,
+				003CB8F92179C0DE001DDA03 /* UIControl+hook.h */,
+				003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */,
+				23693CD5217AB8D30001A43A /* UITableView+hook.h */,
+				23693CD6217AB8D30001A43A /* UITableView+hook.m */,
+				003CB8F62179C096001DDA03 /* UIViewController+hook.h */,
+				003CB8F72179C096001DDA03 /* UIViewController+hook.m */,
+				23693CE1217ACC180001A43A /* UIGestureRecognizer+hook.h */,
+				23693CE2217ACC180001A43A /* UIGestureRecognizer+hook.m */,
+			);
+			path = "方法拦截";
+			sourceTree = "<group>";
+		};
+		231A5DC0217BA1DC00EBD745 /* Unicode转换 */ = {
+			isa = PBXGroup;
+			children = (
+				23693CE7217ADDBF0001A43A /* NSSet+HYBUnicodeReadable.h */,
+				23693CE9217ADDC00001A43A /* NSSet+HYBUnicodeReadable.m */,
+				23693CE6217ADDBF0001A43A /* NSArray+HYBUnicodeReadable.h */,
+				23693CE5217ADDBF0001A43A /* NSArray+HYBUnicodeReadable.m */,
+				23693CE4217ADDBE0001A43A /* NSDictionary+HYBUnicodeReadable.h */,
+				23693CE8217ADDC00001A43A /* NSDictionary+HYBUnicodeReadable.m */,
+			);
+			path = "Unicode转换";
+			sourceTree = "<group>";
+		};
+		231A5DC1217BA1DC00EBD745 /* 容错处理 */ = {
+			isa = PBXGroup;
+			children = (
+				231A5DD4217BAEAA00EBD745 /* NSDictionary+SafeException.h */,
+				231A5DD5217BAEAA00EBD745 /* NSDictionary+SafeException.m */,
+				231A5DD1217BAEA900EBD745 /* NSMutableDictionary+SafeException.h */,
+				231A5DD3217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m */,
+				231A5DCF217BAEA800EBD745 /* NSArray+SafeException.h */,
+				231A5DD0217BAEA900EBD745 /* NSArray+SafeException.m */,
+				231A5DCE217BAEA800EBD745 /* NSMutableArray+SafeException.h */,
+				231A5DD2217BAEA900EBD745 /* NSMutableArray+SafeException.m */,
+				231A5DDD217BAED900EBD745 /* NullSafe.m */,
+			);
+			path = "容错处理";
+			sourceTree = "<group>";
+		};
+		231A5DCB217BA81700EBD745 /* 网络拦截 */ = {
+			isa = PBXGroup;
+			children = (
+				234B6EB921791E8C000B69AB /* WLNURLProtocol.h */,
+				234B6EBA21791E8C000B69AB /* WLNURLProtocol.m */,
+			);
+			path = "网络拦截";
+			sourceTree = "<group>";
+		};
+		231A5DCC217BA92B00EBD745 /* 二维码 */ = {
+			isa = PBXGroup;
+			children = (
+				234AA8EA216F4AD500A0866B /* WLNQRCode.h */,
+				234AA8EB216F4AD500A0866B /* WLNQRCode.m */,
+			);
+			path = "二维码";
+			sourceTree = "<group>";
+		};
+		231A5DCD217BA92B00EBD745 /* 底部提示框 */ = {
 			isa = PBXGroup;
 			children = (
 				23C828B02171C9FD0086C253 /* WMYActionSheet.h */,
 				23C828B12171C9FD0086C253 /* WMYActionSheet.m */,
-				234AA8EA216F4AD500A0866B /* WLNQRCode.h */,
-				234AA8EB216F4AD500A0866B /* WLNQRCode.m */,
 			);
-			path = "(可分发)";
+			path = "底部提示框";
+			sourceTree = "<group>";
+		};
+		231A5DE2217D261F00EBD745 /* 提示框 */ = {
+			isa = PBXGroup;
+			children = (
+				231A5DE3217D262200EBD745 /* HYAlertView.h */,
+				231A5DE4217D262200EBD745 /* HYAlertView.m */,
+			);
+			path = "提示框";
+			sourceTree = "<group>";
+		};
+		231A96EB217131230063587B /* CONTROLS */ = {
+			isa = PBXGroup;
+			children = (
+				231A5DE2217D261F00EBD745 /* 提示框 */,
+				231A5DCC217BA92B00EBD745 /* 二维码 */,
+				235484722160C76200BCE879 /* 国际化 */,
+				231A5DCD217BA92B00EBD745 /* 底部提示框 */,
+			);
+			path = CONTROLS;
 			sourceTree = "<group>";
 		};
 		231A96F0217137660063587B /* (必须分发) */ = {
@@ -923,8 +1039,6 @@
 			children = (
 				23D24F28216BD21C00C1557F /* UINavigationBar+Awesome.h */,
 				23D24F29216BD21C00C1557F /* UINavigationBar+Awesome.m */,
-				00DE4285217597CF005DDEE0 /* NSObject+Function.h */,
-				00DE4286217597CF005DDEE0 /* NSObject+Function.m */,
 				0037543F217833B80025CD1D /* UITextField+Set.h */,
 				00375440217833B80025CD1D /* UITextField+Set.m */,
 				23D17B4B2174314F0004D877 /* UITableView+NewTableView.h */,
@@ -1053,22 +1167,22 @@
 			path = "账户安全";
 			sourceTree = "<group>";
 		};
-		234B6EC221792DBA000B69AB /* Hook */ = {
+		234B6EC221792DBA000B69AB /* DEEPS */ = {
 			isa = PBXGroup;
 			children = (
-				00272E742179715000A5EBD4 /* Click.h */,
-				00272E752179715000A5EBD4 /* Click.m */,
-				003CB8F92179C0DE001DDA03 /* UIControl+hook.h */,
-				003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */,
-				003CB8FC2179C429001DDA03 /* UITableView+hook.h */,
-				003CB8FD2179C429001DDA03 /* UITableView+hook.m */,
-				003CB8F62179C096001DDA03 /* UIViewController+hook.h */,
-				003CB8F72179C096001DDA03 /* UIViewController+hook.m */,
+				231A5DBF217BA1A700EBD745 /* 方法拦截 */,
+				231A5DCB217BA81700EBD745 /* 网络拦截 */,
+				231A5DC1217BA1DC00EBD745 /* 容错处理 */,
+				231A5DC0217BA1DC00EBD745 /* Unicode转换 */,
+				00DE4285217597CF005DDEE0 /* NSObject+Function.h */,
+				00DE4286217597CF005DDEE0 /* NSObject+Function.m */,
+				231A5DDB217BAEBA00EBD745 /* NSObject+Swizzle.h */,
+				231A5DDA217BAEB900EBD745 /* NSObject+Swizzle.m */,
 			);
-			path = Hook;
+			path = DEEPS;
 			sourceTree = "<group>";
 		};
-		235484722160C76200BCE879 /* LanguageTool */ = {
+		235484722160C76200BCE879 /* 国际化 */ = {
 			isa = PBXGroup;
 			children = (
 				236346DC216289C800CFF257 /* DAConfig.h */,
@@ -1077,7 +1191,7 @@
 				236346DD216289C800CFF257 /* NSBundle+DAUtils.m */,
 				236346D52162873900CFF257 /* Localizable.strings */,
 			);
-			path = LanguageTool;
+			path = "国际化";
 			sourceTree = "<group>";
 		};
 		237BA3B3217072ED00C71283 /* 互助推广 */ = {
@@ -1105,7 +1219,7 @@
 			path = "互助推广";
 			sourceTree = "<group>";
 		};
-		237E1B82215E9D08002BC6F0 /* XML */ = {
+		237E1B82215E9D08002BC6F0 /* XMLS */ = {
 			isa = PBXGroup;
 			children = (
 				003754452178624D0025CD1D /* WLNOrderCell.xml */,
@@ -1178,7 +1292,7 @@
 				00A5EBDF2176DB9E00FED04D /* WLNMineFormDetailHeadView.xml */,
 				236347052162ECED00CFF257 /* WLNView.style */,
 			);
-			path = XML;
+			path = XMLS;
 			sourceTree = "<group>";
 		};
 		238F54F921653D7C00A9EB7F /* View */ = {
@@ -1652,13 +1766,14 @@
 				23C828A8217181810086C253 /* WLNMineScavengingCell.m in Sources */,
 				238F55652169790300A9EB7F /* WLNMineCommunityHeadView.m in Sources */,
 				23185FB1216E053C00ECD952 /* WLNMineGForumCell.m in Sources */,
+				231A5DD6217BAEAA00EBD745 /* NSArray+SafeException.m in Sources */,
 				00CC76082174898C0053E546 /* WLNLockCell.m in Sources */,
+				231A5DD7217BAEAA00EBD745 /* NSMutableArray+SafeException.m in Sources */,
 				00CC76122174A20D0053E546 /* WLNMineSellOutCtr.m in Sources */,
 				23D17B3721742C7F0004D877 /* WLNLockCtr.m in Sources */,
 				23D17B3C21742C7F0004D877 /* WLNReceiveMoneyCtr.m in Sources */,
 				236346E0216289C800CFF257 /* NSBundle+DAUtils.m in Sources */,
 				003CB8F82179C096001DDA03 /* UIViewController+hook.m in Sources */,
-				003CB8FE2179C429001DDA03 /* UITableView+hook.m in Sources */,
 				2309F918215D3F4E00F156E8 /* WLNMineCtr.m in Sources */,
 				237BA3B62170730A00C71283 /* WLNMineExtensionCtr.m in Sources */,
 				2340563721702C2200888D96 /* WLNHandle+Log.m in Sources */,
@@ -1672,10 +1787,13 @@
 				232FF54E216AFF9800C71BCA /* WLNMineOrderHeadView.m in Sources */,
 				0089FB652175EA48002C3465 /* WLNMineGHBWalletCtr.m in Sources */,
 				2340564021702C3F00888D96 /* WLNHandle+Trade.m in Sources */,
+				231A5DD8217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m in Sources */,
 				238F555F2169757800A9EB7F /* WLNMineCommunityCtr.m in Sources */,
+				231A5DD9217BAEAA00EBD745 /* NSDictionary+SafeException.m in Sources */,
 				00272E762179715000A5EBD4 /* Click.m in Sources */,
 				23D17AF821742A7F0004D877 /* WLNWalletBodyCell.m in Sources */,
 				237BA3C6217079AF00C71283 /* WLNMineExtensionInfoView.m in Sources */,
+				23693CD7217AB8D30001A43A /* UITableView+hook.m in Sources */,
 				233AAFF6216C9AAE007D12DD /* WLNForgetCell.m in Sources */,
 				2346E7B6216B281A002074D5 /* WLNMineSecurityCell.m in Sources */,
 				2309F914215D3F4E00F156E8 /* WLNHomeCtr.m in Sources */,
@@ -1699,6 +1817,7 @@
 				003CB8FB2179C0DE001DDA03 /* UIControl+hook.m in Sources */,
 				23405618216F55E400888D96 /* WLNMineIntegralCtr.m in Sources */,
 				234F1D742164F4FF00BA61AF /* WLNPropertyValuationCell.m in Sources */,
+				23693CE3217ACC180001A43A /* UIGestureRecognizer+hook.m in Sources */,
 				236346E1216289C800CFF257 /* DAConfig.m in Sources */,
 				23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */,
 				234AA8EC216F4AD500A0866B /* WLNQRCode.m in Sources */,
@@ -1707,18 +1826,22 @@
 				236346F12162B45F00CFF257 /* WLNMineHeadCell.m in Sources */,
 				23F9C9262163E09F000EDFC4 /* WLNShopItemCell.m in Sources */,
 				0089FB532175C15C002C3465 /* WLNMineFormBottomCell.m in Sources */,
+				23693CEA217ADDC00001A43A /* NSArray+HYBUnicodeReadable.m in Sources */,
 				236346FC2162D86E00CFF257 /* WLNHomeCountCell.m in Sources */,
 				00DE4287217597CF005DDEE0 /* NSObject+Function.m in Sources */,
 				23AC68C3216B3C5700580EA5 /* WLNMineChargeCtr.m in Sources */,
 				23D17B3821742C7F0004D877 /* WLNChangeCtr.m in Sources */,
 				23C828B22171C9FD0086C253 /* WMYActionSheet.m in Sources */,
 				23118A6C216DED7A0014FB7E /* WLNShopSectionHeadView.m in Sources */,
+				231A5DE5217D262200EBD745 /* HYAlertView.m in Sources */,
 				23D17B3D21742C7F0004D877 /* WLNOrderCtr.m in Sources */,
 				237BA3C1217076A000C71283 /* WLNMineExtensionInfoCell.m in Sources */,
 				236346F92162D85D00CFF257 /* WLNHomeHotCell.m in Sources */,
 				23212A62216FE3C1008C8DD2 /* WLNHandle.m in Sources */,
 				238F5578216A60EE00A9EB7F /* WLNTradeHeadView.m in Sources */,
+				231A5DDC217BAEBA00EBD745 /* NSObject+Swizzle.m in Sources */,
 				2340561B216F569C00888D96 /* WLNMineCardPublishCtr.m in Sources */,
+				231A5DDE217BAED900EBD745 /* NullSafe.m in Sources */,
 				23405615216F55C700888D96 /* WLNMineScavengingCtr.m in Sources */,
 				2346E7AD216B21C6002074D5 /* WLNMineGProblemCtr.m in Sources */,
 				234B6EB521790991000B69AB /* WLNHandle+Wallet.m in Sources */,
@@ -1742,12 +1865,15 @@
 				23C828B52171E0A70086C253 /* AppDelegate+Chat.m in Sources */,
 				00A5EBEB21770A8500FED04D /* WLNKeyChain.m in Sources */,
 				234F1D8F21650B1100BA61AF /* WLNMineOrderCtr.m in Sources */,
+				23693CEB217ADDC00001A43A /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				238F5562216978A500A9EB7F /* WLNMineCommunityCell.m in Sources */,
+				231A5DC4217BA7BF00EBD745 /* WLNUserDefaults.m in Sources */,
 				00A5EBF721773AA800FED04D /* WLNMineGHBBodyCell.m in Sources */,
 				2346E7B3216B270D002074D5 /* WLNMineSecurityCtr.m in Sources */,
 				2340563A21702C3200888D96 /* WLNHandle+Property.m in Sources */,
 				00938C8E2175BF3F005F90D4 /* WLNMineFormDetailCtr.m in Sources */,
 				23DAEF25216E2B9F0025E3CF /* WLNHomeSectionHeadView.m in Sources */,
+				23693CEC217ADDC00001A43A /* NSSet+HYBUnicodeReadable.m in Sources */,
 				00CC760D217499520053E546 /* WLNMineApplyFromCtr.m in Sources */,
 				2340563D21702C3800888D96 /* WLNHandle+Home.m in Sources */,
 				23AC68C8216B3F9800580EA5 /* WLNShopChangeCtr.m in Sources */,
@@ -1932,7 +2058,7 @@
 					"$(PROJECT_DIR)/KangYangChain",
 					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
 				);
-				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = /Users/furao/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,
@@ -1997,7 +2123,7 @@
 					"$(PROJECT_DIR)/KangYangChain",
 					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
 				);
-				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = /Users/furao/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,

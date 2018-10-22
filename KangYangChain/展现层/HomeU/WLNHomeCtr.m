@@ -7,39 +7,31 @@
 //
 
 #import "WLNHomeCtr.h"
-#import "WLNHandle.h"
 
-@interface WLNHomeCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,Interface>
+
+@interface WLNHomeCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 {
     NSArray *_secitonArrs;
     
 }
-@property (nonatomic, strong) UITableView *tab;
 @property (nonatomic, strong) NSMutableArray *dataArr;
-@property (nonatomic, assign) id <Interface> pro;
 
 @end
 
 @implementation WLNHomeCtr
 
-
-- (UITableView *)tab{
-    if (_tab == nil) {
-        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
-        _tab.backgroundColor = maingray;
-
-    }
-    return _tab;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
   
     self.title = @"首页".Intl;
-
-    [self.view addSubview:self.tab];
+    
+    [self tabType:0];
+    
     self.tab.delegate = self;
     self.tab.dataSource = self;
+    
+   
     
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArr = [NSMutableArray array];
@@ -186,10 +178,7 @@
   
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    [SVProgressHUD showErrorWithStatus:@"功能开发中"];
-    return;
-    
+ 
 }
 
 @end

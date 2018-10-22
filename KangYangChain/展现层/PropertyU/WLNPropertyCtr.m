@@ -9,24 +9,19 @@
 #import "WLNPropertyCtr.h"
 
 @interface WLNPropertyCtr ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tab;
+
 @end
 
 @implementation WLNPropertyCtr
-- (UITableView *)tab{
-    if (_tab == nil) {
-        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64) style:UITableViewStylePlain];
-        _tab.backgroundColor = maingray;
-        
-    }
-    return _tab;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"资产".Intl;
-    [self.view addSubview:self.tab];
+    
+    [self tabType:0];
     self.tab.dataSource = self;
     self.tab.delegate = self;
+    
     self.tab.separatorStyle =UITableViewCellSeparatorStyleNone;
 }
 

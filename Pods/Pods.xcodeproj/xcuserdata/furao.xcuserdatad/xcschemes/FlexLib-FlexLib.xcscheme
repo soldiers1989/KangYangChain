@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F22E0488330E0528B954F9E0EF49092"
+               BlueprintIdentifier = "CAC2505DC2B497C34D6A5094DDB321B1"
                BuildableName = "FlexLib.bundle"
                BlueprintName = "FlexLib-FlexLib"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F22E0488330E0528B954F9E0EF49092"
+            BlueprintIdentifier = "CAC2505DC2B497C34D6A5094DDB321B1"
             BuildableName = "FlexLib.bundle"
             BlueprintName = "FlexLib-FlexLib"
             ReferencedContainer = "container:Pods.xcodeproj">

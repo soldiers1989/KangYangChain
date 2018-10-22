@@ -8,11 +8,9 @@
 
 #import "WLNWalletCtr.h"
 
+#import "WLNKeyChain.h"
 
 @interface WLNWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,WMYActionSheetDelegate>
-
-@property (strong, nonatomic) UITableView *tab;
-
 
 
 @end
@@ -23,9 +21,11 @@
     [super viewDidLoad];
     self.title = @"我的钱包".Intl;
     
+    [WLNWalletSingle shared].currentType = @"BTC";
     
-    
-    [self.view addSubview:self.tab];
+    [self tabType:2];
+    self.tab.delegate = self;
+    self.tab.dataSource = self;
     
     [self.tab registerClass:WLNWalletBodyCell.class forCellReuseIdentifier:@"WLNWalletBodyCell"];
 
@@ -33,11 +33,29 @@
 
     
     
-    [self routeTargetName:@"WLNHandle" actionName:@"getKeys:" param:@{DELEGATES:self}.mutableCopy];
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    dic[DELEGATES] = self;
+    dic[@"type"] = @(0);
+    
+    [self routeTargetName:@"WLNHandle" actionName:@"getKeys:" param:dic];
+    
+    [self routeTargetName:@"WLNHandle" actionName:@"rmbPrice:" param:@{DELEGATES:self}.mutableCopy];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearAction)];
+    
+    
+}
+- (void)clearAction{
+    
+    [WLNKeyChain deleteKeychainValue:@"BTC"];
+    [WLNKeyChain deleteKeychainValue:@"USDT"];
+
     
     
 }
 - (void)result:(id)data sel:(NSString *)sel{
+    
+    
     
     if ([sel isEqualToString:@"getKeys:"]) {
         
@@ -50,18 +68,25 @@
         dic[DELEGATES] = self;
         dic[@"address"] = data[@"address"];
         
-        [self routeTargetName:@"WLNHandle" actionName:@"balanceInquiry:" param:dic];
+        [self routeTargetName:@"WLNHandle" actionName:@"getBalance:" param:dic];
         
         
-    }else if ([sel isEqualToString:@"balanceInquiry:"]){
+    }else if ([sel isEqualToString:@"getBalance:"]){
         
         NSMutableDictionary *dic = data[[WLNWalletSingle shared].address];
         
         [WLNWalletSingle shared].balance = dic[@"final_balance"];
         
-
         [self.tab reloadData];
         
+    }else if ([sel isEqualToString:@"rmbPrice:"]){
+        
+        
+        
+        [WLNWalletSingle shared].rmb = data;
+        
+        [self.tab reloadData];
+
         
     }
     
@@ -70,6 +95,25 @@
     
 }
 - (void)faild:(id)data sel:(NSString *)sel{
+    
+    
+    
+}
+- (void)fist:(id)data sel:(NSString *)sel{
+    
+    
+    NSString *str = data[@"address"];
+    
+    NSString *type = data[@"type"];
+    
+    HYAlertView *alert = [[HYAlertView alloc]initWithTitle:@"提示" message:[NSString stringWithFormat:@"为您生成 %@ 地址:%@",type,str] buttonTitles:@"确定", nil];
+    
+    [alert showWithCompletion:^(HYAlertView *alertView, NSInteger selectIndex) {
+    
+        
+        
+        
+    }];
     
     
     
@@ -115,10 +159,12 @@
 
     WLNWalletHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNWalletHeadCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.img.image = [UIImage imageNamed:@"123"];
 
     cell.balanceLab.text = [NSString stringWithFormat:@"%.5f",[WLNWalletSingle shared].changeBalance];
     
+    cell.currentType = [WLNWalletSingle shared].currentType;
+    
+    cell.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f RMB",[WLNWalletSingle shared].rmb.doubleValue * [WLNWalletSingle shared].changeBalance];
 
     weakSelf(self);
     
@@ -143,7 +189,7 @@
 - (void)showSheet{
     
     
-    WMYActionSheet *sheet = [[WMYActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"BTC",@"USDT", nil];
+    WMYActionSheet *sheet = [[WMYActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"BTC",@"USDT",nil];
     
     [sheet show];
     
@@ -151,10 +197,26 @@
 }
 - (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    
+    if (buttonIndex == 0) {
+        return;
+        
+    }else{
+        
+        [WLNWalletSingle shared].currentType = @[@"BTC",@"USDT"][buttonIndex - 1];
+        
+        NSMutableDictionary *dic = @{}.mutableCopy;
+        
+        dic[DELEGATES] = self;
+        
+        dic[@"type"] = @(buttonIndex - 1);
+        
+        [self routeTargetName:@"WLNHandle" actionName:@"getKeys:" param:dic];
+
+    }
     
     
 }
+
 - (void)gotoNextWith:(NSInteger)tag{
 
   
@@ -187,13 +249,5 @@
     
     
 }
-- (UITableView *)tab{
-    if (_tab == nil) {
-        _tab = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 375, 667) style:UITableViewStylePlain];
-        _tab.dataSource = self;
-        _tab.delegate = self;
-        
-    }
-    return _tab;
-}
+
 @end
