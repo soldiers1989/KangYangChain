@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   WLNTradeLawCionCell.xml
+   KangYangChain
+
+   Created by edz on 2018/10/22.
+   Copyright (c) 2018 furao. All rights reserved.
+-->
+
+<UIView layout="" attr="bgColor:#f5f5f5">
+
+    <UIView layout="margin:5,marginBottom:1,flexDirection:row,justifyContent:space-between" attr="bgColor:white">
+
+        <UIView layout="flexDirection:row" attr="">
+            <UILabel name="" layout="margin:5" attr="fontSize:18,color:#333333,linesNum:0,text:姓名"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:已交易5667 成交率99%"/>   
+
+        </UIView>
+
+        <UIView layout="flexDirection:row" attr="">
+            <UIImageView attr="source:"/>
+            <UIImageView attr="source:"/>
+            <UIImageView attr="source:"/>
+        </UIView>
+
+
+
+    </UIView>
+
+    <UIView layout="margin:5,marginTop:0,flexDirection:row,justifyContent:space-between" attr="bgColor:white">
+
+        <UIView layout="margin:5" attr="">
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:6.88"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:价格(CNY)"/>
+        </UIView>
+        <UIView layout=",margin:5" attr="">
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:8000-8400"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:限额"/>
+        </UIView>
+        <UIView layout=",margin:5" attr="">
+            
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:1232.22"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:数量"/>
+        
+        </UIView>
+
+    </UIView>
+
+</UIView>
+

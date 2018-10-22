@@ -22,26 +22,38 @@
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self.tab registerClass:WLNTradeCell.class forCellReuseIdentifier:@"WLNTradeCell"];
-
     WLNTradeHeadView *view = [WLNTradeHeadView shared];
     view.topArr = @[@"行情".Intl,@"法币".Intl,@"币币".Intl,@"合约".Intl].mutableCopy;
     view.bottomArr = @[@"ETC",@"USDT",@"BTC",@"ETH",@"自选".Intl].mutableCopy;
     
     
+    weakSelf(self);
+    
     [view setDidClickTopBLock:^(NSInteger tag) {
     
         
+        [weakself gotoNext:tag];
+        
         
     }];
-    
-    
-    
-    
-    
-    
+
     
     self.tab.tableHeaderView = view;
 
+}
+- (void)gotoNext:(NSInteger)tag{
+    
+    if (tag == 1) {
+        [self.navigationController pushViewController:@"WLNTradeLawCionCtr".instance animated:YES];
+        
+    }else if (tag == 2){
+        [self.navigationController pushViewController:@"WLNTradeCoinCoinCtr".instance animated:YES];
+        
+    }else{
+        [self.navigationController pushViewController:@"WLNTradeAgreementCtr".instance animated:YES];
+        
+    }
+    
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return @"RGH";

@@ -34,6 +34,12 @@
 		00A5EBF721773AA800FED04D /* WLNMineGHBBodyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5EBF621773AA800FED04D /* WLNMineGHBBodyCell.m */; };
 		00A5EBF921773AC600FED04D /* WLNMineGHBBodyCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00A5EBF821773AC600FED04D /* WLNMineGHBBodyCell.xml */; };
 		00B76B132178923800802011 /* WLNRechargeCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B76B122178923800802011 /* WLNRechargeCtr.m */; };
+		00B7F4C6217DD762009208C9 /* WLNTradeTradeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F4C5217DD762009208C9 /* WLNTradeTradeCell.m */; };
+		00B7F4C9217DD76E009208C9 /* WLNTradeHoldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F4C8217DD76E009208C9 /* WLNTradeHoldCell.m */; };
+		00B7F4CC217DD796009208C9 /* WLNTradeHangCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F4CB217DD796009208C9 /* WLNTradeHangCell.m */; };
+		00B7F4D1217DD8FA009208C9 /* WLNTradeTradeCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00B7F4D0217DD8FA009208C9 /* WLNTradeTradeCell.xml */; };
+		00B7F4D3217DDAD9009208C9 /* WLNTradeHoldCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00B7F4D2217DDAD9009208C9 /* WLNTradeHoldCell.xml */; };
+		00B7F4D5217DDAF8009208C9 /* WLNTradeHangCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00B7F4D4217DDAF8009208C9 /* WLNTradeHangCell.xml */; };
 		00CC76082174898C0053E546 /* WLNLockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CC76072174898C0053E546 /* WLNLockCell.m */; };
 		00CC760A2174899C0053E546 /* WLNLockCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00CC76092174899C0053E546 /* WLNLockCell.xml */; };
 		00CC760D217499520053E546 /* WLNMineApplyFromCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CC760C217499520053E546 /* WLNMineApplyFromCtr.m */; };
@@ -42,6 +48,12 @@
 		00CC76142174A2350053E546 /* WLNMineSellOutCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00CC76132174A2350053E546 /* WLNMineSellOutCtr.xml */; };
 		00DE427B21759447005DDEE0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DE427A21759447005DDEE0 /* User.m */; };
 		00DE4287217597CF005DDEE0 /* NSObject+Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DE4286217597CF005DDEE0 /* NSObject+Function.m */; };
+		00E92D4E217DB95500C51DCD /* WLNTradeLawCionCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E92D4D217DB95500C51DCD /* WLNTradeLawCionCtr.m */; };
+		00E92D51217DBA4A00C51DCD /* WLNTradeLawCionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E92D50217DBA4A00C51DCD /* WLNTradeLawCionCell.m */; };
+		00E92D53217DBAB700C51DCD /* WLNTradeLawCionCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00E92D52217DBAB700C51DCD /* WLNTradeLawCionCell.xml */; };
+		00E92D5B217DC0AD00C51DCD /* WLNTradeCoinCoinCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E92D5A217DC0AD00C51DCD /* WLNTradeCoinCoinCtr.m */; };
+		00FB699E217DC95A009B3F82 /* WLNTradeCoinCoinCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00FB699D217DC95A009B3F82 /* WLNTradeCoinCoinCtr.xml */; };
+		00FB69A1217DD53D009B3F82 /* WLNTradeAgreementCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB69A0217DD53D009B3F82 /* WLNTradeAgreementCtr.m */; };
 		2309F8AF215D316200F156E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2309F8AE215D316200F156E8 /* AppDelegate.m */; };
 		2309F8B7215D316300F156E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2309F8B6215D316300F156E8 /* Assets.xcassets */; };
 		2309F8BA215D316300F156E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2309F8B8215D316300F156E8 /* LaunchScreen.storyboard */; };
@@ -305,6 +317,15 @@
 		00B76B0F2178909A00802011 /* WLNModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNModelProtocol.h; sourceTree = "<group>"; };
 		00B76B112178923800802011 /* WLNRechargeCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNRechargeCtr.h; sourceTree = "<group>"; };
 		00B76B122178923800802011 /* WLNRechargeCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNRechargeCtr.m; sourceTree = "<group>"; };
+		00B7F4C4217DD762009208C9 /* WLNTradeTradeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeTradeCell.h; sourceTree = "<group>"; };
+		00B7F4C5217DD762009208C9 /* WLNTradeTradeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeTradeCell.m; sourceTree = "<group>"; };
+		00B7F4C7217DD76E009208C9 /* WLNTradeHoldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeHoldCell.h; sourceTree = "<group>"; };
+		00B7F4C8217DD76E009208C9 /* WLNTradeHoldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeHoldCell.m; sourceTree = "<group>"; };
+		00B7F4CA217DD796009208C9 /* WLNTradeHangCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeHangCell.h; sourceTree = "<group>"; };
+		00B7F4CB217DD796009208C9 /* WLNTradeHangCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeHangCell.m; sourceTree = "<group>"; };
+		00B7F4D0217DD8FA009208C9 /* WLNTradeTradeCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeTradeCell.xml; sourceTree = "<group>"; };
+		00B7F4D2217DDAD9009208C9 /* WLNTradeHoldCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeHoldCell.xml; sourceTree = "<group>"; };
+		00B7F4D4217DDAF8009208C9 /* WLNTradeHangCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeHangCell.xml; sourceTree = "<group>"; };
 		00CC76062174898C0053E546 /* WLNLockCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNLockCell.h; sourceTree = "<group>"; };
 		00CC76072174898C0053E546 /* WLNLockCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNLockCell.m; sourceTree = "<group>"; };
 		00CC76092174899C0053E546 /* WLNLockCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNLockCell.xml; sourceTree = "<group>"; };
@@ -318,6 +339,16 @@
 		00DE427A21759447005DDEE0 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		00DE4285217597CF005DDEE0 /* NSObject+Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Function.h"; sourceTree = "<group>"; };
 		00DE4286217597CF005DDEE0 /* NSObject+Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Function.m"; sourceTree = "<group>"; };
+		00E92D4C217DB95500C51DCD /* WLNTradeLawCionCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeLawCionCtr.h; sourceTree = "<group>"; };
+		00E92D4D217DB95500C51DCD /* WLNTradeLawCionCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeLawCionCtr.m; sourceTree = "<group>"; };
+		00E92D4F217DBA4A00C51DCD /* WLNTradeLawCionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeLawCionCell.h; sourceTree = "<group>"; };
+		00E92D50217DBA4A00C51DCD /* WLNTradeLawCionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeLawCionCell.m; sourceTree = "<group>"; };
+		00E92D52217DBAB700C51DCD /* WLNTradeLawCionCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeLawCionCell.xml; sourceTree = "<group>"; };
+		00E92D59217DC0AD00C51DCD /* WLNTradeCoinCoinCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeCoinCoinCtr.h; sourceTree = "<group>"; };
+		00E92D5A217DC0AD00C51DCD /* WLNTradeCoinCoinCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeCoinCoinCtr.m; sourceTree = "<group>"; };
+		00FB699D217DC95A009B3F82 /* WLNTradeCoinCoinCtr.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WLNTradeCoinCoinCtr.xml; sourceTree = "<group>"; };
+		00FB699F217DD53D009B3F82 /* WLNTradeAgreementCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeAgreementCtr.h; sourceTree = "<group>"; };
+		00FB69A0217DD53D009B3F82 /* WLNTradeAgreementCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeAgreementCtr.m; sourceTree = "<group>"; };
 		10B59D59D494D29FC2123A54 /* libPods-KangYangChain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KangYangChain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2309F8AA215D316200F156E8 /* KangYangChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangYangChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2309F8AD215D316200F156E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -700,6 +731,41 @@
 			path = "充值";
 			sourceTree = "<group>";
 		};
+		00B7F4CD217DD8A8009208C9 /* 合约 */ = {
+			isa = PBXGroup;
+			children = (
+				00FB699F217DD53D009B3F82 /* WLNTradeAgreementCtr.h */,
+				00FB69A0217DD53D009B3F82 /* WLNTradeAgreementCtr.m */,
+				00B7F4C4217DD762009208C9 /* WLNTradeTradeCell.h */,
+				00B7F4C5217DD762009208C9 /* WLNTradeTradeCell.m */,
+				00B7F4C7217DD76E009208C9 /* WLNTradeHoldCell.h */,
+				00B7F4C8217DD76E009208C9 /* WLNTradeHoldCell.m */,
+				00B7F4CA217DD796009208C9 /* WLNTradeHangCell.h */,
+				00B7F4CB217DD796009208C9 /* WLNTradeHangCell.m */,
+			);
+			path = "合约";
+			sourceTree = "<group>";
+		};
+		00B7F4CE217DD8A8009208C9 /* 币币 */ = {
+			isa = PBXGroup;
+			children = (
+				00E92D59217DC0AD00C51DCD /* WLNTradeCoinCoinCtr.h */,
+				00E92D5A217DC0AD00C51DCD /* WLNTradeCoinCoinCtr.m */,
+			);
+			path = "币币";
+			sourceTree = "<group>";
+		};
+		00B7F4CF217DD8A8009208C9 /* 法币 */ = {
+			isa = PBXGroup;
+			children = (
+				00E92D4C217DB95500C51DCD /* WLNTradeLawCionCtr.h */,
+				00E92D4D217DB95500C51DCD /* WLNTradeLawCionCtr.m */,
+				00E92D4F217DBA4A00C51DCD /* WLNTradeLawCionCell.h */,
+				00E92D50217DBA4A00C51DCD /* WLNTradeLawCionCell.m */,
+			);
+			path = "法币";
+			sourceTree = "<group>";
+		};
 		00DE427821759438005DDEE0 /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
@@ -885,9 +951,15 @@
 		2309F90B215D3F4E00F156E8 /* TradeU */ = {
 			isa = PBXGroup;
 			children = (
-				238F54F921653D7C00A9EB7F /* View */,
+				00B7F4CE217DD8A8009208C9 /* 币币 */,
+				00B7F4CF217DD8A8009208C9 /* 法币 */,
+				00B7F4CD217DD8A8009208C9 /* 合约 */,
 				2309F90C215D3F4E00F156E8 /* WLNTradeCtr.h */,
 				2309F90D215D3F4E00F156E8 /* WLNTradeCtr.m */,
+				238F54FA21653D8D00A9EB7F /* WLNTradeCell.h */,
+				238F54FB21653D8D00A9EB7F /* WLNTradeCell.m */,
+				238F5576216A60EE00A9EB7F /* WLNTradeHeadView.h */,
+				238F5577216A60EE00A9EB7F /* WLNTradeHeadView.m */,
 			);
 			path = TradeU;
 			sourceTree = "<group>";
@@ -1222,6 +1294,8 @@
 		237E1B82215E9D08002BC6F0 /* XMLS */ = {
 			isa = PBXGroup;
 			children = (
+				00B7F4D2217DDAD9009208C9 /* WLNTradeHoldCell.xml */,
+				00E92D52217DBAB700C51DCD /* WLNTradeLawCionCell.xml */,
 				003754452178624D0025CD1D /* WLNOrderCell.xml */,
 				0037543A217818480025CD1D /* WLNWalletHeadView.xml */,
 				00A5EBF821773AC600FED04D /* WLNMineGHBBodyCell.xml */,
@@ -1290,20 +1364,12 @@
 				0089FB542175C180002C3465 /* WLNMineFormBottomCell.xml */,
 				0089FB582175C19F002C3465 /* WLNMineFormTopCell.xml */,
 				00A5EBDF2176DB9E00FED04D /* WLNMineFormDetailHeadView.xml */,
+				00FB699D217DC95A009B3F82 /* WLNTradeCoinCoinCtr.xml */,
 				236347052162ECED00CFF257 /* WLNView.style */,
+				00B7F4D0217DD8FA009208C9 /* WLNTradeTradeCell.xml */,
+				00B7F4D4217DDAF8009208C9 /* WLNTradeHangCell.xml */,
 			);
 			path = XMLS;
-			sourceTree = "<group>";
-		};
-		238F54F921653D7C00A9EB7F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				238F54FA21653D8D00A9EB7F /* WLNTradeCell.h */,
-				238F54FB21653D8D00A9EB7F /* WLNTradeCell.m */,
-				238F5576216A60EE00A9EB7F /* WLNTradeHeadView.h */,
-				238F5577216A60EE00A9EB7F /* WLNTradeHeadView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		238F5554216974F600A9EB7F /* 法币账户 */ = {
@@ -1624,6 +1690,7 @@
 				2309F8BA215D316300F156E8 /* LaunchScreen.storyboard in Resources */,
 				23C8289221717F020086C253 /* WLNMineCommunityCtr.xml in Resources */,
 				236346D62162873900CFF257 /* Localizable.strings in Resources */,
+				00FB699E217DC95A009B3F82 /* WLNTradeCoinCoinCtr.xml in Resources */,
 				23C8289A21717F020086C253 /* WLNMineSecurityCtr.xml in Resources */,
 				23C8287321717F020086C253 /* WLNShopAlertView.xml in Resources */,
 				23C8288E21717F020086C253 /* WLNForgetCtr.xml in Resources */,
@@ -1658,8 +1725,10 @@
 				238F54F82165380600A9EB7F /* Snip20181004_36.png in Resources */,
 				23C8288721717F020086C253 /* WLNMineCommunityHeadView.xml in Resources */,
 				23D17B4521742DD60004D877 /* WLNWalletBodyCell.xml in Resources */,
+				00B7F4D1217DD8FA009208C9 /* WLNTradeTradeCell.xml in Resources */,
 				0089FB552175C180002C3465 /* WLNMineFormBottomCell.xml in Resources */,
 				23C8287621717F020086C253 /* WLNMineOrderCell.xml in Resources */,
+				00B7F4D5217DDAF8009208C9 /* WLNTradeHangCell.xml in Resources */,
 				0089FB4D2175C0F4002C3465 /* WLNMineFormDetailCtr.xml in Resources */,
 				00A5EBE02176DB9E00FED04D /* WLNMineFormDetailHeadView.xml in Resources */,
 				23C8288921717F020086C253 /* WLNMineOrderHeadView.xml in Resources */,
@@ -1687,9 +1756,11 @@
 				23C8289921717F020086C253 /* WLNMineGProblemCell.xml in Resources */,
 				23C8288321717F020086C253 /* WLNPropertyCell.xml in Resources */,
 				23C8288821717F020086C253 /* WLNLogCtr.xml in Resources */,
+				00B7F4D3217DDAD9009208C9 /* WLNTradeHoldCell.xml in Resources */,
 				236347122163873200CFF257 /* Snip20181002_2.png in Resources */,
 				2340565021704DC300888D96 /* Snip20181012_36.png in Resources */,
 				23C8287B21717F020086C253 /* WLNTradeCtr.xml in Resources */,
+				00E92D53217DBAB700C51DCD /* WLNTradeLawCionCell.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1764,6 +1835,7 @@
 				23984A7121649E8800ADCFF1 /* WLNPropertyCell.m in Sources */,
 				2309F915215D3F4E00F156E8 /* WLNPropertyCtr.m in Sources */,
 				23C828A8217181810086C253 /* WLNMineScavengingCell.m in Sources */,
+				00B7F4C9217DD76E009208C9 /* WLNTradeHoldCell.m in Sources */,
 				238F55652169790300A9EB7F /* WLNMineCommunityHeadView.m in Sources */,
 				23185FB1216E053C00ECD952 /* WLNMineGForumCell.m in Sources */,
 				231A5DD6217BAEAA00EBD745 /* NSArray+SafeException.m in Sources */,
@@ -1781,6 +1853,7 @@
 				238F54FC21653D8D00A9EB7F /* WLNTradeCell.m in Sources */,
 				2309F8BD215D316300F156E8 /* main.m in Sources */,
 				2309F916215D3F4E00F156E8 /* WLNTradeCtr.m in Sources */,
+				00E92D5B217DC0AD00C51DCD /* WLNTradeCoinCoinCtr.m in Sources */,
 				23D17B3621742C7F0004D877 /* WLNRSendMoneyCtr.m in Sources */,
 				234F1D922165185B00BA61AF /* WLNMineOrderCell.m in Sources */,
 				23D17B3A21742C7F0004D877 /* WLNWalletDetailHeadView.m in Sources */,
@@ -1819,6 +1892,7 @@
 				234F1D742164F4FF00BA61AF /* WLNPropertyValuationCell.m in Sources */,
 				23693CE3217ACC180001A43A /* UIGestureRecognizer+hook.m in Sources */,
 				236346E1216289C800CFF257 /* DAConfig.m in Sources */,
+				00B7F4CC217DD796009208C9 /* WLNTradeHangCell.m in Sources */,
 				23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */,
 				234AA8EC216F4AD500A0866B /* WLNQRCode.m in Sources */,
 				00A5EBF22177301E00FED04D /* WLNMineGHBHeadCell.m in Sources */,
@@ -1830,6 +1904,7 @@
 				236346FC2162D86E00CFF257 /* WLNHomeCountCell.m in Sources */,
 				00DE4287217597CF005DDEE0 /* NSObject+Function.m in Sources */,
 				23AC68C3216B3C5700580EA5 /* WLNMineChargeCtr.m in Sources */,
+				00FB69A1217DD53D009B3F82 /* WLNTradeAgreementCtr.m in Sources */,
 				23D17B3821742C7F0004D877 /* WLNChangeCtr.m in Sources */,
 				23C828B22171C9FD0086C253 /* WMYActionSheet.m in Sources */,
 				23118A6C216DED7A0014FB7E /* WLNShopSectionHeadView.m in Sources */,
@@ -1857,7 +1932,10 @@
 				23D17B4D217431500004D877 /* UITableView+NewTableView.m in Sources */,
 				2346E7C0216B3624002074D5 /* WLNMineIDCertifiedCtr.m in Sources */,
 				00A5EBE52177049900FED04D /* WLNWalletSingle.m in Sources */,
+				00E92D4E217DB95500C51DCD /* WLNTradeLawCionCtr.m in Sources */,
 				23D17AFA21742A7F0004D877 /* WLNWalletHeadCell.m in Sources */,
+				00E92D51217DBA4A00C51DCD /* WLNTradeLawCionCell.m in Sources */,
+				00B7F4C6217DD762009208C9 /* WLNTradeTradeCell.m in Sources */,
 				235484712160BCB400BCE879 /* UIView+SYLayout.m in Sources */,
 				0089FB5C2175CF45002C3465 /* Order.m in Sources */,
 				2340564621702C4B00888D96 /* WLNHandle+Mine.m in Sources */,
@@ -2058,7 +2136,7 @@
 					"$(PROJECT_DIR)/KangYangChain",
 					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
 				);
-				GCC_PREFIX_HEADER = /Users/furao/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,
@@ -2123,7 +2201,7 @@
 					"$(PROJECT_DIR)/KangYangChain",
 					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
 				);
-				GCC_PREFIX_HEADER = /Users/furao/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,

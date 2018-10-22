@@ -38,24 +38,51 @@
                     method_getImplementation(class_getInstanceMethod([self class], @selector(newTableView:didSelectRowAtIndexPath:))),
                     nil);
 
+    if ([self isContainSel:sel inClass:[delegate class]])
+    {
+        IMP imp = method_getImplementation(class_getInstanceMethod([delegate class], sel));
+        class_addMethod([delegate class], sel, imp, nil);
+    }
+    
     [[delegate class] swizzleMethod:sel swizzledSelector:newSel];
 
 
 }
-
+- (BOOL)isContainSel:(SEL)sel inClass:(Class)class {
+    unsigned int count;
+    Method *methodList = class_copyMethodList(class,&count);
+    for (int i = 0; i < count; i++) {
+        Method method = methodList[i];
+        NSString *tempMethodString = [NSString stringWithUTF8String:sel_getName(method_getName(method))];
+        if ([tempMethodString isEqualToString:NSStringFromSelector(sel)]) {
+            return YES;
+        }
+    }
+    return NO;
+}
 -(void)newTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //这里要跟上方保持一致，调用原本didSelectRowAtIndexPath方法
+    SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@/%@/%ld", NSStringFromClass([self class]),  NSStringFromClass([tableView class]), tableView.tag]);
     
-    NSLog(@"我被抓住了");
-    
-    if ([NSStringFromClass([self class]) isEqualToString:@"WLNMineCtr"] && indexPath.section == 2) {
-        
-        [self newTableView:tableView didSelectRowAtIndexPath:indexPath];
-
-    }else{
-        
-        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+    if ([self respondsToSelector:sel]) {
+        IMP imp = [self methodForSelector:sel];
+        void (*func)(id, SEL,id,id) = (void *)imp;
+        func(self, sel,tableView,indexPath);
     }
+    
+    
+    
+//    NSLog(@"我被抓住了");
+//    
+//    if ([NSStringFromClass([self class]) isEqualToString:@"WLNMineCtr"] && indexPath.section == 2) {
+//        
+//        [self newTableView:tableView didSelectRowAtIndexPath:indexPath];
+//
+//    }else{
+//        
+//        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
+//    }
   
 
     

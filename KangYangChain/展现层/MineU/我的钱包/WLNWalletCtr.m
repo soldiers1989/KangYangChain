@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的钱包".Intl;
+    self.title = @"币币账户".Intl;
     
     [WLNWalletSingle shared].currentType = @"BTC";
     

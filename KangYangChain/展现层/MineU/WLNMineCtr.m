@@ -28,7 +28,7 @@ typedef void (^CellBlock)(void);
         _t_p_a_Arr = @[
   @[@{}],
   @[@{TK:@"法币账户".Intl,PK:@"account",BK:^{[self push:@"UIViewController".instance];}},
-  @{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"UIViewController".instance];}},
+  @{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"WLNWalletCtr".instance];}},
   @{TK:@"合约账户".Intl,PK:@"contract",BK:^{[self push:@"UIViewController".instance];}}],
   
   @[@{TK:@"扫码推广".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
@@ -179,7 +179,7 @@ typedef void (^CellBlock)(void);
         return;
     }
     
-    NSArray *arr = @[@"WLNWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"".instance,@"".instance,@"".instance,@"WLNMineEditCtr".instance];
+    NSArray *arr = @[@"WLNMineGHBWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"".instance,@"".instance,@"".instance,@"WLNMineEditCtr".instance];
     
     [self.navigationController pushViewController:arr[tag] animated:YES];
     

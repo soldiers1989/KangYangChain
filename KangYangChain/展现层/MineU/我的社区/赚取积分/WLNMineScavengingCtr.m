@@ -36,7 +36,8 @@
     
     self.img.image = [[WLNQRCode new] jy_QRCodeFromString:@"http://kyl.linkhb.com" size:100];
     
-    self.linkLab.text = @"http://kyl.linkhb.com";
+    self.linkLab.text = [NSString stringWithFormat:@"http://kyl.linkhb.com/#/register-moblie?parent=%@",self.userModel.userid];
+    
     
   
     NSMutableDictionary *dic = @{}.mutableCopy;
