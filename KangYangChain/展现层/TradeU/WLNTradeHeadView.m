@@ -43,16 +43,6 @@
 }
 - (void)topClick:(UIButton*)button{
    
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [self.topBtnArr enumerateObjectsUsingBlock:^(UIButton *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj != button) {
-            
-            [obj setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        }
-    }];
-    
-    
     if (button.tag > 0 &&  _didClickTopBLock) {
         _didClickTopBLock(button.tag);
     }

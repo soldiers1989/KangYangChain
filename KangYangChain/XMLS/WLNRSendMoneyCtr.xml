@@ -41,7 +41,7 @@
     </UIView>
 
 
-    <FlexTouchView onPress="sendAction" layout="margin:10,height:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#1E73F4,borderRadius:5">
+    <FlexTouchView onPress="showPwd" layout="margin:10,height:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#1E73F4,borderRadius:5">
         <UILabel name="" layout="" attr="fontSize:14,color:white,linesNum:0,text:发送"/>
     </FlexTouchView>
 

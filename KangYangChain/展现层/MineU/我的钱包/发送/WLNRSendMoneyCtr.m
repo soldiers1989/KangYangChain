@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UILabel *typeLab;
 @property (nonatomic, strong) UILabel *bottomLab;
 
+@property (nonatomic, strong) GalenPayPasswordView *pwd;
 
 
 @end
@@ -41,19 +42,23 @@
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
-    [SVProgressHUD showSuccessWithStatus:@"发送成功"];
+    [self.pwd showSuccess:@"发送成功"];
+    
     [self.navigationController popViewControllerAnimated:YES];
     
 
 }
 - (void)faild:(id)data sel:(NSString *)sel{
     
+    
+    [self.pwd hiddenPayPasswordView];
+    
     [SVProgressHUD showErrorWithStatus:@"发送失败"];
     
     
 }
 
-- (void)sendAction{
+- (void)showPwd{
     
     if (self.addressTxt.text.length == 0) {
         [SVProgressHUD showErrorWithStatus:@"地址格式不正确"];
@@ -63,6 +68,27 @@
         [SVProgressHUD showErrorWithStatus:@"请输入数量"];
         return;
     }
+    
+    self.pwd = [GalenPayPasswordView tradeView];
+    
+    [self.pwd showInView:self.view.window];
+    
+    __block typeof(GalenPayPasswordView *) blockPay=self.pwd;
+    
+    weakSelf(self);
+    
+    [self.pwd setFinish:^(NSString * pwd) {
+        
+        [blockPay showProgressView:@"正在处理..."];
+        
+        [weakself sendAction];
+        
+        
+    }];
+    
+    
+}
+- (void)sendAction{
     
     NSMutableDictionary *dic = @{}.mutableCopy;
     
@@ -74,6 +100,7 @@
     
     [self routeTargetName:@"WLNHandle" actionName:@"send:" param:dic];
     
+
     
 }
 - (void)chooseAction{

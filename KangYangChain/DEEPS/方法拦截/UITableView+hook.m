@@ -44,7 +44,13 @@
         class_addMethod([delegate class], sel, imp, nil);
     }
     
-    [[delegate class] swizzleMethod:sel swizzledSelector:newSel];
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        
+        [[delegate class] swizzleMethod:sel swizzledSelector:newSel];
+
+    });
 
 
 }
@@ -63,18 +69,18 @@
 -(void)newTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //这里要跟上方保持一致，调用原本didSelectRowAtIndexPath方法
-    SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@/%@/%ld", NSStringFromClass([self class]),  NSStringFromClass([tableView class]), tableView.tag]);
+//    SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@/%@/%ld", NSStringFromClass([self class]),  NSStringFromClass([tableView class]), tableView.tag]);
+//
+//    if ([self respondsToSelector:sel]) {
+//        IMP imp = [self methodForSelector:sel];
+//        void (*func)(id, SEL,id,id) = (void *)imp;
+//        func(self, sel,tableView,indexPath);
+//    }
+//
+    [self newTableView:tableView didSelectRowAtIndexPath:indexPath];
     
-    if ([self respondsToSelector:sel]) {
-        IMP imp = [self methodForSelector:sel];
-        void (*func)(id, SEL,id,id) = (void *)imp;
-        func(self, sel,tableView,indexPath);
-    }
-    
-    
-    
-//    NSLog(@"我被抓住了");
-//    
+    NSLog(@"我被抓住了");
+//
 //    if ([NSStringFromClass([self class]) isEqualToString:@"WLNMineCtr"] && indexPath.section == 2) {
 //        
 //        [self newTableView:tableView didSelectRowAtIndexPath:indexPath];

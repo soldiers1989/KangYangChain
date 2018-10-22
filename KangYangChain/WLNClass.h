@@ -49,6 +49,7 @@
 #import "WMYActionSheet.h"
 #import "DAConfig.h"
 #import "HYAlertView.h"
+#import "GalenPayPasswordView.h"
 
 
 #endif

@@ -210,6 +210,26 @@
 		23C828AF2171C6810086C253 /* WLNMineEditCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23C828AE2171C6810086C253 /* WLNMineEditCtr.xml */; };
 		23C828B22171C9FD0086C253 /* WMYActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C828B12171C9FD0086C253 /* WMYActionSheet.m */; };
 		23C828B52171E0A70086C253 /* AppDelegate+Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C828B42171E0A70086C253 /* AppDelegate+Chat.m */; };
+		23CB8613217E5A17007B4B21 /* trade.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23CB860C217E5A17007B4B21 /* trade.bundle */; };
+		23CB8614217E5A17007B4B21 /* GalenPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB860D217E5A17007B4B21 /* GalenPasswordView.m */; };
+		23CB8615217E5A17007B4B21 /* GalneProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB860E217E5A17007B4B21 /* GalneProgressView.m */; };
+		23CB8616217E5A17007B4B21 /* GalenPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8612217E5A17007B4B21 /* GalenPayPasswordView.m */; };
+		23CB889D217E7AC2007B4B21 /* HSEther.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB887C217E7AC1007B4B21 /* HSEther.m */; };
+		23CB889E217E7AC2007B4B21 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB887D217E7AC1007B4B21 /* Wallet.m */; };
+		23CB889F217E7AC2007B4B21 /* CachedDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8880217E7AC1007B4B21 /* CachedDataStore.m */; };
+		23CB88A0217E7AC2007B4B21 /* SignedRemoteDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8881217E7AC1007B4B21 /* SignedRemoteDictionary.m */; };
+		23CB88A1217E7AC2007B4B21 /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8884217E7AC1007B4B21 /* UIColor+hex.m */; };
+		23CB88A2217E7AC2007B4B21 /* IndexPathArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8887217E7AC1007B4B21 /* IndexPathArray.m */; };
+		23CB88A3217E7AC2007B4B21 /* IconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8889217E7AC1007B4B21 /* IconFont.m */; };
+		23CB88A4217E7AC2007B4B21 /* IconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB888A217E7AC1007B4B21 /* IconInfo.m */; };
+		23CB88A5217E7AC2007B4B21 /* UIImage+IconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB888B217E7AC1007B4B21 /* UIImage+IconFont.m */; };
+		23CB88A6217E7AC2007B4B21 /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8891217E7AC1007B4B21 /* SharedDefaults.m */; };
+		23CB88A7217E7AC2007B4B21 /* AsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8893217E7AC1007B4B21 /* AsyncOperation.m */; };
+		23CB88A8217E7AC2007B4B21 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8894217E7AC1007B4B21 /* Utilities.m */; };
+		23CB88A9217E7AC2007B4B21 /* Signer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8897217E7AC1007B4B21 /* Signer.m */; };
+		23CB88AA217E7AC2007B4B21 /* CloudKeychainSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB8898217E7AC1007B4B21 /* CloudKeychainSigner.m */; };
+		23CB88AB217E7AC2007B4B21 /* UIImage+resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CB889B217E7AC1007B4B21 /* UIImage+resize.m */; };
+		23CB88B5217E7AEA007B4B21 /* ethers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CB88B2217E7AD0007B4B21 /* ethers.framework */; };
 		23CF8F93216DF0C300CCF4C4 /* Snip20181010_31.png in Resources */ = {isa = PBXBuildFile; fileRef = 23CF8F92216DF0C300CCF4C4 /* Snip20181010_31.png */; };
 		23CF8F96216DFE3200CCF4C4 /* WLNMineGLiveCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CF8F95216DFE3200CCF4C4 /* WLNMineGLiveCtr.m */; };
 		23CF8F99216DFF4D00CCF4C4 /* WLNMineGLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CF8F98216DFF4D00CCF4C4 /* WLNMineGLiveCell.m */; };
@@ -254,6 +274,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2309F8A9215D316200F156E8;
 			remoteInfo = KangYangChain;
+		};
+		23CB88B1217E7AD0007B4B21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23CB88AC217E7ACF007B4B21 /* ethers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2317E631E3191AC00DBE3E4;
+			remoteInfo = ethers;
+		};
+		23CB88B3217E7AD0007B4B21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23CB88AC217E7ACF007B4B21 /* ethers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2317E6C1E3191AC00DBE3E4;
+			remoteInfo = ethersTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -606,6 +640,44 @@
 		23C828B12171C9FD0086C253 /* WMYActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMYActionSheet.m; sourceTree = "<group>"; };
 		23C828B32171E0A70086C253 /* AppDelegate+Chat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Chat.h"; sourceTree = "<group>"; };
 		23C828B42171E0A70086C253 /* AppDelegate+Chat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Chat.m"; sourceTree = "<group>"; };
+		23CB860C217E5A17007B4B21 /* trade.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = trade.bundle; sourceTree = "<group>"; };
+		23CB860D217E5A17007B4B21 /* GalenPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalenPasswordView.m; sourceTree = "<group>"; };
+		23CB860E217E5A17007B4B21 /* GalneProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalneProgressView.m; sourceTree = "<group>"; };
+		23CB860F217E5A17007B4B21 /* GalenPayPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalenPayPasswordView.h; sourceTree = "<group>"; };
+		23CB8610217E5A17007B4B21 /* GalneProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalneProgressView.h; sourceTree = "<group>"; };
+		23CB8611217E5A17007B4B21 /* GalenPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalenPasswordView.h; sourceTree = "<group>"; };
+		23CB8612217E5A17007B4B21 /* GalenPayPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalenPayPasswordView.m; sourceTree = "<group>"; };
+		23CB887C217E7AC1007B4B21 /* HSEther.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSEther.m; sourceTree = "<group>"; };
+		23CB887D217E7AC1007B4B21 /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
+		23CB887E217E7AC1007B4B21 /* HSEther.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSEther.h; sourceTree = "<group>"; };
+		23CB8880217E7AC1007B4B21 /* CachedDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedDataStore.m; sourceTree = "<group>"; };
+		23CB8881217E7AC1007B4B21 /* SignedRemoteDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignedRemoteDictionary.m; sourceTree = "<group>"; };
+		23CB8882217E7AC1007B4B21 /* AsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncOperation.h; sourceTree = "<group>"; };
+		23CB8883217E7AC1007B4B21 /* SharedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
+		23CB8884217E7AC1007B4B21 /* UIColor+hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+hex.m"; sourceTree = "<group>"; };
+		23CB8885217E7AC1007B4B21 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		23CB8886217E7AC1007B4B21 /* UIImage+resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+resize.h"; sourceTree = "<group>"; };
+		23CB8887217E7AC1007B4B21 /* IndexPathArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexPathArray.m; sourceTree = "<group>"; };
+		23CB8889217E7AC1007B4B21 /* IconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconFont.m; sourceTree = "<group>"; };
+		23CB888A217E7AC1007B4B21 /* IconInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconInfo.m; sourceTree = "<group>"; };
+		23CB888B217E7AC1007B4B21 /* UIImage+IconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IconFont.m"; sourceTree = "<group>"; };
+		23CB888C217E7AC1007B4B21 /* UIImage+IconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IconFont.h"; sourceTree = "<group>"; };
+		23CB888D217E7AC1007B4B21 /* IconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconInfo.h; sourceTree = "<group>"; };
+		23CB888E217E7AC1007B4B21 /* IconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconFont.h; sourceTree = "<group>"; };
+		23CB888F217E7AC1007B4B21 /* CachedDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedDataStore.h; sourceTree = "<group>"; };
+		23CB8890217E7AC1007B4B21 /* UIColor+hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+hex.h"; sourceTree = "<group>"; };
+		23CB8891217E7AC1007B4B21 /* SharedDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedDefaults.m; sourceTree = "<group>"; };
+		23CB8892217E7AC1007B4B21 /* SignedRemoteDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignedRemoteDictionary.h; sourceTree = "<group>"; };
+		23CB8893217E7AC1007B4B21 /* AsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncOperation.m; sourceTree = "<group>"; };
+		23CB8894217E7AC1007B4B21 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		23CB8896217E7AC1007B4B21 /* CloudKeychainSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKeychainSigner.h; sourceTree = "<group>"; };
+		23CB8897217E7AC1007B4B21 /* Signer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signer.m; sourceTree = "<group>"; };
+		23CB8898217E7AC1007B4B21 /* CloudKeychainSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKeychainSigner.m; sourceTree = "<group>"; };
+		23CB8899217E7AC1007B4B21 /* Signer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signer.h; sourceTree = "<group>"; };
+		23CB889A217E7AC1007B4B21 /* IndexPathArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPathArray.h; sourceTree = "<group>"; };
+		23CB889B217E7AC1007B4B21 /* UIImage+resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+resize.m"; sourceTree = "<group>"; };
+		23CB889C217E7AC1007B4B21 /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		23CB88AC217E7ACF007B4B21 /* ethers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ethers.xcodeproj; path = "ethers.objc-master/ethers.xcodeproj"; sourceTree = "<group>"; };
 		23CF8F92216DF0C300CCF4C4 /* Snip20181010_31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181010_31.png; sourceTree = "<group>"; };
 		23CF8F94216DFE3200CCF4C4 /* WLNMineGLiveCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineGLiveCtr.h; sourceTree = "<group>"; };
 		23CF8F95216DFE3200CCF4C4 /* WLNMineGLiveCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineGLiveCtr.m; sourceTree = "<group>"; };
@@ -666,6 +738,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23CB88B5217E7AEA007B4B21 /* ethers.framework in Frameworks */,
 				232D22912174459D0088D9AC /* libPods-KangYangChain.a in Frameworks */,
 				00A5EBE22177026900FED04D /* BTCPack.framework in Frameworks */,
 			);
@@ -837,6 +910,8 @@
 				2363470D2163873200CFF257 /* Snip20181002_1.png */,
 				2363470B2163873200CFF257 /* Snip20181002_2.png */,
 				003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */,
+				23CB88AC217E7ACF007B4B21 /* ethers.xcodeproj */,
+				23CB887B217E7AC1007B4B21 /* ETHPack */,
 				00A5EBE12177026900FED04D /* BTCPack.framework */,
 				2309F8B6215D316300F156E8 /* Assets.xcassets */,
 				2309F8B8215D316300F156E8 /* LaunchScreen.storyboard */,
@@ -1098,6 +1173,7 @@
 		231A96EB217131230063587B /* CONTROLS */ = {
 			isa = PBXGroup;
 			children = (
+				23CB860B217E5A17007B4B21 /* GalenPasswordView */,
 				231A5DE2217D261F00EBD745 /* 提示框 */,
 				231A5DCC217BA92B00EBD745 /* 二维码 */,
 				235484722160C76200BCE879 /* 国际化 */,
@@ -1480,6 +1556,90 @@
 			path = LogU;
 			sourceTree = "<group>";
 		};
+		23CB860B217E5A17007B4B21 /* GalenPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				23CB860C217E5A17007B4B21 /* trade.bundle */,
+				23CB860D217E5A17007B4B21 /* GalenPasswordView.m */,
+				23CB860E217E5A17007B4B21 /* GalneProgressView.m */,
+				23CB860F217E5A17007B4B21 /* GalenPayPasswordView.h */,
+				23CB8610217E5A17007B4B21 /* GalneProgressView.h */,
+				23CB8611217E5A17007B4B21 /* GalenPasswordView.h */,
+				23CB8612217E5A17007B4B21 /* GalenPayPasswordView.m */,
+			);
+			path = GalenPasswordView;
+			sourceTree = "<group>";
+		};
+		23CB887B217E7AC1007B4B21 /* ETHPack */ = {
+			isa = PBXGroup;
+			children = (
+				23CB887F217E7AC1007B4B21 /* Utilities */,
+				23CB887E217E7AC1007B4B21 /* HSEther.h */,
+				23CB887C217E7AC1007B4B21 /* HSEther.m */,
+				23CB889C217E7AC1007B4B21 /* Wallet.h */,
+				23CB887D217E7AC1007B4B21 /* Wallet.m */,
+			);
+			path = ETHPack;
+			sourceTree = "<group>";
+		};
+		23CB887F217E7AC1007B4B21 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				23CB8880217E7AC1007B4B21 /* CachedDataStore.m */,
+				23CB8881217E7AC1007B4B21 /* SignedRemoteDictionary.m */,
+				23CB8882217E7AC1007B4B21 /* AsyncOperation.h */,
+				23CB8883217E7AC1007B4B21 /* SharedDefaults.h */,
+				23CB8884217E7AC1007B4B21 /* UIColor+hex.m */,
+				23CB8885217E7AC1007B4B21 /* Utilities.h */,
+				23CB8886217E7AC1007B4B21 /* UIImage+resize.h */,
+				23CB8887217E7AC1007B4B21 /* IndexPathArray.m */,
+				23CB8888217E7AC1007B4B21 /* IconFont */,
+				23CB888F217E7AC1007B4B21 /* CachedDataStore.h */,
+				23CB8890217E7AC1007B4B21 /* UIColor+hex.h */,
+				23CB8891217E7AC1007B4B21 /* SharedDefaults.m */,
+				23CB8892217E7AC1007B4B21 /* SignedRemoteDictionary.h */,
+				23CB8893217E7AC1007B4B21 /* AsyncOperation.m */,
+				23CB8894217E7AC1007B4B21 /* Utilities.m */,
+				23CB8895217E7AC1007B4B21 /* Signers */,
+				23CB889A217E7AC1007B4B21 /* IndexPathArray.h */,
+				23CB889B217E7AC1007B4B21 /* UIImage+resize.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		23CB8888217E7AC1007B4B21 /* IconFont */ = {
+			isa = PBXGroup;
+			children = (
+				23CB8889217E7AC1007B4B21 /* IconFont.m */,
+				23CB888A217E7AC1007B4B21 /* IconInfo.m */,
+				23CB888B217E7AC1007B4B21 /* UIImage+IconFont.m */,
+				23CB888C217E7AC1007B4B21 /* UIImage+IconFont.h */,
+				23CB888D217E7AC1007B4B21 /* IconInfo.h */,
+				23CB888E217E7AC1007B4B21 /* IconFont.h */,
+			);
+			path = IconFont;
+			sourceTree = "<group>";
+		};
+		23CB8895217E7AC1007B4B21 /* Signers */ = {
+			isa = PBXGroup;
+			children = (
+				23CB8896217E7AC1007B4B21 /* CloudKeychainSigner.h */,
+				23CB8897217E7AC1007B4B21 /* Signer.m */,
+				23CB8898217E7AC1007B4B21 /* CloudKeychainSigner.m */,
+				23CB8899217E7AC1007B4B21 /* Signer.h */,
+			);
+			path = Signers;
+			sourceTree = "<group>";
+		};
+		23CB88AD217E7ACF007B4B21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23CB88B2217E7AD0007B4B21 /* ethers.framework */,
+				23CB88B4217E7AD0007B4B21 /* ethersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		23D17B2021742C7B0004D877 /* 发送 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1654,6 +1814,12 @@
 			mainGroup = 2309F8A1215D316200F156E8;
 			productRefGroup = 2309F8AB215D316200F156E8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 23CB88AD217E7ACF007B4B21 /* Products */;
+					ProjectRef = 23CB88AC217E7ACF007B4B21 /* ethers.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2309F8A9215D316200F156E8 /* KangYangChain */,
@@ -1662,6 +1828,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		23CB88B2217E7AD0007B4B21 /* ethers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ethers.framework;
+			remoteRef = 23CB88B1217E7AD0007B4B21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		23CB88B4217E7AD0007B4B21 /* ethersTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ethersTests.xctest;
+			remoteRef = 23CB88B3217E7AD0007B4B21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2309F8A8215D316200F156E8 /* Resources */ = {
@@ -1686,6 +1869,7 @@
 				003754462178624D0025CD1D /* WLNOrderCell.xml in Resources */,
 				23C8289F21717F020086C253 /* WLNMineExtensionInfoCell.xml in Resources */,
 				238F55022165438400A9EB7F /* Snip20181004_37.png in Resources */,
+				23CB8613217E5A17007B4B21 /* trade.bundle in Resources */,
 				23C8288621717F020086C253 /* WLNHomeHotCell.xml in Resources */,
 				2309F8BA215D316300F156E8 /* LaunchScreen.storyboard in Resources */,
 				23C8289221717F020086C253 /* WLNMineCommunityCtr.xml in Resources */,
@@ -1842,6 +2026,7 @@
 				00CC76082174898C0053E546 /* WLNLockCell.m in Sources */,
 				231A5DD7217BAEAA00EBD745 /* NSMutableArray+SafeException.m in Sources */,
 				00CC76122174A20D0053E546 /* WLNMineSellOutCtr.m in Sources */,
+				23CB88A0217E7AC2007B4B21 /* SignedRemoteDictionary.m in Sources */,
 				23D17B3721742C7F0004D877 /* WLNLockCtr.m in Sources */,
 				23D17B3C21742C7F0004D877 /* WLNReceiveMoneyCtr.m in Sources */,
 				236346E0216289C800CFF257 /* NSBundle+DAUtils.m in Sources */,
@@ -1862,15 +2047,20 @@
 				2340564021702C3F00888D96 /* WLNHandle+Trade.m in Sources */,
 				231A5DD8217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m in Sources */,
 				238F555F2169757800A9EB7F /* WLNMineCommunityCtr.m in Sources */,
+				23CB88A3217E7AC2007B4B21 /* IconFont.m in Sources */,
 				231A5DD9217BAEAA00EBD745 /* NSDictionary+SafeException.m in Sources */,
 				00272E762179715000A5EBD4 /* Click.m in Sources */,
 				23D17AF821742A7F0004D877 /* WLNWalletBodyCell.m in Sources */,
+				23CB88A6217E7AC2007B4B21 /* SharedDefaults.m in Sources */,
 				237BA3C6217079AF00C71283 /* WLNMineExtensionInfoView.m in Sources */,
 				23693CD7217AB8D30001A43A /* UITableView+hook.m in Sources */,
 				233AAFF6216C9AAE007D12DD /* WLNForgetCell.m in Sources */,
+				23CB8614217E5A17007B4B21 /* GalenPasswordView.m in Sources */,
+				23CB88A7217E7AC2007B4B21 /* AsyncOperation.m in Sources */,
 				2346E7B6216B281A002074D5 /* WLNMineSecurityCell.m in Sources */,
 				2309F914215D3F4E00F156E8 /* WLNHomeCtr.m in Sources */,
 				233AAFEC216C9601007D12DD /* WLNRegisterCtr.m in Sources */,
+				23CB88AA217E7AC2007B4B21 /* CloudKeychainSigner.m in Sources */,
 				236346E82162978500CFF257 /* WLNMineSimpleCell.m in Sources */,
 				2340564C217040E400888D96 /* WLNMineScanHeadView.m in Sources */,
 				23AC68BE216B39E000580EA5 /* WLNMinePaySetCtr.m in Sources */,
@@ -1879,11 +2069,14 @@
 				2340564321702C4600888D96 /* WLNHandle+Shop.m in Sources */,
 				2346E7A8216B0F19002074D5 /* WLNMineGProblemCell.m in Sources */,
 				00A5EBDE2176DB7600FED04D /* WLNMineFormDetailHeadView.m in Sources */,
+				23CB88A8217E7AC2007B4B21 /* Utilities.m in Sources */,
 				2309F8AF215D316200F156E8 /* AppDelegate.m in Sources */,
 				23CF8FA2216E032800CCF4C4 /* WLNMineGForumCtr.m in Sources */,
 				23C828AD2171C25C0086C253 /* WLNMineEditCtr.m in Sources */,
 				235484702160BCB400BCE879 /* NSObject+RouteRoot.m in Sources */,
+				23CB8616217E5A17007B4B21 /* GalenPayPasswordView.m in Sources */,
 				231A96E721712FFD0063587B /* WLNData.m in Sources */,
+				23CB889E217E7AC2007B4B21 /* Wallet.m in Sources */,
 				23F9C9292163E0C8000EDFC4 /* WLNShopIntegralCell.m in Sources */,
 				231A96E421712D8C0063587B /* WLNDataBase.m in Sources */,
 				232FF547216AFABD00C71BCA /* WLNMineNewsCtr.m in Sources */,
@@ -1894,7 +2087,10 @@
 				236346E1216289C800CFF257 /* DAConfig.m in Sources */,
 				00B7F4CC217DD796009208C9 /* WLNTradeHangCell.m in Sources */,
 				23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */,
+				23CB8615217E5A17007B4B21 /* GalneProgressView.m in Sources */,
+				23CB88A2217E7AC2007B4B21 /* IndexPathArray.m in Sources */,
 				234AA8EC216F4AD500A0866B /* WLNQRCode.m in Sources */,
+				23CB88A9217E7AC2007B4B21 /* Signer.m in Sources */,
 				00A5EBF22177301E00FED04D /* WLNMineGHBHeadCell.m in Sources */,
 				23CF8F99216DFF4D00CCF4C4 /* WLNMineGLiveCell.m in Sources */,
 				236346F12162B45F00CFF257 /* WLNMineHeadCell.m in Sources */,
@@ -1906,23 +2102,28 @@
 				23AC68C3216B3C5700580EA5 /* WLNMineChargeCtr.m in Sources */,
 				00FB69A1217DD53D009B3F82 /* WLNTradeAgreementCtr.m in Sources */,
 				23D17B3821742C7F0004D877 /* WLNChangeCtr.m in Sources */,
+				23CB88A1217E7AC2007B4B21 /* UIColor+hex.m in Sources */,
 				23C828B22171C9FD0086C253 /* WMYActionSheet.m in Sources */,
 				23118A6C216DED7A0014FB7E /* WLNShopSectionHeadView.m in Sources */,
 				231A5DE5217D262200EBD745 /* HYAlertView.m in Sources */,
 				23D17B3D21742C7F0004D877 /* WLNOrderCtr.m in Sources */,
 				237BA3C1217076A000C71283 /* WLNMineExtensionInfoCell.m in Sources */,
+				23CB88A5217E7AC2007B4B21 /* UIImage+IconFont.m in Sources */,
 				236346F92162D85D00CFF257 /* WLNHomeHotCell.m in Sources */,
 				23212A62216FE3C1008C8DD2 /* WLNHandle.m in Sources */,
 				238F5578216A60EE00A9EB7F /* WLNTradeHeadView.m in Sources */,
 				231A5DDC217BAEBA00EBD745 /* NSObject+Swizzle.m in Sources */,
 				2340561B216F569C00888D96 /* WLNMineCardPublishCtr.m in Sources */,
 				231A5DDE217BAED900EBD745 /* NullSafe.m in Sources */,
+				23CB889F217E7AC2007B4B21 /* CachedDataStore.m in Sources */,
 				23405615216F55C700888D96 /* WLNMineScavengingCtr.m in Sources */,
 				2346E7AD216B21C6002074D5 /* WLNMineGProblemCtr.m in Sources */,
 				234B6EB521790991000B69AB /* WLNHandle+Wallet.m in Sources */,
 				23AC68D4216B561600580EA5 /* WLNLogCtr.m in Sources */,
 				233AAFF1216C995A007D12DD /* WLNForgetCtr.m in Sources */,
+				23CB889D217E7AC2007B4B21 /* HSEther.m in Sources */,
 				00375439217818130025CD1D /* WLNWalletHeadView.m in Sources */,
+				23CB88AB217E7AC2007B4B21 /* UIImage+resize.m in Sources */,
 				234B6EBB21791E8C000B69AB /* WLNURLProtocol.m in Sources */,
 				23D17B3B21742C7F0004D877 /* WLNWalletDetailCell.m in Sources */,
 				237BA3D2217090AC00C71283 /* WLNShopAlertView.m in Sources */,
@@ -1934,6 +2135,7 @@
 				00A5EBE52177049900FED04D /* WLNWalletSingle.m in Sources */,
 				00E92D4E217DB95500C51DCD /* WLNTradeLawCionCtr.m in Sources */,
 				23D17AFA21742A7F0004D877 /* WLNWalletHeadCell.m in Sources */,
+				23CB88A4217E7AC2007B4B21 /* IconInfo.m in Sources */,
 				00E92D51217DBA4A00C51DCD /* WLNTradeLawCionCell.m in Sources */,
 				00B7F4C6217DD762009208C9 /* WLNTradeTradeCell.m in Sources */,
 				235484712160BCB400BCE879 /* UIView+SYLayout.m in Sources */,
@@ -2132,11 +2334,11 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/KangYangChain/展现层/Mine",
 					"$(PROJECT_DIR)/KangYangChain",
-					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
+					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator",
+					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator/ethers.framework",
 				);
-				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KangYangChain/WLNPrefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,
@@ -2174,6 +2376,7 @@
 					"\"${PODS_ROOT}/OpenSSL/lib-ios\"",
 					"\"${PODS_ROOT}/WechatOpenSDK/WechatSDK1.8.2\"",
 					"\"$(SRCROOT)/KangYangChain/BTCPack.framework\"",
+					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = kangyanglian;
@@ -2197,11 +2400,11 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/KangYangChain/展现层/Mine",
 					"$(PROJECT_DIR)/KangYangChain",
-					"$(PROJECT_DIR)/KangYangChain/展现层/Mine/我的钱包",
+					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator",
+					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator/ethers.framework",
 				);
-				GCC_PREFIX_HEADER = /Users/edz/Desktop/KangYangChain/KangYangChain/WLNPrefix.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KangYangChain/WLNPrefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/include/libxml2,
@@ -2239,6 +2442,7 @@
 					"\"${PODS_ROOT}/OpenSSL/lib-ios\"",
 					"\"${PODS_ROOT}/WechatOpenSDK/WechatSDK1.8.2\"",
 					"\"$(SRCROOT)/KangYangChain/BTCPack.framework\"",
+					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = kangyanglian;
