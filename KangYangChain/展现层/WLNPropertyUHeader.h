@@ -11,6 +11,8 @@
 
 
 #import "WLNPropertyCell.h"
-#import "WLNPropertyValuationCell.h"
+#import "WLNPropertyHeadView.h"
+
+#import "WLNRSendMoneyCell.h"
 
 #endif /* WLNPropertyUHeader_h */

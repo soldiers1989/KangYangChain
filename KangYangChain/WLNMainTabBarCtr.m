@@ -104,17 +104,17 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     
     
-//    if (TARGET_IPHONE_SIMULATOR) {
-//        if (self.selectedViewController == viewController) {
-//            
-//            UINavigationController *nav = (UINavigationController *)viewController;
-//            UIViewController *vc = nav.viewControllers.firstObject;
-//            [vc viewDidLoad];
-//            [vc viewWillAppear:YES];
-//            
-//            
-//        }
-//    }
+    if (TARGET_IPHONE_SIMULATOR) {
+        if (self.selectedViewController == viewController) {
+            
+            UINavigationController *nav = (UINavigationController *)viewController;
+            UIViewController *vc = nav.viewControllers.firstObject;
+            [vc viewDidLoad];
+            [vc viewWillAppear:YES];
+            
+            
+        }
+    }
 
 }
 

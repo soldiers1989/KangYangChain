@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WLNChangeCtr : UIViewController<WLNPassValueProtocol>
+@interface WLNChangeCtr : FlexBaseVC <WLNPassValueProtocol>
 
 @end

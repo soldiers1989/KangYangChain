@@ -10,7 +10,7 @@
 
 @interface WLNOrderCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 
-@property (nonatomic, strong) UITableView *tab;
+
 @property (nonatomic, strong) NSMutableArray *dataArrs;
 
 
@@ -25,7 +25,9 @@
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    [self.view addSubview:self.tab];
+    self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self tabType:1];
+    
     [self.tab registerClass:WLNOrderCell.class forCellReuseIdentifier:@"WLNOrderCell"];
     
     
@@ -33,6 +35,11 @@
     [self routeTargetName:@"WLNHandle" actionName:@"getOrder:" param:@{DELEGATES:self}.mutableCopy];
     
     [SVProgressHUD show];
+    
+    
+    WLNOrderHeadView *view = [[WLNOrderHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 50)];
+    self.tab.tableHeaderView = view;
+    
 }
 
 - (void)result:(id)data sel:(NSString *)sel{
@@ -50,6 +57,14 @@
     
 }
 
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView fr_willDisplayCell:cell forRowAtIndexPath:indexPath];
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
@@ -81,14 +96,6 @@
     NSString *timeS = [formatter stringFromDate:myDate];
     return timeS;
     
-}
-
-- (UITableView *)tab{
-    
-    if (_tab == nil) {
-        _tab = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    }
-    return _tab;
 }
 
 @end

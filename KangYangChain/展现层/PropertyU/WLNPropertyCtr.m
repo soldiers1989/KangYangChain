@@ -25,21 +25,37 @@
     self.tab.separatorStyle =UITableViewCellSeparatorStyleNone;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    WLNPropertyHeadView *view = [[WLNPropertyHeadView alloc]init];
+    
+    
+    weakSelf(self);
+    [view setDidClickBlock:^(NSInteger  tag) {
+        
+        [weakself gotoNextWith:tag];
+        
+        
+    }];
+    return view;
+    
+}
+- (void)gotoNextWith:(NSInteger)tag{
+    
+    NSArray *arr = @[[WLNReceiveMoneyCtr new],[WLNRSendMoneyCtr new],[WLNChangeCtr new],[WLNOrderCtr new]];
+
+    UIViewController *vc = arr[tag];
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == 0) {
-        return [self top_tableView:tableView cellForRowAtIndexPath:indexPath];
-    }
-    return [self bottom_tableView:tableView cellForRowAtIndexPath:indexPath];
-  
-    
-    
-}
--(UITableViewCell *)top_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
     static NSString *identifier = @"WLNPropertyCell";
     
     WLNPropertyCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -50,22 +66,10 @@
     }
     
     return cell;
+    
+    
 }
--(UITableViewCell *)bottom_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    
-    static NSString *identifier = @"WLNPropertyValuationCell";
-    
-    WLNPropertyValuationCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[WLNPropertyValuationCell alloc] initWithFlex:nil reuseIdentifier:identifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;;
-        
-    }
-    
-    return cell;
-    
-}
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }

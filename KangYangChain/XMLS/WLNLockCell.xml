@@ -7,9 +7,56 @@
    Created by edz on 2018/10/15.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIView layout="flexDirection:row,justifyContent:space-around,height:44" attr="">
-    <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:BTC:"/>
-    <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:0.0"/>
-    <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:2018-2019"/>
-    <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:5.9"/>
+<UIView layout="" attr="bgColor:#f5f5f5">
+
+    <UIView layout="margin:10" attr="bgColor:white,borderRadius:7">
+        <UIView layout="flexDirection:row,justifyContent:space-around" attr="">
+            <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:GHB钱包"/>
+            <UIImageView attr="source:"/>
+            <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:锁仓"/>
+        </UIView>
+
+        <UIView layout="flexDirection:row" attr="">
+            <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:币种选择"/>
+            <UILabel name="" layout="flex:1" attr="fontSize:14,color:#333333,linesNum:0,text:GHB钱包"/>
+            <UIImageView attr="source:" layout="marginRight:10"/>
+        </UIView>
+
+        <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+
+        <UIView layout="flexDirection:row," attr="">
+        
+            <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:输入数量"/>
+            <UITextField name="" layout="flex:1" attr="fontSize:14,color:black,textAlign:left,placeholder:请输入转入数量,text:"/>
+        </UIView>
+
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="bgColor:#DEE0E0">
+            <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:#333333,linesNum:0,text:可转入金额0.0GHB"/>
+            <FlexTouchView onPress="" layout="marginRight:10" attr="underlayColor:darkGray">
+                <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:全部转入"/>
+            </FlexTouchView>
+        </UIView>
+
+        <UIView layout="flexDirection:row" attr="">
+            <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:锁仓时间"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:请选择锁仓时间"/>
+
+        </UIView>
+
+        <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+
+        <UIView layout="flexDirection:row" attr="">
+            <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:预计收益"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:0,00"/>
+        </UIView>
+
+    </UIView>
+
+
+    <FlexTouchView onPress="" layout="margin:20,height:44,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#41559D,
+    borderRadius:7">
+        <UILabel name="" layout="" attr="fontSize:14,color:white,linesNum:0,text:确定划转"/>
+    </FlexTouchView>
+
+
 </UIView>

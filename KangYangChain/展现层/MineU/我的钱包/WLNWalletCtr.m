@@ -220,9 +220,10 @@
 - (void)gotoNextWith:(NSInteger)tag{
 
   
-    NSArray *arr = @[[WLNReceiveMoneyCtr new],[WLNRSendMoneyCtr new],[WLNChangeCtr new],[WLNOrderCtr new]];
-    
-    [self.navigationController pushViewController:arr[tag] animated:YES];
+    NSArray *arr = @[[WLNChangeCtr new],[WLNOrderCtr new]];
+    UIViewController *vc = arr[tag];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
     
     
 }

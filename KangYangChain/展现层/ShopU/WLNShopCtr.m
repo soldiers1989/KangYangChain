@@ -108,18 +108,16 @@
     
     [cell setDidClick:^(NSInteger tag) {
        
-        
-        [SVProgressHUD showErrorWithStatus:@"功能开发中"];
 
-//        if (tag == 1) {
-//
-//            [weakself.navigationController pushViewController:@"WLNShopBuyHBGCtr".instance animated:YES];
-//
-//        }else{
-//
-//            [weakself.navigationController pushViewController:@"WLNShopChangeCtr".instance animated:YES];
-//
-//        }
+        if (tag == 1) {
+
+            [weakself.navigationController pushViewController:@"WLNShopBuyHBGCtr".instance animated:YES];
+
+        }else{
+
+            [weakself.navigationController pushViewController:@"WLNShopChangeCtr".instance animated:YES];
+
+        }
         
     }];
     return cell;

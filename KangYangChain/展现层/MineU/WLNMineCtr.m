@@ -27,9 +27,9 @@ typedef void (^CellBlock)(void);
     if (!_t_p_a_Arr) {
         _t_p_a_Arr = @[
   @[@{}],
-  @[@{TK:@"法币账户".Intl,PK:@"account",BK:^{[self push:@"UIViewController".instance];}},
-  @{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"WLNWalletCtr".instance];}},
-  @{TK:@"合约账户".Intl,PK:@"contract",BK:^{[self push:@"UIViewController".instance];}}],
+  @[@{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"WLNWalletCtr".instance];}},
+  @{TK:@"法币账户".Intl,PK:@"account",BK:^{[self push:@"WLNMineLawWalletCtr".instance];}},
+  @{TK:@"合约账户".Intl,PK:@"contract",BK:^{[self push:@"WLNMineAgreeWalletCtr".instance];}}],
   
   @[@{TK:@"扫码推广".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
   @{TK:@"互助推广".Intl,PK:@"fenxiang",BK:^{[self push:@"WLNMineExtensionCtr".instance];}}],
@@ -55,7 +55,8 @@ typedef void (^CellBlock)(void);
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    
+    self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     [self.tab registerClass:WLNMineSimpleCell.class forCellReuseIdentifier:@"WLNMineSimpleCell"];
     [self.tab registerClass:WLNMineHeadCell.class forCellReuseIdentifier:@"WLNMineHeadCell"];
     

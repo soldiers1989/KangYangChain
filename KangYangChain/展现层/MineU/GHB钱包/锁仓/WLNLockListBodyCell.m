@@ -1,14 +1,14 @@
 //
-//  WLNPropertyValuationCell.m
+//  WLNLockListBodyCell.m
 //  KangYangChain
 //
-//  Created by furao on 2018/10/3.
-//  Copyright © 2018年 furao. All rights reserved.
+//  Created by edz on 2018/10/23.
+//  Copyright © 2018 furao. All rights reserved.
 //
 
-#import "WLNPropertyValuationCell.h"
+#import "WLNLockListBodyCell.h"
 
-@implementation WLNPropertyValuationCell
+@implementation WLNLockListBodyCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

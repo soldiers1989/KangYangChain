@@ -67,7 +67,20 @@
 #import "WLNMineExtensionInfoCell.h"
 #import "WLNMineExtensionInfoView.h"
 
+#import "WLNMineLawWalletCtr.h"
+#import "WLNMineAgreeWalletCtr.h"
 
+#import "WLNMineAgreeWalletHeadCell.h"
+#import "WLNMineLawWalletHeadCell.h"
+
+#import "WLNOrderHeadView.h"
+#import "WLNLockListCtr.h"
+
+#import "WLNLockListBodyCell.h"
+#import "WLNLockListHeadCell.h"
+
+#import "WLNRechargeListCtr.h"
+#import "WLNRechargeListCell.h"
 
 
 #endif /* WLNMineUHeader_h */

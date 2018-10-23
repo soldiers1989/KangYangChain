@@ -28,28 +28,15 @@
     </UIView>
 
     <UIView layout="margin:15,height:80,flexDirection:row,justifyContent:space-around,alignItems:center" attr="bgColor:white,borderRadius:10">
+       
         <FlexTouchView onPress="clickAction:" layout="alignItems:center,flex:1" attr="underlayColor:darkGray,tag:0">
-
-            <UIImageView attr="source:Recharge" layout="width:20,height:20,marginBottom:10"/>  
-            <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:@充币"/>
-
-        </FlexTouchView>
-
-        <FlexTouchView onPress="clickAction:" layout="alignItems:center,flex:1" attr="underlayColor:darkGray,tag:1">
-
-            <UIImageView attr="source:draw" layout="width:20,height:20,marginBottom:10"/>  
-            <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:@提币"/>
-        </FlexTouchView>
-
-
-        <FlexTouchView onPress="clickAction:" layout="alignItems:center,flex:1" attr="underlayColor:darkGray,tag:2">
 
             <UIImageView attr="source:Capital_transfer" layout="width:20,height:20,marginBottom:10"/>  
             <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:@资金转化"/>
             
         </FlexTouchView>
 
-        <FlexTouchView onPress="clickAction:" layout="alignItems:center,flex:1" attr="underlayColor:darkGray,tag:3">
+        <FlexTouchView onPress="clickAction:" layout="alignItems:center,flex:1" attr="underlayColor:darkGray,tag:1">
 
             <UIImageView attr="source:bill" layout="width:20,height:20,marginBottom:10"/>  
             <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:@账单"/>

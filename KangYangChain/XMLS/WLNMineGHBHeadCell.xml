@@ -31,12 +31,19 @@
     </UIView>
 
     <UIView layout="margin:20,height:80,flexDirection:row,justifyContent:space-around,alignItems:center" attr="bgColor:white,borderRadius:10">
-        <FlexTouchView onPress="clickAction:" layout="" attr="underlayColor:darkGray,tag:0">
-            <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:充值"/>
+
+        <FlexTouchView onPress="clickAction:" layout="alignItems:center,flex:1" attr="underlayColor:darkGray,tag:0">
+
+            <UIImageView attr="source:Recharge" layout="width:20,height:20,marginBottom:10"/>  
+            <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:@充值"/>
+            
         </FlexTouchView>
 
-        <FlexTouchView onPress="clickAction:" layout="" attr="underlayColor:darkGray,tag:1">
-            <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:锁仓"/>
+        <FlexTouchView onPress="clickAction:" layout="alignItems:center,flex:1" attr="underlayColor:darkGray,tag:1">
+
+            <UIImageView attr="source:lock" layout="width:20,height:20,marginBottom:10"/>  
+            <UILabel name="" layout="" attr="fontSize:14,color:black,linesNum:0,text:@锁仓"/>
+            
         </FlexTouchView>
 
     </UIView>

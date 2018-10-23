@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WLNRSendMoneyCtr : FlexBaseVC
+@interface WLNRSendMoneyCtr : UIViewController
 
 @end

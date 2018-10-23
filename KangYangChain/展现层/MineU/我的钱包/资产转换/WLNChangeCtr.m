@@ -16,15 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-- (id)initWithDic:(NSMutableDictionary *)dic{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
+    
+    self.title  = @"资金转化";
     
 }
+
 
 @end

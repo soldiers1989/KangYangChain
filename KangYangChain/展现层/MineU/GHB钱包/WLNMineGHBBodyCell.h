@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNMineGHBBodyCell : UITableViewCell
+@interface WLNMineGHBBodyCell : FlexBaseTableCell
 
 @end
 

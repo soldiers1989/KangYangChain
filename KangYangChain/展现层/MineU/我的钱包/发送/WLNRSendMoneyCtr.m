@@ -8,7 +8,7 @@
 
 #import "WLNRSendMoneyCtr.h"
 
-@interface WLNRSendMoneyCtr ()<WMYActionSheetDelegate,WLNReqstProtocol>
+@interface WLNRSendMoneyCtr ()<WMYActionSheetDelegate,WLNReqstProtocol,UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITextField *addressTxt;
 @property (nonatomic, strong) UITextField *numTxt;
@@ -28,6 +28,16 @@
     
     self.title = @"提币".Intl;
     
+    [self tabType:1];
+
+    self.tab.delegate = self;
+    self.tab.dataSource = self;
+    
+    
+    
+    [self.tab registerClass:WLNRSendMoneyCell.class forCellReuseIdentifier:@"WLNRSendMoneyCell"];
+    
+    
     self.addressTxt.text = @"1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY";
     
     self.typeLab.text = [WLNWalletSingle shared].currentType;
@@ -37,7 +47,35 @@
     [self.addressTxt letPadding:10];
     [self.numTxt letPadding:10];
     
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStyleDone target:self action:@selector(cashList)];
+    
   
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    WLNRSendMoneyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNRSendMoneyCell"];
+    
+    
+    return cell;
+    
+    
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+- (void)cashList{
+    
+    
+    
+    
     
 }
 - (void)result:(id)data sel:(NSString *)sel{

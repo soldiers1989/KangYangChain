@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"充币".Intl;
+    
     
     
 }

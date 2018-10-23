@@ -15,11 +15,6 @@
         <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:13968111662"/>
         <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:1000"/>
         <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:已完成"/>
-
-        <FlexTouchView name="" onPress="payGHB" layout="justifyContent:center,alignItems:center,width:50,height:30" attr="underlayColor:darkGray,bgColor:#1E263C,
-        borderRadius:7">
-            <UILabel name="" layout="" attr="fontSize:14,color:white,linesNum:0,text:支付"/>
-        </FlexTouchView>
     </UIView>
 
    
