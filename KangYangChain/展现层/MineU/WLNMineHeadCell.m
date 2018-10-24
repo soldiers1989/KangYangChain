@@ -15,12 +15,4 @@
     // Initialization code
 }
 
-- (void)click:(UITapGestureRecognizer *)tap{
-    
-    if (_didClick) {
-        _didClick(tap.view.tag);
-    }
-    
-    
-}
 @end

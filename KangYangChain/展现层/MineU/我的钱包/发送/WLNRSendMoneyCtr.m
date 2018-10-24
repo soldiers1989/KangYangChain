@@ -32,7 +32,7 @@
 
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    
+    self.tab.separatorStyle = UITableViewCellSelectionStyleNone;
     
     
     [self.tab registerClass:WLNRSendMoneyCell.class forCellReuseIdentifier:@"WLNRSendMoneyCell"];
@@ -61,8 +61,9 @@
     
     
     WLNRSendMoneyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNRSendMoneyCell"];
-    
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.forwarder = self;
+
     return cell;
     
     
@@ -162,7 +163,8 @@
 }
 - (void)saoAction{
     
-    
+    WLNScanCtr *vc = [WLNScanCtr new];
+    [self push:vc];
     
     
 }

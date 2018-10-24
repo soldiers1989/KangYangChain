@@ -14,23 +14,6 @@
     [super awakeFromNib];
     
 }
-- (void)clickAction:(UITapGestureRecognizer *)tap{
-    
-    if (_didClickBlock) {
-        _didClickBlock(tap.view.tag);
-    }
-    
-}
-- (void)changeBiAction{
-    if (_didChangeBiBlock) {
-        _didChangeBiBlock();
-        
-    }
-}
-- (void)setCurrentType:(NSString *)currentType{
-    
-    self.bizhongChoseLab.text = currentType;
-    self.bizhongTypeLab.text = currentType;
-    
-}
+
+
 @end

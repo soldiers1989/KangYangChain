@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNPropertyHeadView : FlexBaseTableCell
 
-@property (nonatomic, strong) void (^didClickBlock)(NSInteger);
+@property (nonatomic,strong) id forwarder;
 
 
 @end

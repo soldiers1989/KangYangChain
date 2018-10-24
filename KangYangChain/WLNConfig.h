@@ -15,7 +15,14 @@
 #define maingray rgba(245,245,245,1)
 #define rgba(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a] //宏定义颜色
 #define weakSelf(type)  __weak typeof(type) weak##type = type
-
+/*
+ 回到主线程
+ */
+#define DISPATCH_MAIN(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), mainQueueBlock)
+/*
+ 创建子线程
+ */
+#define DISPATCH_CHILD(childQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),childQueueBlock)
 
 
 #define DELEGATES @"fdsoufdiosaufiosdafdsalfndmsfdsfdsafdshghh"

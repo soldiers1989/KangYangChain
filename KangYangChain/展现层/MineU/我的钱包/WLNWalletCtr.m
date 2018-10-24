@@ -44,6 +44,16 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearAction)];
     
     
+    WLNWalletHeadView *view = [[WLNWalletHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 250)];
+    view.forwarder = self;
+    
+    view.balanceLab.text = [NSString stringWithFormat:@"%.5f",[WLNWalletSingle shared].changeBalance];
+    view.currentType = [WLNWalletSingle shared].currentType;
+    view.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f RMB",[WLNWalletSingle shared].rmb.doubleValue * [WLNWalletSingle shared].changeBalance];
+    self.tab.tableHeaderView = view;
+    
+    
+    
 }
 - (void)clearAction{
     
@@ -118,27 +128,28 @@
     
     
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return section == 0 ? 40 : 0.1;
+    
+}
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    WLNWalletHeadView *view = [[WLNWalletHeadView alloc]init];
-    
-    return section == 1 ? view : nil;
+    WLNMineSmallView *view = [[WLNMineSmallView alloc]init];
+    return section == 0 ? view : 0;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    
-    return section == 1 ?  80 : 0.1;
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return section == 0 ? 1 : 2;
-    
+    return 1;
     
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
-    
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -156,37 +167,17 @@
     
 }
 - (UITableViewCell *)head_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
+    
+    
     WLNWalletHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNWalletHeadCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-    cell.balanceLab.text = [NSString stringWithFormat:@"%.5f",[WLNWalletSingle shared].changeBalance];
-    
-    cell.currentType = [WLNWalletSingle shared].currentType;
-    
-    cell.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f RMB",[WLNWalletSingle shared].rmb.doubleValue * [WLNWalletSingle shared].changeBalance];
-
-    weakSelf(self);
-    
-    [cell setDidClickBlock:^(NSInteger tag) {
-       
-        [weakself gotoNextWith:tag];
-        
-    }];
-    
-    
-    
-    [cell setDidChangeBiBlock:^{
-        
-        [weakself showSheet];
-        
-    }];
-    
     
     return cell;
     
+    
 }
-- (void)showSheet{
+- (void)changeBiAction{
     
     
     WMYActionSheet *sheet = [[WMYActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"BTC",@"USDT",nil];
@@ -217,11 +208,11 @@
     
 }
 
-- (void)gotoNextWith:(NSInteger)tag{
+- (void)clickAction:(UITapGestureRecognizer *)tap{
 
   
     NSArray *arr = @[[WLNChangeCtr new],[WLNOrderCtr new]];
-    UIViewController *vc = arr[tag];
+    UIViewController *vc = arr[tap.view.tag];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
     

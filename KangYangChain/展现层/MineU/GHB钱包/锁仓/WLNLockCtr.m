@@ -22,6 +22,8 @@
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self tabType:1];
+    self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     
     [self.tab registerClass:WLNLockCell.class forCellReuseIdentifier:@"WLNLockCell"];
     

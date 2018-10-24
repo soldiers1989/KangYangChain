@@ -389,14 +389,14 @@ void FlexApplyLayoutParam(YGLayout* layout,
     if(self.onPress.length>0){
         SEL sel = NSSelectorFromString(self.onPress);
         if(sel!=nil){
-            if([owner respondsToSelector:sel]){
+//            if([owner respondsToSelector:sel]){
                 UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:owner action:sel];
                 tap.cancelsTouchesInView = NO;
                 tap.delaysTouchesBegan = NO;
                 [view addGestureRecognizer:tap];
-            }else{
-                NSLog(@"Flexbox: owner %@ not respond %@", [owner class] , self.onPress);
-            }
+//            }else{
+//                NSLog(@"Flexbox: owner %@ not respond %@", [owner class] , self.onPress);
+//            }
         }else{
             NSLog(@"Flexbox: wrong onPress name %@", self.onPress);
         }

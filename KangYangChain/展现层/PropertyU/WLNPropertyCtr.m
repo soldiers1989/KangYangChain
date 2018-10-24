@@ -23,47 +23,30 @@
     self.tab.delegate = self;
     
     self.tab.separatorStyle =UITableViewCellSeparatorStyleNone;
+    [self.tab registerClass:WLNPropertyCell.class forCellReuseIdentifier:@"WLNPropertyCell"];
+    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
     WLNPropertyHeadView *view = [[WLNPropertyHeadView alloc]init];
+    view.forwarder = self;
     
-    
-    weakSelf(self);
-    [view setDidClickBlock:^(NSInteger  tag) {
-        
-        [weakself gotoNextWith:tag];
-        
-        
-    }];
     return view;
     
 }
-- (void)gotoNextWith:(NSInteger)tag{
-    
-    NSArray *arr = @[[WLNReceiveMoneyCtr new],[WLNRSendMoneyCtr new],[WLNChangeCtr new],[WLNOrderCtr new]];
 
-    UIViewController *vc = arr[tag];
-    vc.hidesBottomBarWhenPushed = YES;
-    
-    [self.navigationController pushViewController:vc animated:YES];
-    
-    
-}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *identifier = @"WLNPropertyCell";
     
-    WLNPropertyCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[WLNPropertyCell alloc] initWithFlex:nil reuseIdentifier:identifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;;
-        
-    }
+    WLNPropertyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNPropertyCell"];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;;
+    
+    
     
     return cell;
     
@@ -73,4 +56,23 @@
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }
+
+
+
+
+- (void)clickAction:(UITapGestureRecognizer *)tap{
+
+    NSArray *arr = @[[WLNReceiveMoneyCtr new],[WLNRSendMoneyCtr new],[WLNChangeCtr new],[WLNOrderCtr new]];
+
+    UIViewController *vc = arr[tap.view.tag];
+    vc.hidesBottomBarWhenPushed = YES;
+
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+- (void)changeBiAction{
+    NSLog(@"trade");
+}
+
+
 @end

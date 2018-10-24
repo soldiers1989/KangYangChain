@@ -13,26 +13,33 @@
 //#import <HyphenateLite/HyphenateLite.h>
 //#import <EaseUI.h>
 
-
+/**
+ 系统库
+ */
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-
 #import <FlexLib/FlexLib.h>
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <BTCPack/BTCWrapper.h>
 
-
+/**
+ 协议
+ */
 #import "WLNReqstProtocol.h"
 #import "WLNModelProtocol.h"
 #import "WLNPassValueProtocol.h"
 #import "WLNURLProtocol.h"
 
-
+/**
+ 模型
+ */
 #import "User.h"
 #import "Order.h"
 
-
+/**
+ 公共类目
+ */
 #import "NSObject+RouteRoot.h"
 #import "UIView+SYLayout.h"
 #import "NSString+Language.h"
@@ -43,13 +50,19 @@
 #import "NSObject+Function.h"
 #import "UITextField+Set.h"
 #import "NSBundle+DAUtils.h"
+#import "UIView+Set.h"
 
+/**
+ 公共控件
 
+ */
 #import "WLNQRCode.h"
+#import "WLNScanCtr.h"
 #import "WMYActionSheet.h"
 #import "DAConfig.h"
 #import "HYAlertView.h"
 #import "GalenPayPasswordView.h"
+#import "WLNScanTipView.h"
 
 
 #endif

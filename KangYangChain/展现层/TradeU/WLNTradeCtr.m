@@ -22,6 +22,7 @@
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self.tab registerClass:WLNTradeCell.class forCellReuseIdentifier:@"WLNTradeCell"];
+    
     WLNTradeHeadView *view = [WLNTradeHeadView shared];
     view.topArr = @[@"行情".Intl,@"法币".Intl,@"币币".Intl,@"合约".Intl].mutableCopy;
     view.bottomArr = @[@"ETC",@"USDT",@"BTC",@"ETH",@"自选".Intl].mutableCopy;
@@ -80,7 +81,6 @@
     
     
 }
-
 
 
 @end

@@ -122,14 +122,8 @@ typedef void (^CellBlock)(void);
     
     WLNMineHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineHeadCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.forwarder = self;
     
-    weakSelf(self);
-    
-    [cell setDidClick:^(NSInteger tag){
-        
-        [weakself gotoNextWith:tag];
-
-    }];
     return cell;
     
 }
@@ -171,7 +165,9 @@ typedef void (^CellBlock)(void);
     }
     
 }
-- (void)gotoNextWith:(NSInteger)tag{
+- (void)click:(UITapGestureRecognizer *)tap{
+    
+    NSInteger tag = tap.view.tag;
     
     if (tag == 7) {
         

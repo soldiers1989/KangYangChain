@@ -28,13 +28,29 @@
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self tabType:1];
     
-    [self.tab registerClass:WLNMineGHBHeadCell.class forCellReuseIdentifier:@"WLNMineGHBHeadCell"];
+    [self.tab registerClass:WLNWalletHeadCell.class forCellReuseIdentifier:@"WLNWalletHeadCell"];
     [self.tab registerClass:WLNMineGHBBodyCell.class forCellReuseIdentifier:@"WLNMineGHBBodyCell"];
     
     
+    WLNMineGHBHeadView *view = [[WLNMineGHBHeadView alloc]initWithFrame:CGRectMake(0 , 0, DEVICEWidth, 250)];
+    view.forwarder = self;
+    
+
+    self.tab.tableHeaderView = view;
+ 
     
 }
 
+- (void)clickAction:(UITapGestureRecognizer *)tap{
+    
+    
+    [self.navigationController pushViewController:tap.view.tag == 0 ? @"WLNRechargeCtr".instance: @"WLNLockCtr".instance animated:YES];
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return section == 0 ? 1 : 5;
 }
@@ -42,16 +58,14 @@
     return 2;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return section == 1 ?80: 0.1;
+    return section == 0 ? 40: 0.1;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    WLNWalletHeadView *view = [[WLNWalletHeadView alloc]init];
-    view.bottomView.hidden = YES;
-    view.titleLab.text = @"账单l记录";
-    view.bottom2View.hidden = NO;
+    WLNMineSmallView *view = [[WLNMineSmallView alloc]init];
+    view.titleLab.text = @"账单明细";
     
-    return section == 1 ? view : nil;
+    return section == 0 ? view : nil;
     
     
 }
@@ -68,18 +82,11 @@
 - (UITableViewCell *)head_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    WLNMineGHBHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineGHBHeadCell"];
+    WLNWalletHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNWalletHeadCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    weakSelf(self);
-    [cell setDidClickBlock:^(NSInteger tag) {
-        
-        [weakself.navigationController pushViewController:tag == 0 ?
-        @"WLNRechargeCtr".instance: @"WLNLockCtr".instance animated:YES];
-        
-    }];
-    
-    
+    cell.bottomView.hidden = YES;
+    cell.bottom2View.hidden = NO;
+
     return cell;
     
     
@@ -93,6 +100,11 @@
     
     
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+    
+}
 
 @end

@@ -10,14 +10,4 @@
 
 @implementation WLNPropertyHeadView
 
-- (void)clickAction:(UITapGestureRecognizer *)tap{
-    
-    if (_didClickBlock) {
-        _didClickBlock(tap.view.tag);
-        
-    }
-    
-    
-}
-
 @end

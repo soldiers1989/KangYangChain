@@ -30,6 +30,23 @@
     [self.tab registerClass:WLNWalletHeadCell.class forCellReuseIdentifier:@"WLNWalletHeadCell"];
     
     
+    
+    WLNMineAgreeWalletHeadView *view = [[WLNMineAgreeWalletHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 250)];
+    view.forwarder = self;
+    self.tab.tableHeaderView = view;
+    
+    
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return section == 0 ? 40 : 0.1;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    WLNMineSmallView *view = [[WLNMineSmallView alloc]init];
+    return section == 0 ? view : nil;
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
@@ -54,26 +71,10 @@
     
     WLNWalletHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNWalletHeadCell"];
     
+    cell.forwarder = self;
     
-    
-    weakSelf(self);
-    [cell setDidClickBlock:^(NSInteger tag) {
-        
-        [weakself gotoNext:tag];
-        
-        
-    }];
     
     return cell;
-    
-    
-}
-- (void)gotoNext:(NSInteger)tag{
-    
-    UIViewController *vc = @[[WLNChangeCtr new],[WLNOrderCtr new]][tag];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-    
     
 }
 - (UITableViewCell *)body_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -85,5 +86,18 @@
     return cell;
     
 }
+- (void)changeBiAction{
+    NSLog(@"1");
+    
+}
+- (void)clickAction:(UITapGestureRecognizer *)tap{
+
+    UIViewController *vc = @[[WLNChangeCtr new],[WLNOrderCtr new]][tap.view.tag];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+}
+
 
 @end

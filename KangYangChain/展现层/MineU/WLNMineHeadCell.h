@@ -11,7 +11,4 @@
 @interface WLNMineHeadCell : FlexBaseTableCell
 
 
-
-@property (nonatomic, strong) void (^didClick)(NSInteger);
-
 @end

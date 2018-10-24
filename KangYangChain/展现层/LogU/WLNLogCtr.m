@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     
     [self.phoneT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];

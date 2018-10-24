@@ -82,5 +82,13 @@
 #import "WLNRechargeListCtr.h"
 #import "WLNRechargeListCell.h"
 
+#import "WLNRechargeDetailCtr.h"
+#import "WLNRechargeDetailCell.h"
+
+#import "WLNRechargeListHeadView.h"
+#import "WLNMineSmallView.h"
+#import "WLNMineAgreeWalletHeadView.h"
+
+#import "WLNMineGHBHeadView.h"
 
 #endif /* WLNMineUHeader_h */
