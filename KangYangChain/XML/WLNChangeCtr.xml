@@ -16,7 +16,7 @@
     </UIView>
 
 
-    <UIView layout="flexDirection:row,marginTop:15" attr="bgColor:white">
+    <UIView layout="flexDirection:row,marginTop:30" attr="bgColor:white">
     
         <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:币种选择"/>
         <UITextField name="" layout="" attr="fontSize:14,color:black,textAlign:left,placeholder:,text:请选择"/>
