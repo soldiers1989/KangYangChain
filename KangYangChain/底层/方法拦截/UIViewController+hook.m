@@ -32,6 +32,8 @@
     
     NSLog(@"🍓🍓🍓 当前控制器 : %@",NSStringFromClass([self class]));
     
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:15], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    
     [self fr_viewWillAppear:animated];
 
 }
@@ -44,9 +46,11 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"newback"] style:UIBarButtonItemStyleDone target:self action:@selector(customPop)];
-
     
+    
+ 
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"newback"] style:UIBarButtonItemStyleDone target:self action:@selector(customPop)];
+  
 }
 
 - (void)__viewDidLoad{

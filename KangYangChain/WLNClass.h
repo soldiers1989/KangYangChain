@@ -30,22 +30,29 @@
 #import "WLNModelProtocol.h"
 #import "WLNPassValueProtocol.h"
 #import "WLNURLProtocol.h"
+#import "WLNReloadProtocol.h"
+
 
 /**
  模型
  */
 #import "User.h"
 #import "Order.h"
+#import "Money.h"
+
 
 /**
  公共类目
  */
+#import "AppDelegate+Chat.h"
+#import "AppDelegate+Wallet.h"
+
+
 #import "NSObject+RouteRoot.h"
 #import "UIView+SYLayout.h"
 #import "NSString+Language.h"
 #import "UIViewController+hook.h"
 #import "UINavigationBar+Awesome.h"
-#import "AppDelegate+Chat.h"
 #import "UITableView+NewTableView.h"
 #import "NSObject+Function.h"
 #import "UITextField+Set.h"
@@ -63,6 +70,9 @@
 #import "HYAlertView.h"
 #import "GalenPayPasswordView.h"
 #import "WLNScanTipView.h"
+
+
+#import "WLNSingle.h"
 
 
 #endif

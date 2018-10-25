@@ -7,18 +7,18 @@
    Created by edz on 2018/10/15.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIView layout="" attr="bgColor:#f5f5f5">
+<UIView layout="" attr="@:css/colors">
 
     <UIView layout="margin:10,marginBottom:0" attr="bgColor:white,borderRadius:7">
 
 
-        <UIView layout="flexDirection:row,justifyContent:space-around" attr="">
+        <UIView layout="flexDirection:row,justifyContent:space-around,alignItems:center" attr="">
             <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:GHB钱包"/>
-            <UIImageView attr="source:"/>
+            <UIImageView attr="source:goback" />
             <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:锁仓"/>
         </UIView>
 
-        <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+        <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
         <UIView layout="flexDirection:row" attr="">
             <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:币种选择"/>
@@ -26,7 +26,7 @@
             <UIImageView attr="source:" layout="marginRight:10"/>
         </UIView>
 
-        <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+        <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
         <UIView layout="flexDirection:row" attr="">
 
@@ -35,7 +35,7 @@
 
         </UIView>
 
-        <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+        <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
         <UIView layout="flexDirection:row," attr="">
         
@@ -65,7 +65,7 @@
                 
             </UIView>
 
-            <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+            <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
             <UIView layout="" attr="">
                 <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:交易说明"/>

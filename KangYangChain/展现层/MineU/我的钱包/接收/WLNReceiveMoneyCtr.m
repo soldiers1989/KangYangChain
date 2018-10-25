@@ -22,13 +22,13 @@
     
     self.title = @"充币".Intl;
     
-    self.titleLab.text = [NSString stringWithFormat:@"向如下地址发送%@",[WLNWalletSingle shared].currentType];
+    self.titleLab.text = [NSString stringWithFormat:@"向如下地址发送%@",[WLNSingle shared].currentType];
     
-    self.bottomLab.text = [NSString stringWithFormat:@"请确保向改地址发送的是%@,否则资产将会丢失且无法找回",[WLNWalletSingle shared].currentType];
+    self.bottomLab.text = [NSString stringWithFormat:@"请确保向改地址发送的是%@,否则资产将会丢失且无法找回",[WLNSingle shared].currentType];
     
-    self.img.image = [[WLNQRCode new] jy_QRCodeFromString:[WLNWalletSingle shared].address size:100];
+    self.img.image = [[WLNQRCode new] jy_QRCodeFromString:[WLNSingle shared].current_model.address size:100];
 
-    self.addressLab.text = [WLNWalletSingle shared].address;
+    self.addressLab.text = [WLNSingle shared].current_model.address;
     
     
 }

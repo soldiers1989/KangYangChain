@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
-<UIView layout="" attr="bgColor:#f5f5f5">
+<UIView layout="" attr="@:css/colors">
 
 
     <UIView name="bottomView" layout="flexDirection:row,justifyContent:space-around,height:40,marginTop:1" attr="bgColor:white">
@@ -21,7 +21,7 @@
 
 
 
-    <UILabel name="" layout="flex:1,height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+    <UILabel name="" layout="flex:1,height:1" attr="@:css/colors,fontSize:14,linesNum:0,text:"/>
 
 
 </UIView>

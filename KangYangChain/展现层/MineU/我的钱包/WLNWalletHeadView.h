@@ -10,14 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNWalletHeadView : FlexCustomBaseView
+@interface WLNWalletHeadView : FlexCustomBaseView <WLNReloadProtocol>
+
 
 @property (nonatomic, strong) UIImageView *img;
 @property (nonatomic, strong) UILabel *balanceLab;
 @property (nonatomic, strong) UILabel *rmbLab;
 @property (nonatomic, strong) UILabel *bizhongChoseLab;
 @property (nonatomic, strong) UILabel *bizhongTypeLab;
-@property (nonatomic, strong) NSString  *currentType;
+
+@property (nonatomic, strong) Money *model;
+
 
 @end
 

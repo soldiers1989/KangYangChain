@@ -10,10 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNPropertyHeadView : FlexBaseTableCell
+@interface WLNPropertyHeadView : FlexBaseTableCell <WLNReloadProtocol>
 
-@property (nonatomic,strong) id forwarder;
 
+@property (nonatomic, strong) UIImageView *img;
+@property (nonatomic, strong) UILabel *balanceLab;
+@property (nonatomic, strong) UILabel *rmbLab;
+@property (nonatomic, strong) UILabel *bizhongChoseLab;
+@property (nonatomic, strong) UILabel *bizhongTypeLab;
+
+@property (nonatomic, strong) Money *model;
 
 @end
 

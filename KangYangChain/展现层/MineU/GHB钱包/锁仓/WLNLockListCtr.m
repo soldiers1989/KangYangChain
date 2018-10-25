@@ -20,6 +20,8 @@
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
+    self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [self tabType:1];
     
     
@@ -28,6 +30,10 @@
     [self.tab  registerClass:WLNLockListHeadCell.class forCellReuseIdentifier:@"WLNLockListHeadCell"];
     
     
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [tableView fr_willDisplayCell:cell forRowAtIndexPath:indexPath];
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;

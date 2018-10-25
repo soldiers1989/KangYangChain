@@ -21,7 +21,7 @@
         </UIView>
 
         <UIView layout="margin:10" attr="">
-            <UILabel name="balanceLab" layout="" attr="fontSize:30,color:white,linesNum:0,text:0 BTC"/>
+            <UILabel name="balanceLab" layout="" attr="fontSize:30,color:white,linesNum:0,text:0 GHB"/>
         </UIView>
 
         <UILabel name="" layout="margin:10,marginTop:0" attr="fontSize:16,color:white,linesNum:0,text:≈ 0 rmb"/>

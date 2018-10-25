@@ -10,6 +10,9 @@
 
 @interface WLNPropertyCtr ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic, strong) WLNPropertyHeadView *headView;
+
+
 @end
 
 @implementation WLNPropertyCtr
@@ -18,7 +21,9 @@
     [super viewDidLoad];
     self.title = @"资产".Intl;
     
+    
     [self tabType:0];
+    
     self.tab.dataSource = self;
     self.tab.delegate = self;
     
@@ -26,13 +31,18 @@
     [self.tab registerClass:WLNPropertyCell.class forCellReuseIdentifier:@"WLNPropertyCell"];
     
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.headView reloadData];
+}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    WLNPropertyHeadView *view = [[WLNPropertyHeadView alloc]init];
-    view.forwarder = self;
+   
+    self.headView.model = [WLNSingle shared].current_model;
     
-    return view;
+    return self.headView;
     
 }
 
@@ -74,5 +84,13 @@
     NSLog(@"trade");
 }
 
+- (WLNPropertyHeadView *)headView{
+    if (_headView == nil) {
+        _headView = [[WLNPropertyHeadView alloc]init];
+        _headView.forwarder = self;
+        
+    }
+    return _headView;
+}
 
 @end

@@ -14,7 +14,7 @@
         <UILabel name="timeLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:2018.0.0"/>
         <UILabel name="addressLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:0.01"/>
         <UILabel name="numLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:BTC"/>
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:买入"/>
+        <UILabel name="toAddressLab" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:买入"/>
         <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:0.01"/>
         <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:成功"/>  
 

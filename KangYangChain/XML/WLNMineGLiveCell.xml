@@ -8,7 +8,7 @@
     <UIImageView attr="source:Snip20181010_34"/>
 
     <UIView layout="" attr="">
-        <UIImageView attr="source:Snip20181004_36" layout="@:WLNView/icon" />
+        <UIImageView attr="source:Snip20181004_36" layout="@:css/icon" />
         <UIView layout="" attr="">
             <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:币届大佬交流群"/>
             <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:FDJFKDHFJK"/>

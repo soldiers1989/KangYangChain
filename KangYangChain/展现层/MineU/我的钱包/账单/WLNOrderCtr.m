@@ -31,8 +31,9 @@
     [self.tab registerClass:WLNOrderCell.class forCellReuseIdentifier:@"WLNOrderCell"];
     
     
+    NSString *str = [NSString stringWithFormat:@"get%@Order:",[WLNSingle shared].currentType];
     
-    [self routeTargetName:@"WLNHandle" actionName:@"getOrder:" param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:@"WLNHandle" actionName:str param:@{DELEGATES:self}.mutableCopy];
     
     [SVProgressHUD show];
     
@@ -80,7 +81,7 @@
     
     
     cell.timeLab.text = [self getTimeFromTimesTamp:dic[@"time"]];
-    
+    cell.
     
     return cell;
     

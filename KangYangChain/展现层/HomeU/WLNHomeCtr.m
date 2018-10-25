@@ -66,6 +66,10 @@
     
 
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
 - (void)changeLangage{
     
     [SVProgressHUD showErrorWithStatus:@"此功能尚未映射完成"];
@@ -143,8 +147,35 @@
     
     WLNHomeCountCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNHomeCountCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;;
-
+    cell.forwarder = self;
+    
     return cell;
+    
+}
+- (void)click:(UITapGestureRecognizer *)tap{
+    
+    NSInteger t = tap.view.tag;
+    if (t == 0) {
+    
+        self.tabBarController.selectedIndex = 1;
+        
+    
+    }else if (t == 1){
+        self.tabBarController.selectedIndex = 3;
+
+    }else if (t == 2){
+        
+        [self push:@"WLNMineCommunityCtr".instance];
+        
+        
+    }else if (t == 3){
+        [self push:@"WLNWalletCtr".instance];
+
+    }else{
+        
+        [self push:@"UIViewController".instance];
+
+    }
     
 }
 - (UITableViewCell *)new_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -167,7 +198,7 @@
     cell.headImg.image = [UIImage imageNamed:@"Snip20181002_1"];
     cell.nameLab.text = @"拖鞋高手";
     cell.remarkLab.text = @"热爱生活";
-    cell.contentImg.image = [UIImage imageNamed:@"Snip20181002_2"];
+    cell.contentImg.image = [UIImage imageNamed:@"fdsafas"];
     cell.contentLab.text = @"加密货币加密货币加密货币加密货币加密";
     cell.ofLab.text = @"#肥宅#";
     cell.lookLab.text = @"浏览789次";

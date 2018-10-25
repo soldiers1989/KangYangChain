@@ -40,9 +40,9 @@
     
     self.addressTxt.text = @"1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY";
     
-    self.typeLab.text = [WLNWalletSingle shared].currentType;
+    self.typeLab.text = [WLNSingle shared].currentType;
     
-    self.bottomLab.text = [NSString stringWithFormat:@"请确保正在发送的是一个 %@ 地址 否则字长丢失且无法找回",[WLNWalletSingle shared].currentType];
+    self.bottomLab.text = [NSString stringWithFormat:@"请确保正在发送的是一个 %@ 地址 否则字长丢失且无法找回",[WLNSingle shared].currentType];
     
     [self.addressTxt letPadding:10];
     [self.numTxt letPadding:10];
@@ -170,7 +170,7 @@
 }
 - (void)allAction{
     
-    self.numTxt.text = [NSString stringWithFormat:@"%.5f",[WLNWalletSingle shared].changeBalance];
+    self.numTxt.text = [NSString stringWithFormat:@"%.5f",[WLNSingle shared].current_model.changeBalance];
     
 
 }

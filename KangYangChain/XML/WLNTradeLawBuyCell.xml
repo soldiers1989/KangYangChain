@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   WLNTradeLawBuyCell.xml
+   KangYangChain
+
+   Created by edz on 2018/10/25.
+   Copyright (c) 2018 furao. All rights reserved.
+-->
+<UIView layout="" attr="@:css/colors">
+
+    <UIView layout="flexDirection:row,justifyContent:space-between,margin:5" attr="">
+        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:价格"/>
+        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:当前盘口价格6.88CNY"/>
+    </UIView>
+
+    <UIView layout="flexDirection:row" attr="bgColor:white">
+
+        <UIView layout="" attr="">
+
+            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:交易价格"/>
+
+            <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:数量(USDT)"/>
+
+            <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:金额(CNY)"/>
+
+        </UIView>
+
+        <UIView layout="flex:1" attr="">
+
+            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:6.88"/>
+
+            <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+            <UITextField name="" layout="margin:10" attr="fontSize:14,color:black,textAlign:left,placeholder:请输入价格,text:"/>
+
+            <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:最小交易额为2000"/>
+        </UIView>
+
+    </UIView>
+
+    <UIView layout="marginTop:20,flexDirection:row,alignItems:flex-start" attr="bgColor:white">
+        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:交易说明"/>
+        <UILabel name="" layout="margin:10" attr="fontSize:12,color:gray,linesNum:0,text:1.订单有效期为15分钟\,请及时付款并点击(我已支付)按钮 \n2.币有系统锁定托管\,请放心下单
+        "/>
+    </UIView>
+
+    <FlexTouchView onPress="gotoPay" layout="margin:20,justifyContent;center,alignItems:center" attr="underlayColor:darkGray,bgColor:#1E253D,
+    borderRadius:7">
+        <UILabel name="" layout="margin:10" attr="fontSize:14,color:white,linesNum:0,text:买入"/>
+    </FlexTouchView>
+
+
+</UIView>   

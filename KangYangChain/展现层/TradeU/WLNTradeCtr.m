@@ -48,7 +48,7 @@
         [self.navigationController pushViewController:@"WLNTradeLawCionCtr".instance animated:YES];
         
     }else if (tag == 2){
-        [self.navigationController pushViewController:@"WLNTradeCoinCoinCtr".instance animated:YES];
+        [self.navigationController pushViewController:@"WLNTradeBBCtr".instance animated:YES];
         
     }else{
         [self.navigationController pushViewController:@"WLNTradeAgreementCtr".instance animated:YES];

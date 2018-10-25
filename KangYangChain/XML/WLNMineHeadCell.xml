@@ -7,7 +7,7 @@
 
         <FlexTouchView onPress="click:" layout="" attr="tag:7">
 
-            <UIImageView name="" attr="source:Snip20181002_2,borderRadius:40,clipsToBounds:true" layout="width:80,height:80"/>
+            <UIImageView name="" attr="source:Snip20181025_1,borderRadius:40,clipsToBounds:true" layout="width:80,height:80"/>
 
         </FlexTouchView>
 

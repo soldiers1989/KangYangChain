@@ -9,7 +9,7 @@
 -->
 
 
-<UIView layout="" attr="bgColor:#f5f5f5">
+<UIView layout="" attr="@:css/colors">
 
     <UIView layout="margin:10,marginTop:30" attr="bgColor:white,borderRadius:7">
 
@@ -19,18 +19,18 @@
 
     </UIView>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
     <UIView layout="flexDirection:row" attr="">
         <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:金额(元)"/>
         <UITextField name="" layout="" attr="fontSize:14,color:black,textAlign:left,placeholder:,text:"/>
     </UIView>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
     <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:请选在支付方式"/>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
     <UIView layout="flexDirection:row" attr="">
         <UIImageView attr="source:" layout=""/>
@@ -39,7 +39,7 @@
 
     </UIView>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
     <UIView layout="flexDirection:row" attr="">
 

@@ -4,7 +4,7 @@
 <UIView layout="marginLeft:10,marginRight:10,flexDirection:row,height:50,alignItems:center" attr="">
     
         <UIImageView name="img" layout="marginLeft:20" attr="source:Snip20181002_7"/>
-        <UILabel name="lab" layout="marginLeft:10" attr="@:WLNView/contentLabel" />
+        <UILabel name="lab" layout="marginLeft:10" attr="@:css/contentLabel" />
 
 </UIView>
     

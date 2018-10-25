@@ -10,17 +10,23 @@
 
 @implementation WLNWalletHeadView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-- (void)setCurrentType:(NSString *)currentType{
+
+
+- (void)reloadData{
     
-    self.bizhongChoseLab.text = currentType;
-    self.bizhongTypeLab.text = currentType;
+    self.model = [WLNSingle shared].current_model;
+
     
 }
+- (void)setModel:(Money *)model{
+    
+    _model = model;
+    
+    self.balanceLab.text = [NSString stringWithFormat:@"%.5f",model.changeBalance];
+    self.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f RMB",model.rmb.doubleValue * model.changeBalance];
+    self.bizhongChoseLab.text = model.type;
+    self.bizhongTypeLab.text = model.type;
+}
+
+
 @end

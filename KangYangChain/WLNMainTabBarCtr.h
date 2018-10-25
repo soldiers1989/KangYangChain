@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WLNMainTabBarCtr : UITabBarController
+
 - (void)isLog:(BOOL)bol;
+
 @end
