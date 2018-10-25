@@ -26,6 +26,8 @@
     
     [self.tab registerClass:WLNRechargeListCell.class forCellReuseIdentifier:@"WLNRechargeListCell"];
     
+    WLNRechargeListHeadView *view = [[WLNRechargeListHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 85)];
+    self.tab.tableHeaderView = view;
     
     
 }

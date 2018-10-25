@@ -88,6 +88,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     WLNLockCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNLockCell"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     cell.bizhongLab.text = @"币种";
     cell.zhuanruCountLab.text = @"转入数量";

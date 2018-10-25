@@ -15,10 +15,5 @@
     // Initialization code
 }
 
-- (void)showDetailPage{
-    
-    
-    
-    
-}
+
 @end

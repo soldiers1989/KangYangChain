@@ -12,6 +12,7 @@
 
 @interface WLNWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,WMYActionSheetDelegate>
 
+@property (nonatomic, strong) WLNWalletHeadView *headView;
 
 @end
 
@@ -44,13 +45,13 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearAction)];
     
     
-    WLNWalletHeadView *view = [[WLNWalletHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 250)];
-    view.forwarder = self;
+    self.headView = [[WLNWalletHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 250)];
+    self.headView.forwarder = self;
     
-    view.balanceLab.text = [NSString stringWithFormat:@"%.5f",[WLNWalletSingle shared].changeBalance];
-    view.currentType = [WLNWalletSingle shared].currentType;
-    view.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f RMB",[WLNWalletSingle shared].rmb.doubleValue * [WLNWalletSingle shared].changeBalance];
-    self.tab.tableHeaderView = view;
+    self.headView.balanceLab.text = [NSString stringWithFormat:@"%.5f",[WLNWalletSingle shared].changeBalance];
+    self.headView.currentType = [WLNWalletSingle shared].currentType;
+    self.headView.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f RMB",[WLNWalletSingle shared].rmb.doubleValue * [WLNWalletSingle shared].changeBalance];
+    self.tab.tableHeaderView = self.headView;
     
     
     
@@ -86,6 +87,9 @@
         NSMutableDictionary *dic = data[[WLNWalletSingle shared].address];
         
         [WLNWalletSingle shared].balance = dic[@"final_balance"];
+        
+        
+        self.headView.currentType = [WLNWalletSingle shared].currentType;
         
         [self.tab reloadData];
         

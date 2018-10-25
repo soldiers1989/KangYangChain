@@ -90,5 +90,6 @@
 #import "WLNMineAgreeWalletHeadView.h"
 
 #import "WLNMineGHBHeadView.h"
+#import "WLNMineBusinessCtr.h"
 
 #endif /* WLNMineUHeader_h */

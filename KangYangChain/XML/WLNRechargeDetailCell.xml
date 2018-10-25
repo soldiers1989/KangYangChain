@@ -7,7 +7,7 @@
    Created by edz on 2018/10/24.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIView layout="" attr="bgColor:#f5f5f5">
+<UIView layout="" attr="@:css/colors">
     <UIView layout="margin:10" attr="bgColor:white,borderRadius:7">
 
         <UIView layout="alignItems:center" attr="">
@@ -22,13 +22,13 @@
                 <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:币种"/>
                 <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:手续费"/>
 
-                <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+                <UILabel name="" layout="height:1" attr="@:css/colors,fontSize:14,linesNum:0,text:"/>
 
                 <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:提币时间"/>
                 <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:流水号"/>
                 <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:货币地址"/>
 
-                <UILabel name="" layout="height:1" attr="fontSize:14,bgColor:#f5f5f5,linesNum:0,text:"/>
+                <UILabel name="" layout="height:1" attr="@:css/colors,fontSize:14,linesNum:0,text:"/>
 
                 <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:描述"/>
                 <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:操作"/>

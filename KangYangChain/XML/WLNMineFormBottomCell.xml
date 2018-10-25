@@ -7,7 +7,7 @@
    Created by edz on 2018/10/16.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIView layout="marginTop:0" attr="bgColor:#f5f5f5">
+<UIView layout="marginTop:0" attr="@:css/colors">
 
 
     <UIView layout="height:40,flexDirection:row,alignItems:center" attr="bgColor:white">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<UIView layout="flex:1" attr="bgColor:#F5F5F5">
+<UIView layout="flex:1" attr="@:css/colors">
 
     <UIView layout="flexDirection:row,alignItems:center" attr="bgColor:white">
     

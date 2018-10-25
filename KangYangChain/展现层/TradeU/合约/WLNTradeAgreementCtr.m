@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"合约";
     
     self.tab.delegate = self;
     self.tab.dataSource = self;

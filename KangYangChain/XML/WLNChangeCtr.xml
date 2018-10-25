@@ -8,9 +8,21 @@
    Copyright (c) 2018 furao. All rights reserved.
 -->
 
-<UIView layout="" attr="bgColor:#f5f5f5">
+<UIView layout="" attr="@:css/colors">
 
-    <UIView layout="" attr="">
+    <UIView layout="flexDirection:row,marginTop:30,alignItems:center" attr="bgColor:white">
+
+        <FlexTouchView layout="flexDirection:row,alignItems:center,width:50%,justifyContent:center" attr="underlayColor:darkGray">
+            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:币币账户"/>
+            <UIImageView attr="source:Arrow_down_white"/>
+        </FlexTouchView>
+
+        <UIImageView attr="source:goback"/>
+
+        <FlexTouchView layout="flexDirection:row,alignItems:center,width:50%,justifyContent:center" attr="underlayColor:darkGray">
+            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:法币账户"/>
+            <UIImageView attr="source:Arrow_down_white"/>
+        </FlexTouchView>
 
 
     </UIView>

@@ -2,7 +2,7 @@
 
 
 
-<UIView layout="flex:1" attr="bgColor:#f5f5f5">
+<UIView layout="flex:1" attr="@:css/colors">
 
     <UIView layout="margin:10" attr="bgColor:white,borderRadius:7">
 

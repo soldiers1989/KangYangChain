@@ -14,12 +14,26 @@
 #import "WLNTradeHeadView.h"
 #import "WLNTradeLawCionCtr.h"
 #import "WLNTradeLawCionCell.h"
-#import "WLNTradeCoinCoinCtr.h"
+#import "WLNTradeBBCtr.h"
 #import "WLNTradeAgreementCtr.h"
 
 
 #import "WLNTradeHangCell.h"
 #import "WLNTradeHoldCell.h"
 #import "WLNTradeTradeCell.h"
+#import "WLNTradeLawBuyCtr.h"
+#import "WLNTradeLawBuyCell.h"
+
+#import "WLNTradeLawPayCtr.h"
+#import "WLNTradeLawPayCell.h"
+
+#import "WLNTradeBBOpenView.h"
+
+#import "WLNTradeBBOpenLeftCell.h"
+#import "WLNTradeBBOpenRightCell.h"
+
+#import "WLNTradeBBOrderCtr.h"
+#import "WLNTradeBBOrderCell.h"
+
 
 #endif /* WLNTradeUHeader_h */

@@ -176,7 +176,7 @@ typedef void (^CellBlock)(void);
         return;
     }
     
-    NSArray *arr = @[@"WLNMineGHBWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"".instance,@"".instance,@"".instance,@"WLNMineEditCtr".instance];
+    NSArray *arr = @[@"WLNMineGHBWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"WLNMineBusinessCtr".instance,@"".instance,@"".instance,@"WLNMineEditCtr".instance];
     
     [self.navigationController pushViewController:arr[tag] animated:YES];
     

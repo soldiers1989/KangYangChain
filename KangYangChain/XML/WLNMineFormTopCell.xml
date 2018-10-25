@@ -7,7 +7,7 @@
    Created by edz on 2018/10/16.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIView layout="" attr="bgColor:#f5f5f5">
+<UIView layout="" attr="@:css/colors">
 
     <UIView layout="height:40,flexDirection:row,justifyContent:space-between,marginBottom:1" attr="bgColor:white">
         <UILabel name="typeLab" layout="marginLeft:10" attr="fontSize:12,color:orange,linesNum:0,text:买入"/>

@@ -24,6 +24,14 @@
     self.tab.dataSource = self;
     [self.tab registerClass:WLNTradeLawCionCell.class forCellReuseIdentifier:@"WLNTradeLawCionCell"];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"+" style:UIBarButtonItemStyleDone target:self action:@selector(addAction)];
+    
+}
+- (void)addAction{
+    
+    [self push:@"WLNTradeLawBuyCtr".instance];
+    
+    
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

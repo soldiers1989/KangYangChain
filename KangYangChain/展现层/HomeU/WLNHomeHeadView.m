@@ -27,6 +27,9 @@
             UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(10,10,DEVICEWidth - 20, self.height - 10)];
             img.image = [UIImage imageNamed:@"banner"];
             
+            img.layer.cornerRadius = 7;
+            img.layer.masksToBounds = YES;
+            
             [view addSubview:img];
             [self.sc addSubview:view];
             
