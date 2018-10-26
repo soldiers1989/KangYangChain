@@ -16,11 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"常见问题".Intl;
     
     self.tab.dataSource = self;
     self.tab.delegate = self;
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tab tabType:1];
+    [self tabType:1];
     
     
     [self.tab registerClass:WLNMineGProblemCell.class forCellReuseIdentifier:@"WLNMineGProblemCell"];
