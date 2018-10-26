@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNMineGroupCtr : FlexBaseVC
+@interface WLNMineGroupCtr : UIViewController
 
 @end
 

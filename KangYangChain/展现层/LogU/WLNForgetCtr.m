@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UITextField *codeTxt;
 @property (nonatomic, strong) UILabel *codeLab;
 @property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) UITextField *sureCodeTxt;
 
 
 
@@ -103,6 +104,11 @@
         [SVProgressHUD showErrorWithStatus:@"请输入密码"];
         return;
         
+    }else if (![self.pwdTxt.text isEqualToString:self.sureCodeTxt.text]){
+        [SVProgressHUD showErrorWithStatus:@"两次密码不一致"];
+        return;
+        
+        
     }else if (self.codeTxt.text.length == 0){
         [SVProgressHUD showErrorWithStatus:@"请输入验证码"];
         return;
@@ -130,6 +136,12 @@
     }else if (self.pwdTxt.text.length == 1){
         [SVProgressHUD showErrorWithStatus:@"请输入密码"];
         return;
+        
+    }else if (![self.pwdTxt.text isEqualToString:self.sureCodeTxt.text]){
+        [SVProgressHUD showErrorWithStatus:@"两次密码不一致"];
+        return;
+        
+        
     }
     
     _codeView = tap.view;

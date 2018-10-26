@@ -19,7 +19,7 @@
 
 
 @property (nonatomic, strong) void (^didClickTopBLock)(NSInteger tag);
-@property (nonatomic, strong) void (^didClickBottomBLock)(void);
+@property (nonatomic, strong) void (^didClickBottomBLock)(NSInteger tag);
 
 
 @end

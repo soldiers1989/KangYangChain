@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) WLNPropertyHeadView *headView;
 
+@property (nonatomic, strong) WLNFloatView *floatView;
 
 @end
 
@@ -44,6 +45,9 @@
     
     return self.headView;
     
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 250;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -80,8 +84,14 @@
     [self.navigationController pushViewController:vc animated:YES];
 
 }
-- (void)changeBiAction{
-    NSLog(@"trade");
+- (void)changeBiAction:(UITapGestureRecognizer *)tap{
+    
+  
+    self.floatView = [[WLNFloatView alloc]initFather:tap.view delegate:self ButtonTitles:BI_TITLE_ARR, nil];
+    
+    [self.floatView show];
+    
+    
 }
 
 - (WLNPropertyHeadView *)headView{

@@ -10,11 +10,7 @@
 
 #import "WLNKeyChain.h"
 
-#define BI_TITLE_ARR @[@"BTC",@"USDT",@"ETH",@"ETC",@"EOS"]
-
-#define BI_ACTION_ARR @[@"getBTCBalance",@"getUSDTBalance",@"getETHBalance",@"getETCBalance",@"getEOSBalance"]
-
-@interface WLNWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,WMYActionSheetDelegate>
+@interface WLNWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,WLNFloatViewDelegate>
 
 @property (nonatomic, strong) WLNWalletHeadView *headView;
 
@@ -162,31 +158,25 @@
     
     
 }
-- (void)changeBiAction{
+- (void)changeBiAction:(UITapGestureRecognizer *)tap{
     
     
-    WMYActionSheet *sheet = [[WMYActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:BI_TITLE_ARR, nil];
-    
-    [sheet show];
+    WLNFloatView *view = [[WLNFloatView alloc]initFather:tap.view delegate:self ButtonTitles:BI_TITLE_ARR, nil];
     
     
+    [view show];
+  
 }
-- (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+- (void)floatClickBack:(UIButton *)button tag:(NSInteger)tag{
     
-    if (buttonIndex == 0) {
-        return;
-        
-    }else{
-        
-        
-        [WLNSingle shared].currentType = BI_TITLE_ARR[buttonIndex - 1];
-        
-
-        [self routeTargetName:@"WLNHandle" actionName:BI_ACTION_ARR[buttonIndex - 1] param:@{DELEGATES:self}.mutableCopy];
-
-
-    }
     
+    [WLNSingle shared].currentType = BI_TITLE_ARR[tag];
+    
+    NSString *action = [NSString stringWithFormat:@"get%@Balance:",BI_TITLE_ARR[tag]];
+    
+    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
+    
+
     
 }
 
@@ -207,9 +197,6 @@
 
     cell.bizhongLab.text = BI_TITLE_ARR[indexPath.row];
     
-    
-    
-    
     return cell;
     
 }
@@ -220,7 +207,6 @@
         [self.navigationController pushViewController:[WLNWalletDetailCtr new] animated:YES];
 
     }
-    
     
 }
 - (WLNWalletHeadView *)headView{

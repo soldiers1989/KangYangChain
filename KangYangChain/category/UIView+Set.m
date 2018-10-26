@@ -18,7 +18,7 @@
 }
 - (void)setForwarder:(id)forwarder{
     
-    objc_setAssociatedObject(self, @selector(forwarder), forwarder, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(forwarder), forwarder, OBJC_ASSOCIATION_ASSIGN);
     
 }
 
@@ -39,7 +39,19 @@
     return self.forwarder;
     
 }
-
+- (void)shadow{
+    
+    
+    self.layer.shadowRadius = 1;
+    
+    self.layer.shadowOpacity = 0.2;
+    
+    self.layer.shadowColor = UIColor.blackColor.CGColor;
+    
+    self.layer.shadowOffset = CGSizeMake(0,0);
+    
+    
+}
 
 
 

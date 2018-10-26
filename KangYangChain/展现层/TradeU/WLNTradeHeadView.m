@@ -62,7 +62,7 @@
         
     }];
     if (_didClickBottomBLock) {
-        _didClickBottomBLock();
+        _didClickBottomBLock(button.tag);
         
     }
     
@@ -78,6 +78,7 @@
         [button setTitle:bottomArr[i] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:15];
         [button setTitleColor:i == 0 ? [UIColor blackColor]: [UIColor grayColor] forState:UIControlStateNormal];
+        button.tag = i;
 
         [self addSubview:button];
         [button addTarget:self action:@selector(bottomClick:) forControlEvents:UIControlEventTouchUpInside];

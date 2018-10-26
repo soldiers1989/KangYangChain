@@ -22,6 +22,7 @@
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <BTCPack/BTCWrapper.h>
+#import "ETHPack/HSEther.h"
 
 /**
  协议
@@ -55,22 +56,27 @@
 #import "UINavigationBar+Awesome.h"
 #import "UITableView+NewTableView.h"
 #import "NSObject+Function.h"
-#import "UITextField+Set.h"
 #import "NSBundle+DAUtils.h"
 #import "UIView+Set.h"
+#import "UITextField+Set.h"
+#import "UIViewController+Set.h"
+
 
 /**
  公共控件
 
  */
-#import "WLNQRCode.h"
-#import "WLNScanCtr.h"
+
 #import "WMYActionSheet.h"
 #import "DAConfig.h"
 #import "HYAlertView.h"
 #import "GalenPayPasswordView.h"
-#import "WLNScanTipView.h"
 
+
+#import "WLNScanTipView.h"
+#import "WLNFloatView.h"
+#import "WLNQRCode.h"
+#import "WLNScanCtr.h"
 
 #import "WLNSingle.h"
 

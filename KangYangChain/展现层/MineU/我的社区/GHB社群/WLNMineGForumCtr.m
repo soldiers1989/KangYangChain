@@ -10,7 +10,6 @@
 
 @interface WLNMineGForumCtr ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,strong) UITableView *tab;
 
 @end
 
@@ -21,6 +20,8 @@
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
+    [self tabType:1];
+    
     
     [self.tab registerClass:WLNMineGForumCell.class forCellReuseIdentifier:@"WLNMineGForumCell"];
     
@@ -29,6 +30,9 @@
     
     return 10;
     
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     

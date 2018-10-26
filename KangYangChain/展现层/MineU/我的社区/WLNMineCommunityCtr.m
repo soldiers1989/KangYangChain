@@ -9,7 +9,7 @@
 #import "WLNMineCommunityCtr.h"
 
 @interface WLNMineCommunityCtr ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tab;
+
 @end
 
 @implementation WLNMineCommunityCtr
@@ -20,6 +20,8 @@
     self.title = @"我的社区".Intl;
     self.tab.dataSource = self;
     self.tab.delegate = self;
+    [self tabType:1];
+    
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.tab registerClass:WLNMineCommunityCell.class forCellReuseIdentifier:@"WLNMineCommunityCell"];
@@ -43,7 +45,9 @@
     self.tab.tableHeaderView = view;
     
 }
-
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 2;
 }

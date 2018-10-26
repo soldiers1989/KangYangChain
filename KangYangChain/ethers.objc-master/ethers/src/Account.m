@@ -87,7 +87,7 @@ NSData *ensureDataLength(NSString *hexString, NSUInteger length) {
 
 @implementation Cancellable {
     BOOL _cancelled;
-    void (^_cancelCallback)();
+    void (^_cancelCallback)(void);
 }
 
 - (instancetype)initWithCancelCallback: (void (^)())cancelCallback {

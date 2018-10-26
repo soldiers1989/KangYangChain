@@ -39,7 +39,28 @@
     
     
     WLNOrderHeadView *view = [[WLNOrderHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 50)];
+    view.forwarder = self;
+    
     self.tab.tableHeaderView = view;
+    
+}
+- (void)floatAction:(UITapGestureRecognizer *)tap{
+    
+    if (tap.view.tab == 0) {
+        
+        WLNFloatView *view = [[WLNFloatView alloc]initFather:tap.view delegate:self ButtonTitles:BI_TITLE_ARR, nil];
+        
+        [view show];
+        
+    }else{
+        WLNFloatView *view = [[WLNFloatView alloc]initFather:tap.view delegate:self ButtonTitles:@"买入",@"卖出", nil];
+        
+        [view show];
+        
+    }
+    
+    
+    
     
 }
 
@@ -59,6 +80,8 @@
 }
 
 
+
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView fr_willDisplayCell:cell forRowAtIndexPath:indexPath];
@@ -76,12 +99,12 @@
     
     
     WLNOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNOrderCell"];
- 
+    
     NSMutableDictionary *dic = self.dataArrs[indexPath.row];
     
     
     cell.timeLab.text = [self getTimeFromTimesTamp:dic[@"time"]];
-    cell.
+    //    cell.
     
     return cell;
     
@@ -93,10 +116,11 @@
     double time = [timeStr doubleValue];
     NSDate *myDate = [NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *formatter = [NSDateFormatter new];
-    [formatter setDateFormat:@"YYYY-MM-dd HH:mm"];
+    [formatter setDateFormat:@"YYYY.MM.dd HH:mm"];
     NSString *timeS = [formatter stringFromDate:myDate];
     return timeS;
     
 }
+
 
 @end

@@ -1,8 +1,8 @@
 //
-//  UIView+Set.h
+//  UIViewController+Set.h
 //  KangYangChain
 //
-//  Created by edz on 2018/10/24.
+//  Created by edz on 2018/10/26.
 //  Copyright © 2018 furao. All rights reserved.
 //
 
@@ -10,11 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (Set)
+@interface UIViewController (Set)
 
-@property (nonatomic,strong) id forwarder;
-
-- (void)shadow;
 
 
 @end

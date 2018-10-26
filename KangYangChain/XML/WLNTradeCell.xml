@@ -34,6 +34,12 @@
 
     </UIView>
 
+    <UIImageView name="cellect" attr="source:service,hidden:true" layout="marginRight:10"/>
+
+
+
+
+
     </UIView>
 
 </UIView>

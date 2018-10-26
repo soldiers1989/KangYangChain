@@ -26,7 +26,19 @@
     
     <UIView layout="flexDirection:row,marginLeft:50,marginRight:50,marginTop:15,alignItems:center" attr="bgColor:#7A7A7A,borderRadius:7">
         <UIImageView attr="source:Login_lock" layout="marginLeft:15"/>
-        <UITextField name="pwdT" layout="height:40,flex:1,marginLeft:10" attr="fontSize:14,color:white,textAlign:left,placeholder:@设置密码,"/>
+        <UITextField name="pwdT" layout="height:40,flex:1,marginLeft:10" attr="secureTextEntry:true,fontSize:14,color:white,textAlign:left,placeholder:@设置密码,"/>
+
+        <FlexTouchView onPress="hideAction" layout="height:40,width:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray">
+
+            <UIImageView attr="source:hide" layout="height:10,width:15"/>
+
+        </FlexTouchView>
+
+    </UIView>
+
+     <UIView layout="flexDirection:row,marginLeft:50,marginRight:50,marginTop:15,alignItems:center" attr="bgColor:#7A7A7A,borderRadius:7">
+        <UIImageView attr="source:surePwd" layout="marginLeft:15"/>
+        <UITextField name="surePwdT" layout="height:40,flex:1,marginLeft:10" attr="secureTextEntry:true,fontSize:14,color:white,textAlign:left,placeholder:@确认密码,"/>
 
         <FlexTouchView onPress="hideAction" layout="height:40,width:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray">
 

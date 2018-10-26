@@ -15,4 +15,7 @@
 @property (nonatomic, strong) UILabel *money2Lab;
 @property (nonatomic, strong) UILabel *dealCountLab;
 @property (nonatomic, strong) UILabel *waveLab; //波动百分比
+
+@property (nonatomic, strong) UIImageView*cellect;
+
 @end

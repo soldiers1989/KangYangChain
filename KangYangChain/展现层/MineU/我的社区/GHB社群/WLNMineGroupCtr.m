@@ -14,7 +14,7 @@
     NSArray *_contentArrs;
     
 }
-@property (nonatomic, strong) UITableView *tab;
+
 @end
 
 @implementation WLNMineGroupCtr
@@ -31,6 +31,7 @@
     self.tab.delegate = self;
     self.tab.dataSource = self;
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self tabType:1];
     
     [self.tab registerClass:WLNMineCommunityCell.class forCellReuseIdentifier:@"WLNMineCommunityCell"];
     
@@ -38,6 +39,10 @@
     imagev.image = [UIImage imageNamed:@"Snip20181008_3"];
     self.tab.tableHeaderView = imagev;
     
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

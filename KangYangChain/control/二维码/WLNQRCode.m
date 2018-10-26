@@ -44,7 +44,7 @@
     //获得上下文中二维码
     UIImage *retVal =  UIGraphicsGetImageFromCurrentImageContext();
     CGImageRelease(bitmapImage);
-    CGContextRelease(bitmapContextRef);
+//    CGContextRelease(bitmapContextRef);
     return retVal;
 }
 

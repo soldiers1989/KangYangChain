@@ -25,11 +25,14 @@
 #define DISPATCH_CHILD(childQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),childQueueBlock)
 
 
+#define BI_TITLE_ARR @[@"BTC",@"USDT",@"ETH",@"ETC",@"EOS"]
+
 #define DELEGATES @"fdsoufdiosaufiosdafdsalfndmsfdsfdsafdshghh"
 
-#define URLS @"urldfkaljfdklajflkdsajflsdajfdklsfjdklsafhdsjkafhdajkfhjsk"
-
 #define OrderStatusArr  @[@"匹配中",@"交易中",@"完成",@"冻结",@"可卖出",@"去支付",@"收益中"]
+
+#define windowFrame(a) [a convertRect:a.bounds toView:[UIApplication sharedApplication].delegate.window]
+
 
 #define TK @"cell_title"
 #define PK @"cell_picture"

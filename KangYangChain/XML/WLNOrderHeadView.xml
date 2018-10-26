@@ -13,12 +13,12 @@
     <UIView layout="margin:10,flexDirection:row" attr="bgColor:white,borderRadius:7">
 
 
-        <FlexTouchView layout="flexDirection:row,alignItems:center,width:50%" attr="underlayColor:darkGray">
+        <FlexTouchView onPress="floatAction:" layout="flexDirection:row,alignItems:center,width:50%" attr="underlayColor:darkGray,tag:0">
             <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:币种"/>
             <UIImageView attr="source:Arrow_down_white" layout="width5,height:5"/>
         </FlexTouchView>
 
-        <FlexTouchView layout="flexDirection:row,alignItems:center,flex:1" attr="underlayColor:darkGray">
+        <FlexTouchView onPress="floatAction:" layout="flexDirection:row,alignItems:center,flex:1" attr="underlayColor:darkGray,tag:1">
             <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:类型"/>
             <UIImageView attr="source:Arrow_down_white" layout="width5,height:5"/>
         </FlexTouchView>

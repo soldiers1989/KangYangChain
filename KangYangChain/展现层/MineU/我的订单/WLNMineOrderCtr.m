@@ -9,7 +9,7 @@
 #import "WLNMineOrderCtr.h"
 
 @interface WLNMineOrderCtr ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tab;
+
 @end
 
 @implementation WLNMineOrderCtr
@@ -20,11 +20,16 @@
     self.tab.delegate = self;
     self.tab.dataSource = self;
     self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self tabType:1];
     
-    WLNMineOrderHeadView*view = [[WLNMineOrderHeadView alloc]initWithFrame:CGRectMake(00, 0, DEVICEWidth, 50)];
+    
+    WLNMineOrderHeadView*view = [[WLNMineOrderHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 50)];
     self.tab.tableHeaderView = view;
     
     
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 5;

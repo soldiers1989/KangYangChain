@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UITextField *phoneT;
 @property (nonatomic, strong) UITextField *pwdT;
 @property (nonatomic, strong) UITextField *codeT;
+@property (nonatomic, strong) UITextField *surePwdT;
+
 @property (nonatomic, strong) UILabel *codeLab;
 @property (nonatomic, strong) NSTimer *timer;
 
@@ -40,6 +42,7 @@
     [self.phoneT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [self.pwdT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [self.codeT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.surePwdT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
 
     
 }
@@ -75,13 +78,20 @@
     if (self.phoneT.text.length != 11) {
         [SVProgressHUD showErrorWithStatus:@"手机格式不正确".Intl];
         return;
+    
+    }else if (self.codeT.text.length == 0){
+        [SVProgressHUD showErrorWithStatus:@"验证码格式不正确".Intl];
+        return;
     }else if (self.pwdT.text.length == 0){
         
         [SVProgressHUD showErrorWithStatus:@"密码格式不正确".Intl];
         return;
-    }else if (self.codeT.text.length == 0){
-        [SVProgressHUD showErrorWithStatus:@"验证码格式不正确".Intl];
+        
+    }else if (![self.pwdT.text isEqualToString:self.surePwdT.text]){
+        
+        [SVProgressHUD showErrorWithStatus:@"两次密码不一致"];
         return;
+        
     }
     dic[@"account"] = self.phoneT.text;
     dic[@"pass"] = self.pwdT.text;
@@ -147,6 +157,7 @@
 - (void)hideAction{
     
     self.pwdT.secureTextEntry = !self.pwdT.secureTextEntry;
+    self.surePwdT.secureTextEntry = !self.surePwdT.secureTextEntry;
     
 }
 

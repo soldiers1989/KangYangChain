@@ -20,10 +20,16 @@
 
         </UIView>
 
+         <UIView layout="alignItems:center,flexDirection:row,height:50" attr="">
+            <UILabel name="titleLab" layout="marginLeft:15" attr="fontSize:14,color:#333333,linesNum:0,text:@确认密码"/>
+            <UITextField name="pwdTxt" layout="marginLeft:20,flex:1" attr="fontSize:14,color:black,textAlign:left,placeholder:@确认新密码,text:"/>
+
+        </UIView>
+
         <UIView layout="alignItems:center,flexDirection:row,height:50" attr="">
 
             <UILabel name="titleLab" layout="marginLeft:15" attr="fontSize:14,color:#333333,linesNum:0,text:@验证码"/>
-            <UITextField name="codeTxt" layout="marginLeft:20,flex:1" attr="fontSize:14,color:black,textAlign:left,placeholder:@请输入验证码,text:,
+            <UITextField name="sureCodeTxt" layout="marginLeft:20,flex:1" attr="fontSize:14,color:black,textAlign:left,placeholder:@请输入验证码,text:,
             keyboardType:numberPad"/>
 
             <FlexTouchView onPress="codeAction:" layout="" attr="underlayColor:darkGray">

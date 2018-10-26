@@ -24,7 +24,7 @@
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:BTCKEY].mutableCopy;
     
-    chainDic[@"address"] = @"1J5MNotTENrEc8jMaWcFZVyACnzfDprTni";
+    chainDic[@"address"] = @"1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY";
     
     if (chainDic) {
         
@@ -72,7 +72,7 @@
     
     [dic removeObjectForKey:DELEGATES];
     
-    NSString *address = @"1J5MNotTENrEc8jMaWcFZVyACnzfDprTni";
+    NSString *address = @"1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY";
     
     [BTCWrapper getBalanceWithAddress:address block:^(NSDictionary *dict, BOOL suc) {
         
@@ -161,7 +161,7 @@
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:BTCKEY].mutableCopy;
     
     
-    [BTCWrapper getTxlistWithAddress:@"1J5MNotTENrEc8jMaWcFZVyACnzfDprTni" withPage:1 block:^(NSArray *array, BOOL suc) {
+    [BTCWrapper getTxlistWithAddress:@"1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY" withPage:1 block:^(NSArray *array, BOOL suc) {
         
         
         if (suc) {

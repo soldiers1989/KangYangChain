@@ -9,7 +9,10 @@
 #import "WLNTradeCtr.h"
 
 @interface WLNTradeCtr ()<UITableViewDelegate,UITableViewDataSource>
-
+{
+    BOOL _isChange;
+    
+}
 @end
 
 @implementation WLNTradeCtr
@@ -37,9 +40,27 @@
         
         
     }];
-
+    
+    [view setDidClickBottomBLock:^(NSInteger tag) {
+       
+        [weakself changeDataSource:tag];
+        
+    }];
     
     self.tab.tableHeaderView = view;
+
+}
+- (void)changeDataSource:(NSInteger)tag{
+    
+    if (tag == 4) {
+        
+        _isChange = YES;
+        
+    }else{
+        _isChange = NO;
+        
+    }
+    [self.tab reloadData];
 
 }
 - (void)gotoNext:(NSInteger)tag{
@@ -73,6 +94,10 @@
     
     WLNTradeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    
+    cell.cellect.hidden = !_isChange;
+    
     return cell;
     
 }
