@@ -31,13 +31,13 @@ typedef void (^CellBlock)(void);
   @{TK:@"法币账户".Intl,PK:@"account",BK:^{[self push:@"WLNMineLawWalletCtr".instance];}},
   @{TK:@"合约账户".Intl,PK:@"contract",BK:^{[self push:@"WLNMineAgreeWalletCtr".instance];}}],
   
-  @[@{TK:@"扫码推广".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
-  @{TK:@"互助推广".Intl,PK:@"fenxiang",BK:^{[self push:@"WLNMineExtensionCtr".instance];}}],
+  @[@{TK:@"扫码算力".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
+  @{TK:@"互助算力".Intl,PK:@"fenxiang",BK:^{[self push:@"WLNMineExtensionCtr".instance];}}],
   
-  @[@{TK:@"身份认证".Intl,PK:@"identity",BK:^{[self push:@"WLNMineIDCertifiedCtr".instance];}},
-  @{TK:@"账户安全".Intl,PK:@"suotou",BK:^{[self push:@"WLNMineSecurityCtr".instance];}},
-  @{TK:@"支付设置".Intl,PK:@"pay",BK:^{[self push:@"WLNMinePaySetCtr".instance];}},
-  @{TK:@"手续费等级".Intl,PK:@"charge",BK:^{[self push:@"WLNMineChargeCtr".instance];}}]];
+  @[@{TK:@"身份认证".Intl,PK:@"identity",BK:^{[self push:@"WLNHTMLCtr".instance];}},
+  @{TK:@"账户安全".Intl,PK:@"suotou",BK:^{[self push:@"WLNHTMLCtr".instance];}},
+  @{TK:@"支付设置".Intl,PK:@"pay",BK:^{[self push:@"WLNHTMLCtr".instance];}},
+  @{TK:@"手续费等级".Intl,PK:@"charge",BK:^{[self push:@"WLNHTMLCtr".instance];}}]];
         
     }
  

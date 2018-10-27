@@ -17,29 +17,52 @@
 @property (nonatomic, strong) UITextField *phoneTxt;
 @property (nonatomic, strong) UITextField *pwdTxt;
 @property (nonatomic, strong) UITextField *codeTxt;
+@property (nonatomic, strong) UITextField *surePwdTxt;
+
 @property (nonatomic, strong) UILabel *codeLab;
 @property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, strong) UITextField *sureCodeTxt;
 
 
 
 @end
 
 @implementation WLNForgetCtr
-//- (UIEdgeInsets)getSafeArea:(BOOL)portrait{
-//
-//    return UIEdgeInsetsZero;
-//
-//}
+- (UIEdgeInsets)getSafeArea:(BOOL)portrait{
+
+    return UIEdgeInsetsZero;
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationController.navigationBar.translucent = NO;
     self.title = @"忘记密码".Intl;
+        
+    [self.phoneTxt changePlaceHolder:UIColor.whiteColor];
+    [self.codeTxt changePlaceHolder:UIColor.whiteColor];
+    [self.pwdTxt changePlaceHolder:UIColor.whiteColor];
+    [self.surePwdTxt changePlaceHolder:UIColor.whiteColor];
+
+
+
+}
+- (void)hideAction{
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"完成".Intl style:UIBarButtonItemStyleDone target:self action:@selector(doneAction)];
-
-
+    self.pwdTxt.secureTextEntry = !self.pwdTxt.secureTextEntry;
+    self.surePwdTxt.secureTextEntry = !self.surePwdTxt.secureTextEntry;
+    
+}
+- (void)registerAction{
+    
+    [self push:@"WLNRegisterCtr".instance];
+    
+    
+}
+- (void)logAction{
+    
+    [self push:@"WLNLogCtr".instance];
+    
+    
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
@@ -104,7 +127,7 @@
         [SVProgressHUD showErrorWithStatus:@"请输入密码"];
         return;
         
-    }else if (![self.pwdTxt.text isEqualToString:self.sureCodeTxt.text]){
+    }else if (![self.pwdTxt.text isEqualToString:self.surePwdTxt.text]){
         [SVProgressHUD showErrorWithStatus:@"两次密码不一致"];
         return;
         
@@ -132,15 +155,6 @@
     if (self.phoneTxt.text.length != 11) {
         [SVProgressHUD showErrorWithStatus:@"手机号格式不正确"];
         return;
-        
-    }else if (self.pwdTxt.text.length == 1){
-        [SVProgressHUD showErrorWithStatus:@"请输入密码"];
-        return;
-        
-    }else if (![self.pwdTxt.text isEqualToString:self.sureCodeTxt.text]){
-        [SVProgressHUD showErrorWithStatus:@"两次密码不一致"];
-        return;
-        
         
     }
     

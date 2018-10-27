@@ -38,13 +38,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
-    [self.phoneT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [self.pwdT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [self.codeT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [self.surePwdT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.phoneT changePlaceHolder:UIColor.whiteColor];
+    [self.pwdT changePlaceHolder:UIColor.whiteColor];
+    [self.codeT changePlaceHolder:UIColor.whiteColor];
+    [self.surePwdT changePlaceHolder:UIColor.whiteColor];
 
-    
 }
 - (void)logAction{
     

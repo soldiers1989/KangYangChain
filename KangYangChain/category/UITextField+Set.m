@@ -21,5 +21,10 @@
     self.leftViewMode = UITextFieldViewModeAlways;
     self.leftView = leftview;
 }
+- (void)changePlaceHolder:(UIColor *)color{
+    
+    [self setValue:color forKeyPath:@"_placeholderLabel.textColor"];
+
+}
 
 @end

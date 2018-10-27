@@ -47,7 +47,7 @@
 
     <UIView layout="marginTop:20,flexDirection:row,alignItems:flex-start" attr="bgColor:white">
         <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:交易说明"/>
-        <UILabel name="" layout="margin:10" attr="fontSize:12,color:gray,linesNum:0,text:1.订单有效期为15分钟\,请及时付款并点击(我已支付)按钮 \n2.币有系统锁定托管\,请放心下单
+        <UILabel name="" layout="margin:10,flex:1" attr="fontSize:12,color:gray,linesNum:0,text:1.订单有效期为15分钟\,请及时付款并点击(我已支付)按钮 \n2.币有系统锁定托管\,请放心下单
         "/>
     </UIView>
 

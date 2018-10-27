@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"扫码推广".Intl;
+    self.title = @"扫码算力".Intl;
     self.tab.delegate = self;
     self.tab.dataSource = self;
     self.dataArrs = [NSMutableArray array];

@@ -77,7 +77,10 @@
 #import "WLNFloatView.h"
 #import "WLNQRCode.h"
 #import "WLNScanCtr.h"
-
+#import "WLNSimpleHeadView.h"
+#import "WLNTradeTradeHeadView.h"
+#import "WLNHTMLCtr.h"
+#import "WLNHTMLProgressView.h"
 #import "WLNSingle.h"
 
 

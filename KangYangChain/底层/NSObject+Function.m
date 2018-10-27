@@ -50,6 +50,7 @@
     tableview.backgroundColor = maingray;
     if (tableview == nil) {
         self.tab = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+        self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableview = objc_getAssociatedObject(self, @selector(tab));
         
     }

@@ -8,22 +8,33 @@
    Copyright (c) 2018 furao. All rights reserved.
 -->
 
-<UIView layout="" attr="bgColor:white">
+<UIView layout="" attr="@:css/colors">
 
-    <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:订单:90000000"/>
+    <UIView layout="marginBottom:10" attr="bgColor:white">
+        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:订单:90000000"/>
 
-    <UIView layout="margin:10,justifyContent:space-around" attr="">
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:币种:BTC/USDT"/>
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:类型:限价"/>
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:数量:1"/>
+        <UIView layout="margin:10,justifyContent:space-between,flexDirection:row" attr="">
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:币种:BTC/USDT"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:类型:限价"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:数量:1"/>
+        </UIView>
+
+        <UIView layout="margin:10,flexDirection:row" attr="">
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:现价:6666.90"/>
+            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:"/>
+        </UIView>
+
+        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:占用USDT:5758"/>
+
+        <UIView layout="alignItems:center,margin:10" attr="">
+
+            <FlexTouchView onPress="" layout="" attr="underlayColor:darkGray,bgColor:#1D253C,
+            borderRadius:7">
+                <UILabel name="" layout="margin:10" attr="fontSize:14,color:white,linesNum:0,text:取消订单"/>
+            </FlexTouchView>
+        </UIView>
     </UIView>
 
-    <UIView layout="margin:10" attr="">
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:现价:6666.90"/>
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:"/>
-    </UIView>
-
-    <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:占用USDT:5758"/>
 
 </UIView>
 

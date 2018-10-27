@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextField (Set)
 
--(void)letPadding:(CGFloat)leftWidth;
+- (void)letPadding:(CGFloat)leftWidth;
+
+- (void)changePlaceHolder:(UIColor *)color;
 
 @end
 

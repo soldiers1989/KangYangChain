@@ -34,6 +34,8 @@
 
 #import "WLNTradeBBOrderCtr.h"
 #import "WLNTradeBBOrderCell.h"
+#import "WLNTradeLawBHeaderView.h"
+#import "WLNTradeLawBPublishCtr.h"
 
 
 #endif /* WLNTradeUHeader_h */

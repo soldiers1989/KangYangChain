@@ -29,9 +29,9 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     
-    [self.phoneT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [self.pwdT setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-  
+    [self.phoneT changePlaceHolder:UIColor.whiteColor];
+    [self.pwdT changePlaceHolder:UIColor.whiteColor];
+
 
 }
 - (UIEdgeInsets)getSafeArea:(BOOL)portrait{

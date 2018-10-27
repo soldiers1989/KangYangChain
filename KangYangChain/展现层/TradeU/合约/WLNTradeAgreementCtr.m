@@ -8,7 +8,7 @@
 
 #import "WLNTradeAgreementCtr.h"
 
-@interface WLNTradeAgreementCtr ()<UITableViewDelegate,UITableViewDataSource>
+@interface WLNTradeAgreementCtr ()<UITableViewDelegate,UITableViewDataSource,WLNSimpleHeadViewDelegate>
 {
     NSInteger _currentType;
 }
@@ -31,7 +31,25 @@
     [self.tab registerClass:WLNTradeHangCell.class forCellReuseIdentifier:@"WLNTradeHangCell"];
 
     
+    WLNSimpleHeadView *view = [[WLNSimpleHeadView alloc]initWithDelegate:self titleArr:@[@"交易",@"挂单",@"持仓"]];
+    self.tab.tableHeaderView = view;
     
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    WLNTradeTradeHeadView *view = [[WLNTradeTradeHeadView alloc]init];
+    
+    return view;
+    
+}
+- (void)simpleClickBack:(UIButton *)button tag:(NSInteger)tag{
+    
+    _currentType = tag;
+    [self.tab reloadData];
     
     
 }
@@ -46,7 +64,7 @@
         
         return [self trade_tableView:tableView cellForRowAtIndexPath:indexPath];
         
-    }else if (indexPath.row == 1){
+    }else if (_currentType == 1){
         
         return [self hang_bleView:tableView cellForRowAtIndexPath:indexPath];
         

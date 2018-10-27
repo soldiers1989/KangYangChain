@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   WLNTradeTradeHeadView.xml
+   KangYangChain
+
+   Created by edz on 2018/10/27.
+   Copyright (c) 2018 furao. All rights reserved.
+-->
+
+<UIView layout="flexDirection:row,justifyContent:space-between" attr="bgColor:white">
+
+    <UIView layout="flexDirection:row,alignItems:center" attr="">
+        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:BTC 当真 0921"/>
+        <UIImageView attr="source:Arrow_down_white"/>
+    </UIView>
+
+    <UIView layout="flexDirection:row" attr="">
+        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:$6544.15"/>
+        <UIImageView attr="source:"/>
+    </UIView>
+
+</UIView>
+
+
+

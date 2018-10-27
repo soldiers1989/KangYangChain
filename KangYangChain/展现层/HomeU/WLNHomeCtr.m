@@ -169,7 +169,7 @@
         
         
     }else if (t == 3){
-        [self push:@"WLNWalletCtr".instance];
+        [self push:@"WLNMineGHBWalletCtr".instance];
 
     }else{
         

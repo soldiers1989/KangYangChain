@@ -28,6 +28,8 @@
 
     </UIView>
 
+    <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
 
 </UIView>
 
