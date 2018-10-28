@@ -12,27 +12,22 @@
 
 - (void)walletSetup{
     
-    
-
-
-    NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[DELEGATES] = self;
-    
+ 
     /**
      生成比特币地址
      */
-    [self routeTargetName:@"WLNHandle" actionName:@"getBTCKeys:" param:dic];
+    [self routeTargetName:@"WLNHandle" actionName:@"getBTCKeys:" param:@{DELEGATES:self}.mutableCopy];
     
     /**
      生成usdt地址
      */
-    [self routeTargetName:@"WLNHandle" actionName:@"getUSDTKeys:" param:dic];
+    [self routeTargetName:@"WLNHandle" actionName:@"getUSDTKeys:" param:@{DELEGATES:self}.mutableCopy];
 
     /**
      生成ETH地址
      */
     
-    [self routeTargetName:@"WLNHandle" actionName:@"getETHKeys:" param:dic];
+    [self routeTargetName:@"WLNHandle" actionName:@"getETHKeys:" param:@{DELEGATES:self}.mutableCopy];
 
     /**
      生成ETC地址

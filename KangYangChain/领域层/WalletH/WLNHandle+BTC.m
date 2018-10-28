@@ -81,7 +81,7 @@
             
             if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:dict sel:NSStringFromSelector(_cmd)];
+                [delegate result:dict[address][@"final_balance"] sel:NSStringFromSelector(_cmd)];
                 
             }
         }else{
@@ -137,11 +137,7 @@
             }
             
         }
-        
-        
-        
-        
-        
+   
     }];
     
     

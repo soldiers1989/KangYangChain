@@ -24,8 +24,10 @@
  */
 #define DISPATCH_CHILD(childQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),childQueueBlock)
 
-
 #define BI_TITLE_ARR @[@"BTC",@"USDT",@"ETH",@"ETC",@"EOS"]
+
+#define BANLANCE_ACTION(a) [NSString stringWithFormat:@"get%@Balance:",a]
+
 
 #define DELEGATES @"fdsoufdiosaufiosdafdsalfndmsfdsfdsafdshghh"
 

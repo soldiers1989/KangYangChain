@@ -330,6 +330,7 @@
 		23F9C9262163E09F000EDFC4 /* WLNShopItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C9252163E09F000EDFC4 /* WLNShopItemCell.m */; };
 		23F9C9292163E0C8000EDFC4 /* WLNShopIntegralCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C9282163E0C8000EDFC4 /* WLNShopIntegralCell.m */; };
 		23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C92B2163E13A000EDFC4 /* WLNShopADView.m */; };
+		23FBB77221866A700056A7AA /* WLNHandle+EOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FBB77121866A700056A7AA /* WLNHandle+EOS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -929,6 +930,8 @@
 		23F9C9282163E0C8000EDFC4 /* WLNShopIntegralCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNShopIntegralCell.m; sourceTree = "<group>"; };
 		23F9C92A2163E13A000EDFC4 /* WLNShopADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNShopADView.h; sourceTree = "<group>"; };
 		23F9C92B2163E13A000EDFC4 /* WLNShopADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNShopADView.m; sourceTree = "<group>"; };
+		23FBB77021866A700056A7AA /* WLNHandle+EOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLNHandle+EOS.h"; sourceTree = "<group>"; };
+		23FBB77121866A700056A7AA /* WLNHandle+EOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLNHandle+EOS.m"; sourceTree = "<group>"; };
 		7116EC6F909A487B8F245C22 /* Pods-KangYangChain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangYangChain.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangYangChain/Pods-KangYangChain.release.xcconfig"; sourceTree = "<group>"; };
 		758F12EEA60DB921DFF132A7 /* Pods-KangYangChain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangYangChain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangYangChain/Pods-KangYangChain.debug.xcconfig"; sourceTree = "<group>"; };
 		7F19D04013673CB42FDFF409 /* libPods-KangYangChainTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KangYangChainTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1089,6 +1092,8 @@
 				23441E7521826CBF00F6C110 /* WLNHandle+BTC.m */,
 				23441E7721826CC800F6C110 /* WLNHandle+ETH.h */,
 				23441E7821826CC800F6C110 /* WLNHandle+ETH.m */,
+				23FBB77021866A700056A7AA /* WLNHandle+EOS.h */,
+				23FBB77121866A700056A7AA /* WLNHandle+EOS.m */,
 				23441E7121826CB100F6C110 /* WLNHandle+USDT.h */,
 				23441E7221826CB100F6C110 /* WLNHandle+USDT.m */,
 			);
@@ -2580,6 +2585,7 @@
 				00048FC62181BA1B00969F11 /* WLNTradeBBCtr.m in Sources */,
 				00E92D4E217DB95500C51DCD /* WLNTradeLawCionCtr.m in Sources */,
 				23D17AFA21742A7F0004D877 /* WLNWalletHeadCell.m in Sources */,
+				23FBB77221866A700056A7AA /* WLNHandle+EOS.m in Sources */,
 				00E92D51217DBA4A00C51DCD /* WLNTradeLawCionCell.m in Sources */,
 				0085F393218464E600DAD323 /* HideTrackView.m in Sources */,
 				00B7F4C6217DD762009208C9 /* WLNTradeTradeCell.m in Sources */,

@@ -34,9 +34,9 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearAction)];
     
     
-    
-    
-    [self routeTargetName:@"WLNHandle" actionName:@"getBTCBalance:" param:@{DELEGATES:self}.mutableCopy];
+    NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
+
+    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
 
     self.headView.model = [WLNSingle shared].current_model;
     
@@ -70,9 +70,7 @@
     }else{
         
         
-        NSDictionary *dic = data[model.address];
-        
-        model.balance = dic[@"final_balance"];
+        model.balance = data;
         
         [self.tab reloadData];
         
@@ -172,7 +170,7 @@
     
     [WLNSingle shared].currentType = BI_TITLE_ARR[tag];
     
-    NSString *action = [NSString stringWithFormat:@"get%@Balance:",BI_TITLE_ARR[tag]];
+    NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
     
     [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
     

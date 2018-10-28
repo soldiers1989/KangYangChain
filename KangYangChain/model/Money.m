@@ -33,8 +33,6 @@
     
     double numd = [balance doubleValue];
     
-    
-    
     numd = numd / pow(10,8);
     
     
