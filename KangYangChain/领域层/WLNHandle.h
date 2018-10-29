@@ -10,19 +10,12 @@
 
 #import "WLNKeyChain.h"
 
-@protocol Interface <NSObject,WLNReqstProtocol>
-
-@end
-
-@interface WLNHandle : NSObject<Interface>
+@interface WLNHandle : NSObject<WLNReqstProtocol>
 
 @property (nonatomic, weak) id <WLNReqstProtocol>delegate;
 
 @property (nonatomic, assign) SEL sel;
 
-
-
-- (void)implementWith:(id <Interface>)impl;
 
 
 @end

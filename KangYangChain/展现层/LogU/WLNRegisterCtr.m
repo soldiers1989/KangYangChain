@@ -44,13 +44,7 @@
     [self.surePwdT changePlaceHolder:UIColor.whiteColor];
 
 }
-- (void)logAction{
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
-- (void)faild:(id)data sel:(NSString *)sel{
-    
-}
+#pragma mark - 数据回调
 
 - (void)result:(id)data sel:(NSString *)sel{
     
@@ -68,6 +62,15 @@
     
 }
 
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+}
+#pragma mark - 自定义方法
+
+- (void)logAction{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)registerAction{
     
     NSMutableDictionary *dic = @{}.mutableCopy;

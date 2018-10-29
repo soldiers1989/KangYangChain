@@ -123,9 +123,7 @@
 - (void)hideAction{
     
     self.pwdT.secureTextEntry = !self.pwdT.secureTextEntry;
-    
-    
-    
+ 
 }
 
 

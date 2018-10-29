@@ -2,9 +2,10 @@
 //  NSMutableDictionary+SafeException.m
 //  QHSafeException
 //
-//  Created by QianHan on 2017/12/6.
-//  Copyright © 2017年 karl.luo. All rights reserved.
+//  Created by edz on 2018/10/16.
+//  Copyright © 2018 furao. All rights reserved.
 //
+
 
 #import "NSMutableDictionary+SafeException.h"
 #import <objc/runtime.h>

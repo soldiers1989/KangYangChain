@@ -10,9 +10,9 @@
 
 @interface WLNHandle() 
 
-@property (nonatomic, assign ) BOOL isImpMented;
-@property (nonatomic, strong ) id <Interface> impl;
-@property (nonatomic, assign ) Class cls;
+//@property (nonatomic, assign ) BOOL isImpMented;
+//@property (nonatomic, assign ) Class cls;
+//@property (nonatomic, strong ) id <Interface> impl;
 
 @end
 @implementation WLNHandle

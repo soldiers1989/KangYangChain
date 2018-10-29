@@ -21,7 +21,7 @@
         <UIView layout="flexDirection:row" attr="">
 
             <UILabel name="contentLab" layout="flex:1,marginLeft:10,marginRight:10" attr="fontSize:14,color:#333333,linesNum:0,@:css/colors,text:加密货币加密货币加密货币加密货币加密"/>
-            <UIImageView name="contentImg" attr="source:Snip20181002_2" layout="@:css/contentImg,marginRight:10." />
+            <UIImageView name="contentImg" attr="source:fdsafas" layout="@:css/contentImg,marginRight:10." />
 
         </UIView>
      

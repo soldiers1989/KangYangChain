@@ -51,22 +51,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KangYangChain/&#x9886;&#x57df;&#x5c42;/WalletH/WLNHandle+Wallet.m"
-            timestampString = "562461390.348071"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "-rmbPrice:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "KangYangChain/&#x9886;&#x57df;&#x5c42;/WalletH/WLNHandle+ETH.m"
             timestampString = "562462002.246304"
             startingColumnNumber = "9223372036854775807"
