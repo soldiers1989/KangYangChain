@@ -83,6 +83,11 @@
 		0085F398218466A500DAD323 /* GesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F396218466A400DAD323 /* GesManager.m */; };
 		0085F39B21846ADE00DAD323 /* WLNHTMLCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F39A21846ADE00DAD323 /* WLNHTMLCtr.m */; };
 		0085F39F21846C9D00DAD323 /* WLNHTMLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F39E21846C9D00DAD323 /* WLNHTMLProgressView.m */; };
+		0085F3A32186D60300DAD323 /* WLNData+Net.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F3A22186D60300DAD323 /* WLNData+Net.m */; };
+		0085F3A82186D61100DAD323 /* WLNData+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F3A72186D61100DAD323 /* WLNData+Base.m */; };
+		0085F3AB2186D61800DAD323 /* WLNData+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F3AA2186D61800DAD323 /* WLNData+Chain.m */; };
+		0085F3AE2186D62B00DAD323 /* WLNData+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F3AD2186D62B00DAD323 /* WLNData+UserDefaults.m */; };
+		0085F3B12186ED2000DAD323 /* WLNKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F3B02186ED2000DAD323 /* WLNKeyChain.m */; };
 		0089FB4D2175C0F4002C3465 /* WLNMineFormDetailCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0089FB4C2175C0F4002C3465 /* WLNMineFormDetailCtr.xml */; };
 		0089FB502175C151002C3465 /* WLNMineFormTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0089FB4F2175C151002C3465 /* WLNMineFormTopCell.m */; };
 		0089FB532175C15C002C3465 /* WLNMineFormBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0089FB522175C15C002C3465 /* WLNMineFormBottomCell.m */; };
@@ -97,7 +102,6 @@
 		0093CDB521807DDF007A60A7 /* WLNMineAgreeWalletHeadView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0093CDB421807DDF007A60A7 /* WLNMineAgreeWalletHeadView.xml */; };
 		00A5EBDE2176DB7600FED04D /* WLNMineFormDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5EBDD2176DB7600FED04D /* WLNMineFormDetailHeadView.m */; };
 		00A5EBE02176DB9E00FED04D /* WLNMineFormDetailHeadView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00A5EBDF2176DB9E00FED04D /* WLNMineFormDetailHeadView.xml */; };
-		00A5EBEB21770A8500FED04D /* WLNKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5EBEA21770A8500FED04D /* WLNKeyChain.m */; };
 		00A5EBF22177301E00FED04D /* WLNMineGHBHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5EBF12177301E00FED04D /* WLNMineGHBHeadCell.m */; };
 		00A5EBF4217736F200FED04D /* WLNMineGHBHeadCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00A5EBF3217736F200FED04D /* WLNMineGHBHeadCell.xml */; };
 		00A5EBF721773AA800FED04D /* WLNMineGHBBodyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5EBF621773AA800FED04D /* WLNMineGHBBodyCell.m */; };
@@ -146,7 +150,6 @@
 		23118A69216DE7FB0014FB7E /* Snip20181010_30.png in Resources */ = {isa = PBXBuildFile; fileRef = 23118A68216DE7FB0014FB7E /* Snip20181010_30.png */; };
 		23118A6C216DED7A0014FB7E /* WLNShopSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23118A6B216DED7A0014FB7E /* WLNShopSectionHeadView.m */; };
 		23185FB1216E053C00ECD952 /* WLNMineGForumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23185FB0216E053C00ECD952 /* WLNMineGForumCell.m */; };
-		231A5DC4217BA7BF00EBD745 /* WLNUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DC3217BA7BF00EBD745 /* WLNUserDefaults.m */; };
 		231A5DD6217BAEAA00EBD745 /* NSArray+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD0217BAEA900EBD745 /* NSArray+SafeException.m */; };
 		231A5DD7217BAEAA00EBD745 /* NSMutableArray+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD2217BAEA900EBD745 /* NSMutableArray+SafeException.m */; };
 		231A5DD8217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DD3217BAEAA00EBD745 /* NSMutableDictionary+SafeException.m */; };
@@ -154,9 +157,7 @@
 		231A5DDC217BAEBA00EBD745 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DDA217BAEB900EBD745 /* NSObject+Swizzle.m */; };
 		231A5DDE217BAED900EBD745 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DDD217BAED900EBD745 /* NullSafe.m */; };
 		231A5DE5217D262200EBD745 /* HYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A5DE4217D262200EBD745 /* HYAlertView.m */; };
-		231A96E421712D8C0063587B /* WLNDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E321712D8C0063587B /* WLNDataBase.m */; };
 		231A96E721712FFD0063587B /* WLNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E621712FFD0063587B /* WLNData.m */; };
-		231A96EA2171303D0063587B /* WLNDataNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 231A96E92171303D0063587B /* WLNDataNet.m */; };
 		23212A62216FE3C1008C8DD2 /* WLNHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 23212A61216FE3C1008C8DD2 /* WLNHandle.m */; };
 		232D22912174459D0088D9AC /* libPods-KangYangChain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B59D59D494D29FC2123A54 /* libPods-KangYangChain.a */; };
 		232FF544216AFA9F00C71BCA /* WLNMineGroupCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 232FF543216AFA9F00C71BCA /* WLNMineGroupCtr.m */; };
@@ -506,6 +507,16 @@
 		0085F39A21846ADE00DAD323 /* WLNHTMLCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNHTMLCtr.m; sourceTree = "<group>"; };
 		0085F39D21846C9D00DAD323 /* WLNHTMLProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNHTMLProgressView.h; sourceTree = "<group>"; };
 		0085F39E21846C9D00DAD323 /* WLNHTMLProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNHTMLProgressView.m; sourceTree = "<group>"; };
+		0085F3A12186D60300DAD323 /* WLNData+Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLNData+Net.h"; sourceTree = "<group>"; };
+		0085F3A22186D60300DAD323 /* WLNData+Net.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLNData+Net.m"; sourceTree = "<group>"; };
+		0085F3A62186D61100DAD323 /* WLNData+Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLNData+Base.h"; sourceTree = "<group>"; };
+		0085F3A72186D61100DAD323 /* WLNData+Base.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLNData+Base.m"; sourceTree = "<group>"; };
+		0085F3A92186D61800DAD323 /* WLNData+Chain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLNData+Chain.h"; sourceTree = "<group>"; };
+		0085F3AA2186D61800DAD323 /* WLNData+Chain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLNData+Chain.m"; sourceTree = "<group>"; };
+		0085F3AC2186D62B00DAD323 /* WLNData+UserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLNData+UserDefaults.h"; sourceTree = "<group>"; };
+		0085F3AD2186D62B00DAD323 /* WLNData+UserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLNData+UserDefaults.m"; sourceTree = "<group>"; };
+		0085F3AF2186ED2000DAD323 /* WLNKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLNKeyChain.h; sourceTree = "<group>"; };
+		0085F3B02186ED2000DAD323 /* WLNKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNKeyChain.m; sourceTree = "<group>"; };
 		0089FB4C2175C0F4002C3465 /* WLNMineFormDetailCtr.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNMineFormDetailCtr.xml; sourceTree = "<group>"; };
 		0089FB4E2175C151002C3465 /* WLNMineFormTopCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineFormTopCell.h; sourceTree = "<group>"; };
 		0089FB4F2175C151002C3465 /* WLNMineFormTopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineFormTopCell.m; sourceTree = "<group>"; };
@@ -529,8 +540,6 @@
 		00A5EBDC2176DB7600FED04D /* WLNMineFormDetailHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineFormDetailHeadView.h; sourceTree = "<group>"; };
 		00A5EBDD2176DB7600FED04D /* WLNMineFormDetailHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineFormDetailHeadView.m; sourceTree = "<group>"; };
 		00A5EBDF2176DB9E00FED04D /* WLNMineFormDetailHeadView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNMineFormDetailHeadView.xml; sourceTree = "<group>"; };
-		00A5EBE921770A8500FED04D /* WLNKeyChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNKeyChain.h; sourceTree = "<group>"; };
-		00A5EBEA21770A8500FED04D /* WLNKeyChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNKeyChain.m; sourceTree = "<group>"; };
 		00A5EBF02177301E00FED04D /* WLNMineGHBHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineGHBHeadCell.h; sourceTree = "<group>"; };
 		00A5EBF12177301E00FED04D /* WLNMineGHBHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineGHBHeadCell.m; sourceTree = "<group>"; };
 		00A5EBF3217736F200FED04D /* WLNMineGHBHeadCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNMineGHBHeadCell.xml; sourceTree = "<group>"; };
@@ -617,8 +626,6 @@
 		23118A6B216DED7A0014FB7E /* WLNShopSectionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNShopSectionHeadView.m; sourceTree = "<group>"; };
 		23185FAF216E053C00ECD952 /* WLNMineGForumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineGForumCell.h; sourceTree = "<group>"; };
 		23185FB0216E053C00ECD952 /* WLNMineGForumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineGForumCell.m; sourceTree = "<group>"; };
-		231A5DC2217BA7BF00EBD745 /* WLNUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNUserDefaults.h; sourceTree = "<group>"; };
-		231A5DC3217BA7BF00EBD745 /* WLNUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNUserDefaults.m; sourceTree = "<group>"; };
 		231A5DCE217BAEA800EBD745 /* NSMutableArray+SafeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeException.h"; sourceTree = "<group>"; };
 		231A5DCF217BAEA800EBD745 /* NSArray+SafeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeException.h"; sourceTree = "<group>"; };
 		231A5DD0217BAEA900EBD745 /* NSArray+SafeException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeException.m"; sourceTree = "<group>"; };
@@ -632,12 +639,8 @@
 		231A5DDD217BAED900EBD745 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		231A5DE3217D262200EBD745 /* HYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlertView.h; sourceTree = "<group>"; };
 		231A5DE4217D262200EBD745 /* HYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlertView.m; sourceTree = "<group>"; };
-		231A96E221712D8C0063587B /* WLNDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNDataBase.h; sourceTree = "<group>"; };
-		231A96E321712D8C0063587B /* WLNDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNDataBase.m; sourceTree = "<group>"; };
 		231A96E521712FFD0063587B /* WLNData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNData.h; sourceTree = "<group>"; };
 		231A96E621712FFD0063587B /* WLNData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNData.m; sourceTree = "<group>"; };
-		231A96E82171303D0063587B /* WLNDataNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNDataNet.h; sourceTree = "<group>"; };
-		231A96E92171303D0063587B /* WLNDataNet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNDataNet.m; sourceTree = "<group>"; };
 		231A96EC2171343C0063587B /* WLNClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNClass.h; sourceTree = "<group>"; };
 		231A96ED2171348C0063587B /* WLNPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNPrefix.pch; sourceTree = "<group>"; };
 		231A96EF217134E10063587B /* WLNConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNConfig.h; sourceTree = "<group>"; };
@@ -1055,6 +1058,44 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		0085F3B2218712BA00DAD323 /* 网络 */ = {
+			isa = PBXGroup;
+			children = (
+				0085F3A12186D60300DAD323 /* WLNData+Net.h */,
+				0085F3A22186D60300DAD323 /* WLNData+Net.m */,
+			);
+			path = "网络";
+			sourceTree = "<group>";
+		};
+		0085F3B3218712BB00DAD323 /* 钥匙串 */ = {
+			isa = PBXGroup;
+			children = (
+				0085F3AF2186ED2000DAD323 /* WLNKeyChain.h */,
+				0085F3B02186ED2000DAD323 /* WLNKeyChain.m */,
+				0085F3A92186D61800DAD323 /* WLNData+Chain.h */,
+				0085F3AA2186D61800DAD323 /* WLNData+Chain.m */,
+			);
+			path = "钥匙串";
+			sourceTree = "<group>";
+		};
+		0085F3B4218712BB00DAD323 /* userdefault */ = {
+			isa = PBXGroup;
+			children = (
+				0085F3AC2186D62B00DAD323 /* WLNData+UserDefaults.h */,
+				0085F3AD2186D62B00DAD323 /* WLNData+UserDefaults.m */,
+			);
+			path = userdefault;
+			sourceTree = "<group>";
+		};
+		0085F3B5218712BB00DAD323 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				0085F3A62186D61100DAD323 /* WLNData+Base.h */,
+				0085F3A72186D61100DAD323 /* WLNData+Base.m */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
 		0089FB5D2175E1C9002C3465 /* protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -1316,14 +1357,10 @@
 			children = (
 				231A96E521712FFD0063587B /* WLNData.h */,
 				231A96E621712FFD0063587B /* WLNData.m */,
-				231A96E82171303D0063587B /* WLNDataNet.h */,
-				231A96E92171303D0063587B /* WLNDataNet.m */,
-				00A5EBE921770A8500FED04D /* WLNKeyChain.h */,
-				00A5EBEA21770A8500FED04D /* WLNKeyChain.m */,
-				231A5DC2217BA7BF00EBD745 /* WLNUserDefaults.h */,
-				231A5DC3217BA7BF00EBD745 /* WLNUserDefaults.m */,
-				231A96E221712D8C0063587B /* WLNDataBase.h */,
-				231A96E321712D8C0063587B /* WLNDataBase.m */,
+				0085F3B5218712BB00DAD323 /* 数据库 */,
+				0085F3B2218712BA00DAD323 /* 网络 */,
+				0085F3B3218712BB00DAD323 /* 钥匙串 */,
+				0085F3B4218712BB00DAD323 /* userdefault */,
 			);
 			path = "数据层";
 			sourceTree = "<group>";
@@ -2426,6 +2463,7 @@
 				2309F8E1215D323F00F156E8 /* WLNMainTabBarCtr.m in Sources */,
 				232FF544216AFA9F00C71BCA /* WLNMineGroupCtr.m in Sources */,
 				00048FEB2181CF9200969F11 /* WLNMineBusinessCtr.m in Sources */,
+				0085F3B12186ED2000DAD323 /* WLNKeyChain.m in Sources */,
 				23D24F2A216BD21D00C1557F /* UINavigationBar+Awesome.m in Sources */,
 				00375444217862420025CD1D /* WLNOrderCell.m in Sources */,
 				23441E68218264C500F6C110 /* WLNSingle.m in Sources */,
@@ -2464,6 +2502,7 @@
 				0085F37D218464E000DAD323 /* VerifyViewController.m in Sources */,
 				0085F39B21846ADE00DAD323 /* WLNHTMLCtr.m in Sources */,
 				0085F39F21846C9D00DAD323 /* WLNHTMLProgressView.m in Sources */,
+				0085F3AE2186D62B00DAD323 /* WLNData+UserDefaults.m in Sources */,
 				2309F916215D3F4E00F156E8 /* WLNTradeCtr.m in Sources */,
 				00048FA7218177B800969F11 /* WLNTradeLawBuyCell.m in Sources */,
 				23D17B3621742C7F0004D877 /* WLNRSendMoneyCtr.m in Sources */,
@@ -2514,7 +2553,6 @@
 				002DE757218054990092E375 /* WLNRechargeDetailCell.m in Sources */,
 				231A96E721712FFD0063587B /* WLNData.m in Sources */,
 				23F9C9292163E0C8000EDFC4 /* WLNShopIntegralCell.m in Sources */,
-				231A96E421712D8C0063587B /* WLNDataBase.m in Sources */,
 				232FF547216AFABD00C71BCA /* WLNMineNewsCtr.m in Sources */,
 				23441E7321826CB100F6C110 /* WLNHandle+USDT.m in Sources */,
 				003CB8FB2179C0DE001DDA03 /* UIControl+hook.m in Sources */,
@@ -2528,6 +2566,7 @@
 				23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */,
 				00D0B5C021800A6900EF6BA2 /* WLNScanCtr.m in Sources */,
 				23CB8615217E5A17007B4B21 /* GalneProgressView.m in Sources */,
+				0085F3AB2186D61800DAD323 /* WLNData+Chain.m in Sources */,
 				0077FEE4217EF04400743724 /* WLNOrderHeadView.m in Sources */,
 				234AA8EC216F4AD500A0866B /* WLNQRCode.m in Sources */,
 				00A5EBF22177301E00FED04D /* WLNMineGHBHeadCell.m in Sources */,
@@ -2580,6 +2619,7 @@
 				236346F62162D85000CFF257 /* WLNHomeNewCell.m in Sources */,
 				00B76B132178923800802011 /* WLNRechargeCtr.m in Sources */,
 				23D17B4D217431500004D877 /* UITableView+NewTableView.m in Sources */,
+				0085F3A82186D61100DAD323 /* WLNData+Base.m in Sources */,
 				2346E7C0216B3624002074D5 /* WLNMineIDCertifiedCtr.m in Sources */,
 				00048FDC2181BE1A00969F11 /* WLNTradeBBOrderCell.m in Sources */,
 				00048FC62181BA1B00969F11 /* WLNTradeBBCtr.m in Sources */,
@@ -2596,14 +2636,12 @@
 				2309F917215D3F4E00F156E8 /* WLNShopCtr.m in Sources */,
 				23C828B52171E0A70086C253 /* AppDelegate+Chat.m in Sources */,
 				002DE75C21805A190092E375 /* WLNRechargeListHeadView.m in Sources */,
-				00A5EBEB21770A8500FED04D /* WLNKeyChain.m in Sources */,
 				0077FEC4217EC3A700743724 /* WLNRSendMoneyCell.m in Sources */,
 				0077FEEB217F0B6300743724 /* WLNLockListCtr.m in Sources */,
 				00AF61E021840725003ED798 /* WLNSimpleHeadView.m in Sources */,
 				234F1D8F21650B1100BA61AF /* WLNMineOrderCtr.m in Sources */,
 				23693CEB217ADDC00001A43A /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				238F5562216978A500A9EB7F /* WLNMineCommunityCell.m in Sources */,
-				231A5DC4217BA7BF00EBD745 /* WLNUserDefaults.m in Sources */,
 				00A5EBF721773AA800FED04D /* WLNMineGHBBodyCell.m in Sources */,
 				2346E7B3216B270D002074D5 /* WLNMineSecurityCtr.m in Sources */,
 				2340563A21702C3200888D96 /* WLNHandle+Property.m in Sources */,
@@ -2618,10 +2656,10 @@
 				00CC760D217499520053E546 /* WLNMineApplyFromCtr.m in Sources */,
 				2340563D21702C3800888D96 /* WLNHandle+Home.m in Sources */,
 				23AC68C8216B3F9800580EA5 /* WLNShopChangeCtr.m in Sources */,
+				0085F3A32186D60300DAD323 /* WLNData+Net.m in Sources */,
 				0089FB502175C151002C3465 /* WLNMineFormTopCell.m in Sources */,
 				23D17B3921742C7F0004D877 /* WLNWalletDetailCtr.m in Sources */,
 				233AB07A216DC011007D12DD /* WLNShopBuyHBGCtr.m in Sources */,
-				231A96EA2171303D0063587B /* WLNDataNet.m in Sources */,
 				0085F37F218464E000DAD323 /* SetGesViewController.m in Sources */,
 				23B9ECB8217E870A0097D89D /* CloudKeychainSigner.m in Sources */,
 				00048FD72181BC3300969F11 /* WLNTradeBBOpenRightCell.m in Sources */,
@@ -2794,8 +2832,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VV89EF89NQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2845,9 +2883,9 @@
 					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = kangyanglian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kangyangChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = dsfdafdsafa;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -2860,8 +2898,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VV89EF89NQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2911,9 +2949,9 @@
 					"$(PROJECT_DIR)/KangYangChain/Debug-iphonesimulator",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = kangyanglian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kangyangChain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = dsfdafdsafa;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};

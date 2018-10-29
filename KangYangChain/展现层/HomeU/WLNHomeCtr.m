@@ -73,7 +73,7 @@
 - (void)changeLangage{
     
     [SVProgressHUD showErrorWithStatus:@"此功能尚未映射完成"];
-//    return;
+    return;
     
    NSString *str =  [NSBundle currentLanguage];
     
@@ -91,7 +91,6 @@
 
     }
 
-    
     
 }
 /**
@@ -173,7 +172,7 @@
 
     }else{
         
-        [self push:@"UIViewController".instance];
+        [self push:@"WLNMineBusinessCtr".instance];
 
     }
     

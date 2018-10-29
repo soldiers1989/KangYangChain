@@ -13,31 +13,26 @@
 
 @implementation WLNHandle (Wallet)
 
+
+
+
 - (void)rmbPrice:(NSMutableDictionary *)dic{
     
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
+    self.delegate = dic[DELEGATES];
+    self.sel = @selector(rmbPrice:);
     
     [dic removeObjectForKey:DELEGATES];
     
-    [[WLNDataNet new]getWithUrl:UpdateTicker resultBlock:^(id result) {
-        
-        
-        NSNumber *last = result[@"1"][@"last"];
-        
-        NSNumber *USD = result[@"currencies_rate"][@"USD"];
-        
-        double rmb = last.doubleValue / USD.doubleValue / 100;
-        
-        if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
-            
-            [delegate result:@(rmb) sel:NSStringFromSelector(_cmd)];
-            
-        }
-        
-        
-        
-    }];
     
+    NSMutableDictionary *dicp = @{}.mutableCopy;
+    
+    dicp[DELEGATES] = self;
+    
+    dicp[URLS] = UpdateTicker;
+
+    
+    [self routeTargetName:@"WLNData" actionName:@"getWithDic:" param:dicp];
+  
     
 }
 

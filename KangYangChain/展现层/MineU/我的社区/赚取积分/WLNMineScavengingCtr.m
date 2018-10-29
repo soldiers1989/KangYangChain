@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"扫码算力".Intl;
+    self.title = @"扫码赠送".Intl;
     self.tab.delegate = self;
     self.tab.dataSource = self;
     self.dataArrs = [NSMutableArray array];
@@ -34,12 +34,12 @@
     [self.tab registerClass:WLNMineScavengingCell.class forCellReuseIdentifier:@"WLNMineScavengingCell"];
     
     
-    self.img.image = [[WLNQRCode new] jy_QRCodeFromString:@"http://kyl.linkhb.com" size:100];
+    NSString *str = [NSString stringWithFormat:@"http://zskyl.linkhb.com/#/register-moblie?parent=%@",self.userModel.userid];
     
-    self.linkLab.text = [NSString stringWithFormat:@"http://kyl.linkhb.com/#/register-moblie?parent=%@",self.userModel.userid];
+    self.img.image = [[WLNQRCode new] jy_QRCodeFromString:str size:100];
     
+    self.linkLab.text = str;
     
-  
     NSMutableDictionary *dic = @{}.mutableCopy;
     
     dic[DELEGATES] = self;

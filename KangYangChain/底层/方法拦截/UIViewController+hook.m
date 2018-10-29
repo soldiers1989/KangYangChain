@@ -32,6 +32,8 @@
     
     NSLog(@"🍓🍓🍓 当前控制器 : %@",NSStringFromClass([self class]));
     
+    [SVProgressHUD dismiss];
+    
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:15], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
     [self fr_viewWillAppear:animated];
@@ -55,11 +57,10 @@
 
 - (void)__viewDidLoad{
     
-    
     [self __resetNav];
+
     
     [self __viewDidLoad];
-    
     
 }
 

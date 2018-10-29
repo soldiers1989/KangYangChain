@@ -15,35 +15,30 @@
     
     
     
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
+    self.delegate = dic[DELEGATES];
+    self.sel = sel;
     
     [dic removeObjectForKey:DELEGATES];
     
-    [[WLNDataNet new]postWithUrl:url params:dic resultBlock:^(id result) {
+    NSMutableDictionary *dicp = @{}.mutableCopy;
+    
+    dicp[DELEGATES] = self;
+    
+    if (url) {
+        dicp[URLS] = url;
         
-        if ([result[@"code"] integerValue] == 200) {
-            
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
-                
-                [delegate result:result[@"data"] sel:NSStringFromSelector(sel)];
-                
-            }
-            
-        }else{
-            
-            [SVProgressHUD showErrorWithStatus:result[@"message"]];
-            
-            if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
-                
-                [delegate faild:result[@"message"] sel:NSStringFromSelector(sel)];
-                
-            }
-            
-            
-        }
+    }
+    if (dic) {
+        dicp[PRAMAS] = dic;
         
-        
-    }];
+    }
+    [self routeTargetName:@"WLNData" actionName:@"postWithDic:" param:dicp];
+
+    
+    
+    
+    
+    
  
 }
 

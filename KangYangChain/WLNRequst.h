@@ -10,8 +10,8 @@
 //#define baseurl ""
 
 //#define BaseUrl "http://kylvue.cpyu8.com/adminServer/public/index.php/"
-//#define BaseUrl "http://kylvue.cpyu8.com/"
-#define BaseUrl "http://kyl.linkhb.com/adminServer/public/index.php/"
+#define BaseUrl "http://zskyl.linkhb.com/adminServer/public/index.php/"
+//#define BaseUrl "http://kyl.linkhb.com/adminServer/public/index.php/"
 
 #define Getcode  @BaseUrl"/index/login/send_verification_code"
 

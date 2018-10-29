@@ -8,7 +8,7 @@
 
 #import "WLNPropertyCtr.h"
 
-@interface WLNPropertyCtr ()<UITableViewDelegate,UITableViewDataSource>
+@interface WLNPropertyCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,WLNFloatViewDelegate>
 
 @property (nonatomic, strong) WLNPropertyHeadView *headView;
 
@@ -30,6 +30,65 @@
     
     self.tab.separatorStyle =UITableViewCellSeparatorStyleNone;
     [self.tab registerClass:WLNPropertyCell.class forCellReuseIdentifier:@"WLNPropertyCell"];
+    
+    
+    NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
+    
+    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
+
+    
+}
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    [SVProgressHUD dismiss];
+    
+    
+    Money *model = [WLNSingle shared].current_model;
+    
+    if ([sel isEqualToString:@"rmbPrice:"]){
+        
+        
+        
+        model.rmb = data;
+        
+        [self.tab reloadData];
+        
+        [self.headView reloadData];
+        
+        
+    }else{
+        
+        
+        model.balance = data;
+        
+        [self.tab reloadData];
+        
+        [self.headView reloadData];
+        
+        
+        [self routeTargetName:@"WLNHandle" actionName:@"rmbPrice:" param:@{DELEGATES:self}.mutableCopy];
+        
+        
+    }
+    
+    
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+    
+    
+}
+- (void)floatClickBack:(UIButton *)button tag:(NSInteger)tag{
+    
+    
+    [WLNSingle shared].currentType = BI_TITLE_ARR[tag];
+    
+    NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
+    
+    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
+    
+    [SVProgressHUD show];
+    
     
 }
 - (void)viewWillAppear:(BOOL)animated{

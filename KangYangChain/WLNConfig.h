@@ -31,6 +31,10 @@
 
 #define DELEGATES @"fdsoufdiosaufiosdafdsalfndmsfdsfdsafdshghh"
 
+#define URLS @"fdsjfklsadjfkldsajfkdlsafjdkslafjksdlafjsdl"
+
+#define PRAMAS @"fjkdlsafudisofuiosdufiodsuiafodsufiojkljkljkl"
+
 #define OrderStatusArr  @[@"匹配中",@"交易中",@"完成",@"冻结",@"可卖出",@"去支付",@"收益中"]
 
 #define windowFrame(a) [a convertRect:a.bounds toView:[UIApplication sharedApplication].delegate.window]

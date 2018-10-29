@@ -25,7 +25,9 @@
     [self.view addSubview:self.webView];
     [self.view addSubview:self.progressView];
 
-    [self.webView loadRequest:[self myLoadWithURL:@"http://kylvue.cpyu8.com/#/mine/identity"]];
+    NSString *str = [NSString stringWithFormat:@"http://kylvue.cpyu8.com/#/mine/identity/uid=%@",self.userModel.userid];
+    
+    [self.webView loadRequest:[self myLoadWithURL:str]];
      
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
 

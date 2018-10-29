@@ -8,14 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-#import "WLNDataNet.h"
 #import "WLNKeyChain.h"
 
-@protocol Interface<NSObject>
+@protocol Interface <NSObject,WLNReqstProtocol>
 
 @end
 
 @interface WLNHandle : NSObject<Interface>
+
+@property (nonatomic, weak) id <WLNReqstProtocol>delegate;
+
+@property (nonatomic, assign) SEL sel;
+
 
 
 - (void)implementWith:(id <Interface>)impl;

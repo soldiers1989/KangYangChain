@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"互助算力".Intl;
+    self.title = @"算力挖矿".Intl;
     
     self.dataArr = [NSMutableArray array];
     [self.view addSubview:self.tab];

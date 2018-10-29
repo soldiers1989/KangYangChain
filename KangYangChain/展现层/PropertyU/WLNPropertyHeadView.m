@@ -16,7 +16,7 @@
     _model = model;
     
     self.balanceLab.text = [NSString stringWithFormat:@"%.5f",model.changeBalance];
-    self.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f RMB",model.rmb.doubleValue * model.changeBalance];
+    self.rmbLab.text = [NSString stringWithFormat:@"≈ %.2f CNY",model.rmb.doubleValue * model.changeBalance];
     self.bizhongChoseLab.text = [WLNSingle shared].currentType;
     self.bizhongTypeLab.text = [WLNSingle shared].currentType;
     

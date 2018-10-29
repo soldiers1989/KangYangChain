@@ -8,7 +8,7 @@
 
 #import "WLNHandle.h"
 
-@interface WLNHandle (Wallet)
+@interface WLNHandle (Wallet) <WLNReqstProtocol>
 
 /**
  人民币数值

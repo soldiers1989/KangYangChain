@@ -17,30 +17,95 @@
 @end
 @implementation WLNHandle
 
-- (void)implementWith:(id<Interface>)impl{
-    
-    self.impl = impl;
-    self.cls = [impl class];
+- (void)rmbBackWith:(id)data{
     
     
+    NSNumber *last = data[@"1"][@"last"];
+    
+    NSNumber *USD = data[@"currencies_rate"][@"USD"];
+    
+    double rmb = last.doubleValue / USD.doubleValue / 100;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(result:sel:)]) {
+        
+        [self.delegate result:@(rmb) sel:NSStringFromSelector(self.sel)];
+        
+    }
+
     
 }
-- (id)forwardingTargetForSelector:(SEL)aSelector{
+/**
+ 所有请求全部经过这里
+ 
+ */
+- (void)result:(id)data sel:(NSString *)sel{
     
-    if (self.impl && [self.impl respondsToSelector:aSelector]) {
+    
+    if ([NSStringFromSelector(self.sel) isEqualToString:@"rmbPrice:"]) {
+    
+        [self rmbBackWith:data];
+        return;
         
-        return self.impl;
+    }
+    
+    if ([data[@"code"] integerValue] == 200) {
         
-    }else if (self.cls && [self.cls respondsToSelector:aSelector]){
-        
-        return self.cls;
+        if (self.delegate && [self.delegate respondsToSelector:@selector(result:sel:)]) {
+            
+            [self.delegate result:data[@"data"] sel:NSStringFromSelector(self.sel)];
+            
+        }
         
     }else{
         
-        return nil;
+        [SVProgressHUD showErrorWithStatus:data[@"message"]];
+        
+        if (self.delegate  && [self.delegate respondsToSelector:@selector(faild:sel:)]) {
+            
+            [self.delegate faild:data[@"message"] sel:NSStringFromSelector(self.sel)];
+            
+        }
+        
     }
-  
+    
     
 }
+
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+    
+    if ([data isKindOfClass:[NSError class]]) {
+        
+        NSError *error = (NSError *)data;
+        NSLog(@"-----------------------------------%ld",error.code);
+        
+        
+    }
+    
+}
+//- (void)implementWith:(id<Interface>)impl{
+//    
+//    self.impl = impl;
+//    self.cls = [impl class];
+//    
+//    
+//    
+//}
+//- (id)forwardingTargetForSelector:(SEL)aSelector{
+//    
+//    if (self.impl && [self.impl respondsToSelector:aSelector]) {
+//        
+//        return self.impl;
+//        
+//    }else if (self.cls && [self.cls respondsToSelector:aSelector]){
+//        
+//        return self.cls;
+//        
+//    }else{
+//        
+//        return nil;
+//    }
+//  
+//}
 
 @end

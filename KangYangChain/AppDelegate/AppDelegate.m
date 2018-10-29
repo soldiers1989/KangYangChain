@@ -22,20 +22,21 @@
 
     [NSURLProtocol registerClass:[WLNURLProtocol class]];
     
-    
+    [DAConfig setUserLanguage:@"zh-Hans"];
+
     
     NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
     id data = [de objectForKey:@"log"];
     
     
-    if (data) {
-        
+//    if (data) {
+    
         [self chatSetup];
         
         
         [self walletSetup];
         
-    }
+//    }
     
     
     WLNMainTabBarCtr *ins = [WLNMainTabBarCtr new];

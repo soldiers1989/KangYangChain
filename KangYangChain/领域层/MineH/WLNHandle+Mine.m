@@ -10,96 +10,29 @@
 
 @implementation WLNHandle (Mine)
 
+
 - (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel isPost:(BOOL)isPost{
     
     
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
+    self.delegate = dic[DELEGATES];
+    self.sel = sel;
     
+
     [dic removeObjectForKey:DELEGATES];
     
+    NSMutableDictionary *dicp = @{}.mutableCopy;
     
-    if (isPost) { //post请求
+    dicp[DELEGATES] = self;
     
-        [[WLNDataNet new]postWithUrl:url params:dic resultBlock:^(id result) {
-            
-            
-            
-            if ([result[@"code"] integerValue] == 200) {
-                
-                if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
-                    
-                    [delegate result:result[@"data"] sel:NSStringFromSelector(sel)];
-                    
-                }
-                
-            }else{
-                
-                [SVProgressHUD showErrorWithStatus:result[@"message"]];
-                
-                if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
-                    
-                    [delegate faild:result[@"message"] sel:NSStringFromSelector(sel)];
-                    
-                }
-                
-                
-            }
-            
-            
-        }];
+    if (url) {
+        dicp[URLS] = url;
         
-        
-    }else{ //get请求
-        
-        
-        /**
-         将dic变成字符串
-         */
-        
-        for (int i = 0; i < dic.allKeys.count; i++) {
-            
-            if (i == 0) {
-            
-                url = [NSString stringWithFormat:@"%@?%@=%@",url,dic.allKeys[0],dic[dic.allKeys[0]]];
-                
-            }else{
-                
-                url = [NSString stringWithFormat:@"%@&%@=%@",url,dic.allKeys[i],dic[dic.allKeys[i]]];
-
-                
-            }
-        }
-        
-        
-        [[WLNDataNet new] getWithUrl:url resultBlock:^(id result) {
-            
-           
-            if ([result[@"code"] integerValue] == 200) {
-                
-                if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
-                    
-                    [delegate result:result[@"data"] sel:NSStringFromSelector(sel)];
-                    
-                }
-                
-            }else{
-                
-                [SVProgressHUD showErrorWithStatus:result[@"message"]];
-                
-                if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
-                    
-                    [delegate faild:result[@"message"] sel:NSStringFromSelector(sel)];
-                    
-                }
-                
-                
-            }
-            
-            
-        }];
     }
-
-  
+    if (dic) {
+        dicp[PRAMAS] = dic;
+        
+    }
+    [self routeTargetName:@"WLNData" actionName:isPost ? @"postWithDic:":@"getWithDic:" param:dicp];
 
     
 }
@@ -113,47 +46,47 @@
 - (void)buyGHB:(NSMutableDictionary *)dic{
     
     
-    [self __requestWith:BuyGHB dic:dic sel:@selector(buyGHB:) isPost:YES];
+    [self __requestWith:BuyGHB dic:dic sel:_cmd isPost:YES];
     
     
 }
 - (void)buyInfo:(NSMutableDictionary *)dic{
     
     
-    [self __requestWith:BuyInfo dic:dic sel:@selector(buyInfo:) isPost:NO];
+    [self __requestWith:BuyInfo dic:dic sel:_cmd isPost:NO];
 
     
 }
 - (void)matchList:(NSMutableDictionary *)dic{
     
-    [self __requestWith:MatchList dic:dic sel:@selector(matchList:) isPost:NO];
+    [self __requestWith:MatchList dic:dic sel:_cmd isPost:NO];
 
 }
 - (void)matchInfo:(NSMutableDictionary *)dic{
     
-    [self __requestWith:MatchInfo dic:dic sel:@selector(matchInfo:) isPost:NO];
+    [self __requestWith:MatchInfo dic:dic sel:_cmd isPost:NO];
     
 }
 - (void)payGHB:(NSMutableDictionary *)dic{
     
-    [self __requestWith:PayGHB dic:dic sel:@selector(payGHB:) isPost:YES];
+    [self __requestWith:PayGHB dic:dic sel:_cmd isPost:YES];
     
     
 }
 - (void)lockAction:(NSMutableDictionary *)dic{
     
-    [self __requestWith:LockAction dic:dic sel:@selector(lockAction:) isPost:YES];
+    [self __requestWith:LockAction dic:dic sel:_cmd isPost:YES];
     
 }
 - (void)lockConfig:(NSMutableDictionary *)dic{
     
-    [self __requestWith:LockcConfig dic:dic sel:@selector(lockConfig:) isPost:YES];
+    [self __requestWith:LockcConfig dic:dic sel:_cmd isPost:YES];
     
     
 }
 - (void)yaoqingList:(NSMutableDictionary *)dic{
     
-    [self __requestWith:YaoqingList dic:dic sel:@selector(yaoqingList:) isPost:NO];
+    [self __requestWith:YaoqingList dic:dic sel:_cmd isPost:NO];
     
     
 }

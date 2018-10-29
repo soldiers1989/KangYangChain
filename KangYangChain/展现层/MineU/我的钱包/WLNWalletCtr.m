@@ -33,14 +33,17 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearAction)];
     
-    
-    NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
-
-    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
 
     self.headView.model = [WLNSingle shared].current_model;
     
     self.tab.tableHeaderView = self.headView;
+    
+    
+    
+    NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
+    
+    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
+
     
 }
 
@@ -53,6 +56,9 @@
     
 }
 - (void)result:(id)data sel:(NSString *)sel{
+    
+    [SVProgressHUD dismiss];
+    
     
     Money *model = [WLNSingle shared].current_model;
     
@@ -89,25 +95,7 @@
     
     
 }
-- (void)fist:(id)data sel:(NSString *)sel{
-    
-    
-    NSString *str = data[@"address"];
-    
-    NSString *type = data[@"type"];
-    
-    HYAlertView *alert = [[HYAlertView alloc]initWithTitle:@"提示" message:[NSString stringWithFormat:@"为您生成 %@ 地址:%@",type,str] buttonTitles:@"确定", nil];
-    
-    [alert showWithCompletion:^(HYAlertView *alertView, NSInteger selectIndex) {
-    
-        
-        
-        
-    }];
-    
-    
-    
-}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return section == 0 ? 40 : 0.1;
     
@@ -174,7 +162,8 @@
     
     [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
     
-
+    [SVProgressHUD show];
+    
     
 }
 
