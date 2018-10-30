@@ -17,23 +17,7 @@
 @end
 @implementation WLNHandle
 
-- (void)rmbBackWith:(id)data{
-    
-    
-    NSNumber *last = data[@"1"][@"last"];
-    
-    NSNumber *USD = data[@"currencies_rate"][@"USD"];
-    
-    double rmb = last.doubleValue / USD.doubleValue / 100;
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(result:sel:)]) {
-        
-        [self.delegate result:@(rmb) sel:NSStringFromSelector(self.sel)];
-        
-    }
 
-    
-}
 /**
  所有请求全部经过这里
  
@@ -58,13 +42,13 @@
         
     }else{
         
-        [SVProgressHUD showErrorWithStatus:data[@"message"]];
-        
         if (self.delegate  && [self.delegate respondsToSelector:@selector(faild:sel:)]) {
             
             [self.delegate faild:data[@"message"] sel:NSStringFromSelector(self.sel)];
             
         }
+        [SVProgressHUD showErrorWithStatus:data[@"message"]];
+
         
     }
     
@@ -81,6 +65,25 @@
         
         
     }
+    
+}
+
+
+- (void)rmbBackWith:(id)data{
+    
+    
+    NSNumber *last = data[@"1"][@"last"];
+    
+    NSNumber *USD = data[@"currencies_rate"][@"USD"];
+    
+    double rmb = last.doubleValue / USD.doubleValue / 100;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(result:sel:)]) {
+        
+        [self.delegate result:@(rmb) sel:NSStringFromSelector(self.sel)];
+        
+    }
+    
     
 }
 //- (void)implementWith:(id<Interface>)impl{

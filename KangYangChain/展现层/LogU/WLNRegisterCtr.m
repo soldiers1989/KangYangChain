@@ -146,7 +146,7 @@
 
     if (_count == 0) {
         
-        self.codeLab.text = @"获取";
+        self.codeLab.text = @"获取验证码".Intl;
         _codeView.userInteractionEnabled = YES;
 
         [self.timer invalidate];

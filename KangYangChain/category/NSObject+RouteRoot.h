@@ -2,8 +2,8 @@
 //  NSObject+RouteRoot.h
 //  XPSPlatform
 //
-//  Created by sy on 2017/11/17.
-//  Copyright © 2017年 EOC. All rights reserved.
+//  Created by edz on 2018/10/26.
+//  Copyright © 2018 furao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

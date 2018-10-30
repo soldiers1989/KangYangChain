@@ -1249,7 +1249,6 @@
 				231A96ED2171348C0063587B /* WLNPrefix.pch */,
 				2309F8DF215D323F00F156E8 /* WLNMainTabBarCtr.h */,
 				2309F8E0215D323F00F156E8 /* WLNMainTabBarCtr.m */,
-				003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */,
 				23B9ECBA217E871E0097D89D /* ethers.xcodeproj */,
 				23B9EC8C217E870A0097D89D /* ETHPack */,
 				23B9EC88217E85970097D89D /* BTCPack.framework */,
@@ -1257,6 +1256,7 @@
 				2309F8B8215D316300F156E8 /* LaunchScreen.storyboard */,
 				2309F8BB215D316300F156E8 /* Info.plist */,
 				2309F8BC215D316300F156E8 /* main.m */,
+				003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */,
 			);
 			path = KangYangChain;
 			sourceTree = "<group>";
