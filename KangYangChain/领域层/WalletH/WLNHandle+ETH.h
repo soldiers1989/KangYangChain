@@ -10,6 +10,7 @@
 
 @interface WLNHandle (ETH)
 
+#pragma mark - 以太币
 /**
  生成秘钥
  */
@@ -30,5 +31,29 @@
  转账
  */
 - (void)sendETH:(NSMutableDictionary *)dic;
+
+
+#pragma mark - 中子链
+
+- (void)getNEBCBalance:(NSMutableDictionary *)dic;
+
+- (void)getNEBCOrder:(NSMutableDictionary *)dic;
+
+- (void)sendNEBC:(NSMutableDictionary *)dic;
+
+
+#pragma mark - BNB
+
+- (void)getBNBBalance:(NSMutableDictionary *)dic;
+
+- (void)getBNBOrder:(NSMutableDictionary *)dic;
+
+- (void)sendBNB:(NSMutableDictionary *)dic;
+
+
+
+
+
+
 
 @end

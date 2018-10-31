@@ -201,13 +201,10 @@
 
 
 //转账必读！！！！
-//【 1】供3种方式  1 以太坊官方限流配置https://etherscan.io/apis   2 web3配置（找你们公司后台）  3 infura配置（https://infura.io）  本方式使用以太坊官方限流配置RCWEX6WYBXMJZHD5FD617NZ99TZADKBEDJ（这个是我侯帅的key，你们最好自己去申请）
+//【 1】供3种方式  1 以太坊官方限流配置https://etherscan.io/apis   2 web3配置（找你们公司后台）  3 infura配置（https://infura.io）  本方式使用以太坊官方限流配置RCWEX6WYBXMJZHD5FD617NZ99TZADKBEDJ
 // 【2】 转账前先弄清楚参数意义 see https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendtransaction
 //  【3】 转账签名方式 分为eth转账和 erc20（代币）转账，分别是不同的签名。
-//【4】有任何问题 问我微信，我不是大神，你也不是菜鸟，我们是在交流，哈哈哈
-//【5】自己自己再写钱包的时候，自己手里屯点币，上交易所就套现
-//【6】虚拟货币投资有风险 自己需谨慎
-// 【7】没什么说的了
+
 
 //另外补充一下 18年9月
 //a 钱包修改密码功能：就是把原来的钱包 私钥 助记词 拿过来，重新导入一次钱包，设置新的密码。

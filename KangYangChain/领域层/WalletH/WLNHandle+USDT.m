@@ -20,8 +20,6 @@
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:USDTKEY].mutableCopy;
 
-    chainDic[@"address"] = @"16tg2RJuEPtZooy18Wxn2me2RhUdC94N7r";
-
     if (chainDic) {
         
         if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
@@ -63,8 +61,10 @@
     
     [dic removeObjectForKey:DELEGATES];
     
-    NSString *address = @"16tg2RJuEPtZooy18Wxn2me2RhUdC94N7r";
+    NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:USDTKEY].mutableCopy;
 
+    NSString *address = chainDic[@"address"];
+    
     [BTCWrapper getBalanceWithAddress:address block:^(NSDictionary *dict, BOOL suc) {
         
         
@@ -138,8 +138,9 @@
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:USDTKEY].mutableCopy;
     
+    NSString *address = chainDic[@"address"];
     
-    [BTCWrapper getTxlistWithAddress:@"16tg2RJuEPtZooy18Wxn2me2RhUdC94N7r" withPage:1 block:^(NSArray *array, BOOL suc) {
+    [BTCWrapper getTxlistWithAddress:address withPage:1 block:^(NSArray *array, BOOL suc) {
         
         
         if (suc) {
