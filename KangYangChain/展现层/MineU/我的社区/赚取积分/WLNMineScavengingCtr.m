@@ -34,7 +34,7 @@
     [self.tab registerClass:WLNMineScavengingCell.class forCellReuseIdentifier:@"WLNMineScavengingCell"];
     
     
-    NSString *str = [NSString stringWithFormat:@"http://zskyl.linkhb.com/#/register-moblie?parent=%@",self.userModel.userid];
+    NSString *str = [NSString stringWithFormat:@"%@/#/register-moblie?parent=%@",@Address_Domain,self.userModel.userid];
     
     self.img.image = [[WLNQRCode new] jy_QRCodeFromString:str size:100];
     

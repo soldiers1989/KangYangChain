@@ -10,15 +10,29 @@
 
 @implementation WLNData (Net)
 
+
+- (BOOL)__judgeUrl:(NSString *)url{
+    
+    if (url.length == 0) {
+        return NO;
+    }else{
+        url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSLog(@"%@",url);
+        return YES;
+
+    }
+    
+}
 - (void)__getDataWithUrl:(NSString *)url resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
     
     
-    if (url.length == 0) {
+   
+    if (![self __judgeUrl:url]) {
         return;
-    }else{
-        url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        
     }
+    
+   
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 10;
     manager.securityPolicy.allowInvalidCertificates = YES;
@@ -51,12 +65,12 @@
 - (void)__postDataWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
     
     
-    if (url.length == 0) {
+    
+    if (![self __judgeUrl:url]) {
         return;
-    }else{
-        url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        
     }
+    
+    
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 10;
@@ -66,6 +80,7 @@
     [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"contentType"];
     
     [manager.responseSerializer setAcceptableContentTypes: [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/css", @"text/plain",nil]];
+    
     
     [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (responseObject) {

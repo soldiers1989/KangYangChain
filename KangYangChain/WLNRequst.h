@@ -9,8 +9,10 @@
 
 //#define baseurl ""
 
+#define Address_Domain "http://kyl.wlnxx.top"
+#define BaseUrl Address_Domain"/adminServer/public/index.php/"
+
 //#define BaseUrl "http://kylvue.cpyu8.com/adminServer/public/index.php/"
-#define BaseUrl "http://zskyl.linkhb.com/adminServer/public/index.php/"
 //#define BaseUrl "http://kyl.linkhb.com/adminServer/public/index.php/"
 
 #define Getcode  @BaseUrl"/index/login/send_verification_code"
