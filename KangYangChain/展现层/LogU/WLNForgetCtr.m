@@ -38,18 +38,27 @@
     self.navigationController.navigationBar.translucent = NO;
     self.title = @"忘记密码".Intl;
         
-    [self.phoneTxt changePlaceHolder:UIColor.whiteColor];
-    [self.codeTxt changePlaceHolder:UIColor.whiteColor];
-    [self.pwdTxt changePlaceHolder:UIColor.whiteColor];
-    [self.surePwdTxt changePlaceHolder:UIColor.whiteColor];
+    [self.phoneTxt changePlaceHolderDefaultColor];
+    [self.codeTxt changePlaceHolderDefaultColor];
+    [self.pwdTxt changePlaceHolderDefaultColor];
+    [self.surePwdTxt changePlaceHolderDefaultColor];
 
 
 
 }
-- (void)hideAction{
+- (void)sureHideAction:(UITapGestureRecognizer *)tap{
+    
+    self.surePwdTxt.secureTextEntry = !self.surePwdTxt.secureTextEntry;
+    UIImageView *img = tap.view.subviews.firstObject;
+    img.image = self.surePwdTxt.secureTextEntry ? [UIImage imageNamed:@"display"] : [UIImage imageNamed:@"hide"];
+    
+}
+- (void)hideAction:(UITapGestureRecognizer *)tap{
     
     self.pwdTxt.secureTextEntry = !self.pwdTxt.secureTextEntry;
-    self.surePwdTxt.secureTextEntry = !self.surePwdTxt.secureTextEntry;
+    
+    UIImageView *img = tap.view.subviews.firstObject;
+    img.image = self.pwdTxt.secureTextEntry ? [UIImage imageNamed:@"display"] : [UIImage imageNamed:@"hide"];
     
 }
 - (void)registerAction{

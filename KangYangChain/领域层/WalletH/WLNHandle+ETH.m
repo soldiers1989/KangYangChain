@@ -29,7 +29,7 @@
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:ETHTKEY].mutableCopy;
 
-    chainDic[@"address"] = @"0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0";
+//    chainDic[@"address"] = @"0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0";
     
     if (chainDic) {
         
@@ -67,11 +67,11 @@
     
     [dic removeObjectForKey:DELEGATES];
     
-    
     NSString *token = dic[@"token"];
-
     
-    [HSEther hs_getBalanceWithTokens:token ? @[token] : @[] withAddress:@"0xe83aec696478bba2404eaa0eb9b1f2d58269d637" block:^(NSArray *arrayBanlance, BOOL suc) {
+    NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:ETHTKEY].mutableCopy;
+    
+    [HSEther hs_getBalanceWithTokens:token ? @[token] : @[] withAddress:chainDic[@"address"] block:^(NSArray *arrayBanlance, BOOL suc) {
         
         if (suc) {
             
@@ -165,14 +165,14 @@
     
     dic[@"token"] = NBEC_TOKEN;
     
-    [self getETHKeys:dic];
+    [self getETHBalance:dic];
     
 }
 
 - (void)getNEBCOrder:(NSMutableDictionary *)dic{
     
     dic[@"token"] = NBEC_TOKEN;
-    [self getNEBCBalance:dic];
+    [self getETHOrder:dic];
     
     
 }
@@ -181,7 +181,7 @@
     
     dic[@"token"] = NBEC_TOKEN;
 
-    [self sendNEBC:dic];
+    [self sendETH:dic];
     
     
 }
@@ -192,20 +192,25 @@
 - (void)getBNBBalance:(NSMutableDictionary *)dic{
     
     dic[@"token"] = NBEC_TOKEN;
-    [self getBNBBalance:dic];
+
+    [self getETHBalance:dic];
 
     
 }
 
 - (void)getBNBOrder:(NSMutableDictionary *)dic{
+    
     dic[@"token"] = NBEC_TOKEN;
-    [self getBNBOrder:dic];
+
+    [self getETHOrder:dic];
 
 }
 
 - (void)sendBNB:(NSMutableDictionary *)dic{
+    
     dic[@"token"] = NBEC_TOKEN;
-    [self sendBNB:dic];
+
+    [self sendETH:dic];
     
 }
 

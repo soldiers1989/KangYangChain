@@ -46,7 +46,7 @@
 }
 - (void)floatAction:(UITapGestureRecognizer *)tap{
     
-    if (tap.view.tab == 0) {
+    if (tap.view.tag == 0) {
         
         WLNFloatView *view = [[WLNFloatView alloc]initFather:tap.view delegate:self ButtonTitles:BI_TITLE_ARR, nil];
         

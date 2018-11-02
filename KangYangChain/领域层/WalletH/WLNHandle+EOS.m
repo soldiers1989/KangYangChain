@@ -10,4 +10,46 @@
 
 @implementation WLNHandle (EOS)
 
+
+
+
+- (void)getEOSKeys:(NSMutableDictionary *)dic{
+    
+    
+    [EosEncode getEosKeys:^(NSString *privateKey, NSString *publicKey) {
+    
+        
+        
+        NSLog(@"%@,%@",publicKey,privateKey);
+        
+        
+    }];
+    
+    
+    
+    
+    
+}
+- (void)getEOSBalance:(NSMutableDictionary *)dic{
+    
+    
+}
+
+
+- (void)getEOSOrder:(NSMutableDictionary *)dic{
+    
+    
+    
+    
+}
+
+- (void)sendEOS:(NSMutableDictionary *)dic{
+    
+    
+    
+}
+
+
+
+
 @end

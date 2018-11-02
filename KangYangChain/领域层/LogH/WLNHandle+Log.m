@@ -75,5 +75,9 @@
     [self requestWith:OutLog dic:dic sel:_cmd];
     
 }
-
+- (void)judgeNet{
+    
+    [self requestWith:@"www.baidu.com" dic:nil sel:_cmd];
+    
+}
 @end

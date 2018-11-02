@@ -29,8 +29,10 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     
-    [self.phoneT changePlaceHolder:UIColor.whiteColor];
-    [self.pwdT changePlaceHolder:UIColor.whiteColor];
+    [self.phoneT changePlaceHolderDefaultColor];
+    [self.pwdT changePlaceHolderDefaultColor];
+    
+    [self routeTargetName:@"WLNHandle" actionName:@"judgeNet"];
 
 
 }
@@ -98,6 +100,9 @@
             [de setValue:data forKey:@"log"];
             
             [tabbar isLog:YES];
+            
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+            
         }
      
         
@@ -120,10 +125,15 @@
     
 
 }
-- (void)hideAction{
+- (void)hideAction:(UITapGestureRecognizer *)tap{
+    
     
     self.pwdT.secureTextEntry = !self.pwdT.secureTextEntry;
- 
+    
+    UIImageView *img = tap.view.subviews.firstObject;
+
+    img.image = self.pwdT.secureTextEntry ? [UIImage imageNamed:@"display"] : [UIImage imageNamed:@"hide"];
+    
 }
 
 

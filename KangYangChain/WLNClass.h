@@ -23,6 +23,7 @@
 #import <SVProgressHUD.h>
 #import <BTCPack/BTCWrapper.h>
 #import "ETHPack/HSEther.h"
+#import <EosFramework/EosFramework.h>
 
 /**
  协议
@@ -32,6 +33,7 @@
 #import "WLNPassValueProtocol.h"
 #import "WLNURLProtocol.h"
 #import "WLNReloadProtocol.h"
+#import "WLNEmptyProtocol.h"
 
 
 /**
@@ -49,17 +51,18 @@
 #import "AppDelegate+Wallet.h"
 
 
-#import "NSObject+RouteRoot.h"
 #import "UIView+SYLayout.h"
-#import "NSString+Language.h"
-#import "UIViewController+hook.h"
-#import "UINavigationBar+Awesome.h"
-#import "UITableView+NewTableView.h"
-#import "NSObject+Function.h"
-#import "NSBundle+DAUtils.h"
+#import "NSString+Set.h"
+#import "NSObject+Set.h"
 #import "UIView+Set.h"
 #import "UITextField+Set.h"
+#import "UITableView+Set.h"
 #import "UIViewController+Set.h"
+
+#import "UINavigationBar+Awesome.h"
+
+#import "NSBundle+DAUtils.h"
+
 
 
 /**
@@ -71,6 +74,7 @@
 #import "DAConfig.h"
 #import "HYAlertView.h"
 #import "GalenPayPasswordView.h"
+#import "WLNEmptyView.h"
 
 
 #import "WLNScanTipView.h"

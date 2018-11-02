@@ -37,6 +37,7 @@
     /**
      生成EOS地址
      */
+    [self routeTargetName:@"WLNHandle" actionName:@"getEOSKeys:" param:@{DELEGATES:self}.mutableCopy];
     
     
     /**

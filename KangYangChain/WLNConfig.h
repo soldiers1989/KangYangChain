@@ -39,6 +39,7 @@
 
 #define windowFrame(a) [a convertRect:a.bounds toView:[UIApplication sharedApplication].delegate.window]
 
+#define DISPATH_AFTER(a,afterBlock) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(a * NSEC_PER_SEC)), dispatch_get_main_queue(),afterBlock);
 
 #define TK @"cell_title"
 #define PK @"cell_picture"

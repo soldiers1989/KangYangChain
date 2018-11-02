@@ -10,16 +10,13 @@
 
 @interface WLNHandle() 
 
-//@property (nonatomic, assign ) BOOL isImpMented;
-//@property (nonatomic, assign ) Class cls;
-//@property (nonatomic, strong ) id <Interface> impl;
-
 @end
+
 @implementation WLNHandle
 
 
 /**
- 所有请求全部经过这里
+ 所有请求返回结果全部经过这里
  
  */
 - (void)result:(id)data sel:(NSString *)sel{
@@ -33,6 +30,8 @@
     }
     
     if ([data[@"code"] integerValue] == 200) {
+        
+        [self emptyDataHandleWith:data];
         
         if (self.delegate && [self.delegate respondsToSelector:@selector(result:sel:)]) {
             
@@ -54,7 +53,32 @@
     
     
 }
-
+/**
+ 空数据处理
+ */
+- (void)emptyDataHandleWith:(id)data{
+    
+    if ([data[@"data"] isKindOfClass:[NSArray class]]) {
+        
+        if ([data[@"data"]count] == 0) {
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(emptyShow)]) {
+                [self.delegate emptyShow];
+                
+            }
+        }else{
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(removeEmptyShow)]) {
+                [self.delegate removeEmptyShow];
+                
+            }
+        }
+        
+        
+    }
+    
+    
+}
 - (void)faild:(id)data sel:(NSString *)sel{
     
     
@@ -86,29 +110,6 @@
     
     
 }
-//- (void)implementWith:(id<Interface>)impl{
-//    
-//    self.impl = impl;
-//    self.cls = [impl class];
-//    
-//    
-//    
-//}
-//- (id)forwardingTargetForSelector:(SEL)aSelector{
-//    
-//    if (self.impl && [self.impl respondsToSelector:aSelector]) {
-//        
-//        return self.impl;
-//        
-//    }else if (self.cls && [self.cls respondsToSelector:aSelector]){
-//        
-//        return self.cls;
-//        
-//    }else{
-//        
-//        return nil;
-//    }
-//  
-//}
+
 
 @end

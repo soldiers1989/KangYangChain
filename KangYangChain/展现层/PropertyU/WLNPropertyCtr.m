@@ -65,7 +65,6 @@
         
         [self.headView reloadData];
         
-        
         [self routeTargetName:@"WLNHandle" actionName:@"rmbPrice:" param:@{DELEGATES:self}.mutableCopy];
         
         

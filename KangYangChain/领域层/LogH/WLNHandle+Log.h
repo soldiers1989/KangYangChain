@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)forGet:(NSMutableDictionary *)dic;
 
+- (void)judgeNet;
+
 
 @end
 

@@ -38,10 +38,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.phoneT changePlaceHolder:UIColor.whiteColor];
-    [self.pwdT changePlaceHolder:UIColor.whiteColor];
-    [self.codeT changePlaceHolder:UIColor.whiteColor];
-    [self.surePwdT changePlaceHolder:UIColor.whiteColor];
+    [self.phoneT changePlaceHolderDefaultColor];
+    [self.pwdT changePlaceHolderDefaultColor];
+    [self.codeT changePlaceHolderDefaultColor];
+    [self.surePwdT changePlaceHolderDefaultColor];
 
 }
 #pragma mark - 数据回调
@@ -54,10 +54,12 @@
         
     }else if ([sel isEqualToString:@"registers:"]){
         
+        
+        
         [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+        
         [self.navigationController popViewControllerAnimated:YES];
-        
-        
+
     }
     
 }
@@ -155,10 +157,19 @@
     }
 
 }
-- (void)hideAction{
+- (void)sureHideAction:(UITapGestureRecognizer *)tap{
+    
+    self.surePwdT.secureTextEntry = !self.surePwdT.secureTextEntry;
+    UIImageView *img = tap.view.subviews.firstObject;
+    img.image = self.surePwdT.secureTextEntry ? [UIImage imageNamed:@"display"] : [UIImage imageNamed:@"hide"];
+    
+}
+- (void)hideAction:(UITapGestureRecognizer *)tap{
     
     self.pwdT.secureTextEntry = !self.pwdT.secureTextEntry;
-    self.surePwdT.secureTextEntry = !self.surePwdT.secureTextEntry;
+    
+    UIImageView *img = tap.view.subviews.firstObject;
+    img.image = self.pwdT.secureTextEntry ? [UIImage imageNamed:@"display"] : [UIImage imageNamed:@"hide"];
     
 }
 

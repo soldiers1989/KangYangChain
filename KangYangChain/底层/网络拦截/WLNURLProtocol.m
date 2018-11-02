@@ -26,7 +26,7 @@
     
     NSURL *url = request.URL;
     
-    NSLog(@"🍇🍇🍇 当前网络请求:  %@",url.absoluteString);
+//    NSLog(@"🍇🍇🍇 当前网络请求:  %@",url.absoluteString);
 
     return NO;
 }

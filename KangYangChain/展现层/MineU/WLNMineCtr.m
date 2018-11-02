@@ -155,7 +155,11 @@ typedef void (^CellBlock)(void);
     }
     if (actionSheet == _headSheet) {
         
-        
+        if (buttonIndex == 1) {
+            
+        }else{
+            
+        }
         
     }else if (actionSheet == _outLogSheet){
         
@@ -185,9 +189,6 @@ typedef void (^CellBlock)(void);
  退出登录
  */
 - (void)outAction{
-    
-    
-    
     _outLogSheet = [[WMYActionSheet alloc]initWithTitle:@"" delegate:self cancelButtonTitle:@"取消".Intl destructiveButtonTitle:nil otherButtonTitles:@"退出登录".Intl, nil];
     
     [_outLogSheet show];

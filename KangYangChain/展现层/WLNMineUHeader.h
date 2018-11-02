@@ -15,8 +15,6 @@
 #import "WLNMineGForumCell.h"
 #import "WLNWalletHeadView.h"
 
-#import "WLNWalletClass.h"
-
 #import "WLNMineApplyFromCtr.h"
 #import "WLNMineSellOutCtr.h"
 #import "WLNMineFormDetailCtr.h"
@@ -91,5 +89,17 @@
 
 #import "WLNMineGHBHeadView.h"
 #import "WLNMineBusinessCtr.h"
+
+
+#import "WLNWalletBodyCell.h"
+#import "WLNWalletHeadCell.h"
+#import "WLNWalletDetailCtr.h"
+#import "WLNRSendMoneyCtr.h"
+#import "WLNReceiveMoneyCtr.h"
+#import "WLNLockCtr.h"
+#import "WLNOrderCtr.h"
+#import "WLNChangeCtr.h"
+#import "WLNWalletDetailHeadView.h"
+#import "WLNWalletDetailCell.h"
 
 #endif /* WLNMineUHeader_h */

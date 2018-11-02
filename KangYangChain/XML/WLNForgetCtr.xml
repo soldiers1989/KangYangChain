@@ -31,9 +31,9 @@
         <UIView layout="alignItems:center,flexDirection:row,marginTop:10,marginLeft:50,marginRight:50" attr="bgColor:#7A7A7A,borderRadius:7">
             <UIImageView attr="source:Login_lock" layout="marginLeft:15"/>
             <UITextField name="pwdTxt" layout="marginLeft:20,flex:1,height:40" attr="secureTextEntry:true,fontSize:14,color:white,textAlign:left,placeholder:@请输入新密码,text:"/>
-            <FlexTouchView onPress="hideAction" layout="height:40,width:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray">
+            <FlexTouchView onPress="hideAction:" layout="height:40,width:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray">
 
-                <UIImageView attr="source:hide" layout="height:10,width:15"/>
+                <UIImageView attr="source:display" layout="height:10,width:15"/>
 
             </FlexTouchView>
         </UIView>
@@ -42,9 +42,9 @@
          
             <UIImageView attr="source:surePwd" layout="marginLeft:15"/>
             <UITextField name="surePwdTxt" layout="marginLeft:20,flex:1,height:40" attr="secureTextEntry:true,fontSize:14,color:white,textAlign:left,placeholder:@确认新密码,text:"/>
-            <FlexTouchView onPress="hideAction" layout="height:40,width:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray">
+            <FlexTouchView onPress="sureHideAction:" layout="height:40,width:40,justifyContent:center,alignItems:center" attr="underlayColor:darkGray">
 
-                <UIImageView attr="source:hide" layout="height:10,width:15"/>
+                <UIImageView attr="source:display" layout="height:10,width:15"/>
             </FlexTouchView>
         </UIView>
 

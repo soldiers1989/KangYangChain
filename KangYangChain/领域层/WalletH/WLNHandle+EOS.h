@@ -10,7 +10,27 @@
 
 @interface WLNHandle (EOS)
 
+ 
+/**
+ 生成秘钥
+ */
+- (void)getEOSKeys:(NSMutableDictionary *)dic;
 
+/**
+ 查询余额
+ */
+- (void)getEOSBalance:(NSMutableDictionary *)dic;
+
+/**
+ 订单查询
+ */
+
+- (void)getEOSOrder:(NSMutableDictionary *)dic;
+
+/**
+ 转账
+ */
+- (void)sendEOS:(NSMutableDictionary *)dic;
 
 
 

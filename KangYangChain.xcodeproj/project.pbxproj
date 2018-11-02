@@ -46,7 +46,6 @@
 		003754462178624D0025CD1D /* WLNOrderCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 003754452178624D0025CD1D /* WLNOrderCell.xml */; };
 		003CB8F82179C096001DDA03 /* UIViewController+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8F72179C096001DDA03 /* UIViewController+hook.m */; };
 		003CB8FB2179C0DE001DDA03 /* UIControl+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */; };
-		003CB9002179D185001DDA03 /* Default-Port-hd55.png in Resources */ = {isa = PBXBuildFile; fileRef = 003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */; };
 		0077FEBB217EAE6700743724 /* WLNPropertyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077FEBA217EAE6700743724 /* WLNPropertyHeadView.m */; };
 		0077FEC1217EAEA600743724 /* WLNPropertyHeadView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0077FEC0217EAEA600743724 /* WLNPropertyHeadView.xml */; };
 		0077FEC4217EC3A700743724 /* WLNRSendMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077FEC3217EC3A700743724 /* WLNRSendMoneyCell.m */; };
@@ -63,6 +62,12 @@
 		0077FEEB217F0B6300743724 /* WLNLockListCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077FEEA217F0B6300743724 /* WLNLockListCtr.m */; };
 		007A0DC121804D7700A5C821 /* WLNScanTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A0DC021804D7700A5C821 /* WLNScanTipView.m */; };
 		007A0DC321804D8500A5C821 /* WLNScanTipView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 007A0DC221804D8500A5C821 /* WLNScanTipView.xml */; };
+		00825A84218BF7160036E8DC /* EosFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00825A81218BF7160036E8DC /* EosFramework.framework */; };
+		00825A89218C3DB90036E8DC /* NSObject+Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 00825A88218C3DB90036E8DC /* NSObject+Set.m */; };
+		00825A8C218C3E2F0036E8DC /* NSString+Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 00825A8B218C3E2F0036E8DC /* NSString+Set.m */; };
+		00825A8F218C3EA20036E8DC /* UITableView+Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 00825A8E218C3EA20036E8DC /* UITableView+Set.m */; };
+		00825A93218C4C0E0036E8DC /* WLNEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00825A92218C4C0E0036E8DC /* WLNEmptyView.m */; };
+		00825A95218C4C290036E8DC /* WLNEmptyView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00825A94218C4C290036E8DC /* WLNEmptyView.xml */; };
 		0085F32C218415BD00DAD323 /* WLNTradeTradeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F32B218415BD00DAD323 /* WLNTradeTradeHeadView.m */; };
 		0085F330218415CD00DAD323 /* WLNTradeTradeHeadView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0085F32F218415CD00DAD323 /* WLNTradeTradeHeadView.xml */; };
 		0085F3332184317500DAD323 /* WLNTradeLawBHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F3322184317500DAD323 /* WLNTradeLawBHeaderView.m */; };
@@ -125,7 +130,6 @@
 		00D0B5C021800A6900EF6BA2 /* WLNScanCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B5BF21800A6900EF6BA2 /* WLNScanCtr.m */; };
 		00D0B5C3218011B100EF6BA2 /* UIView+Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B5C2218011B100EF6BA2 /* UIView+Set.m */; };
 		00DE427B21759447005DDEE0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DE427A21759447005DDEE0 /* User.m */; };
-		00DE4287217597CF005DDEE0 /* NSObject+Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DE4286217597CF005DDEE0 /* NSObject+Function.m */; };
 		00E92D4E217DB95500C51DCD /* WLNTradeLawCionCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E92D4D217DB95500C51DCD /* WLNTradeLawCionCtr.m */; };
 		00E92D51217DBA4A00C51DCD /* WLNTradeLawCionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E92D50217DBA4A00C51DCD /* WLNTradeLawCionCell.m */; };
 		00E92D53217DBAB700C51DCD /* WLNTradeLawCionCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00E92D52217DBAB700C51DCD /* WLNTradeLawCionCell.xml */; };
@@ -191,12 +195,10 @@
 		234F1D8F21650B1100BA61AF /* WLNMineOrderCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 234F1D8E21650B1100BA61AF /* WLNMineOrderCtr.m */; };
 		234F1D922165185B00BA61AF /* WLNMineOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 234F1D912165185B00BA61AF /* WLNMineOrderCell.m */; };
 		234F1D9621651A7E00BA61AF /* Snip20181003_35.png in Resources */ = {isa = PBXBuildFile; fileRef = 234F1D9521651A7E00BA61AF /* Snip20181003_35.png */; };
-		235484702160BCB400BCE879 /* NSObject+RouteRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2354846B2160BCB400BCE879 /* NSObject+RouteRoot.m */; };
 		235484712160BCB400BCE879 /* UIView+SYLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2354846F2160BCB400BCE879 /* UIView+SYLayout.m */; };
 		236346D62162873900CFF257 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236346D52162873900CFF257 /* Localizable.strings */; };
 		236346E0216289C800CFF257 /* NSBundle+DAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 236346DD216289C800CFF257 /* NSBundle+DAUtils.m */; };
 		236346E1216289C800CFF257 /* DAConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 236346DE216289C800CFF257 /* DAConfig.m */; };
-		236346E521628B4E00CFF257 /* NSString+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 236346E421628B4E00CFF257 /* NSString+Language.m */; };
 		236346E82162978500CFF257 /* WLNMineSimpleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236346E72162978500CFF257 /* WLNMineSimpleCell.m */; };
 		236346F12162B45F00CFF257 /* WLNMineHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236346F02162B45F00CFF257 /* WLNMineHeadCell.m */; };
 		236346F62162D85000CFF257 /* WLNHomeNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236346F52162D85000CFF257 /* WLNHomeNewCell.m */; };
@@ -326,7 +328,6 @@
 		23D17B4721742DD60004D877 /* WLNWalletHeadCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23D17B4121742DD30004D877 /* WLNWalletHeadCell.xml */; };
 		23D17B4921742DD60004D877 /* WLNWalletDetailHeadView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23D17B4321742DD50004D877 /* WLNWalletDetailHeadView.xml */; };
 		23D17B4A21742DD60004D877 /* WLNReceiveMoneyCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23D17B4421742DD60004D877 /* WLNReceiveMoneyCtr.xml */; };
-		23D17B4D217431500004D877 /* UITableView+NewTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D17B4C217431500004D877 /* UITableView+NewTableView.m */; };
 		23D24F2A216BD21D00C1557F /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D24F29216BD21C00C1557F /* UINavigationBar+Awesome.m */; };
 		23DAEF25216E2B9F0025E3CF /* WLNHomeSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DAEF24216E2B9F0025E3CF /* WLNHomeSectionHeadView.m */; };
 		23F9C9262163E09F000EDFC4 /* WLNShopItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C9252163E09F000EDFC4 /* WLNShopItemCell.m */; };
@@ -442,7 +443,6 @@
 		003CB8F72179C096001DDA03 /* UIViewController+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+hook.m"; sourceTree = "<group>"; };
 		003CB8F92179C0DE001DDA03 /* UIControl+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+hook.h"; sourceTree = "<group>"; };
 		003CB8FA2179C0DE001DDA03 /* UIControl+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+hook.m"; sourceTree = "<group>"; };
-		003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Port-hd55.png"; sourceTree = "<group>"; };
 		0077FEB9217EAE6700743724 /* WLNPropertyHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNPropertyHeadView.h; sourceTree = "<group>"; };
 		0077FEBA217EAE6700743724 /* WLNPropertyHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNPropertyHeadView.m; sourceTree = "<group>"; };
 		0077FEC0217EAEA600743724 /* WLNPropertyHeadView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNPropertyHeadView.xml; sourceTree = "<group>"; };
@@ -468,6 +468,17 @@
 		007A0DBF21804D7700A5C821 /* WLNScanTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNScanTipView.h; sourceTree = "<group>"; };
 		007A0DC021804D7700A5C821 /* WLNScanTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNScanTipView.m; sourceTree = "<group>"; };
 		007A0DC221804D8500A5C821 /* WLNScanTipView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNScanTipView.xml; sourceTree = "<group>"; };
+		00825A81218BF7160036E8DC /* EosFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EosFramework.framework; sourceTree = "<group>"; };
+		00825A86218C3B560036E8DC /* WLNEmptyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNEmptyProtocol.h; sourceTree = "<group>"; };
+		00825A87218C3DB90036E8DC /* NSObject+Set.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Set.h"; sourceTree = "<group>"; };
+		00825A88218C3DB90036E8DC /* NSObject+Set.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Set.m"; sourceTree = "<group>"; };
+		00825A8A218C3E2F0036E8DC /* NSString+Set.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Set.h"; sourceTree = "<group>"; };
+		00825A8B218C3E2F0036E8DC /* NSString+Set.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Set.m"; sourceTree = "<group>"; };
+		00825A8D218C3EA20036E8DC /* UITableView+Set.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Set.h"; sourceTree = "<group>"; };
+		00825A8E218C3EA20036E8DC /* UITableView+Set.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Set.m"; sourceTree = "<group>"; };
+		00825A91218C4C0E0036E8DC /* WLNEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNEmptyView.h; sourceTree = "<group>"; };
+		00825A92218C4C0E0036E8DC /* WLNEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNEmptyView.m; sourceTree = "<group>"; };
+		00825A94218C4C290036E8DC /* WLNEmptyView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNEmptyView.xml; sourceTree = "<group>"; };
 		0085F32A218415BD00DAD323 /* WLNTradeTradeHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeTradeHeadView.h; sourceTree = "<group>"; };
 		0085F32B218415BD00DAD323 /* WLNTradeTradeHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeTradeHeadView.m; sourceTree = "<group>"; };
 		0085F32F218415CD00DAD323 /* WLNTradeTradeHeadView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeTradeHeadView.xml; sourceTree = "<group>"; };
@@ -577,8 +588,6 @@
 		00D0B5C2218011B100EF6BA2 /* UIView+Set.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Set.m"; sourceTree = "<group>"; };
 		00DE427921759447005DDEE0 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		00DE427A21759447005DDEE0 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		00DE4285217597CF005DDEE0 /* NSObject+Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Function.h"; sourceTree = "<group>"; };
-		00DE4286217597CF005DDEE0 /* NSObject+Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Function.m"; sourceTree = "<group>"; };
 		00E92D4C217DB95500C51DCD /* WLNTradeLawCionCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeLawCionCtr.h; sourceTree = "<group>"; };
 		00E92D4D217DB95500C51DCD /* WLNTradeLawCionCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeLawCionCtr.m; sourceTree = "<group>"; };
 		00E92D4F217DBA4A00C51DCD /* WLNTradeLawCionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeLawCionCell.h; sourceTree = "<group>"; };
@@ -713,8 +722,6 @@
 		234F1D902165185B00BA61AF /* WLNMineOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineOrderCell.h; sourceTree = "<group>"; };
 		234F1D912165185B00BA61AF /* WLNMineOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineOrderCell.m; sourceTree = "<group>"; };
 		234F1D9521651A7E00BA61AF /* Snip20181003_35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181003_35.png; sourceTree = "<group>"; };
-		2354846B2160BCB400BCE879 /* NSObject+RouteRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RouteRoot.m"; sourceTree = "<group>"; };
-		2354846C2160BCB400BCE879 /* NSObject+RouteRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RouteRoot.h"; sourceTree = "<group>"; };
 		2354846E2160BCB400BCE879 /* UIView+SYLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYLayout.h"; sourceTree = "<group>"; };
 		2354846F2160BCB400BCE879 /* UIView+SYLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYLayout.m"; sourceTree = "<group>"; };
 		235484762160CD9800BCE879 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -723,8 +730,6 @@
 		236346DD216289C800CFF257 /* NSBundle+DAUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DAUtils.m"; sourceTree = "<group>"; };
 		236346DE216289C800CFF257 /* DAConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAConfig.m; sourceTree = "<group>"; };
 		236346DF216289C800CFF257 /* NSBundle+DAUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DAUtils.h"; sourceTree = "<group>"; };
-		236346E321628B4E00CFF257 /* NSString+Language.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Language.h"; sourceTree = "<group>"; };
-		236346E421628B4E00CFF257 /* NSString+Language.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Language.m"; sourceTree = "<group>"; };
 		236346E62162978400CFF257 /* WLNMineSimpleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineSimpleCell.h; sourceTree = "<group>"; };
 		236346E72162978500CFF257 /* WLNMineSimpleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNMineSimpleCell.m; sourceTree = "<group>"; };
 		236346EF2162B45F00CFF257 /* WLNMineHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNMineHeadCell.h; sourceTree = "<group>"; };
@@ -901,7 +906,6 @@
 		23D17AF521742A7B0004D877 /* WLNWalletHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLNWalletHeadCell.h; sourceTree = "<group>"; };
 		23D17AF621742A7C0004D877 /* WLNWalletCtr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNWalletCtr.m; sourceTree = "<group>"; };
 		23D17AF721742A7D0004D877 /* WLNWalletHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNWalletHeadCell.m; sourceTree = "<group>"; };
-		23D17B1F21742C070004D877 /* WLNWalletClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNWalletClass.h; sourceTree = "<group>"; };
 		23D17B2121742C7B0004D877 /* WLNRSendMoneyCtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLNRSendMoneyCtr.h; sourceTree = "<group>"; };
 		23D17B2221742C7B0004D877 /* WLNRSendMoneyCtr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNRSendMoneyCtr.m; sourceTree = "<group>"; };
 		23D17B2421742C7C0004D877 /* WLNLockCtr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLNLockCtr.m; sourceTree = "<group>"; };
@@ -923,8 +927,6 @@
 		23D17B4121742DD30004D877 /* WLNWalletHeadCell.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WLNWalletHeadCell.xml; sourceTree = "<group>"; };
 		23D17B4321742DD50004D877 /* WLNWalletDetailHeadView.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WLNWalletDetailHeadView.xml; sourceTree = "<group>"; };
 		23D17B4421742DD60004D877 /* WLNReceiveMoneyCtr.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WLNReceiveMoneyCtr.xml; sourceTree = "<group>"; };
-		23D17B4B2174314F0004D877 /* UITableView+NewTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NewTableView.h"; sourceTree = "<group>"; };
-		23D17B4C217431500004D877 /* UITableView+NewTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+NewTableView.m"; sourceTree = "<group>"; };
 		23D24F28216BD21C00C1557F /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		23D24F29216BD21C00C1557F /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		23DAEF23216E2B9F0025E3CF /* WLNHomeSectionHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNHomeSectionHeadView.h; sourceTree = "<group>"; };
@@ -951,6 +953,7 @@
 				23B9ECC3217E87340097D89D /* ethers.framework in Frameworks */,
 				23B9EC89217E85970097D89D /* BTCPack.framework in Frameworks */,
 				232D22912174459D0088D9AC /* libPods-KangYangChain.a in Frameworks */,
+				00825A84218BF7160036E8DC /* EosFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1005,24 @@
 				0093CDB221807DD5007A60A7 /* WLNMineAgreeWalletHeadView.m */,
 			);
 			path = "合约账户";
+			sourceTree = "<group>";
+		};
+		00825A85218C330D0036E8DC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2309F8DF215D323F00F156E8 /* WLNMainTabBarCtr.h */,
+				2309F8E0215D323F00F156E8 /* WLNMainTabBarCtr.m */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		00825A90218C4BFA0036E8DC /* 缺省 */ = {
+			isa = PBXGroup;
+			children = (
+				00825A91218C4C0E0036E8DC /* WLNEmptyView.h */,
+				00825A92218C4C0E0036E8DC /* WLNEmptyView.m */,
+			);
+			path = "缺省";
 			sourceTree = "<group>";
 		};
 		0085F372218464B600DAD323 /* DragRect */ = {
@@ -1060,15 +1081,16 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
-		0089FB5D2175E1C9002C3465 /* protocol */ = {
+		0089FB5D2175E1C9002C3465 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				238F5575216A301900A9EB7F /* WLNReqstProtocol.h */,
+				00825A86218C3B560036E8DC /* WLNEmptyProtocol.h */,
 				00B76B0F2178909A00802011 /* WLNModelProtocol.h */,
 				23441E60218262E300F6C110 /* WLNReloadProtocol.h */,
 				0089FB5E2175E21B002C3465 /* WLNPassValueProtocol.h */,
 			);
-			path = protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		0089FB5F2175EA23002C3465 /* GHB钱包 */ = {
@@ -1183,7 +1205,7 @@
 			path = "法币";
 			sourceTree = "<group>";
 		};
-		00D0B5BD2180095000EF6BA2 /* 扫码 */ = {
+		00D0B5BD2180095000EF6BA2 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
 				00D0B5BE21800A6900EF6BA2 /* WLNScanCtr.h */,
@@ -1191,10 +1213,10 @@
 				007A0DBF21804D7700A5C821 /* WLNScanTipView.h */,
 				007A0DC021804D7700A5C821 /* WLNScanTipView.m */,
 			);
-			path = "扫码";
+			path = Scan;
 			sourceTree = "<group>";
 		};
-		00DE427821759438005DDEE0 /* model */ = {
+		00DE427821759438005DDEE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				00DE427921759447005DDEE0 /* User.h */,
@@ -1204,7 +1226,7 @@
 				23441E632182640400F6C110 /* Money.h */,
 				23441E642182640400F6C110 /* Money.m */,
 			);
-			path = model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2309F8A1215D316200F156E8 = {
@@ -1234,10 +1256,10 @@
 			children = (
 				23C403002187C0AF004D63E1 /* 测试 */,
 				23441E6A2182668D00F6C110 /* AppDelegate */,
-				00DE427821759438005DDEE0 /* model */,
-				231A96EB217131230063587B /* control */,
-				0089FB5D2175E1C9002C3465 /* protocol */,
-				231A96F0217137660063587B /* category */,
+				00DE427821759438005DDEE0 /* Models */,
+				231A96EB217131230063587B /* Controls */,
+				0089FB5D2175E1C9002C3465 /* Protocols */,
+				231A96F0217137660063587B /* Categorys */,
 				234B6EC221792DBA000B69AB /* 底层 */,
 				237E1B82215E9D08002BC6F0 /* XML */,
 				2309F904215D3F4E00F156E8 /* 展现层 */,
@@ -1247,16 +1269,14 @@
 				231A96EF217134E10063587B /* WLNConfig.h */,
 				238F5574216A0A6800A9EB7F /* WLNRequst.h */,
 				231A96ED2171348C0063587B /* WLNPrefix.pch */,
-				2309F8DF215D323F00F156E8 /* WLNMainTabBarCtr.h */,
-				2309F8E0215D323F00F156E8 /* WLNMainTabBarCtr.m */,
 				23B9ECBA217E871E0097D89D /* ethers.xcodeproj */,
 				23B9EC8C217E870A0097D89D /* ETHPack */,
 				23B9EC88217E85970097D89D /* BTCPack.framework */,
+				00825A81218BF7160036E8DC /* EosFramework.framework */,
+				2309F8BC215D316300F156E8 /* main.m */,
+				2309F8BB215D316300F156E8 /* Info.plist */,
 				2309F8B6215D316300F156E8 /* Assets.xcassets */,
 				2309F8B8215D316300F156E8 /* LaunchScreen.storyboard */,
-				2309F8BB215D316300F156E8 /* Info.plist */,
-				2309F8BC215D316300F156E8 /* main.m */,
-				003CB8FF2179D185001DDA03 /* Default-Port-hd55.png */,
 			);
 			path = KangYangChain;
 			sourceTree = "<group>";
@@ -1298,7 +1318,6 @@
 		2309F904215D3F4E00F156E8 /* 展现层 */ = {
 			isa = PBXGroup;
 			children = (
-				23D17B1F21742C070004D877 /* WLNWalletClass.h */,
 				234B6EAB217900AE000B69AB /* WLNLogUHeader.h */,
 				234B6EAC217900C5000B69AB /* WLNMineUHeader.h */,
 				234B6EAD217900D3000B69AB /* WLNShopUHeader.h */,
@@ -1470,22 +1489,22 @@
 			path = "网络拦截";
 			sourceTree = "<group>";
 		};
-		231A5DCC217BA92B00EBD745 /* 二维码 */ = {
+		231A5DCC217BA92B00EBD745 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
 				234AA8EA216F4AD500A0866B /* WLNQRCode.h */,
 				234AA8EB216F4AD500A0866B /* WLNQRCode.m */,
 			);
-			path = "二维码";
+			path = QRCode;
 			sourceTree = "<group>";
 		};
-		231A5DCD217BA92B00EBD745 /* 底部提示框 */ = {
+		231A5DCD217BA92B00EBD745 /* ActionSheet */ = {
 			isa = PBXGroup;
 			children = (
 				23C828B02171C9FD0086C253 /* WMYActionSheet.h */,
 				23C828B12171C9FD0086C253 /* WMYActionSheet.m */,
 			);
-			path = "底部提示框";
+			path = ActionSheet;
 			sourceTree = "<group>";
 		};
 		231A5DE2217D261F00EBD745 /* 提示框 */ = {
@@ -1497,45 +1516,47 @@
 			path = "提示框";
 			sourceTree = "<group>";
 		};
-		231A96EB217131230063587B /* control */ = {
+		231A96EB217131230063587B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				23C402FF2187BF55004D63E1 /* 普通头部 */,
-				23C402FE2187BF26004D63E1 /* 单例 */,
-				23C402FD2187BF0D004D63E1 /* 浮动选项卡 */,
+				00825A90218C4BFA0036E8DC /* 缺省 */,
+				00825A85218C330D0036E8DC /* Tabbar */,
+				23C402FF2187BF55004D63E1 /* SimpleHead */,
+				23C402FE2187BF26004D63E1 /* Single */,
+				23C402FD2187BF0D004D63E1 /* FloatView */,
 				0085F39C21846C7600DAD323 /* WebView */,
 				0085F372218464B600DAD323 /* DragRect */,
 				23CB860B217E5A17007B4B21 /* 支付密码 */,
-				00D0B5BD2180095000EF6BA2 /* 扫码 */,
+				00D0B5BD2180095000EF6BA2 /* Scan */,
 				231A5DE2217D261F00EBD745 /* 提示框 */,
-				231A5DCC217BA92B00EBD745 /* 二维码 */,
+				231A5DCC217BA92B00EBD745 /* QRCode */,
 				235484722160C76200BCE879 /* 国际化 */,
-				231A5DCD217BA92B00EBD745 /* 底部提示框 */,
+				231A5DCD217BA92B00EBD745 /* ActionSheet */,
 			);
-			path = control;
+			path = Controls;
 			sourceTree = "<group>";
 		};
-		231A96F0217137660063587B /* category */ = {
+		231A96F0217137660063587B /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
 				00D0B5C1218011B100EF6BA2 /* UIView+Set.h */,
 				00D0B5C2218011B100EF6BA2 /* UIView+Set.m */,
+				00825A8A218C3E2F0036E8DC /* NSString+Set.h */,
+				00825A8B218C3E2F0036E8DC /* NSString+Set.m */,
+				00825A87218C3DB90036E8DC /* NSObject+Set.h */,
+				00825A88218C3DB90036E8DC /* NSObject+Set.m */,
 				0037543F217833B80025CD1D /* UITextField+Set.h */,
 				00375440217833B80025CD1D /* UITextField+Set.m */,
+				00825A8D218C3EA20036E8DC /* UITableView+Set.h */,
+				00825A8E218C3EA20036E8DC /* UITableView+Set.m */,
 				2354846E2160BCB400BCE879 /* UIView+SYLayout.h */,
 				2354846F2160BCB400BCE879 /* UIView+SYLayout.m */,
-				236346E321628B4E00CFF257 /* NSString+Language.h */,
-				236346E421628B4E00CFF257 /* NSString+Language.m */,
 				000371222182BB5400CD1364 /* UIViewController+Set.h */,
 				000371232182BB5400CD1364 /* UIViewController+Set.m */,
-				2354846C2160BCB400BCE879 /* NSObject+RouteRoot.h */,
-				2354846B2160BCB400BCE879 /* NSObject+RouteRoot.m */,
 				23D24F28216BD21C00C1557F /* UINavigationBar+Awesome.h */,
 				23D24F29216BD21C00C1557F /* UINavigationBar+Awesome.m */,
-				23D17B4B2174314F0004D877 /* UITableView+NewTableView.h */,
-				23D17B4C217431500004D877 /* UITableView+NewTableView.m */,
 			);
-			path = category;
+			path = Categorys;
 			sourceTree = "<group>";
 		};
 		23212A36216FDE24008C8DD2 /* MineH */ = {
@@ -1672,8 +1693,6 @@
 				231A5DCB217BA81700EBD745 /* 网络拦截 */,
 				231A5DC1217BA1DC00EBD745 /* 容错处理 */,
 				231A5DC0217BA1DC00EBD745 /* Unicode转换 */,
-				00DE4285217597CF005DDEE0 /* NSObject+Function.h */,
-				00DE4286217597CF005DDEE0 /* NSObject+Function.m */,
 				231A5DDB217BAEBA00EBD745 /* NSObject+Swizzle.h */,
 				231A5DDA217BAEB900EBD745 /* NSObject+Swizzle.m */,
 			);
@@ -1720,6 +1739,7 @@
 		237E1B82215E9D08002BC6F0 /* XML */ = {
 			isa = PBXGroup;
 			children = (
+				00825A94218C4C290036E8DC /* WLNEmptyView.xml */,
 				0085F33921843B7F00DAD323 /* WLNTradeLawBPublishCtr.xml */,
 				0085F334218431A100DAD323 /* WLNTradeLawBHeaderView.xml */,
 				0085F32F218415CD00DAD323 /* WLNTradeTradeHeadView.xml */,
@@ -2027,31 +2047,31 @@
 			path = "钥匙串";
 			sourceTree = "<group>";
 		};
-		23C402FD2187BF0D004D63E1 /* 浮动选项卡 */ = {
+		23C402FD2187BF0D004D63E1 /* FloatView */ = {
 			isa = PBXGroup;
 			children = (
 				00048FEF2182A1F200969F11 /* WLNFloatView.h */,
 				00048FF02182A1F200969F11 /* WLNFloatView.m */,
 			);
-			path = "浮动选项卡";
+			path = FloatView;
 			sourceTree = "<group>";
 		};
-		23C402FE2187BF26004D63E1 /* 单例 */ = {
+		23C402FE2187BF26004D63E1 /* Single */ = {
 			isa = PBXGroup;
 			children = (
 				23441E66218264C500F6C110 /* WLNSingle.h */,
 				23441E67218264C500F6C110 /* WLNSingle.m */,
 			);
-			path = "单例";
+			path = Single;
 			sourceTree = "<group>";
 		};
-		23C402FF2187BF55004D63E1 /* 普通头部 */ = {
+		23C402FF2187BF55004D63E1 /* SimpleHead */ = {
 			isa = PBXGroup;
 			children = (
 				00AF61DE21840725003ED798 /* WLNSimpleHeadView.h */,
 				00AF61DF21840725003ED798 /* WLNSimpleHeadView.m */,
 			);
-			path = "普通头部";
+			path = SimpleHead;
 			sourceTree = "<group>";
 		};
 		23C403002187C0AF004D63E1 /* 测试 */ = {
@@ -2379,7 +2399,6 @@
 				234F1D9621651A7E00BA61AF /* Snip20181003_35.png in Resources */,
 				23C8288121717F020086C253 /* WLNMineScavengingCtr.xml in Resources */,
 				23C8289521717F020086C253 /* WLNShopBuyHBGCtr.xml in Resources */,
-				003CB9002179D185001DDA03 /* Default-Port-hd55.png in Resources */,
 				00A5EBF921773AC600FED04D /* WLNMineGHBBodyCell.xml in Resources */,
 				23C8289B21717F020086C253 /* WLNShopChangeCtr.xml in Resources */,
 				238F54F82165380600A9EB7F /* Snip20181004_36.png in Resources */,
@@ -2393,6 +2412,7 @@
 				23C8287621717F020086C253 /* WLNMineOrderCell.xml in Resources */,
 				00048FED2181D01100969F11 /* Snip20181025_1.png in Resources */,
 				00B7F4D5217DDAF8009208C9 /* WLNTradeHangCell.xml in Resources */,
+				00825A95218C4C290036E8DC /* WLNEmptyView.xml in Resources */,
 				0089FB4D2175C0F4002C3465 /* WLNMineFormDetailCtr.xml in Resources */,
 				00048FE02181CB7800969F11 /* fdsafas.png in Resources */,
 				00A5EBE02176DB9E00FED04D /* WLNMineFormDetailHeadView.xml in Resources */,
@@ -2574,7 +2594,6 @@
 				2340564C217040E400888D96 /* WLNMineScanHeadView.m in Sources */,
 				23AC68BE216B39E000580EA5 /* WLNMinePaySetCtr.m in Sources */,
 				23405622216F656D00888D96 /* WLNMineGHBAboutCtr.m in Sources */,
-				236346E521628B4E00CFF257 /* NSString+Language.m in Sources */,
 				2340564321702C4600888D96 /* WLNHandle+Shop.m in Sources */,
 				2346E7A8216B0F19002074D5 /* WLNMineGProblemCell.m in Sources */,
 				23C402FA2187BD88004D63E1 /* WLNData+Base.m in Sources */,
@@ -2582,11 +2601,11 @@
 				00A5EBDE2176DB7600FED04D /* WLNMineFormDetailHeadView.m in Sources */,
 				23C402F92187BD88004D63E1 /* WLNData+UserDefaults.m in Sources */,
 				2309F8AF215D316200F156E8 /* AppDelegate.m in Sources */,
+				00825A8C218C3E2F0036E8DC /* NSString+Set.m in Sources */,
 				23CF8FA2216E032800CCF4C4 /* WLNMineGForumCtr.m in Sources */,
 				00D0B5C3218011B100EF6BA2 /* UIView+Set.m in Sources */,
 				23C828AD2171C25C0086C253 /* WLNMineEditCtr.m in Sources */,
 				0093CDB321807DD5007A60A7 /* WLNMineAgreeWalletHeadView.m in Sources */,
-				235484702160BCB400BCE879 /* NSObject+RouteRoot.m in Sources */,
 				23CB8616217E5A17007B4B21 /* GalenPayPasswordView.m in Sources */,
 				00D0B5BA217F1F4C00EF6BA2 /* WLNRechargeListCell.m in Sources */,
 				002DE757218054990092E375 /* WLNRechargeDetailCell.m in Sources */,
@@ -2595,12 +2614,14 @@
 				23441E7321826CB100F6C110 /* WLNHandle+USDT.m in Sources */,
 				003CB8FB2179C0DE001DDA03 /* UIControl+hook.m in Sources */,
 				23405618216F55E400888D96 /* WLNMineIntegralCtr.m in Sources */,
+				00825A8F218C3EA20036E8DC /* UITableView+Set.m in Sources */,
 				23693CE3217ACC180001A43A /* UIGestureRecognizer+hook.m in Sources */,
 				236346E1216289C800CFF257 /* DAConfig.m in Sources */,
 				23B9ECB1217E870A0097D89D /* IconFont.m in Sources */,
 				00B7F4CC217DD796009208C9 /* WLNTradeHangCell.m in Sources */,
 				0077FED9217ED20500743724 /* WLNMineAgreeWalletCtr.m in Sources */,
 				23B9ECB9217E870A0097D89D /* UIImage+resize.m in Sources */,
+				00825A89218C3DB90036E8DC /* NSObject+Set.m in Sources */,
 				23F9C92C2163E13A000EDFC4 /* WLNShopADView.m in Sources */,
 				00D0B5C021800A6900EF6BA2 /* WLNScanCtr.m in Sources */,
 				23CB8615217E5A17007B4B21 /* GalneProgressView.m in Sources */,
@@ -2609,12 +2630,12 @@
 				00A5EBF22177301E00FED04D /* WLNMineGHBHeadCell.m in Sources */,
 				23CF8F99216DFF4D00CCF4C4 /* WLNMineGLiveCell.m in Sources */,
 				236346F12162B45F00CFF257 /* WLNMineHeadCell.m in Sources */,
+				00825A93218C4C0E0036E8DC /* WLNEmptyView.m in Sources */,
 				23F9C9262163E09F000EDFC4 /* WLNShopItemCell.m in Sources */,
 				0085F38F218464E600DAD323 /* SetHeadView.m in Sources */,
 				0089FB532175C15C002C3465 /* WLNMineFormBottomCell.m in Sources */,
 				23693CEA217ADDC00001A43A /* NSArray+HYBUnicodeReadable.m in Sources */,
 				236346FC2162D86E00CFF257 /* WLNHomeCountCell.m in Sources */,
-				00DE4287217597CF005DDEE0 /* NSObject+Function.m in Sources */,
 				0085F395218464E600DAD323 /* RectView.m in Sources */,
 				23AC68C3216B3C5700580EA5 /* WLNMineChargeCtr.m in Sources */,
 				0077FEDF217ED41500743724 /* WLNMineAgreeWalletHeadCell.m in Sources */,
@@ -2656,7 +2677,6 @@
 				00048FA42181767800969F11 /* WLNTradeLawBuyCtr.m in Sources */,
 				236346F62162D85000CFF257 /* WLNHomeNewCell.m in Sources */,
 				00B76B132178923800802011 /* WLNRechargeCtr.m in Sources */,
-				23D17B4D217431500004D877 /* UITableView+NewTableView.m in Sources */,
 				2346E7C0216B3624002074D5 /* WLNMineIDCertifiedCtr.m in Sources */,
 				00048FDC2181BE1A00969F11 /* WLNTradeBBOrderCell.m in Sources */,
 				00048FC62181BA1B00969F11 /* WLNTradeBBCtr.m in Sources */,

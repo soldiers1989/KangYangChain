@@ -11,43 +11,52 @@
 
 <UIView layout="" attr="@:css/colors">
 
-    <UIView layout="margin:10,marginTop:30" attr="bgColor:white,borderRadius:7">
+    <UIView layout="margin:10,marginTop:30,flexDirection:row" attr="bgColor:white,borderRadius:7">
 
-    <UIView layout="flexDirection:row" attr="">
-        <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:请输入GHB数量"/>
-        <UITextField name="" layout="" attr="fontSize:14,color:black,textAlign:left,placeholder:,text:"/>    
+    <UIView layout="" attr="">
 
-    </UIView>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+        <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:数量(GHB)"/>
 
-    <UIView layout="flexDirection:row" attr="">
-        <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:金额(元)"/>
-        <UITextField name="" layout="" attr="fontSize:14,color:black,textAlign:left,placeholder:,text:"/>
-    </UIView>
+        <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+        <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:充值比例"/>
 
-    <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:请选在支付方式"/>
+         <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
-    <UIView layout="flexDirection:row" attr="">
-        <UIImageView attr="source:" layout=""/>
-        <UILabel name="" layout="margin:20" attr="fontSize:14,color:#333333,linesNum:0,text:支付宝"/>
-        <UIImageView attr="source:"/>
+        <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:金额(USDT)"/>
+
+        <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+        <UILabel name="" layout="margin:15" attr="fontSize:14,color:#333333,linesNum:0,text:交易说明"/>
+
 
     </UIView>
 
-    <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
-    <UIView layout="flexDirection:row" attr="">
 
-        <UIImageView attr="source:" layout=""/>
-         <UILabel name="" layout="margin:20" attr="fontSize:14,color:#333333,linesNum:0,text:微信"/>
-         <UIImageView attr="source:"/>
+    <UIView layout="flex:1" attr="">
+
+        <UITextField name="" layout="margin:15" attr="fontSize:14,color:black,textAlign:left,placeholder:请输入充值数量,text:"/>    
+
+        <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+        <UILabel name="" layout="margin:15" attr="fontSize:14,color:gray,linesNum:0,text:1"/>
+
+        <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+        <UILabel name="" layout="margin:15" attr="fontSize:14,color:gray,linesNum:0,text:0.00"/>
+
+        <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+
+        <UILabel name="" layout="margin:15" attr="fontSize:14,color:gray,linesNum:0,text:xxxxxxxxxxxxxxxxxxxx"/>
 
     </UIView>
+
+
+
+
       
     </UIView>
 
