@@ -34,10 +34,8 @@
     
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    
-    dic[DELEGATES] = self;
     dic[@"uid"] = self.userModel.userid;
-    [self routeTargetName:@"WLNHandle" actionName:@"lockConfig:" param:dic];
+    [self routeTargetName:Handle actionName:@"lockConfig:" param:dic];
     
 }
 - (void)lockList{
@@ -49,11 +47,10 @@
     
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[DELEGATES] = self;
     dic[@"ghb"] = @"100";
     dic[@"ghb_lock_category_id"] = @"1";
     
-    [self routeTargetName:@"WLNHandle" actionName:@"lockAction:" param:dic];
+    [self routeTargetName:Handle actionName:@"lockAction:" param:dic];
 
 }
 - (void)result:(id)data sel:(NSString *)sel{

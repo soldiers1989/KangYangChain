@@ -39,9 +39,8 @@
     
     
     NSMutableDictionary *dic =@{}.mutableCopy;
-    dic[DELEGATES] = self;
-    dic[@"uid"] = [self userModel].userid;    
-    [self routeTargetName:@"WLNHandle" actionName:@"buyInfo:" param:dic];
+    dic[@"uid"] = [self userModel].userid;
+    [self routeTargetName:Handle actionName:@"buyInfo:" param:dic];
     
     
 }
@@ -78,14 +77,12 @@
     }
     
     NSMutableDictionary *dic =@{}.mutableCopy;
-  
-    dic[DELEGATES] = self;
     dic[@"uid"] = [self userModel].userid;
     dic[@"num"] = self.countTxt.text;
     
     
     
-    [self routeTargetName:@"WLNHandle" actionName:@"buyGHB:" param:dic];
+    [self routeTargetName:Handle actionName:@"buyGHB:" param:dic];
     
 
     

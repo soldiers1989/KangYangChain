@@ -14,7 +14,6 @@
 
 @implementation WLNHandle
 
-
 /**
  所有请求返回结果全部经过这里
  
@@ -33,17 +32,17 @@
         
         [self emptyDataHandleWith:data];
         
-        if (self.delegate && [self.delegate respondsToSelector:@selector(result:sel:)]) {
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
             
-            [self.delegate result:data[@"data"] sel:NSStringFromSelector(self.sel)];
+            [self.reqDelegate result:data[@"data"] sel:NSStringFromSelector(self.sel)];
             
         }
         
     }else{
         
-        if (self.delegate  && [self.delegate respondsToSelector:@selector(faild:sel:)]) {
+        if (self.reqDelegate  && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
             
-            [self.delegate faild:data[@"message"] sel:NSStringFromSelector(self.sel)];
+            [self.reqDelegate faild:data[@"message"] sel:NSStringFromSelector(self.sel)];
             
         }
         [SVProgressHUD showErrorWithStatus:data[@"message"]];
@@ -62,14 +61,14 @@
         
         if ([data[@"data"]count] == 0) {
             
-            if (self.delegate && [self.delegate respondsToSelector:@selector(emptyShow)]) {
-                [self.delegate emptyShow];
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(emptyShow)]) {
+                [self.reqDelegate emptyShow];
                 
             }
         }else{
             
-            if (self.delegate && [self.delegate respondsToSelector:@selector(removeEmptyShow)]) {
-                [self.delegate removeEmptyShow];
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(removeEmptyShow)]) {
+                [self.reqDelegate removeEmptyShow];
                 
             }
         }
@@ -93,6 +92,7 @@
 }
 
 
+
 - (void)rmbBackWith:(id)data{
     
     
@@ -102,9 +102,9 @@
     
     double rmb = last.doubleValue / USD.doubleValue / 100;
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(result:sel:)]) {
+    if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
         
-        [self.delegate result:@(rmb) sel:NSStringFromSelector(self.sel)];
+        [self.reqDelegate result:@(rmb) sel:NSStringFromSelector(self.sel)];
         
     }
     

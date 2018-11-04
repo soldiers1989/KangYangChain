@@ -32,7 +32,7 @@
     [self.phoneT changePlaceHolderDefaultColor];
     [self.pwdT changePlaceHolderDefaultColor];
     
-    [self routeTargetName:@"WLNHandle" actionName:@"judgeNet"];
+    [self routeTargetName:Handle actionName:@"judgeNet"];
 
 
 }
@@ -62,13 +62,12 @@
 
     NSMutableDictionary *dic = @{}.mutableCopy;
     
-    dic[DELEGATES] = self;
     dic[@"account"] = self.phoneT.text;
     dic[@"pass"] = self.pwdT.text;
     dic[@"app"] = @(1);
     
     
-    [self routeTargetName:@"WLNHandle" actionName:@"log:" param:dic];
+    [self routeTargetName:Handle actionName:@"log:" param:dic];
     
     [SVProgressHUD show];
 
@@ -94,14 +93,12 @@
         if (data) {
             
             WLNMainTabBarCtr *tabbar = (WLNMainTabBarCtr *)self.tabBarController;
-
-            NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
-            
-            [de setValue:data forKey:@"log"];
             
             [tabbar isLog:YES];
             
             [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+            
+            [self routeTargetName:Handle actionName:@"saveUserDic:" param:data];
             
         }
      

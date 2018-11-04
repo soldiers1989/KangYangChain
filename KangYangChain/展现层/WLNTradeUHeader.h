@@ -36,6 +36,11 @@
 #import "WLNTradeBBOrderCell.h"
 #import "WLNTradeLawBHeaderView.h"
 #import "WLNTradeLawBPublishCtr.h"
-
+#import "WLNTradeLawBOrderCtr.h"
+#import "WLNTradeLawBOrderCell.h"
+#import "WLNTradeLawBOrderDetailCtr.h"
+#import "WLNTradeLawBOrderDetailBottomCell.h"
+#import "WLNTradeLawBOrderDetailTopCell.h"
+#import "WLNTradeLawBOrderDetailFootView.h"
 
 #endif /* WLNTradeUHeader_h */

@@ -19,6 +19,9 @@
         [self swizzleMethod:@selector(viewDidLoad) swizzledSelector:@selector(__viewDidLoad)];
         
         [self swizzleMethod:@selector(viewWillAppear:) swizzledSelector:@selector(fr_viewWillAppear:)];
+        
+        [self swizzleMethod:NSSelectorFromString(@"dealloc") swizzledSelector:@selector(fr_dealloc)];
+
 
     });
                   
@@ -27,7 +30,12 @@
 
     
 }
+- (void)fr_dealloc{
+    
+    NSLog(@"🐯🐯🐯 当前控制器被释放 : %@",NSStringFromClass([self class]));
 
+    
+}
 - (void)fr_viewWillAppear:(BOOL)animated{
     
     NSLog(@"🍓🍓🍓 当前控制器 : %@",NSStringFromClass([self class]));

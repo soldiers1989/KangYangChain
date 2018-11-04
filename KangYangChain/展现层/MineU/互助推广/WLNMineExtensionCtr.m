@@ -19,6 +19,7 @@
 
 @implementation WLNMineExtensionCtr
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -60,12 +61,10 @@
 - (void)matchList{
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[DELEGATES] = self;
-
     dic[@"uid"] = [self userModel].userid;
     dic[@"page"] = @"1";
     
-    [self routeTargetName:@"WLNHandle" actionName:@"matchList:" param:dic];
+    [self routeTargetName:Handle actionName:@"matchList:" param:dic];
     
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

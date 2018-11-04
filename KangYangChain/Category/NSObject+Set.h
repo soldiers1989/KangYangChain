@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)routeTargetName:(NSString*)targetName actionName:(NSString*)actionName param:(id)param;
 - (id)routeTargetName:(NSString*)targetName actionName:(NSString*)actionName blockParam:(void(^)(NSDictionary*))completion;
 
+/**
+ 此处必须使用strong
+ */
+@property (nonatomic, strong) id <WLNReqstProtocol> reqDelegate;
+
+
 
 @end
 

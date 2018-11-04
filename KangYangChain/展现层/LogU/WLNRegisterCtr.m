@@ -75,8 +75,6 @@
 }
 - (void)registerAction{
     
-    NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[DELEGATES] = self;
     
     if (self.phoneT.text.length != 11) {
         [SVProgressHUD showErrorWithStatus:@"手机格式不正确".Intl];
@@ -96,12 +94,14 @@
         return;
         
     }
+    
+    NSMutableDictionary *dic = @{}.mutableCopy;
     dic[@"account"] = self.phoneT.text;
     dic[@"pass"] = self.pwdT.text;
     dic[@"verification_code"] = self.codeT.text;
     
     
-    [self routeTargetName:@"WLNHandle" actionName:@"registers:" param:dic];
+    [self routeTargetName:Handle actionName:@"registers:" param:dic];
     
 
     
@@ -115,12 +115,10 @@
     _codeView = tap.view;
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    
-    dic[DELEGATES] = self;
-   
+       
     dic[@"phone"] = self.phoneT.text;
     
-    [self routeTargetName:@"WLNHandle" actionName:@"getCode:" param:dic];
+    [self routeTargetName:Handle actionName:@"getCode:" param:dic];
 
     [self timeCut];
 

@@ -25,7 +25,7 @@
 }
 - (void)saveChange{
     
-    [self routeTargetName:@"WLNHandle" actionName:@"resetName:" param:nil];
+    [self routeTargetName:Handle actionName:@"resetName:"];
     
     
     

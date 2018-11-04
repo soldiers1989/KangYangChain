@@ -10,6 +10,8 @@
 #ifndef WLNConfig_h
 #define WLNConfig_h
 
+#define Handle @"WLNHandle"
+
 #define DEVICEWidth [UIScreen mainScreen].bounds.size.width  //设备尺寸
 #define DEVICEHEIGHT [UIScreen mainScreen].bounds.size.height  //设备尺寸
 #define maingray rgba(245,245,245,1)
@@ -27,9 +29,6 @@
 #define BI_TITLE_ARR @[@"BTC",@"USDT",@"ETH",@"ETC",@"EOS",@"NEBC",@"BNB"]
 
 #define BANLANCE_ACTION(a) [NSString stringWithFormat:@"get%@Balance:",a]
-
-
-#define DELEGATES @"fdsoufdiosaufiosdafdsalfndmsfdsfdsafdshghh"
 
 #define URLS @"fdsjfklsadjfkldsajfkdlsafjdkslafjksdlafjsdl"
 

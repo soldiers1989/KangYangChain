@@ -11,18 +11,13 @@
 
 @implementation WLNHandle (Log)
 
-- (void)requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel{
+- (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel{
     
     
-    
-    self.delegate = dic[DELEGATES];
     self.sel = sel;
     
-    [dic removeObjectForKey:DELEGATES];
     
     NSMutableDictionary *dicp = @{}.mutableCopy;
-    
-    dicp[DELEGATES] = self;
     
     if (url) {
         dicp[URLS] = url;
@@ -34,50 +29,66 @@
     }
     [self routeTargetName:@"WLNData" actionName:@"postWithDic:" param:dicp];
 
-    
-    
-    
-    
-    
  
 }
 
 - (void)log:(NSMutableDictionary *)dic{
     
-    [self requestWith:Logurl dic:dic sel:_cmd];
+    [self __requestWith:Logurl dic:dic sel:_cmd];
     
 }
 - (void)registers:(NSMutableDictionary *)dic{
     
-    [self requestWith:Register dic:dic sel:_cmd];
+    [self __requestWith:Register dic:dic sel:_cmd];
     
 }
 - (void)getCode:(NSMutableDictionary *)dic{
     
-    [self requestWith:Getcode dic:dic sel:_cmd];
+    [self __requestWith:Getcode dic:dic sel:_cmd];
     
 }
 - (void)fafdasfdasfds:(NSMutableDictionary *)dic{
     
     
-    [self requestWith:fdsfdsf dic:dic sel:_cmd];
+    [self __requestWith:fdsfdsf dic:dic sel:_cmd];
     
 }
 - (void)forGet:(NSMutableDictionary *)dic{
     
-    [self requestWith:ForGet dic:dic sel:_cmd];
+    [self __requestWith:ForGet dic:dic sel:_cmd];
     
 }
 
 - (void)logout:(NSMutableDictionary *)dic{
     
     
-    [self requestWith:OutLog dic:dic sel:_cmd];
+    [self __requestWith:OutLog dic:dic sel:_cmd];
     
 }
 - (void)judgeNet{
     
-    [self requestWith:@"www.baidu.com" dic:nil sel:_cmd];
+    [self __requestWith:@"www.baidu.com" dic:nil sel:_cmd];
+    
+}
+- (NSDictionary *)readUserDic{
+    
+    NSUserDefaults *de =[NSUserDefaults standardUserDefaults];
+    NSDictionary *dic = [de objectForKey:@"log"];
+    
+    return dic;
+    
+}
+- (void)saveUserDic:(NSMutableDictionary *)dic{
+    
+    NSUserDefaults *de =[NSUserDefaults standardUserDefaults];
+    [de setValue:dic forKey:@"log"];
+    
+}
+- (void)deleteUserDic{
+    
+    NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
+    
+    [de removeObjectForKey:@"log"];
     
 }
 @end

@@ -49,6 +49,7 @@
     return tableview;
     
 }
+
 - (void)tabType:(TAB_FRAME_TYPE)type{
     
     if ([self isKindOfClass:UIViewController.class]) {
@@ -112,7 +113,9 @@
     NSLog(@"添加缺省图");
     
     WLNEmptyView *view = [[WLNEmptyView alloc]initWithFrame:[self resetEmptyFrame]];
-
+    if (!self.tab) {
+        return;
+    }
     self.tab.tableFooterView = view;
     
     
@@ -121,6 +124,9 @@
     
     NSLog(@"移除缺省图");
     
+    if (!self.tab) {
+        return;
+    }
     self.tab.tableFooterView = nil;
     
     

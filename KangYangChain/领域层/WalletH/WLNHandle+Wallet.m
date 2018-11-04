@@ -18,16 +18,11 @@
 
 - (void)rmbPrice:(NSMutableDictionary *)dic{
     
-    self.delegate = dic[DELEGATES];
     self.sel = @selector(rmbPrice:);
-    
-    [dic removeObjectForKey:DELEGATES];
     
     
     NSMutableDictionary *dicp = @{}.mutableCopy;
-    
-    dicp[DELEGATES] = self;
-    
+        
     dicp[URLS] = UpdateTicker;
 
     

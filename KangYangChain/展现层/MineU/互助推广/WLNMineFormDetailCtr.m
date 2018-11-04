@@ -52,11 +52,10 @@
 - (void)requst{
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[DELEGATES] = self;
     dic[@"uid"] = [self userModel].userid;
     dic[@"id"] = self.lastDic[@"id"];
     
-    [self routeTargetName:@"WLNHandle" actionName:@"matchInfo:" param:dic];
+    [self routeTargetName:Handle actionName:@"matchInfo:" param:dic];
     
 }
 - (void)faild:(id)data sel:(NSString *)sel{
@@ -157,12 +156,11 @@
     
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    dic[DELEGATES] = self;
     dic[@"uid"] = [self userModel].userid;
     dic[@"id"] = ids;
     dic[@"pwd"] = @"123456";
     
-    [self routeTargetName:@"WLNHandle" actionName:@"payGHB:" param:dic];
+    [self routeTargetName:Handle actionName:@"payGHB:" param:dic];
     
     
     

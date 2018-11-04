@@ -13,18 +13,15 @@
 @implementation WLNHandle (USDT)
 
 - (void)getUSDTKeys:(NSMutableDictionary *)dic{
-    
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
+  
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:USDTKEY].mutableCopy;
 
     if (chainDic) {
         
-        if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
             
-            [delegate result:chainDic sel:NSStringFromSelector(_cmd)];
+            [self.reqDelegate result:chainDic sel:NSStringFromSelector(_cmd)];
         }
         
     }else{
@@ -38,9 +35,9 @@
             
             [WLNKeyChain saveKeychainValue:dic key:USDTKEY];
             
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:dic sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate result:dic sel:NSStringFromSelector(_cmd)];
                 
             }
             
@@ -56,11 +53,7 @@
  */
 
 - (void)getUSDTBalance:(NSMutableDictionary *)dic{
-    
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
-    
+
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:USDTKEY].mutableCopy;
 
     NSString *address = chainDic[@"address"];
@@ -70,16 +63,16 @@
         
         if (suc) {
             
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:dict[address][@"final_balance"] sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate result:dict[address][@"final_balance"] sel:NSStringFromSelector(_cmd)];
                 
             }
         }else{
             
-            if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
                 
-                [delegate faild:dict sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate faild:dict sel:NSStringFromSelector(_cmd)];
                 
             }
         }
@@ -90,11 +83,7 @@
 }
 - (void)sendUSDT:(NSMutableDictionary *)dic{
     
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
-    
-    
+
     NSString *sendAddress = dic[@"sendAddress"];
     
     NSString *sendNum = dic[@"sendNum"];
@@ -105,18 +94,18 @@
         
         if (suc) {
             
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:hashStr sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate result:hashStr sel:NSStringFromSelector(_cmd)];
                 
             }
             
             
         }else{
             
-            if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
                 
-                [delegate faild:hashStr sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate faild:hashStr sel:NSStringFromSelector(_cmd)];
                 
             }
             
@@ -129,12 +118,7 @@
 
 - (void)getUSDTOrder:(NSMutableDictionary *)dic{
     
-    
-    
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
-    
+  
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:USDTKEY].mutableCopy;
     
@@ -145,18 +129,18 @@
         
         if (suc) {
             
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:array.mutableCopy sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate result:array.mutableCopy sel:NSStringFromSelector(_cmd)];
                 
             }
             
             
         }else{
             
-            if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
                 
-                [delegate faild:array sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate faild:array sel:NSStringFromSelector(_cmd)];
                 
             }
         }

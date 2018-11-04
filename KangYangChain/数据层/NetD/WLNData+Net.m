@@ -109,25 +109,20 @@
 }
 - (void)getWithDic:(NSMutableDictionary *)dic{
     
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
-    
-    
     [self __getDataWithUrl:dic[URLS] resultBlock:^(id result) {
         
-        if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
             
-            [delegate result:result sel:NSStringFromSelector(_cmd)];
+            [self.reqDelegate result:result sel:NSStringFromSelector(_cmd)];
             
         }
         
         
     } failureBlock:^(NSError * _Nonnull error) {
         
-        if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
             
-            [delegate faild:error sel:NSStringFromSelector(_cmd)];
+            [self.reqDelegate faild:error sel:NSStringFromSelector(_cmd)];
             
         }
         
@@ -140,23 +135,21 @@
 }
 - (void)postWithDic:(NSMutableDictionary *)dic{
     
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
-    
+    NSLog(@"%@",self.reqDelegate);
+
     [self __postDataWithUrl:dic[URLS] params:dic[PRAMAS] resultBlock:^(id result) {
         
-        if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
             
-            [delegate result:result sel:NSStringFromSelector(_cmd)];
+            [self.reqDelegate result:result sel:NSStringFromSelector(_cmd)];
             
         }
         
     } failureBlock:^(NSError * _Nonnull error) {
         
-        if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
             
-            [delegate faild:error sel:NSStringFromSelector(_cmd)];
+            [self.reqDelegate faild:error sel:NSStringFromSelector(_cmd)];
             
         }
         

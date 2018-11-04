@@ -41,10 +41,8 @@
     self.linkLab.text = str;
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    
-    dic[DELEGATES] = self;
     dic[@"uid"] = self.userModel.userid;
-    [self routeTargetName:@"WLNHandle" actionName:@"yaoqingList:" param:dic];
+    [self routeTargetName:Handle actionName:@"yaoqingList:" param:dic];
     
 }
 
