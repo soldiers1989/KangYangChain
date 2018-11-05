@@ -42,5 +42,13 @@
 #import "WLNTradeLawBOrderDetailBottomCell.h"
 #import "WLNTradeLawBOrderDetailTopCell.h"
 #import "WLNTradeLawBOrderDetailFootView.h"
+#import "WLNTradeLawBPublishCell.h"
+
+#import "WLNTradeTradeHeadCell.h"
+#import "WLNTradeAgreementLeftCtr.h"
+#import "WLNTradeAgreementRightCtr.h"
+#import "WLNTradeAgreementCenterCtr.h"
+#import "WLNTradeTradeBodyCell.h"
+#import "WLNTradeAgreementLeftHeadView.h"
 
 #endif /* WLNTradeUHeader_h */

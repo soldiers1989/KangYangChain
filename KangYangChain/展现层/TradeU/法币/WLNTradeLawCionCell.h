@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNTradeLawCionCell : FlexBaseTableCell
+@property (nonatomic, strong) UIView *bottomView;
 
 @end
 

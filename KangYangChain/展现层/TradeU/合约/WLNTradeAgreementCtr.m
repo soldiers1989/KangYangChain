@@ -8,10 +8,15 @@
 
 #import "WLNTradeAgreementCtr.h"
 
-@interface WLNTradeAgreementCtr ()<UITableViewDelegate,UITableViewDataSource,WLNSimpleHeadViewDelegate>
+@interface WLNTradeAgreementCtr ()<WLNSimpleHeadViewDelegate>
 {
     NSInteger _currentType;
+    NSArray *_vcArr;
 }
+@property (nonatomic, strong) WLNTradeAgreementLeftCtr *leftVc;
+@property (nonatomic, strong) WLNTradeAgreementCenterCtr *centerVc;
+@property (nonatomic, strong) WLNTradeAgreementRightCtr *rightVc;
+
 @end
 
 @implementation WLNTradeAgreementCtr
@@ -20,83 +25,81 @@
     [super viewDidLoad];
     
     self.title = @"合约";
+    self.view.backgroundColor = UIColor.whiteColor;
     
-    self.tab.delegate = self;
-    self.tab.dataSource = self;
     
-    [self tabType:1];
+    _vcArr = @[self.leftVc.view,self.centerVc.view,self.rightVc.view];
     
-    [self.tab registerClass:WLNTradeHoldCell.class forCellReuseIdentifier:@"WLNTradeHoldCell"];
-    [self.tab registerClass:WLNTradeTradeCell.class forCellReuseIdentifier:@"WLNTradeTradeCell"];
-    [self.tab registerClass:WLNTradeHangCell.class forCellReuseIdentifier:@"WLNTradeHangCell"];
+    
+
+    [self.view addSubview:_vcArr.firstObject];
+    
+    
 
     
     WLNSimpleHeadView *view = [[WLNSimpleHeadView alloc]initWithDelegate:self titleArr:@[@"交易",@"挂单",@"持仓"]];
-    self.tab.tableHeaderView = view;
+
+    [self.view addSubview:view];
+    
+    
+    WLNTradeTradeHeadView *viewb = [[WLNTradeTradeHeadView alloc]initWithFrame:CGRectMake(0, 46, DEVICEWidth, 40)];
+    
+    [self.view addSubview:viewb];
+    
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:@"add".image style:UIBarButtonItemStyleDone target:self action:@selector(menuAciton)];
+    
     
     
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+- (void)menuAciton{
     
-    WLNTradeTradeHeadView *view = [[WLNTradeTradeHeadView alloc]init];
-    
-    return view;
     
 }
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    self.leftVc.view.frame = CGRectMake(0, 84, DEVICEWidth, DEVICEHEIGHT - 84 - 64);
+    self.centerVc.view.frame = CGRectMake(0, 84, DEVICEWidth, DEVICEHEIGHT - 84 - 64);
+    self.rightVc.view.frame = CGRectMake(0, 84, DEVICEWidth, DEVICEHEIGHT - 84 - 64);
+}
+
 - (void)simpleClickBack:(UIButton *)button tag:(NSInteger)tag{
     
     _currentType = tag;
-    [self.tab reloadData];
     
-    
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return 5;
-    
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (_currentType == 0) {
-        
-        return [self trade_tableView:tableView cellForRowAtIndexPath:indexPath];
-        
-    }else if (_currentType == 1){
-        
-        return [self hang_bleView:tableView cellForRowAtIndexPath:indexPath];
-        
-    }else{
-        return [self hold_tableView:tableView cellForRowAtIndexPath:indexPath];
-        
+    for (int i =0 ;i < _vcArr.count; i ++) {
+        UIView *view = _vcArr[i];
+        if (i == tag) {
+            [self.view addSubview:view];
+        }else{
+            [view removeFromSuperview];
+        }
     }
     
-}
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
-}
-- (UITableViewCell *)trade_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    WLNTradeTradeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeTradeCell"];
-    
-    return cell;
     
     
 }
-- (UITableViewCell *)hang_bleView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    WLNTradeHangCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeHangCell"];
-    
-    return cell;
-    
+
+- (WLNTradeAgreementLeftCtr *)leftVc{
+    if (_leftVc == nil) {
+        _leftVc = [[WLNTradeAgreementLeftCtr alloc]init];
+    }
+    return _leftVc;
 }
-- (UITableViewCell *)hold_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    WLNTradeHoldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeHoldCell"];
-    
-    return cell;
+- (WLNTradeAgreementCenterCtr *)centerVc{
+    if (_centerVc == nil) {
+        _centerVc = [[WLNTradeAgreementCenterCtr alloc]init];
+        
+    }
+    return _centerVc;
+}
+- (WLNTradeAgreementRightCtr *)rightVc{
+    if (_rightVc == nil) {
+        _rightVc = [[WLNTradeAgreementRightCtr alloc]init];
+        
+    }
+    return _rightVc;
     
 }
 

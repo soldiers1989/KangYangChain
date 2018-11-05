@@ -43,7 +43,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     WLNTradeLawBOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeLawBOrderCell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
 }

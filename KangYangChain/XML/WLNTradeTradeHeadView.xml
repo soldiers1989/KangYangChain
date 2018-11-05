@@ -10,13 +10,13 @@
 
 <UIView layout="flexDirection:row,justifyContent:space-between" attr="bgColor:white">
 
-    <UIView layout="flexDirection:row,alignItems:center" attr="">
-        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:BTC 当真 0921"/>
+    <FlexTouchView onPress="headClickAction:" layout="flexDirection:row,alignItems:center" attr="underlayColor:darkGray">
+        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:BTC 指数"/>
         <UIImageView attr="source:Arrow_down_white"/>
-    </UIView>
+    </FlexTouchView>
 
-    <UIView layout="flexDirection:row" attr="">
-        <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:$6544.15"/>
+    <UIView layout="flexDirection:row,marginRight:10" attr="">
+        <UILabel name="" layout="" attr="fontSize:14,color:green,linesNum:0,text:$6544.15"/>
         <UIImageView attr="source:"/>
     </UIView>
 

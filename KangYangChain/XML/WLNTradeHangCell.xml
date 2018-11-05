@@ -10,30 +10,43 @@
 
 <UIView layout="" attr="@:css/colors">
 
-    <UIView layout="marginBottom:10" attr="bgColor:white">
-        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:订单:90000000"/>
 
-        <UIView layout="margin:10,justifyContent:space-between,flexDirection:row" attr="">
-            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:币种:BTC/USDT"/>
-            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:类型:限价"/>
-            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:数量:1"/>
-        </UIView>
-
-        <UIView layout="margin:10,flexDirection:row" attr="">
-            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:现价:6666.90"/>
-            <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:"/>
-        </UIView>
-
-        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:占用USDT:5758"/>
-
-        <UIView layout="alignItems:center,margin:10" attr="">
-
-            <FlexTouchView onPress="" layout="" attr="underlayColor:darkGray,bgColor:#1D253C,
-            borderRadius:7">
-                <UILabel name="" layout="margin:10" attr="fontSize:14,color:white,linesNum:0,text:取消订单"/>
-            </FlexTouchView>
-        </UIView>
+    <UIView layout="margin:5" attr="bgColor:white">
+    
+    
+    <UIView layout="margin:5" attr="bgColor:white">
+        <UILabel name="" layout="" attr="fontSize:12,color:green,linesNum:0,text:买涨/开多(BTC/USDT 20X)"/>
     </UIView>
+
+    <UILabel name="" layout="height:0.5" attr="fontSize:12,@:css/colors,linesNum:0,text:"/>
+    
+    <UIView layout="flexDirection:row" attr="">
+        <UIView layout="" attr="">
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:数量:"/>
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:挂单价:"/>
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止盈:"/>
+        </UIView>
+
+        <UIView layout="" attr="">
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:盈亏:"/>
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:冻结:"/>
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止损:"/>
+
+        </UIView>
+
+
+    </UIView>
+
+    <UILabel name="" layout="height:0.5" attr="fontSize:12,@:css/colors,linesNum:0,text:"/>
+
+    <UIView layout="alignItems:flex-end,flex:1" attr="">
+
+        <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:2018-9-9"/>
+
+    </UIView>
+
+    </UIView>
+
 
 
 </UIView>

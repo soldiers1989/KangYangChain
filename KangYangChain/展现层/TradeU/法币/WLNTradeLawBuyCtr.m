@@ -21,12 +21,12 @@
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
-    self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self tabType:1];
     
     
     [self.tab registerClass:WLNTradeLawBuyCell.class forCellReuseIdentifier:@"WLNTradeLawBuyCell"];
     
+    [self.tab registerClass:WLNTradeLawCionCell.class forCellReuseIdentifier:@"WLNTradeLawCionCell"];
     
     
 }
@@ -37,7 +37,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == 0) {
+        return [self head_tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
+    return [self body_tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+}
+- (UITableViewCell *)head_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    WLNTradeLawCionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeLawCionCell"];
+    return cell;
+    
+}
+- (UITableViewCell *)body_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     WLNTradeLawBuyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeLawBuyCell"];
     cell.forwarder = self;

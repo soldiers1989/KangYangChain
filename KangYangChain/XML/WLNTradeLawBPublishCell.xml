@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-   WLNTradeLawBPublishCtr.xml
+   WLNTradeLawBPublishCell.xml
    KangYangChain
 
-   Created by edz on 2018/10/27.
+   Created by edz on 2018/11/5.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIView layout="marginTop:45" attr="@:css/colors">
-
+<UIView layout="" attr="@:css/colors">
+    
     <UIView layout="flexDirection:row" attr="bgColor:white">
-
+        
         <UIView layout="" attr="">
             <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:交易价格"/>
             <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:数量(USDT)"/>
             <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:金额(CNY)"/>
-
+            
         </UIView>
         <UIView layout="" attr="">
-
+            
             <UITextField name="" layout="margin:10" attr="fontSize:12,color:black,textAlign:left,placeholder:请输入交易价格,text:"/>
             <UITextField name="" layout="margin:10" attr="fontSize:12,color:black,textAlign:left,placeholder:请输入交易数量,text:"/>
             <UITextField name="" layout="margin:10" attr="fontSize:12,color:black,textAlign:left,placeholder:最小甲乙金额2000,text:"/>
-        
+            
         </UIView>
     </UIView>
-
+    
     <UIView layout="flexDirection:row" attr="">
         <UILabel name="" layout="margin:10" attr="fontSize:10,color:#333333,linesNum:0,text:买单保证金:100.0USDT"/>
         <UILabel name="" layout="" attr="fontSize:10,color:#333333,linesNum:0,text:平台服务费0.0%"/>
     </UIView>
-
-    <UIView layout="flexDirection:row,alignItems:flex-start,height:100" attr="bgColor:white">
     
+    <UIView layout="flexDirection:row,alignItems:flex-start,height:100" attr="bgColor:white">
+        
         <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:交易说明"/>
         <UILabel name="" layout="margin:10,flex:1" attr="fontSize:12,color:gray,linesNum:0,text:1.订单有效时间为15分钟\,请及时点击(我已支付)按钮"/>
-
-
+        
+        
     </UIView>
-
+    
     <FlexTouchView onPress="" layout="margin:20,justifyContent:center,alignItems:center," attr="underlayColor:darkGray,bgColor:#1E253D,
-    borderRadius:7">
+        borderRadius:7">
         <UILabel name="" layout="margin:10" attr="fontSize:12,color:white,linesNum:0,text:发布委托单"/>
     </FlexTouchView>
-
+    
     
 </UIView>

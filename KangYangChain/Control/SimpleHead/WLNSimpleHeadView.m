@@ -33,7 +33,7 @@
         self.backgroundColor = maingray;
         self.delegate = delegate;
         [self createUI:arr];
-        [self shadow];
+//        [self shadow];
         
     }
     

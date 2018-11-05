@@ -67,7 +67,7 @@
 }
 - (void)judgeNet{
     
-    [self __requestWith:@"www.baidu.com" dic:nil sel:_cmd];
+    [self __requestWith:@"http://www.baidu.com" dic:nil sel:_cmd];
     
 }
 - (NSDictionary *)readUserDic{

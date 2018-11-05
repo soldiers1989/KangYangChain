@@ -12,7 +12,7 @@
 
 - (User *)userModel{
     
-    NSDictionary *dic = [self routeTargetName:Handle actionName:@"userDic"];
+    NSDictionary *dic = [self routeTargetName:Handle actionName:@"readUserDic"];
     
     User *model = [[User alloc]initWithDictionary:dic.mutableCopy];
     

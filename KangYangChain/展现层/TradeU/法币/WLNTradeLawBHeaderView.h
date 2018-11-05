@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNTradeLawBHeaderView : FlexCustomBaseView
+@property (nonatomic, strong) UIView *headBottomView;
 
 @end
 

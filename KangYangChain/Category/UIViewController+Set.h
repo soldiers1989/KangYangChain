@@ -24,12 +24,18 @@ typedef NS_ENUM(NSInteger, TAB_FRAME_TYPE) {
  */
 @property (nonatomic, strong) UITableView *tab;
 
+@property (nonatomic, assign) TAB_FRAME_TYPE type;
+
+
 - (void)push:(UIViewController *)vc;
 
 - (void)tabType:(TAB_FRAME_TYPE)type;
 
 - (void)customPop;
 
+- (CGRect)resetTabFrame;
+
+- (CGRect)resetEmptyFrame;
 
 @end
 

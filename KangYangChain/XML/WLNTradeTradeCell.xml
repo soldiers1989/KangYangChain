@@ -7,28 +7,105 @@
    Created by edz on 2018/10/22.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIView layout="" attr="">
+<UIView layout="flexDirection:row" attr="">
 
-    
-    <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:BTC合约"/>
+    <UIView layout="width:50%" attr="">
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
 
-    <UIView layout="flexDirection:row,justifyContent:space-around,margin:10" attr="">
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:限价单"/>
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:20X"/>
 
-        <UIView layout="" attr="borderColor:gray,borderWidth:1">
-            <UILabel name="" layout="margin:5" attr="fontSize:14,color:#333333,linesNum:0,text:当周 1012"/>
         </UIView>
 
-        <UIView layout="" attr="borderColor:gray,borderWidth:1">
-            <UILabel name="" layout="margin:5" attr="fontSize:14,color:#333333,linesNum:0,text:次周 1012"/>
+        <UIView layout="flexDirection:row,margin:10,justifyContent:space-around" attr="borderColor:gray,borderWidth:1">
+            <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:数量"/>
+            <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:BTC"/>
         </UIView>
 
-        <UIView layout="" attr="borderColor:gray,borderWidth:1">
-            <UILabel name="" layout="margin:5" attr="fontSize:14,color:#333333,linesNum:0,text:季度 1012"/>
+        <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止盈止损设置"/>
+
+        <UIView layout="flexDirection:row,margin:10" attr="">
+
+            <UIView layout="flex:1" attr="borderColor:gray,borderWidth:1">
+                <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:>USDT,
+                textAlign:center"/>
+            </UIView>
+            <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:或"/>
+            <UIView layout="flex:1" attr="borderColor:gray,borderWidth:1">
+                <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:USDT,
+                textAlign:center"/>
+            </UIView>
+
         </UIView>
+
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
+            <UIView layout="" attr="">
+                <UILabel name="" layout="margin:10,marginBottom:0" attr="fontSize:12,color:#333333,linesNum:0,text:总金额"/>
+                <UILabel name="" layout="margin:10,marginBottom:0" attr="fontSize:12,color:#333333,linesNum:0,text:风险率"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:可用"/>
+
+            </UIView>
+            <UIView layout="" attr="">
+
+                <UILabel name="" layout="margin:10,marginBottom:0" attr="fontSize:12,color:#333333,linesNum:0,text:0.000 USDT"/>
+                <UILabel name="" layout="margin:10,marginBottom:0" attr="fontSize:12,color:#333333,linesNum:0,text:0.00%"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:0.000 USDT"/>
+
+            </UIView>
+
+        </UIView>
+
+        <FlexTouchView onPress="" layout="margin:10,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:green,
+        ,borderRadius:7">
+            <UILabel name="" layout="margin:5" attr="fontSize:12,color:white,linesNum:0,text:买涨/做多"/>
+        </FlexTouchView>
+
+        <FlexTouchView onPress="" layout="margin:10,marginTop:0,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:red,
+        borderRadius:7">
+            <UILabel name="" layout="margin:5" attr="fontSize:12,color:white,linesNum:0,text:买跌/做空"/>
+        </FlexTouchView>
+
 
     </UIView>
 
-    <UILabel name="" layout="height:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
+    <UIView layout="width:50%" attr="">
+
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:价格"/>
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:时间"/>
+        </UIView>
+
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
+            <UIView layout="" attr="">
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:9393.00"/>
+
+
+            </UIView>
+
+            <UIView layout="" attr="">
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:15:38:03"/>
+
+            </UIView>
+        </UIView>
+
+
+
+    </UIView>
+
 
 
 </UIView>

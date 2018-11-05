@@ -49,24 +49,27 @@
     return tableview;
     
 }
+- (void)setType:(TAB_FRAME_TYPE)type{
+    
+    objc_setAssociatedObject(self, @selector(type), @(type), OBJC_ASSOCIATION_ASSIGN);
 
-- (void)tabType:(TAB_FRAME_TYPE)type{
+}
+- (TAB_FRAME_TYPE)type{
     
-    if ([self isKindOfClass:UIViewController.class]) {
-        UIViewController *vc = (UIViewController*)self;
-        [vc.view addSubview:self.tab];
-    }else{
-        return;
-    }
+    return [objc_getAssociatedObject(self, @selector(type)) integerValue];
     
+    
+}
+
+- (CGRect)resetTabFrame{
     
     CGRect frame;
     
-    if (type == CUT_TOPDOWN) {
+    if (self.type == CUT_TOPDOWN) {
         
         frame = CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 49 - 64);
         
-    }else if(type == CUT_TOP){
+    }else if(self.type == CUT_TOP){
         
         frame = CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64);
         
@@ -74,7 +77,17 @@
         frame = CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 49 );
         
     }
-    self.tab.frame = frame;
+    
+    return frame;
+    
+}
+- (void)tabType:(TAB_FRAME_TYPE)type{
+ 
+    self.type = type;
+    
+    self.tab.frame = [self resetTabFrame];
+    
+    [self.view addSubview:self.tab];
     
     
 }

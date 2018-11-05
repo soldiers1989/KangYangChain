@@ -28,7 +28,7 @@
 
     </UIView>
 
-    <UIView layout="margin:5,marginTop:0,flexDirection:row,justifyContent:space-between" attr="bgColor:white">
+    <UIView layout="margin:5,marginTop:0,marginBottom:1,flexDirection:row,justifyContent:space-between" attr="bgColor:white">
 
         <UIView layout="margin:5" attr="">
             <UILabel name="" layout="" attr="fontSize:14,color:#333333,linesNum:0,text:6.88"/>
@@ -46,6 +46,28 @@
         </UIView>
 
     </UIView>
+
+    <UIView  name="bottomView" layout="alignItems:flex-end" attr="bgColor:white,hidden:true">
+
+
+        <UIView layout="flexDirection:row,marginRight:10" attr="">
+            <FlexTouchView onPress="" layout="marginRight:20,margin:5" attr="underlayColor:darkGray,bgColor:lightGray,
+            borderRadius:3">
+                <UILabel name="" layout="margin:2" attr="fontSize:12,color:white,linesNum:0,text:撤单"/>
+            </FlexTouchView>
+
+            <FlexTouchView onPress="" layout=",margin:5" attr="underlayColor:darkGray,bgColor:blue,
+            borderRadius:3">
+                <UILabel name="" layout="margin:2" attr="fontSize:12,color:white,linesNum:0,text:暂停接单"/>
+            </FlexTouchView>
+
+        </UIView>
+
+
+
+    </UIView>
+
+
 
 </UIView>
 

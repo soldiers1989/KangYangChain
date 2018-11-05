@@ -32,6 +32,18 @@
 		00048FEB2181CF9200969F11 /* WLNMineBusinessCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00048FEA2181CF9200969F11 /* WLNMineBusinessCtr.m */; };
 		00048FED2181D01100969F11 /* Snip20181025_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00048FEC2181D01100969F11 /* Snip20181025_1.png */; };
 		00048FF12182A1F200969F11 /* WLNFloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00048FF02182A1F200969F11 /* WLNFloatView.m */; };
+		0012F87C218FDFEB001AD42C /* WLNTradeLawBPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012F87B218FDFEB001AD42C /* WLNTradeLawBPublishCell.m */; };
+		0012F880218FE003001AD42C /* WLNTradeLawBPublishCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0012F87F218FE003001AD42C /* WLNTradeLawBPublishCell.xml */; };
+		0012F8C0219021F1001AD42C /* WLNTradeTradeHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012F8BF219021F1001AD42C /* WLNTradeTradeHeadCell.m */; };
+		0012F8C22190221E001AD42C /* WLNTradeTradeHeadCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0012F8C12190221E001AD42C /* WLNTradeTradeHeadCell.xml */; };
+		0012F8C521903B00001AD42C /* WLNTradeAgreementLeftCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012F8C421903B00001AD42C /* WLNTradeAgreementLeftCtr.m */; };
+		0012F8C821903B0B001AD42C /* WLNTradeAgreementCenterCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012F8C721903B0B001AD42C /* WLNTradeAgreementCenterCtr.m */; };
+		0012F8CB21903B14001AD42C /* WLNTradeAgreementRightCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012F8CA21903B14001AD42C /* WLNTradeAgreementRightCtr.m */; };
+		0012F8CE21903EF5001AD42C /* WLNTradeTradeBodyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012F8CD21903EF5001AD42C /* WLNTradeTradeBodyCell.m */; };
+		0012F8D021903F01001AD42C /* WLNTradeTradeBodyCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0012F8CF21903F01001AD42C /* WLNTradeTradeBodyCell.xml */; };
+		0012F8D32190408B001AD42C /* WLNTradeAgreementLeftHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012F8D22190408B001AD42C /* WLNTradeAgreementLeftHeadView.m */; };
+		0012F8D5219040A7001AD42C /* WLNTradeAgreementLeftHeadView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0012F8D4219040A7001AD42C /* WLNTradeAgreementLeftHeadView.xml */; };
+		0012F8D721905128001AD42C /* Snip20181105_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0012F8D621905128001AD42C /* Snip20181105_1.png */; };
 		00272E762179715000A5EBD4 /* Click.m in Sources */ = {isa = PBXBuildFile; fileRef = 00272E752179715000A5EBD4 /* Click.m */; };
 		002DE752218054420092E375 /* WLNRechargeDetailCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 002DE751218054420092E375 /* WLNRechargeDetailCtr.m */; };
 		002DE757218054990092E375 /* WLNRechargeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 002DE756218054990092E375 /* WLNRechargeDetailCell.m */; };
@@ -73,7 +85,6 @@
 		0085F3332184317500DAD323 /* WLNTradeLawBHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F3322184317500DAD323 /* WLNTradeLawBHeaderView.m */; };
 		0085F335218431A100DAD323 /* WLNTradeLawBHeaderView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0085F334218431A100DAD323 /* WLNTradeLawBHeaderView.xml */; };
 		0085F33821843A4700DAD323 /* WLNTradeLawBPublishCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F33721843A4700DAD323 /* WLNTradeLawBPublishCtr.m */; };
-		0085F33A21843B7F00DAD323 /* WLNTradeLawBPublishCtr.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0085F33921843B7F00DAD323 /* WLNTradeLawBPublishCtr.xml */; };
 		0085F375218464B700DAD323 /* DragRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F373218464B600DAD323 /* DragRect.m */; };
 		0085F37D218464E000DAD323 /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F377218464E000DAD323 /* VerifyViewController.m */; };
 		0085F37E218464E000DAD323 /* GesBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085F379218464E000DAD323 /* GesBaseViewController.m */; };
@@ -426,6 +437,25 @@
 		00048FEC2181D01100969F11 /* Snip20181025_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181025_1.png; sourceTree = "<group>"; };
 		00048FEF2182A1F200969F11 /* WLNFloatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNFloatView.h; sourceTree = "<group>"; };
 		00048FF02182A1F200969F11 /* WLNFloatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNFloatView.m; sourceTree = "<group>"; };
+		0012F87A218FDFEB001AD42C /* WLNTradeLawBPublishCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeLawBPublishCell.h; sourceTree = "<group>"; };
+		0012F87B218FDFEB001AD42C /* WLNTradeLawBPublishCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeLawBPublishCell.m; sourceTree = "<group>"; };
+		0012F87F218FE003001AD42C /* WLNTradeLawBPublishCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeLawBPublishCell.xml; sourceTree = "<group>"; };
+		0012F8BE219021F1001AD42C /* WLNTradeTradeHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeTradeHeadCell.h; sourceTree = "<group>"; };
+		0012F8BF219021F1001AD42C /* WLNTradeTradeHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeTradeHeadCell.m; sourceTree = "<group>"; };
+		0012F8C12190221E001AD42C /* WLNTradeTradeHeadCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeTradeHeadCell.xml; sourceTree = "<group>"; };
+		0012F8C321903B00001AD42C /* WLNTradeAgreementLeftCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeAgreementLeftCtr.h; sourceTree = "<group>"; };
+		0012F8C421903B00001AD42C /* WLNTradeAgreementLeftCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeAgreementLeftCtr.m; sourceTree = "<group>"; };
+		0012F8C621903B0B001AD42C /* WLNTradeAgreementCenterCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeAgreementCenterCtr.h; sourceTree = "<group>"; };
+		0012F8C721903B0B001AD42C /* WLNTradeAgreementCenterCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeAgreementCenterCtr.m; sourceTree = "<group>"; };
+		0012F8C921903B14001AD42C /* WLNTradeAgreementRightCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeAgreementRightCtr.h; sourceTree = "<group>"; };
+		0012F8CA21903B14001AD42C /* WLNTradeAgreementRightCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeAgreementRightCtr.m; sourceTree = "<group>"; };
+		0012F8CC21903EF5001AD42C /* WLNTradeTradeBodyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeTradeBodyCell.h; sourceTree = "<group>"; };
+		0012F8CD21903EF5001AD42C /* WLNTradeTradeBodyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeTradeBodyCell.m; sourceTree = "<group>"; };
+		0012F8CF21903F01001AD42C /* WLNTradeTradeBodyCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeTradeBodyCell.xml; sourceTree = "<group>"; };
+		0012F8D12190408B001AD42C /* WLNTradeAgreementLeftHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeAgreementLeftHeadView.h; sourceTree = "<group>"; };
+		0012F8D22190408B001AD42C /* WLNTradeAgreementLeftHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeAgreementLeftHeadView.m; sourceTree = "<group>"; };
+		0012F8D4219040A7001AD42C /* WLNTradeAgreementLeftHeadView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeAgreementLeftHeadView.xml; sourceTree = "<group>"; };
+		0012F8D621905128001AD42C /* Snip20181105_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20181105_1.png; sourceTree = "<group>"; };
 		00272E742179715000A5EBD4 /* Click.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Click.h; sourceTree = "<group>"; };
 		00272E752179715000A5EBD4 /* Click.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Click.m; sourceTree = "<group>"; };
 		002DE750218054420092E375 /* WLNRechargeDetailCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNRechargeDetailCtr.h; sourceTree = "<group>"; };
@@ -494,7 +524,6 @@
 		0085F334218431A100DAD323 /* WLNTradeLawBHeaderView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeLawBHeaderView.xml; sourceTree = "<group>"; };
 		0085F33621843A4700DAD323 /* WLNTradeLawBPublishCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLNTradeLawBPublishCtr.h; sourceTree = "<group>"; };
 		0085F33721843A4700DAD323 /* WLNTradeLawBPublishCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLNTradeLawBPublishCtr.m; sourceTree = "<group>"; };
-		0085F33921843B7F00DAD323 /* WLNTradeLawBPublishCtr.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLNTradeLawBPublishCtr.xml; sourceTree = "<group>"; };
 		0085F36C21845EA200DAD323 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0085F36E218460A800DAD323 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		0085F3702184612A00DAD323 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1168,6 +1197,12 @@
 		00B7F4CD217DD8A8009208C9 /* 合约 */ = {
 			isa = PBXGroup;
 			children = (
+				0012F8C321903B00001AD42C /* WLNTradeAgreementLeftCtr.h */,
+				0012F8C421903B00001AD42C /* WLNTradeAgreementLeftCtr.m */,
+				0012F8C621903B0B001AD42C /* WLNTradeAgreementCenterCtr.h */,
+				0012F8C721903B0B001AD42C /* WLNTradeAgreementCenterCtr.m */,
+				0012F8C921903B14001AD42C /* WLNTradeAgreementRightCtr.h */,
+				0012F8CA21903B14001AD42C /* WLNTradeAgreementRightCtr.m */,
 				00FB699F217DD53D009B3F82 /* WLNTradeAgreementCtr.h */,
 				00FB69A0217DD53D009B3F82 /* WLNTradeAgreementCtr.m */,
 				0085F32A218415BD00DAD323 /* WLNTradeTradeHeadView.h */,
@@ -1178,6 +1213,12 @@
 				00B7F4C8217DD76E009208C9 /* WLNTradeHoldCell.m */,
 				00B7F4CA217DD796009208C9 /* WLNTradeHangCell.h */,
 				00B7F4CB217DD796009208C9 /* WLNTradeHangCell.m */,
+				0012F8BE219021F1001AD42C /* WLNTradeTradeHeadCell.h */,
+				0012F8BF219021F1001AD42C /* WLNTradeTradeHeadCell.m */,
+				0012F8CC21903EF5001AD42C /* WLNTradeTradeBodyCell.h */,
+				0012F8CD21903EF5001AD42C /* WLNTradeTradeBodyCell.m */,
+				0012F8D12190408B001AD42C /* WLNTradeAgreementLeftHeadView.h */,
+				0012F8D22190408B001AD42C /* WLNTradeAgreementLeftHeadView.m */,
 			);
 			path = "合约";
 			sourceTree = "<group>";
@@ -1232,11 +1273,13 @@
 				23D4718D218F4CAF00605CC1 /* WLNTradeLawBOrderDetailBottomCell.m */,
 				23D47193218F514500605CC1 /* WLNTradeLawBOrderDetailFootView.h */,
 				23D47194218F514500605CC1 /* WLNTradeLawBOrderDetailFootView.m */,
+				0012F87A218FDFEB001AD42C /* WLNTradeLawBPublishCell.h */,
+				0012F87B218FDFEB001AD42C /* WLNTradeLawBPublishCell.m */,
 			);
 			path = "法币";
 			sourceTree = "<group>";
 		};
-		00D0B5BD2180095000EF6BA2 /* Scan */ = {
+		00D0B5BD2180095000EF6BA2 /* 扫码 */ = {
 			isa = PBXGroup;
 			children = (
 				00D0B5BE21800A6900EF6BA2 /* WLNScanCtr.h */,
@@ -1244,7 +1287,7 @@
 				007A0DBF21804D7700A5C821 /* WLNScanTipView.h */,
 				007A0DC021804D7700A5C821 /* WLNScanTipView.m */,
 			);
-			path = Scan;
+			path = "扫码";
 			sourceTree = "<group>";
 		};
 		00DE427821759438005DDEE0 /* Model */ = {
@@ -1520,13 +1563,13 @@
 			path = "网络拦截";
 			sourceTree = "<group>";
 		};
-		231A5DCC217BA92B00EBD745 /* QRCode */ = {
+		231A5DCC217BA92B00EBD745 /* 二维码 */ = {
 			isa = PBXGroup;
 			children = (
 				234AA8EA216F4AD500A0866B /* WLNQRCode.h */,
 				234AA8EB216F4AD500A0866B /* WLNQRCode.m */,
 			);
-			path = QRCode;
+			path = "二维码";
 			sourceTree = "<group>";
 		};
 		231A5DCD217BA92B00EBD745 /* ActionSheet */ = {
@@ -1553,14 +1596,14 @@
 				00825A90218C4BFA0036E8DC /* 缺省 */,
 				00825A85218C330D0036E8DC /* Tabbar */,
 				23C402FF2187BF55004D63E1 /* SimpleHead */,
-				23C402FE2187BF26004D63E1 /* Single */,
+				23C402FE2187BF26004D63E1 /* 单例 */,
 				23C402FD2187BF0D004D63E1 /* FloatView */,
 				0085F39C21846C7600DAD323 /* WebView */,
 				0085F372218464B600DAD323 /* DragRect */,
 				23CB860B217E5A17007B4B21 /* 支付密码 */,
-				00D0B5BD2180095000EF6BA2 /* Scan */,
+				00D0B5BD2180095000EF6BA2 /* 扫码 */,
 				231A5DE2217D261F00EBD745 /* 提示框 */,
-				231A5DCC217BA92B00EBD745 /* QRCode */,
+				231A5DCC217BA92B00EBD745 /* 二维码 */,
 				235484722160C76200BCE879 /* 国际化 */,
 				231A5DCD217BA92B00EBD745 /* ActionSheet */,
 			);
@@ -1770,8 +1813,8 @@
 		237E1B82215E9D08002BC6F0 /* XML */ = {
 			isa = PBXGroup;
 			children = (
+				0012F8CF21903F01001AD42C /* WLNTradeTradeBodyCell.xml */,
 				00825A94218C4C290036E8DC /* WLNEmptyView.xml */,
-				0085F33921843B7F00DAD323 /* WLNTradeLawBPublishCtr.xml */,
 				0085F334218431A100DAD323 /* WLNTradeLawBHeaderView.xml */,
 				0085F32F218415CD00DAD323 /* WLNTradeTradeHeadView.xml */,
 				00037129218313F600CD1364 /* WLNMineGLiveCtr.xml */,
@@ -1864,6 +1907,9 @@
 				23D4718F218F4D3E00605CC1 /* WLNTradeLawBOrderDetailTopCell.xml */,
 				23D47191218F4D4A00605CC1 /* WLNTradeLawBOrderDetailBottomCell.xml */,
 				23D47196218F519300605CC1 /* WLNTradeLawBOrderDetailFootView.xml */,
+				0012F87F218FE003001AD42C /* WLNTradeLawBPublishCell.xml */,
+				0012F8C12190221E001AD42C /* WLNTradeTradeHeadCell.xml */,
+				0012F8D4219040A7001AD42C /* WLNTradeAgreementLeftHeadView.xml */,
 			);
 			path = XML;
 			sourceTree = "<group>";
@@ -2079,13 +2125,13 @@
 			path = FloatView;
 			sourceTree = "<group>";
 		};
-		23C402FE2187BF26004D63E1 /* Single */ = {
+		23C402FE2187BF26004D63E1 /* 单例 */ = {
 			isa = PBXGroup;
 			children = (
 				23441E66218264C500F6C110 /* WLNSingle.h */,
 				23441E67218264C500F6C110 /* WLNSingle.m */,
 			);
-			path = Single;
+			path = "单例";
 			sourceTree = "<group>";
 		};
 		23C402FF2187BF55004D63E1 /* SimpleHead */ = {
@@ -2100,6 +2146,7 @@
 		23C403002187C0AF004D63E1 /* 测试 */ = {
 			isa = PBXGroup;
 			children = (
+				0012F8D621905128001AD42C /* Snip20181105_1.png */,
 				237BA3C92170867800C71283 /* Snip20181012_41.png */,
 				2340564F21704DC300888D96 /* Snip20181012_36.png */,
 				23CF8F9C216E007300CCF4C4 /* Snip20181010_34.png */,
@@ -2359,7 +2406,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0085F33A21843B7F00DAD323 /* WLNTradeLawBPublishCtr.xml in Resources */,
 				23C828A321717F020086C253 /* WLNHomeSectionHeadView.xml in Resources */,
 				00A5EBF4217736F200FED04D /* WLNMineGHBHeadCell.xml in Resources */,
 				238F55712169868B00A9EB7F /* Snip20181007_53.png in Resources */,
@@ -2369,6 +2415,7 @@
 				002DE759218055560092E375 /* WLNRechargeDetailCell.xml in Resources */,
 				23CF8F93216DF0C300CCF4C4 /* Snip20181010_31.png in Resources */,
 				23C8287721717F020086C253 /* WLNMineHeadCell.xml in Resources */,
+				0012F8D721905128001AD42C /* Snip20181105_1.png in Resources */,
 				0093CDB521807DDF007A60A7 /* WLNMineAgreeWalletHeadView.xml in Resources */,
 				23D47185218F496A00605CC1 /* WLNTradeLawBOrderCell.xml in Resources */,
 				00048FA121815CEB00969F11 /* WLNRechargeListHeadView.xml in Resources */,
@@ -2379,9 +2426,12 @@
 				237BA3CA2170867800C71283 /* Snip20181012_41.png in Resources */,
 				0093CDB021807906007A60A7 /* WLNMineGHBHeadView.xml in Resources */,
 				003754462178624D0025CD1D /* WLNOrderCell.xml in Resources */,
+				0012F880218FE003001AD42C /* WLNTradeLawBPublishCell.xml in Resources */,
+				0012F8D021903F01001AD42C /* WLNTradeTradeBodyCell.xml in Resources */,
 				0077FEE6217EF44100743724 /* WLNOrderHeadView.xml in Resources */,
 				23C8289F21717F020086C253 /* WLNMineExtensionInfoCell.xml in Resources */,
 				238F55022165438400A9EB7F /* Snip20181004_37.png in Resources */,
+				0012F8C22190221E001AD42C /* WLNTradeTradeHeadCell.xml in Resources */,
 				23CB8613217E5A17007B4B21 /* trade.bundle in Resources */,
 				23C8288621717F020086C253 /* WLNHomeHotCell.xml in Resources */,
 				2309F8BA215D316300F156E8 /* LaunchScreen.storyboard in Resources */,
@@ -2404,6 +2454,7 @@
 				23C828A021717F020086C253 /* WLNMineSimpleCell.xml in Resources */,
 				00048FB12181A10D00969F11 /* WLNTradeLawPayCell.xml in Resources */,
 				23C828A521717F020086C253 /* WLNPropertyCtr.xml in Resources */,
+				0012F8D5219040A7001AD42C /* WLNTradeAgreementLeftHeadView.xml in Resources */,
 				236347142163873200CFF257 /* Snip20181002_1.png in Resources */,
 				23C8289D21717F020086C253 /* WLNShopIntegralCell.xml in Resources */,
 				00CC76142174A2350053E546 /* WLNMineSellOutCtr.xml in Resources */,
@@ -2557,6 +2608,7 @@
 				23C828A8217181810086C253 /* WLNMineScavengingCell.m in Sources */,
 				00B7F4C9217DD76E009208C9 /* WLNTradeHoldCell.m in Sources */,
 				238F55652169790300A9EB7F /* WLNMineCommunityHeadView.m in Sources */,
+				0012F87C218FDFEB001AD42C /* WLNTradeLawBPublishCell.m in Sources */,
 				23185FB1216E053C00ECD952 /* WLNMineGForumCell.m in Sources */,
 				23D4718B218F4C9300605CC1 /* WLNTradeLawBOrderDetailTopCell.m in Sources */,
 				231A5DD6217BAEAA00EBD745 /* NSArray+SafeException.m in Sources */,
@@ -2608,6 +2660,7 @@
 				0085F392218464E600DAD323 /* CALayer+anim.m in Sources */,
 				23693CD7217AB8D30001A43A /* UITableView+hook.m in Sources */,
 				23D47188218F4BEA00605CC1 /* WLNTradeLawBOrderDetailCtr.m in Sources */,
+				0012F8C821903B0B001AD42C /* WLNTradeAgreementCenterCtr.m in Sources */,
 				0085F33821843A4700DAD323 /* WLNTradeLawBPublishCtr.m in Sources */,
 				233AAFF6216C9AAE007D12DD /* WLNForgetCell.m in Sources */,
 				23CB8614217E5A17007B4B21 /* GalenPasswordView.m in Sources */,
@@ -2616,6 +2669,7 @@
 				00D0B5B7217F1D0E00EF6BA2 /* WLNRechargeListCtr.m in Sources */,
 				0085F37E218464E000DAD323 /* GesBaseViewController.m in Sources */,
 				23B9ECAF217E870A0097D89D /* UIColor+hex.m in Sources */,
+				0012F8D32190408B001AD42C /* WLNTradeAgreementLeftHeadView.m in Sources */,
 				233AAFEC216C9601007D12DD /* WLNRegisterCtr.m in Sources */,
 				0085F391218464E600DAD323 /* TipLable.m in Sources */,
 				236346E82162978500CFF257 /* WLNMineSimpleCell.m in Sources */,
@@ -2631,10 +2685,13 @@
 				00825A8C218C3E2F0036E8DC /* NSString+Set.m in Sources */,
 				23CF8FA2216E032800CCF4C4 /* WLNMineGForumCtr.m in Sources */,
 				00D0B5C3218011B100EF6BA2 /* UIView+Set.m in Sources */,
+				0012F8C0219021F1001AD42C /* WLNTradeTradeHeadCell.m in Sources */,
 				23C828AD2171C25C0086C253 /* WLNMineEditCtr.m in Sources */,
 				0093CDB321807DD5007A60A7 /* WLNMineAgreeWalletHeadView.m in Sources */,
 				23CB8616217E5A17007B4B21 /* GalenPayPasswordView.m in Sources */,
+				0012F8CB21903B14001AD42C /* WLNTradeAgreementRightCtr.m in Sources */,
 				00D0B5BA217F1F4C00EF6BA2 /* WLNRechargeListCell.m in Sources */,
+				0012F8C521903B00001AD42C /* WLNTradeAgreementLeftCtr.m in Sources */,
 				002DE757218054990092E375 /* WLNRechargeDetailCell.m in Sources */,
 				23F9C9292163E0C8000EDFC4 /* WLNShopIntegralCell.m in Sources */,
 				232FF547216AFABD00C71BCA /* WLNMineNewsCtr.m in Sources */,
@@ -2732,6 +2789,7 @@
 				2340563A21702C3200888D96 /* WLNHandle+Property.m in Sources */,
 				00048FCB2181BAFD00969F11 /* WLNTradeBBOpenView.m in Sources */,
 				0085F32C218415BD00DAD323 /* WLNTradeTradeHeadView.m in Sources */,
+				0012F8CE21903EF5001AD42C /* WLNTradeTradeBodyCell.m in Sources */,
 				23D47180218F482500605CC1 /* WLNTradeLawBOrderCtr.m in Sources */,
 				0085F375218464B700DAD323 /* DragRect.m in Sources */,
 				00938C8E2175BF3F005F90D4 /* WLNMineFormDetailCtr.m in Sources */,
