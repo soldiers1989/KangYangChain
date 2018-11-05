@@ -14,16 +14,10 @@
 - (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel isPost:(BOOL)isPost{
     
     
-    self.delegate = dic[DELEGATES];
     self.sel = sel;
     
-
-    [dic removeObjectForKey:DELEGATES];
-    
     NSMutableDictionary *dicp = @{}.mutableCopy;
-    
-    dicp[DELEGATES] = self;
-    
+        
     if (url) {
         dicp[URLS] = url;
         
@@ -36,7 +30,9 @@
 
     
 }
-
+- (void)sellGHB:(NSMutableDictionary *)dic{
+    
+}
 - (void)resetName:(NSMutableDictionary *)dic{
     
     NSLog(@"1");
@@ -81,6 +77,11 @@
 - (void)lockConfig:(NSMutableDictionary *)dic{
     
     [self __requestWith:LockcConfig dic:dic sel:_cmd isPost:YES];
+    
+    
+}
+- (void)lockList:(NSMutableDictionary *)dic{
+    
     
     
 }

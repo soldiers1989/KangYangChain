@@ -9,16 +9,8 @@
 -->
 <UIView layout="" attr="">
 
-    <UIView layout="flexDirection:row,justifyContent:space-around" attr="bgColor:white">
+    <UIView layout="flexDirection:row" attr="bgColor:white">
 
- 
-        <FlexTouchView onPress="topAction:" layout="flexDirection:row,flex:1,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,
-        tag:0">
-
-            <UIImageView attr="source:square"/>
-            <UILabel name="" layout="margin:10" attr="fontSize:10,color:#333333,linesNum:0,text:认证商家,
-            textAlign:center"/>
-        </FlexTouchView>
 
         <FlexTouchView onPress="topAction:" layout="flexDirection:row,flex:1,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,
         tag:1">

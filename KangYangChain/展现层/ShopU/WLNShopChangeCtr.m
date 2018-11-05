@@ -15,12 +15,22 @@
 
 @implementation WLNShopChangeCtr
 
+- (UICollectionView *)collect{
+    if (_collect == nil) {
+        _collect = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth ,DEVICEHEIGHT-64) collectionViewLayout:[UICollectionViewFlowLayout new]];
+        _collect.backgroundColor = UIColor.whiteColor;
+        
+    }
+    return _collect;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"兑换商品".Intl;
     
     self.collect.delegate = self;
     self.collect.dataSource = self;
+    [self.view addSubview:self.collect];
+    
     [self.collect registerClass:WLNShopItemCell.class forCellWithReuseIdentifier:@"WLNShopItemCell"];
 
 }

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNMineScanHeadView : FlexCustomBaseView
+@interface WLNMineScanHeadView : UIView
 
 + (WLNMineScanHeadView *)shared;
 

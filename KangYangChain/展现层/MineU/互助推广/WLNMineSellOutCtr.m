@@ -50,13 +50,11 @@
     }
     
     NSMutableDictionary *dic =@{}.mutableCopy;
-    
-    dic[DELEGATES] = self;
     dic[@"uid"] = self.userModel.userid;
     dic[@"num"] = self.countTxt.text;
     dic[@"id"] = self.lastDic[@"id"];
     
-    [self routeTargetName:@"WLNHandle" actionName:@"buyGHB:" param:dic];
+    [self routeTargetName:Handle actionName:@"buyGHB:" param:dic];
     
     
 }

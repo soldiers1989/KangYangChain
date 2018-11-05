@@ -12,12 +12,6 @@
 
 @interface WLNHandle : NSObject<WLNReqstProtocol>
 
-@property (nonatomic, weak) id <WLNReqstProtocol>delegate;
-
-@property (nonatomic, weak) id <WLNEmptyProtocol> eDelegate;
-
 @property (nonatomic, assign) SEL sel;
-
-
 
 @end

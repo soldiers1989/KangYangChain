@@ -22,10 +22,7 @@
 
 
 - (void)getETHKeys:(NSMutableDictionary *)dic{
-    
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
+
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:ETHTKEY].mutableCopy;
 
@@ -33,9 +30,9 @@
     
     if (chainDic) {
         
-        if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
             
-            [delegate result:chainDic sel:NSStringFromSelector(_cmd)];
+            [self.reqDelegate result:chainDic sel:NSStringFromSelector(_cmd)];
         }
         
     }else{
@@ -50,9 +47,9 @@
             dic[@"keyStore"] = keyStore;
             [WLNKeyChain saveKeychainValue:dic key:ETHTKEY];
             
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:dic sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate result:dic sel:NSStringFromSelector(_cmd)];
                 
             }
             
@@ -63,10 +60,7 @@
 }
 - (void)getETHBalance:(NSMutableDictionary *)dic{
     
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
-    
+  
     NSString *token = dic[@"token"];
     
     NSMutableDictionary *chainDic =  [WLNKeyChain readKeychainValue:ETHTKEY].mutableCopy;
@@ -75,16 +69,16 @@
         
         if (suc) {
             
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:arrayBanlance.firstObject sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate result:arrayBanlance.firstObject sel:NSStringFromSelector(_cmd)];
                 
             }
         }else{
             
-            if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
                 
-                [delegate faild:arrayBanlance sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate faild:arrayBanlance sel:NSStringFromSelector(_cmd)];
                 
             }
         }
@@ -95,11 +89,7 @@
 }
 
 - (void)sendETH:(NSMutableDictionary *)dic{
-    
-    id <WLNReqstProtocol> delegate = dic[DELEGATES];
-    
-    [dic removeObjectForKey:DELEGATES];
-    
+ 
     NSString *sendAddress = dic[@"sendAddress"];
     
     NSString *sendNum = dic[@"sendNum"];
@@ -115,18 +105,18 @@
         
         if (suc) {
             
-            if (delegate && [delegate respondsToSelector:@selector(result:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
                 
-                [delegate result:hashStr sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate result:hashStr sel:NSStringFromSelector(_cmd)];
                 
             }
             
             
         }else{
             
-            if (delegate && [delegate respondsToSelector:@selector(faild:sel:)]) {
+            if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
                 
-                [delegate faild:hashStr sel:NSStringFromSelector(_cmd)];
+                [self.reqDelegate faild:hashStr sel:NSStringFromSelector(_cmd)];
                 
             }
             
@@ -140,17 +130,12 @@
 
 - (void)getETHOrder:(NSMutableDictionary *)dic{
     
-    self.delegate = dic[DELEGATES];
     self.sel = _cmd;
-    
-    [dic removeObjectForKey:DELEGATES];
     
     NSString *str = [NSString stringWithFormat:@"%@/getTxInfo/0x6aa670c983425eba23314459c48ae89b3b8d0e1089397c56400ce2da5ece9d26?apiKey=freekey",ETHINFO];
     
     NSMutableDictionary *dicp = @{}.mutableCopy;
-    
-    dicp[DELEGATES] = self;
-    
+        
     dicp[URLS] = str;
     
     [self routeTargetName:@"WLNData" actionName:@"getWithDic:" param:dicp];

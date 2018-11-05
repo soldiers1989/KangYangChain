@@ -130,14 +130,12 @@
 - (void)sendAction{
     
     NSMutableDictionary *dic = @{}.mutableCopy;
-    
-    dic[DELEGATES] = self;
-    
+        
     dic[@"sendAddress"] = self.addressTxt.text;
     
     dic[@"sendNum"] = self.numTxt.text;
     
-    [self routeTargetName:@"WLNHandle" actionName:@"send:" param:dic];
+    [self routeTargetName:Handle actionName:@"send:" param:dic];
     
 
     

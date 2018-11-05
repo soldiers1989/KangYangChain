@@ -12,12 +12,25 @@
 
 - (User *)userModel{
     
-    NSUserDefaults *de =[NSUserDefaults standardUserDefaults];
-    NSMutableDictionary *dic = [de objectForKey:@"log"];
-    User *model = [[User alloc]initWithDictionary:dic];
+    NSDictionary *dic = [self routeTargetName:Handle actionName:@"userDic"];
+    
+    User *model = [[User alloc]initWithDictionary:dic.mutableCopy];
+    
     return model;
     
 }
+
+- (id<WLNReqstProtocol>)reqDelegate{
+    
+    return objc_getAssociatedObject(self, @selector(reqDelegate));
+    
+}
+- (void)setReqDelegate:(id<WLNReqstProtocol>)reqDelegate{
+    
+    objc_setAssociatedObject(self, @selector(reqDelegate), reqDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+}
+
 - (id)routeTargetName:(NSString*)targetName actionName:(NSString*)actionName{
     
     return [self routeTargetName:targetName actionName:actionName param:nil];
@@ -30,12 +43,18 @@
     
 }
 
+
 - (id)routeTargetName:(NSString*)targetName actionName:(NSString*)actionName param:(id)param{
     
     Class targetClass = NSClassFromString(targetName);
+
     SEL actionSel = NSSelectorFromString(actionName);
     
+    
     NSObject *targetObj = [targetClass new];
+    
+    targetObj.reqDelegate = self;
+
     if ([targetObj respondsToSelector:actionSel]) {
         
         NSMethodSignature *signture = [targetObj methodSignatureForSelector:actionSel];

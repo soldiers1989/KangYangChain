@@ -33,7 +33,7 @@
     
     NSString *str = [NSString stringWithFormat:@"get%@Order:",[WLNSingle shared].currentType];
     
-    [self routeTargetName:@"WLNHandle" actionName:str param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:Handle actionName:str];
     
     [SVProgressHUD show];
     

@@ -34,7 +34,7 @@
     
     NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
     
-    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:Handle actionName:action];
 
     
 }
@@ -65,7 +65,7 @@
         
         [self.headView reloadData];
         
-        [self routeTargetName:@"WLNHandle" actionName:@"rmbPrice:" param:@{DELEGATES:self}.mutableCopy];
+        [self routeTargetName:Handle actionName:@"rmbPrice:"];
         
         
     }
@@ -84,7 +84,7 @@
     
     NSString *action = BANLANCE_ACTION([WLNSingle shared].currentType);
     
-    [self routeTargetName:@"WLNHandle" actionName:action param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:Handle actionName:action];
     
     [SVProgressHUD show];
     

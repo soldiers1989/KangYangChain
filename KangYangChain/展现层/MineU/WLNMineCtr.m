@@ -163,7 +163,7 @@ typedef void (^CellBlock)(void);
         
     }else if (actionSheet == _outLogSheet){
         
-        [self routeTargetName:@"WLNHandle" actionName:@"logout:" param:@{DELEGATES:self}.mutableCopy];
+        [self routeTargetName:Handle actionName:@"logout:"];
         
         
     }
@@ -206,15 +206,15 @@ typedef void (^CellBlock)(void);
 }
 - (void)outLog{
     
-    NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
-    
-    [de removeObjectForKey:@"log"];
     
     WLNMainTabBarCtr *tabbar = (WLNMainTabBarCtr *)self.tabBarController;
     
     [tabbar isLog:NO];
     
     [SVProgressHUD showSuccessWithStatus:@"退出成功"];
+    
+    [self routeTargetName:Handle actionName:@"deleteUserDic"];
+    
 }
 
 @end

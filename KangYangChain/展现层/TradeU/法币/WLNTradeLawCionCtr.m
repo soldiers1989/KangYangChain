@@ -30,30 +30,7 @@
     WLNSimpleHeadView *view = [[WLNSimpleHeadView alloc]initWithDelegate:self titleArr:@[@"购买",@"出售",@"委托单",@"订单"]];
     self.tab.tableHeaderView = view;
 }
-- (void)simpleClickBack:(UIButton *)button tag:(NSInteger)tag{
-    
-    _currentType = tag;
-    
-}
-- (void)addAction{
-    
-    if (_currentType == 0) {
-        
-        [self push:@"WLNTradeLawBuyCtr".instance];
-        
-    }else if (_currentType == 1){
-        
-        
-        
-    }else if(_currentType == 2){
-    
-        [self push:@"WLNTradeLawBPublishCtr".instance];
-        
-        
-    }else{
-        
-    }
-}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 50;
 }
@@ -79,6 +56,42 @@
     return cell;
     
     
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+}
+- (void)simpleClickBack:(UIButton *)button tag:(NSInteger)tag{
+    
+    _currentType = tag;
+    
+    if (tag == 3) {
+        
+        [self push:@"WLNTradeLawBOrderCtr".instance];
+        
+    }
+    
+    
+}
+- (void)addAction{
+    
+    if (_currentType == 0) {
+        
+        [self push:@"WLNTradeLawBuyCtr".instance];
+        
+    }else if (_currentType == 1){
+        
+        
+        
+    }else if(_currentType == 2){
+        
+        [self push:@"WLNTradeLawBPublishCtr".instance];
+        
+        
+    }else{
+        
+    }
 }
 - (void)topAction:(UITapGestureRecognizer *)tap{
     

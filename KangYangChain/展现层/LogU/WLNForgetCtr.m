@@ -147,15 +147,11 @@
     }
     
     NSMutableDictionary *dic= @{}.mutableCopy;
-    
-    dic[DELEGATES] = self;
-    
-    
     dic[@"account"] = self.phoneTxt.text;
     dic[@"pass"] = self.pwdTxt.text;
     dic[@"verification_code"] = self.codeTxt.text;
     
-    [self routeTargetName:@"WLNHandle" actionName:@"forGet:" param:dic];
+    [self routeTargetName:Handle actionName:@"forGet:" param:dic];
     
     
 }
@@ -171,10 +167,9 @@
     
     
     NSMutableDictionary *dic =@{}.mutableCopy;
-    dic[DELEGATES] = self;
     dic[@"phone"] = self.phoneTxt.text;
     
-    [self routeTargetName:@"WLNHandle" actionName:@"getCode:" param:dic];
+    [self routeTargetName:Handle actionName:@"getCode:" param:dic];
  
     [self timeCut];
 

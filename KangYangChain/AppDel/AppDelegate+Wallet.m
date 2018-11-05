@@ -16,18 +16,18 @@
     /**
      生成比特币地址
      */
-    [self routeTargetName:@"WLNHandle" actionName:@"getBTCKeys:" param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:Handle actionName:@"getBTCKeys:"];
     
     /**
      生成usdt地址
      */
-    [self routeTargetName:@"WLNHandle" actionName:@"getUSDTKeys:" param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:Handle actionName:@"getUSDTKeys:"];
 
     /**
      生成ETH地址
      */
     
-    [self routeTargetName:@"WLNHandle" actionName:@"getETHKeys:" param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:Handle actionName:@"getETHKeys:"];
 
     /**
      生成ETC地址
@@ -37,7 +37,7 @@
     /**
      生成EOS地址
      */
-    [self routeTargetName:@"WLNHandle" actionName:@"getEOSKeys:" param:@{DELEGATES:self}.mutableCopy];
+    [self routeTargetName:Handle actionName:@"getEOSKeys:"];
     
     
     /**

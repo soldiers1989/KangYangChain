@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNShopChangeCtr : FlexBaseVC
+@interface WLNShopChangeCtr : UIViewController
 
 @end
 
