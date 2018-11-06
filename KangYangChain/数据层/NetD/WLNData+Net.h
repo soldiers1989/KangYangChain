@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)postWithDic:(NSMutableDictionary *)dic;
 
+- (void)updatePicWithDic:(NSMutableDictionary *)dic;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

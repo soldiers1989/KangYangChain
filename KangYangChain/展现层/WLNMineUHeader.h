@@ -101,5 +101,7 @@
 #import "WLNChangeCtr.h"
 #import "WLNWalletDetailHeadView.h"
 #import "WLNWalletDetailCell.h"
+#import "WLNMineCardPublishPicCell.h"
+#import "WLNMineCardItemCell.h"
 
 #endif /* WLNMineUHeader_h */

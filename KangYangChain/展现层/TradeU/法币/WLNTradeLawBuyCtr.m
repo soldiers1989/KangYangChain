@@ -63,6 +63,9 @@
     return cell;
     
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 - (void)gotoPay{
     
     [self push:@"WLNTradeLawPayCtr".instance];

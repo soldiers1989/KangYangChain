@@ -11,6 +11,7 @@
 @implementation WLNData (Net)
 
 
+
 - (BOOL)__judgeUrl:(NSString *)url{
     
     if (url.length == 0) {
@@ -21,6 +22,62 @@
         return YES;
 
     }
+    
+}
+
+- (void)__updatePicWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
+    
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSUTF8StringEncoding];
+    
+    
+    
+    
+    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+  
+        [formData appendPartWithFileData:params[@"image1"] name:@"furao" fileName:@"image.png" mimeType:@"image/png"];
+
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+     
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+     
+        
+        if (block) {
+            block(responseObject);
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        if (failureblock) {
+            failureblock(error);
+            
+        }
+        
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 - (void)__getDataWithUrl:(NSString *)url resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
@@ -109,6 +166,10 @@
 }
 - (void)getWithDic:(NSMutableDictionary *)dic{
     
+    
+//    NSString *url = [NSString stringWithFormat:@"%@?token=%@",dic[URLS],self.userModel.token];
+    
+    
     [self __getDataWithUrl:dic[URLS] resultBlock:^(id result) {
         
         if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
@@ -135,7 +196,6 @@
 }
 - (void)postWithDic:(NSMutableDictionary *)dic{
     
-    NSLog(@"%@",self.reqDelegate);
 
     [self __postDataWithUrl:dic[URLS] params:dic[PRAMAS] resultBlock:^(id result) {
         
@@ -155,6 +215,35 @@
         
         
     }];
+    
+    
+    
+}
+
+- (void)updatePicWithDic:(NSMutableDictionary *)dic{
+    
+
+    [self __updatePicWithUrl:dic[URLS] params:dic[PRAMAS] resultBlock:^(id result) {
+        
+        
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
+            
+            [self.reqDelegate result:result sel:NSStringFromSelector(_cmd)];
+            
+        }
+        
+        
+    } failureBlock:^(NSError * _Nonnull error) {
+        
+        if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(faild:sel:)]) {
+            
+            [self.reqDelegate faild:error sel:NSStringFromSelector(_cmd)];
+            
+        }
+        
+    }];
+    
+    
     
     
     

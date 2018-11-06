@@ -50,6 +50,14 @@
 #define UpdateTicker @"http://bs.getcai.com/api/v1/exchange/ticker"
 
 
+/**
+ 社区
+ */
+#define CommunityList @BaseUrl"/index/community_article/cate"
+
+#define PublishCard @BaseUrl"/index/community/userPublishArticle"
+
+#define CardList @BaseUrl"/index/community/userArticleList"
 
 
 

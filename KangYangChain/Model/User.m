@@ -15,6 +15,8 @@
     if (self) {
         
         self.userid = dic[@"user_id"];
+        self.token = dic[@"token"];
+        
         
         
     }

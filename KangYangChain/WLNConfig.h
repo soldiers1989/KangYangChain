@@ -14,7 +14,10 @@
 
 #define DEVICEWidth [UIScreen mainScreen].bounds.size.width  //设备尺寸
 #define DEVICEHEIGHT [UIScreen mainScreen].bounds.size.height  //设备尺寸
+
 #define maingray rgba(245,245,245,1)
+#define mainblue rgba(30,37,61,1)
+
 #define rgba(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a] //宏定义颜色
 #define weakSelf(type)  __weak typeof(type) weak##type = type
 /*
@@ -39,6 +42,10 @@
 #define windowFrame(a) [a convertRect:a.bounds toView:[UIApplication sharedApplication].delegate.window]
 
 #define DISPATH_AFTER(a,afterBlock) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(a * NSEC_PER_SEC)), dispatch_get_main_queue(),afterBlock);
+
+#define ALERT_MSG(msg) static UIAlertView *alert; alert = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];\
+[alert show];\
+
 
 #define TK @"cell_title"
 #define PK @"cell_picture"

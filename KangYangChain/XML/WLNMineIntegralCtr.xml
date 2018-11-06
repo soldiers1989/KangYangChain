@@ -9,7 +9,7 @@
         <UIView layout="flexDirection:row,marginLeft:10,alignItems:center" attr=",">
 
             <UIImageView attr="source:Topromote" layout=""/>
-            <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:black,linesNum:0,text:扫码推广"/>
+            <UILabel name="" layout="marginLeft:10" attr="fontSize:14,color:black,linesNum:0,text:扫码赠送"/>
 
         </UIView>
 

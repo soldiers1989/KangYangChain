@@ -45,9 +45,9 @@
     }
     
     static dispatch_once_t onceToken;
-    
+
     dispatch_once(&onceToken, ^{
-        
+
         [[delegate class] swizzleMethod:sel swizzledSelector:newSel];
 
     });
@@ -77,9 +77,10 @@
 //        func(self, sel,tableView,indexPath);
 //    }
 //
+    NSLog(@"我被抓住了");
+
     [self newTableView:tableView didSelectRowAtIndexPath:indexPath];
     
-    NSLog(@"我被抓住了");
 //
 //    if ([NSStringFromClass([self class]) isEqualToString:@"WLNMineCtr"] && indexPath.section == 2) {
 //        

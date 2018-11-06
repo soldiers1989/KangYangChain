@@ -8,8 +8,9 @@
 
 #import "WLNMineGForumCtr.h"
 
-@interface WLNMineGForumCtr ()<UITableViewDelegate,UITableViewDataSource>
+@interface WLNMineGForumCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 
+@property (nonatomic, strong) UIButton *addBtn;
 
 @end
 
@@ -17,13 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"社区".Intl;
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self tabType:1];
     
-    
     [self.tab registerClass:WLNMineGForumCell.class forCellReuseIdentifier:@"WLNMineGForumCell"];
+    
+    [self routeTargetName:Handle actionName:@"cardList:"];
+    
+    
+}
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    
+    
+}
+- (void)faild:(id)data sel:(NSString *)sel{
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -43,5 +55,23 @@
     
     
 }
-
+- (void)publishAction{
+    
+    [self push:@"WLNMineCardPublishCtr".instance];
+    
+    
+    
+    
+}
+- (UIButton *)addBtn{
+    if (_addBtn == nil) {
+        _addBtn = [[UIButton alloc]initWithFrame:CGRectMake( DEVICEWidth / 2, DEVICEHEIGHT - 100, 50, 50)];
+        [_addBtn addTarget:self action:@selector(publishAction) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+    }
+    
+    
+    return _addBtn;
+}
 @end

@@ -39,6 +39,14 @@ NS_ASSUME_NONNULL_BEGIN
  邀请列表
  */
 - (void)yaoqingList:(NSMutableDictionary *)dic;
+/**
+ 发布论坛
+ */
+- (void)publishCard:(NSMutableDictionary *)dic;
+/**
+ 论坛列表
+ */
+- (void)cardList:(NSMutableDictionary *)dic;
 
 
 @end

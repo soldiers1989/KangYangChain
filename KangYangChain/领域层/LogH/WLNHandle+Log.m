@@ -87,7 +87,6 @@
 - (void)deleteUserDic{
     
     NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
-    
     [de removeObjectForKey:@"log"];
     
 }

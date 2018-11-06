@@ -91,4 +91,28 @@
     
     
 }
+
+- (void)publishCard:(NSMutableDictionary *)dic{
+    
+    self.sel = _cmd;
+    
+    NSMutableDictionary *dicp = @{}.mutableCopy;
+    dicp[URLS] = PublishCard;
+    dicp[PRAMAS] = dic;
+    
+    [self routeTargetName:@"WLNData" actionName:@"updatePicWithDic:" param:dicp];
+    
+}
+- (void)cardList:(NSMutableDictionary *)dic{
+    if (dic == nil) {
+        dic = @{}.mutableCopy;
+    }
+    dic[@"token"] = self.userModel.token;
+    
+    
+    [self __requestWith:CardList dic:dic sel:_cmd isPost:YES];
+    
+    
+    
+}
 @end

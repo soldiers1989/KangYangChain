@@ -33,22 +33,33 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - HXPhotoPicker (2.2.3):
+    - SDWebImage (~> 4.4.1)
+    - YYWebImage
   - OpenSSL (1.0.1j)
   - Reachability (3.1.1)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - SVProgressHUD (2.2.5)
   - WechatOpenSDK (1.8.2)
   - Yoga (1.6.0)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - Aspects (~> 1.4.1)
   - Bitheri (from `https://github.com/bither/bitheri.git`, branch `develop`)
   - FlexLib
+  - HXPhotoPicker (~> 2.2.3)
   - OpenSSL (from `https://github.com/bither/OpenSSL.git`)
-  - SDWebImage (~> 3.7.2)
+  - SDWebImage (~> 4.4.1)
   - SVProgressHUD (~> 2.2.5)
   - WechatOpenSDK
 
@@ -59,11 +70,15 @@ SPEC REPOS:
     - CocoaLumberjack
     - FlexLib
     - FMDB
+    - HXPhotoPicker
     - Reachability
     - SDWebImage
     - SVProgressHUD
     - WechatOpenSDK
     - Yoga
+    - YYCache
+    - YYImage
+    - YYWebImage
 
 EXTERNAL SOURCES:
   Bitheri:
@@ -87,13 +102,17 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
   FlexLib: 2ad181452278f13f59e5678843dc9abc105f130f
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  HXPhotoPicker: 143d4fa28a1db67fe982d8465c451ee0c0d284cb
   OpenSSL: 6cc604cf322dabb4695f3b7be882a47ed44a8146
   Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 8c82c46b8d084a303be424591c36d9dd8dff99f2
+PODFILE CHECKSUM: 03980b3112989f11b6cbc637560eb2824fc2261a
 
 COCOAPODS: 1.5.3

@@ -17,6 +17,7 @@
  系统库
  */
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 #import <objc/runtime.h>
 #import <FlexLib/FlexLib.h>
 #import <AFNetworking.h>
@@ -50,6 +51,7 @@
 #import "AppDelegate+Chat.h"
 #import "AppDelegate+Wallet.h"
 
+#import "UIImage+Set.h"
 
 #import "UIView+SYLayout.h"
 #import "NSString+Set.h"
