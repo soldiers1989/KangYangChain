@@ -20,12 +20,9 @@
         
     if (url) {
         dicp[URLS] = url;
-        
     }
-    if (dic) {
-        dicp[PRAMAS] = dic;
-        
-    }
+    dicp[PRAMAS] = dic == nil ? @{}.mutableCopy:dic;
+    
     [self routeTargetName:@"WLNData" actionName:isPost ? @"postWithDic:":@"getWithDic:" param:dicp];
 
     
@@ -104,15 +101,34 @@
     
 }
 - (void)cardList:(NSMutableDictionary *)dic{
-    if (dic == nil) {
-        dic = @{}.mutableCopy;
-    }
-    dic[@"token"] = self.userModel.token;
-    
-    
+ 
     [self __requestWith:CardList dic:dic sel:_cmd isPost:YES];
+ 
+}
+- (void)cardDetail:(NSMutableDictionary *)dic{
     
     
+    [self __requestWith:CardDetail dic:dic sel:_cmd isPost:YES];
+   
+}
+- (void)commentList:(NSMutableDictionary *)dic{
     
+    [self __requestWith:CommentList dic:dic sel:_cmd isPost:YES];
+    
+}
+- (void)problemList:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:ProblemList dic:dic sel:_cmd isPost:YES];
+}
+
+- (void)updateHeadImg:(NSMutableDictionary *)dic{
+    self.sel = _cmd;
+    
+    NSMutableDictionary *dicp = @{}.mutableCopy;
+    dicp[URLS] = PublishCard;
+    dicp[PRAMAS] = dic;
+    
+    [self routeTargetName:@"WLNData" actionName:@"updatePicWithDic:" param:dicp];
+
 }
 @end

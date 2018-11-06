@@ -11,6 +11,8 @@
 @interface WLNMineGForumCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 
 @property (nonatomic, strong) UIButton *addBtn;
+@property (nonatomic, strong) NSMutableArray *dataArrs;
+
 
 @end
 
@@ -20,11 +22,15 @@
     [super viewDidLoad];
     self.title = @"社区".Intl;
     
+    self.dataArrs = [NSMutableArray array];
+    
     self.tab.delegate = self;
     self.tab.dataSource = self;
     [self tabType:1];
-    
-    [self.tab registerClass:WLNMineGForumCell.class forCellReuseIdentifier:@"WLNMineGForumCell"];
+    [self.tab registerClass:WLNHomeHotCell.class forCellReuseIdentifier:@"WLNHomeHotCell"];
+
+    [self.view addSubview:self.addBtn];
+
     
     [self routeTargetName:Handle actionName:@"cardList:"];
     
@@ -32,6 +38,9 @@
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
+    _dataArrs = data[@"data"];
+    
+    [self.tab reloadData];
     
     
 }
@@ -40,7 +49,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 10;
+    return _dataArrs.count;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -48,10 +57,22 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    WLNMineGForumCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineGForumCell"];
+    WLNHomeHotCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNHomeHotCell"];
+    cell.selectionStyle = UITableViewCellSeparatorStyleNone;
+    
+    cell.dic = _dataArrs[indexPath.row];
     
     
     return cell;
+    
+    
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    WLNMineGForumDetailCtr *vc = [WLNMineGForumDetailCtr new];
+    vc.cardID = _dataArrs[indexPath.row][@"id"];
+    [self push:vc];
     
     
 }
@@ -65,13 +86,12 @@
 }
 - (UIButton *)addBtn{
     if (_addBtn == nil) {
-        _addBtn = [[UIButton alloc]initWithFrame:CGRectMake( DEVICEWidth / 2, DEVICEHEIGHT - 100, 50, 50)];
+        _addBtn = [[UIButton alloc]initWithFrame:CGRectMake((DEVICEWidth - 50) / 2, DEVICEHEIGHT - 130, 50, 50)];
+        _addBtn.backgroundColor = UIColor.redColor;
         [_addBtn addTarget:self action:@selector(publishAction) forControlEvents:UIControlEventTouchUpInside];
         
         
     }
-    
-    
     return _addBtn;
 }
 @end

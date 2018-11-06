@@ -6,7 +6,7 @@
 
        <UIView layout="flexDirection:row,margin:15" attr="">
 
-           <UIImageView name="headImg" attr="source:" layout="" />
+           <UIImageView name="headImg" attr="source:,borderRadius:15,clipsToBounds:true" layout="width:30,height:30" />
 
            <UIView layout="marginLeft:10" attr="">
 

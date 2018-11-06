@@ -116,6 +116,8 @@ HXDatePhotoEditViewControllerDelegate
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:self.manager.configuration.statusBarStyle];
+    self.navigationController.navigationBar.translucent = YES;
+
     if (self.needChangeViewFrame) {
         self.needChangeViewFrame = NO;
     }

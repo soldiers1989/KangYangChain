@@ -20,5 +20,15 @@
 
     // Configure the view for the selected state
 }
-
+- (void)setDic:(NSMutableDictionary *)dic{
+    
+    self.nameLab.text = dic[@"user"][@"nickname"];
+   
+    self.contentLab.text = dic[@"content"];
+    
+    [self.headImg sd_setImageWithURL:[NSURL URLWithString:dic[@"avatar"]] placeholderImage:HolderImage];
+    
+    [self.contentImg sd_setImageWithURL:[NSURL URLWithString:dic[@"image1"]] placeholderImage:HolderImage];
+    
+}
 @end

@@ -59,6 +59,10 @@
 
 #define CardList @BaseUrl"/index/community/userArticleList"
 
+#define CardDetail @BaseUrl"/index/community/userArticleDetail"
 
+#define CommentList @BaseUrl"/index/community/userArticleCommentList"
+
+#define ProblemList @BaseUrl"/index/community/agreeUserArticle"
 
 

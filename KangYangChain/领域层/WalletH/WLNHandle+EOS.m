@@ -15,15 +15,7 @@
 
 - (void)getEOSKeys:(NSMutableDictionary *)dic{
     
-    
-    [EosEncode getEosKeys:^(NSString *privateKey, NSString *publicKey) {
-    
-        
-        
-        NSLog(@"%@,%@",publicKey,privateKey);
-        
-        
-    }];
+  
     
     
     

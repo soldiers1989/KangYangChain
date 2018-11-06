@@ -24,8 +24,7 @@
 #import <SVProgressHUD.h>
 #import <BTCPack/BTCWrapper.h>
 #import "ETHPack/HSEther.h"
-#import <EosFramework/EosFramework.h>
-
+#import "UIImageView+WebCache.h"
 /**
  协议
  */
@@ -60,9 +59,6 @@
 #import "UITextField+Set.h"
 #import "UITableView+Set.h"
 #import "UIViewController+Set.h"
-
-#import "UINavigationBar+Awesome.h"
-
 #import "NSBundle+DAUtils.h"
 
 
@@ -77,6 +73,7 @@
 #import "HYAlertView.h"
 #import "GalenPayPasswordView.h"
 #import "WLNEmptyView.h"
+#import "HXPhotoPicker.h"
 
 
 #import "WLNScanTipView.h"

@@ -35,6 +35,7 @@
 - (UIButton *)addBtn{
     if (_addBtn == nil) {
         _addBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        _addBtn.backgroundColor =[UIColor.grayColor colorWithAlphaComponent:0.3];
         [_addBtn addTarget:self action:@selector(addAciton) forControlEvents:UIControlEventTouchUpInside];
         [_addBtn setBackgroundImage:@"ziyuanaddpic".image forState:UIControlStateNormal];
         _addBtn.hidden = YES;

@@ -40,22 +40,26 @@
     
     NSLog(@"🍓🍓🍓 当前控制器 : %@",NSStringFromClass([self class]));
     
-    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:15], NSFontAttributeName, nil] forState:UIControlStateNormal];
-    
     [self __resetNav];
-
+    [self __resetTab];
+    
     [self fr_viewWillAppear:animated];
 
+}
+- (void)__resetTab{
+//    self.tabBarController.tabBar.hidden = YES;
 }
 - (void)__resetNav{
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent; //设置电池栏位白色效果
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationController.navigationBar.barTintColor = rgba(29, 36, 61, 1);
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+    
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:15], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
     
  

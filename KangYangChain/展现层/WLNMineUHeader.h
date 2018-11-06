@@ -103,5 +103,8 @@
 #import "WLNWalletDetailCell.h"
 #import "WLNMineCardPublishPicCell.h"
 #import "WLNMineCardItemCell.h"
+#import "WLNMineCardPublishWordCell.h"
+#import "WLNMineGForumDetailCtr.h"
+#import "WLNMineForumDetailCommentCell.h"
 
 #endif /* WLNMineUHeader_h */

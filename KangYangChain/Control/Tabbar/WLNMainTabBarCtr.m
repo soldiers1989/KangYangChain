@@ -88,13 +88,6 @@
 
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    self.tabBar.hidden = _islog ? NO :YES;
-    
-
-}
 
 
 @end

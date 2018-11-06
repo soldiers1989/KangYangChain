@@ -196,6 +196,8 @@
 }
 - (void)postWithDic:(NSMutableDictionary *)dic{
     
+    dic[PRAMAS][@"token"] = self.userModel.token;
+    
 
     [self __postDataWithUrl:dic[URLS] params:dic[PRAMAS] resultBlock:^(id result) {
         

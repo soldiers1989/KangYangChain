@@ -27,5 +27,6 @@
 @property (nonatomic, strong) UILabel *centerLab;
 @property (nonatomic, strong) UILabel *rightLab;
 
+@property (nonatomic, strong) NSMutableDictionary *dic;
 
 @end

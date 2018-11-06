@@ -48,6 +48,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)cardList:(NSMutableDictionary *)dic;
 
+- (void)cardDetail:(NSMutableDictionary *)dic;
+
+- (void)commentList:(NSMutableDictionary *)dic;
+
+- (void)problemList:(NSMutableDictionary *)dic;
+
+- (void)updateHeadImg:(NSMutableDictionary*)dic;
 
 @end
 

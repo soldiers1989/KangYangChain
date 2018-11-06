@@ -18,6 +18,9 @@ typedef void (^CellBlock)(void);
     
 }
 @property (nonatomic, nullable, strong) NSArray *t_p_a_Arr; //title picture action
+@property (strong, nonatomic) HXPhotoManager *manager;
+@property (nonatomic, strong) WLNMineHeadCell *headCell;
+
 
 @end
 
@@ -81,7 +84,15 @@ typedef void (^CellBlock)(void);
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
-    [self outLog];
+    if ([sel isEqualToString:@"updateHeadImg:"]) {
+        
+        
+        
+    }else if ([sel isEqualToString:@"logout:"]){
+        
+        [self outLog];
+
+    }
 }
 - (void)faild:(id)data sel:(NSString *)sel{
     
@@ -122,6 +133,7 @@ typedef void (^CellBlock)(void);
     
     WLNMineHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineHeadCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.headCell = cell;
     cell.forwarder = self;
     
     return cell;
@@ -157,8 +169,9 @@ typedef void (^CellBlock)(void);
         
         if (buttonIndex == 1) {
             
+            [self cameraAction];
         }else{
-            
+            [self albumAction];
         }
         
     }else if (actionSheet == _outLogSheet){
@@ -167,6 +180,39 @@ typedef void (^CellBlock)(void);
         
         
     }
+    
+}
+- (void)albumAction{
+    
+    NSLog(@"吊起系统相册");
+    
+    weakSelf(self);
+    
+    [self hx_presentSelectPhotoControllerWithManager:self.manager didDone:^(NSArray<HXPhotoModel *> *allList, NSArray<HXPhotoModel *> *photoList, NSArray<HXPhotoModel *> *videoList, BOOL isOriginal, UIViewController *viewController, HXPhotoManager *manager) {
+        
+    } imageList:^(NSArray<UIImage *> *imageList, BOOL isOriginal) {
+        
+        weakself.headCell.headImg.image = imageList.firstObject;
+        [weakself.tab reloadData];
+        /*上传图片*/
+        
+        NSMutableDictionary *dic =@{}.mutableCopy;
+        
+        dic[@"avatar"] = [imageList.firstObject zipImage];
+        
+        [self routeTargetName:Handle actionName:@"updateHeadImg:" param:dic];
+        
+        
+    } cancel:^(UIViewController *viewController, HXPhotoManager *manager) {
+        
+    }];
+    
+    
+    
+}
+- (void)cameraAction{
+    
+    
     
 }
 - (void)click:(UITapGestureRecognizer *)tap{
@@ -216,5 +262,20 @@ typedef void (^CellBlock)(void);
     [self routeTargetName:Handle actionName:@"deleteUserDic"];
     
 }
-
+- (HXPhotoManager *)manager
+{
+    if (!_manager) {
+        _manager = [[HXPhotoManager alloc] initWithType:HXPhotoManagerSelectedTypePhoto];
+        _manager.configuration.openCamera = NO;
+        _manager.configuration.deleteTemporaryPhoto = NO;
+        _manager.configuration.lookLivePhoto = YES;
+        _manager.configuration.saveSystemAblum = YES;
+        //        _manager.configuration.supportRotation = NO;
+        //        _manager.configuration.cameraCellShowPreview = NO;
+        //        _manager.configuration.themeColor = [UIColor redColor];
+        _manager.configuration.videoCanEdit = NO;
+        _manager.configuration.photoCanEdit = NO;
+    }
+    return _manager;
+}
 @end

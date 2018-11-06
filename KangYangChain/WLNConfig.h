@@ -12,6 +12,8 @@
 
 #define Handle @"WLNHandle"
 
+#define HolderImage [UIImage imageNamed:@"default_200-200"]
+
 #define DEVICEWidth [UIScreen mainScreen].bounds.size.width  //设备尺寸
 #define DEVICEHEIGHT [UIScreen mainScreen].bounds.size.height  //设备尺寸
 

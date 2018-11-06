@@ -80,7 +80,7 @@
 - (CGFloat)jugeHeight:(NSInteger)count{
     
     if (count + 1 <= 3) {
-        return ItemSizeWith;
+        return ItemSizeWith+10;
     }
     CGFloat height = (count + 1) % 3 > 0 ?  (count + 1) / 3 *(ItemSizeWith + 10)  + ItemSizeWith + 20: (count + 1) / 3 *(ItemSizeWith + 10) + 20;
     return height ;
@@ -96,7 +96,7 @@
         _collet = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flow];
         _collet.delegate = self;
         _collet.dataSource = self;
-        _collet.backgroundColor = [UIColor redColor];
+        _collet.backgroundColor = UIColor.clearColor;
         [_collet registerClass:WLNMineCardItemCell.class forCellWithReuseIdentifier:@"WLNMineCardItemCell"];
         
         

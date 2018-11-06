@@ -17,6 +17,10 @@
     return NSLocalizedString(self, nil);
     
 }
+- (NSURL *)url{
+    
+    return [NSURL URLWithString:self];
+}
 - (UIColor *)color{
     
     return [UIColor performSelector:NSSelectorFromString([NSString stringWithFormat:@"%@Color",self])];
