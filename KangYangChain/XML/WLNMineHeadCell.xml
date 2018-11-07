@@ -13,7 +13,7 @@
 
         <FlexTouchView onPress="click:" layout="width:50%,alignItems:center" attr="tag:6">
 
-            <UILabel name="" layout="marginTop:10" attr="fontSize:14,color:white,linesNum:0,text:高进>"/>
+            <UILabel name="nameLab" layout="marginTop:10" attr="fontSize:14,color:white,linesNum:0,text:高进>"/>
 
         </FlexTouchView>
 

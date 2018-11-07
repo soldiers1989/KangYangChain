@@ -13,7 +13,7 @@
     <UIView layout="margin:10,height:50,alignItems:center,flexDirection:row" attr="bgColor:white,borderRadius:7">
 
         <UILabel name="" layout="marginLeft:10" attr="fontSize:17,color:#333333,linesNum:0,text:用户名"/>
-        <UITextField name="" layout="marginLeft:10" attr="fontSize:14,color:black,textAlign:left,placeholder:点击输入用户名,text:"/>
+        <UITextField name="nameTxt" layout="marginLeft:10,flex:1" attr="fontSize:14,color:black,textAlign:left,placeholder:点击输入用户名,text:"/>
 
     </UIView>
 

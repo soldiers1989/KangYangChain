@@ -56,6 +56,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)updateHeadImg:(NSMutableDictionary*)dic;
 
+- (void)GHBinfo:(NSMutableDictionary *)dic;
+
+- (void)GHBLogAction:(NSMutableDictionary *)dic;
+
+- (void)GHBRecharge:(NSMutableDictionary *)dic;
+
+- (void)userInfo:(NSMutableDictionary *)dic;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

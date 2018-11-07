@@ -10,7 +10,14 @@
 
 typedef void (^CellBlock)(void);
 
-@interface WLNMineCtr ()<UITableViewDataSource, UITableViewDelegate ,WMYActionSheetDelegate,WLNReqstProtocol>
+@interface WLNMineCtr ()
+<
+UITableViewDataSource,
+UITableViewDelegate,
+WMYActionSheetDelegate,
+WLNReqstProtocol
+>
+
 {
  
     WMYActionSheet *_headSheet;
@@ -26,33 +33,10 @@ typedef void (^CellBlock)(void);
 
 @implementation WLNMineCtr
 
-- (NSArray *)t_p_a_Arr{
-    if (!_t_p_a_Arr) {
-        _t_p_a_Arr = @[
-  @[@{}],
-  @[@{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"WLNWalletCtr".instance];}},
-  @{TK:@"法币账户".Intl,PK:@"account",BK:^{[self push:@"WLNMineLawWalletCtr".instance];}},
-  @{TK:@"合约账户".Intl,PK:@"contract",BK:^{[self push:@"WLNMineAgreeWalletCtr".instance];}}],
-  
-  @[@{TK:@"扫码赠送".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
-  @{TK:@"算力挖矿".Intl,PK:@"fenxiang",BK:^{[self push:@"WLNMineExtensionCtr".instance];}}],
-  
-  @[@{TK:@"身份认证".Intl,PK:@"identity",BK:^{[self push:@"WLNHTMLCtr".instance];}},
-  @{TK:@"账户安全".Intl,PK:@"suotou",BK:^{[self push:@"WLNHTMLCtr".instance];}},
-  @{TK:@"支付设置".Intl,PK:@"pay",BK:^{[self push:@"WLNHTMLCtr".instance];}},
-  @{TK:@"手续费等级".Intl,PK:@"charge",BK:^{[self push:@"WLNHTMLCtr".instance];}}]];
-        
-    }
- 
-    return _t_p_a_Arr;
-    
-}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的".Intl;
-    //,@[@"GHB钱包".Intl]
   
     [self tabType:0];
     
@@ -63,40 +47,52 @@ typedef void (^CellBlock)(void);
     [self.tab registerClass:WLNMineSimpleCell.class forCellReuseIdentifier:@"WLNMineSimpleCell"];
     [self.tab registerClass:WLNMineHeadCell.class forCellReuseIdentifier:@"WLNMineHeadCell"];
     
+    self.tab.tableFooterView = [self setFootView];
+
+    
+   
+    
+    [self routeTargetName:Handle actionName:@"userInfo:"];
     
     
-    UIView *outView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth,60)];
-    outView.backgroundColor =rgba(245, 245, 245, 1);
-    
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"退出登录".Intl forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button.backgroundColor = rgba(225, 225, 225, 1);
-    button.layer.cornerRadius= 7;
-    button.frame = CGRectMake(10, 10, DEVICEWidth - 20,40);
-    [button addTarget:self action:@selector(outAction) forControlEvents:UIControlEventTouchUpInside];
-    [outView addSubview:button];
-    
-    
-    self.tab.tableFooterView = outView;
 
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
     if ([sel isEqualToString:@"updateHeadImg:"]) {
         
+
+        [self routeTargetName:Handle actionName:@"userInfo:"];
+
         
+    }else if ([sel isEqualToString:@"userInfo:"]){
+        
+        NSDictionary *dic = (NSDictionary *)data;
+        
+        NSMutableDictionary * user = dic.mutableCopy;
+        
+        user[@"token"] = self.userModel.token;
+                
+        [self routeTargetName:Handle actionName:@"saveUserDic:" param:user];
+        
+        [self.tab reloadData];
+        
+        [SVProgressHUD dismiss];
+
         
     }else if ([sel isEqualToString:@"logout:"]){
         
         [self outLog];
-
+        
     }
 }
+
 - (void)faild:(id)data sel:(NSString *)sel{
     
-    [self outLog];
+    if ([sel isEqualToString:@"logout:"]) {
+        
+        [self outLog];
+    }
 }
 
 #pragma mark - UITableView dataSource & delegate
@@ -136,6 +132,12 @@ typedef void (^CellBlock)(void);
     self.headCell = cell;
     cell.forwarder = self;
     
+    
+        
+    [cell.headImg sd_setImageWithURL:self.userModel.avatar.url placeholderImage:HolderImage];
+   
+    cell.nameLab.text = self.userModel.nickname;
+    
     return cell;
     
 }
@@ -158,7 +160,6 @@ typedef void (^CellBlock)(void);
         block();
     }
 }
-#pragma mark - 自定义方法
 
 - (void)actionSheet:(WMYActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     
@@ -182,25 +183,49 @@ typedef void (^CellBlock)(void);
     }
     
 }
+
+#pragma mark - 自定义方法
+
+- (UIView *)setFootView{
+    
+    UIView *outView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth,60)];
+    outView.backgroundColor =rgba(245, 245, 245, 1);
+    
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"退出登录".Intl forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.backgroundColor = rgba(225, 225, 225, 1);
+    button.layer.cornerRadius= 7;
+    button.frame = CGRectMake(10, 10, DEVICEWidth - 20,40);
+    [button addTarget:self action:@selector(outAction) forControlEvents:UIControlEventTouchUpInside];
+    [outView addSubview:button];
+    
+    return outView;
+    
+}
+
 - (void)albumAction{
     
     NSLog(@"吊起系统相册");
     
     weakSelf(self);
     
+    
     [self hx_presentSelectPhotoControllerWithManager:self.manager didDone:^(NSArray<HXPhotoModel *> *allList, NSArray<HXPhotoModel *> *photoList, NSArray<HXPhotoModel *> *videoList, BOOL isOriginal, UIViewController *viewController, HXPhotoManager *manager) {
         
     } imageList:^(NSArray<UIImage *> *imageList, BOOL isOriginal) {
         
-        weakself.headCell.headImg.image = imageList.firstObject;
-        [weakself.tab reloadData];
+        
         /*上传图片*/
         
+        [SVProgressHUD showWithStatus:@"上传中"];
+
         NSMutableDictionary *dic =@{}.mutableCopy;
         
         dic[@"avatar"] = [imageList.firstObject zipImage];
         
-        [self routeTargetName:Handle actionName:@"updateHeadImg:" param:dic];
+        [weakself routeTargetName:Handle actionName:@"updateHeadImg:" param:dic];
         
         
     } cancel:^(UIViewController *viewController, HXPhotoManager *manager) {
@@ -212,6 +237,29 @@ typedef void (^CellBlock)(void);
 }
 - (void)cameraAction{
     
+    NSLog(@"吊起系统相机");
+    weakSelf(self);
+
+    [self hx_presentCustomCameraViewControllerWithManager:self.manager done:^(HXPhotoModel *model, HXCustomCameraViewController *viewController) {
+        
+        
+        /*上传图片*/
+        
+        [SVProgressHUD showWithStatus:@"上传中"];
+        
+        NSMutableDictionary *dic =@{}.mutableCopy;
+        
+        dic[@"avatar"] = [model.previewPhoto zipImage];
+        
+        [weakself routeTargetName:Handle actionName:@"updateHeadImg:" param:dic];
+        
+        
+        
+    } cancel:^(HXCustomCameraViewController *viewController) {
+        
+        
+    }];
+    
     
     
 }
@@ -222,15 +270,20 @@ typedef void (^CellBlock)(void);
     if (tag == 7) {
         
         [self chooseHead];
+        return;
         
+    }else if (tag == 6){
+        
+        [self changeName];
         return;
     }
     
-    NSArray *arr = @[@"WLNMineGHBWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"WLNMineBusinessCtr".instance,@"".instance,@"".instance,@"WLNMineEditCtr".instance];
+    NSArray *arr = @[@"WLNMineGHBWalletCtr".instance,@"WLNMineCommunityCtr".instance,@"WLNMineOrderCtr".instance,@"WLNMineBusinessCtr".instance,@"".instance,@"".instance];
     
     [self.navigationController pushViewController:arr[tag] animated:YES];
     
 }
+
 /**
  退出登录
  */
@@ -250,6 +303,19 @@ typedef void (^CellBlock)(void);
     [_headSheet show];
     
 }
+- (void)changeName{
+    
+    weakSelf(self);
+    WLNMineEditCtr *vc = [[WLNMineEditCtr alloc]init];
+    [vc setDiEditdBack:^{
+        
+        [weakself.tab reloadData];
+        
+    }];
+    
+    [self push:vc];
+    
+}
 - (void)outLog{
     
     
@@ -262,14 +328,16 @@ typedef void (^CellBlock)(void);
     [self routeTargetName:Handle actionName:@"deleteUserDic"];
     
 }
+#pragma mark - setter getter
+
 - (HXPhotoManager *)manager
 {
     if (!_manager) {
         _manager = [[HXPhotoManager alloc] initWithType:HXPhotoManagerSelectedTypePhoto];
-        _manager.configuration.openCamera = NO;
+        _manager.configuration.openCamera = YES;
         _manager.configuration.deleteTemporaryPhoto = NO;
         _manager.configuration.lookLivePhoto = YES;
-        _manager.configuration.saveSystemAblum = YES;
+        _manager.configuration.saveSystemAblum = NO;
         //        _manager.configuration.supportRotation = NO;
         //        _manager.configuration.cameraCellShowPreview = NO;
         //        _manager.configuration.themeColor = [UIColor redColor];
@@ -278,4 +346,26 @@ typedef void (^CellBlock)(void);
     }
     return _manager;
 }
+- (NSArray *)t_p_a_Arr{
+    if (!_t_p_a_Arr) {
+        _t_p_a_Arr = @[
+                       @[@{}],
+                       @[@{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"WLNWalletCtr".instance];}},
+                         @{TK:@"法币账户".Intl,PK:@"account",BK:^{[self push:@"WLNMineLawWalletCtr".instance];}},
+                         @{TK:@"合约账户".Intl,PK:@"contract",BK:^{[self push:@"WLNMineAgreeWalletCtr".instance];}}],
+                       
+                       @[@{TK:@"扫码赠送".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
+                         @{TK:@"算力挖矿".Intl,PK:@"fenxiang",BK:^{[self push:@"WLNMineExtensionCtr".instance];}}],
+                       
+                       @[@{TK:@"身份认证".Intl,PK:@"identity",BK:^{[self push:@"WLNHTMLCtr".instance];}},
+                         @{TK:@"账户安全".Intl,PK:@"suotou",BK:^{[self push:@"WLNHTMLCtr".instance];}},
+                         @{TK:@"支付设置".Intl,PK:@"pay",BK:^{[self push:@"WLNHTMLCtr".instance];}},
+                         @{TK:@"手续费等级".Intl,PK:@"charge",BK:^{[self push:@"WLNHTMLCtr".instance];}}]];
+        
+    }
+    
+    return _t_p_a_Arr;
+    
+}
+
 @end

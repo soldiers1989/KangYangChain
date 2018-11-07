@@ -27,10 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)saveUserDic:(NSMutableDictionary*)dic;
 
-- (NSDictionary *)readUserDic;
-
 - (void)deleteUserDic;
 
+- (NSMutableDictionary *)readUserDic;
 
 @end
 

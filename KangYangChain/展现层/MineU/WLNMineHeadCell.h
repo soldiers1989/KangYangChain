@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WLNMineHeadCell : FlexBaseTableCell
-@property (nonatomic, strong) UIImageView *headImg;
 
+@property (nonatomic, strong) UIImageView *headImg;
+@property (nonatomic, strong) UILabel *nameLab;
 
 @end

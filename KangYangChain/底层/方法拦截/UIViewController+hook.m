@@ -33,7 +33,8 @@
 - (void)fr_dealloc{
     
     NSLog(@"🐯🐯🐯 当前控制器被释放 : %@",NSStringFromClass([self class]));
-
+    [SVProgressHUD dismiss];
+    
     
 }
 - (void)fr_viewWillAppear:(BOOL)animated{

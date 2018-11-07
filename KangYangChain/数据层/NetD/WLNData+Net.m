@@ -25,6 +25,43 @@
     
 }
 
+- (NSData *)getDataWithDic:(NSDictionary *)dic{
+   
+    for (NSString *str in dic.allKeys) {
+        
+        if ([str isEqualToString:@"avatar"]) {
+            
+            return dic[@"avatar"];
+            
+        }else if ([str isEqualToString:@"image1"]){
+            
+            return dic[@"image1"];
+        }
+        
+        
+    }
+    return nil;
+    
+    
+    
+}
+- (NSString *)getKeyWithDic:(NSDictionary *)dic{
+    
+    for (NSString *key in dic.allKeys) {
+        
+        if ([key isEqualToString:@"avatar"]) {
+            
+            return @"avatar";
+            
+        }else if ([key isEqualToString:@"image1"]){
+            
+            return @"image1";
+        }
+        
+    }
+    return nil;
+    
+}
 - (void)__updatePicWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
     
     
@@ -33,13 +70,13 @@
     manager.securityPolicy.allowInvalidCertificates = YES;
     manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSUTF8StringEncoding];
     
-    
-    
+    [manager.responseSerializer setAcceptableContentTypes: [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/css", nil]];
+
     
     [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
   
-        [formData appendPartWithFileData:params[@"image1"] name:@"furao" fileName:@"image.png" mimeType:@"image/png"];
+        [formData appendPartWithFileData:[self getDataWithDic:params] name:[self getKeyWithDic:params] fileName:@"image.png" mimeType:@"image/png"];
 
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -224,6 +261,7 @@
 
 - (void)updatePicWithDic:(NSMutableDictionary *)dic{
     
+    dic[PRAMAS][@"token"] = self.userModel.token;
 
     [self __updatePicWithUrl:dic[URLS] params:dic[PRAMAS] resultBlock:^(id result) {
         

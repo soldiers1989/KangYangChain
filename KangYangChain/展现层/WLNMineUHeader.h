@@ -106,5 +106,7 @@
 #import "WLNMineCardPublishWordCell.h"
 #import "WLNMineGForumDetailCtr.h"
 #import "WLNMineForumDetailCommentCell.h"
+#import "WLNMineGForumDetailCell.h"
+
 
 #endif /* WLNMineUHeader_h */

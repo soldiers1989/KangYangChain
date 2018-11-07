@@ -10,7 +10,8 @@
 
 @interface WLNMineGForumDetailCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 @property (nonatomic, strong) NSMutableArray *commentArrs;
-@property (nonatomic, strong) NSMutableDictionary *infoDic;
+@property (nonatomic, strong) LTInputAccessoryView *inputView;
+
 @end
 
 @implementation WLNMineGForumDetailCtr
@@ -20,7 +21,6 @@
     self.title = @"社区详情".Intl;
     
     self.commentArrs = [NSMutableArray array];
-    self.infoDic = [NSMutableDictionary dictionary];
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
@@ -28,28 +28,18 @@
     
     
     [self.tab registerClass:WLNMineForumDetailCommentCell.class forCellReuseIdentifier:@"WLNMineForumDetailCommentCell"];
-    [self.tab registerClass:WLNHomeHotCell.class forCellReuseIdentifier:@"WLNHomeHotCell"];
+    [self.tab registerClass:WLNMineGForumDetailCell.class forCellReuseIdentifier:@"WLNMineGForumDetailCell"];
 
     NSMutableDictionary *dic = @{}.mutableCopy;
     
-    dic[@"id"] = self.cardID;
-    
-    [self routeTargetName:Handle actionName:@"cardDetail:" param:dic];
-    
-    
-    
+    dic[@"id"] = self.infoDic[@"id"];
     
     [self routeTargetName:Handle actionName:@"commentList:" param:dic];
     
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
-    if ([sel isEqualToString:@"cardDetail:"]) {
-        
-        self.infoDic = data;
-        
-        
-    }else if ([sel isEqualToString:@"commentList:"]){
+    if ([sel isEqualToString:@"commentList:"]){
         
         self.commentArrs = data;
         
@@ -67,7 +57,7 @@
     return 2;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return section == 0 ? 1 : 10;
+    return section == 0 ? 1 : 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -79,7 +69,8 @@
     
 }
 - (UITableViewCell *)info_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    WLNHomeHotCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNHomeHotCell"];
+    
+    WLNMineGForumDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineGForumDetailCell"];
     
     cell.dic = self.infoDic;
     

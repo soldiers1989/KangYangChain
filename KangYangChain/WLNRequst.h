@@ -7,13 +7,14 @@
 //
 
 
-//#define baseurl ""
 
+//192.168.0.106/index/user/setAvatar
 #define Address_Domain "http://kyl.wlnxx.top"
 #define BaseUrl Address_Domain"/adminServer/public/index.php/"
 
-//#define BaseUrl "http://kylvue.cpyu8.com/adminServer/public/index.php/"
-//#define BaseUrl "http://kyl.linkhb.com/adminServer/public/index.php/"
+
+
+
 
 #define Getcode  @BaseUrl"/index/login/send_verification_code"
 
@@ -64,5 +65,17 @@
 #define CommentList @BaseUrl"/index/community/userArticleCommentList"
 
 #define ProblemList @BaseUrl"/index/community/agreeUserArticle"
+
+#define HeadUpdate @BaseUrl"/index/user/setAvatar"
+
+#define NameSet @BaseUrl"/index/user/setNickname"
+
+#define GHBInfo @BaseUrl"/index/ghb/info"
+
+#define GHBLog @BaseUrl"/index/ghb/log"
+
+#define GHBCharge @BaseUrl"/index/pay/recharge"
+
+#define UserInfo @BaseUrl"/index/user/info"
 
 

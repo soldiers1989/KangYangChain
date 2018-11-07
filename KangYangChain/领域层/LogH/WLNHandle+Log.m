@@ -70,12 +70,12 @@
     [self __requestWith:@"http://www.baidu.com" dic:nil sel:_cmd];
     
 }
-- (NSDictionary *)readUserDic{
+- (NSMutableDictionary *)readUserDic{
     
     NSUserDefaults *de =[NSUserDefaults standardUserDefaults];
     NSDictionary *dic = [de objectForKey:@"log"];
     
-    return dic;
+    return dic.mutableCopy;
     
 }
 - (void)saveUserDic:(NSMutableDictionary *)dic{

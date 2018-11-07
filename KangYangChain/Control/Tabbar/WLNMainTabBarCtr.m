@@ -79,7 +79,11 @@
     return self;
 
 }
-
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.tabBar.hidden = YES;
+    
+}
 - (void)isLog:(BOOL)bol{
     
     _islog = bol;

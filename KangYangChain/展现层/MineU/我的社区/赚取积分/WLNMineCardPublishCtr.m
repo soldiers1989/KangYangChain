@@ -125,15 +125,7 @@ WLNReqstProtocol
     return cell;
     
 }
-- (void)didSelectPhotos:(NSMutableArray *)photos{
-    
-    
-    NSLog(@"%@",photos);
-    
 
-    
-    
-}
 - (void)addAciton{
     
     NSLog(@"吊起系统相册");
@@ -171,16 +163,12 @@ WLNReqstProtocol
     
     [SVProgressHUD show];
     
-    NSMutableDictionary *dic = @{}.mutableCopy;
-    
-    
+
     UIImage *image =  _selectArrs.firstObject;
     
-    
+    NSMutableDictionary *dic = @{}.mutableCopy;
     dic[@"image1"] = [image zipImage];
     dic[@"content"] = _wordCell.txtV.text;
-    dic[@"token"] = self.userModel.token;
-    
     
     [self routeTargetName:Handle actionName:@"publishCard:" param:dic];
     

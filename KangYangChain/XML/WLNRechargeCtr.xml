@@ -38,7 +38,7 @@
 
     <UIView layout="flex:1" attr="">
 
-        <UITextField name="" layout="margin:15" attr="fontSize:14,color:black,textAlign:left,placeholder:请输入充值数量,text:"/>    
+        <UITextField name="numTxt" layout="margin:15" attr="fontSize:14,color:black,textAlign:left,placeholder:请输入充值数量,text:"/>    
 
         <UILabel name="" layout="height:1,flex:1" attr="fontSize:14,@:css/colors,linesNum:0,text:"/>
 
@@ -60,7 +60,7 @@
       
     </UIView>
 
-    <FlexTouchView onPress="" layout="height:44,margin:20,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#41559D,borderRadius:7,
+    <FlexTouchView onPress="sureAction" layout="height:44,margin:20,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#41559D,borderRadius:7,
     ">
 
         <UILabel name="" layout="" attr="fontSize:14,color:white,linesNum:0,text:确定"/>

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNMineEditCtr : FlexBaseVC
 
+@property (nonatomic, strong) void (^diEditdBack)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

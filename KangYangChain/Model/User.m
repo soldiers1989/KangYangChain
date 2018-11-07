@@ -16,6 +16,9 @@
         
         self.userid = dic[@"user_id"];
         self.token = dic[@"token"];
+        self.avatar = dic[@"avatar"];
+        self.nickname = dic[@"nickname"];
+        
         
         
         

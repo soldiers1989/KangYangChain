@@ -74,6 +74,8 @@
 #import "GalenPayPasswordView.h"
 #import "WLNEmptyView.h"
 #import "HXPhotoPicker.h"
+#import "LTInputAccessoryView.h"
+
 
 
 #import "WLNScanTipView.h"

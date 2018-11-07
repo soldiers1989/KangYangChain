@@ -32,7 +32,8 @@
 }
 - (void)resetName:(NSMutableDictionary *)dic{
     
-    NSLog(@"1");
+    
+    [self __requestWith:NameSet dic:dic sel:_cmd isPost:YES];
     
     
 }
@@ -125,10 +126,32 @@
     self.sel = _cmd;
     
     NSMutableDictionary *dicp = @{}.mutableCopy;
-    dicp[URLS] = PublishCard;
+    dicp[URLS] = HeadUpdate;
     dicp[PRAMAS] = dic;
     
     [self routeTargetName:@"WLNData" actionName:@"updatePicWithDic:" param:dicp];
 
+}
+- (void)GHBLogAction:(NSMutableDictionary *)dic{
+    
+    
+    [self __requestWith:GHBLog dic:dic sel:_cmd isPost:YES];
+    
+}
+
+- (void)GHBRecharge:(NSMutableDictionary *)dic{
+    
+    
+    [self __requestWith:GHBCharge dic:dic sel:_cmd isPost:YES];
+    
+}
+- (void)GHBinfo:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:GHBInfo dic:dic sel:_cmd isPost:YES];
+}
+- (void)userInfo:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:UserInfo dic:dic sel:_cmd isPost:YES];
+    
 }
 @end

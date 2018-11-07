@@ -8,7 +8,10 @@
 
 #import "WLNRechargeCtr.h"
 
-@interface WLNRechargeCtr ()
+@interface WLNRechargeCtr ()<WLNReqstProtocol>
+
+@property (nonatomic, strong) UITextField *numTxt;
+
 
 @end
 
@@ -19,6 +22,30 @@
     self.title = @"充值".Intl;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"充值记录" style:UIBarButtonItemStyleDone target:self action:@selector(rechargeHis)];
+    
+    
+}
+
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    
+    
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+    
+}
+
+- (void)sureAction{
+    
+    if (self.numTxt.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入金额"];
+        return;
+    }
+    
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    dic[@"amount"] = self.numTxt.text;
+    [self routeTargetName:Handle actionName:@"GHBRecharge:" param:dic];
     
     
 }

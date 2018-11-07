@@ -11,10 +11,10 @@
 
 
     <UIView layout="height:40,flexDirection:row,justifyContent:space-around,alignItems:center" attr="bgColor:white">
-        <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:xxxx"/>
-        <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:13968111662"/>
-        <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:1000"/>
-        <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:已完成"/>
+        <UILabel name="timeLab" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:xxxx"/>
+        <UILabel name="typeLab" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:13968111662"/>
+        <UILabel name="numLab" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:1000"/>
+        <UILabel name="stateLab" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:已完成"/>
     </UIView>
 
    

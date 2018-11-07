@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WLNMineGForumDetailCtr : UIViewController
-@property (nonatomic, strong) NSString *cardID;
+
+@property (nonatomic, strong) NSMutableDictionary *infoDic;
+
 
 @end

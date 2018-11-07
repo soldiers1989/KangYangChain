@@ -8,7 +8,8 @@
 
 #import "WLNMineEditCtr.h"
 
-@interface WLNMineEditCtr ()
+@interface WLNMineEditCtr ()<WLNReqstProtocol>
+@property (nonatomic, strong) UITextField *nameTxt;
 
 @end
 
@@ -23,9 +24,46 @@
     
     
 }
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    
+    [SVProgressHUD showSuccessWithStatus:@"更改成功"];
+    
+    /*读*/
+    NSMutableDictionary *dic = [self routeTargetName:Handle actionName:@"readUserDic"];
+    dic[@"nickname"] = self.nameTxt.text;
+    
+    /*写*/
+    
+    [self routeTargetName:Handle actionName:@"saveUserDic:" param:dic];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+
+    if (_diEditdBack) {
+        _diEditdBack();
+    }
+    
+    
+
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+}
 - (void)saveChange{
     
-    [self routeTargetName:Handle actionName:@"resetName:"];
+    
+    if (self.nameTxt.text.length == 0 ) {
+    
+        [SVProgressHUD showSuccessWithStatus:@"请输入内容"];
+        return;
+    }
+    
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    dic[@"nickname"] = self.nameTxt.text;
+    
+    
+    [self routeTargetName:Handle actionName:@"resetName:" param:dic];
+    
     
     
     

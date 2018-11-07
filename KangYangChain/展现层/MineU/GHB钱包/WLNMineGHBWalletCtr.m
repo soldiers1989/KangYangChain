@@ -10,7 +10,10 @@
 
 @interface WLNMineGHBWalletCtr ()<WLNReqstProtocol,UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableDictionary *lockConfigDic;
+@property (nonatomic, strong) NSMutableDictionary *GHBInfoDic;
+
+@property (nonatomic, strong) NSMutableArray *logArrs;
+
 
 @end
 
@@ -21,7 +24,9 @@
     
     self.title = @"我的GHB钱包".Intl;
     
-    self.lockConfigDic = [NSMutableDictionary dictionary];
+    self.GHBInfoDic = [NSMutableDictionary dictionary];
+    self.logArrs = [NSMutableArray array];
+    
     
     self.tab.delegate = self;
     self.tab.dataSource = self;
@@ -37,10 +42,35 @@
     
 
     self.tab.tableHeaderView = view;
+    
+    
+    
+    [self routeTargetName:Handle actionName:@"GHBinfo:"];
+    
+    [self routeTargetName:Handle actionName:@"GHBLogAction:"];
+    
  
     
 }
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    if ([sel isEqualToString:@"GHBinfo:"]) {
+        
+        self.GHBInfoDic = data;
+        [self.tab.tableHeaderView reloadInputViews];
 
+        
+    }else if ([sel isEqualToString:@"GHBLogAction:"]){
+        
+        self.logArrs = data[@"data"];
+        [self.tab reloadData];
+        
+    }
+    
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+}
 - (void)clickAction:(UITapGestureRecognizer *)tap{
     
     
@@ -52,7 +82,7 @@
     return 100;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return section == 0 ? 1 : 5;
+    return section == 0 ? 1 : self.logArrs.count;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
@@ -95,6 +125,9 @@
     
     
     WLNMineGHBBodyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineGHBBodyCell"];
+    
+    cell.dic = self.logArrs[indexPath.row];
+    
     
     return cell;
     

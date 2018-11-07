@@ -12,20 +12,12 @@
 
 
 - (void)push:(UIViewController *)vc{
-    if (vc == nil) {
-        return;
-    }
-    if (![self isKindOfClass:[UIViewController class]]) {
-        
-        return;
-        
-    }
+   
+    vc.hidesBottomBarWhenPushed = YES;
     
     UIViewController *mine = (UIViewController *)self;
     
     [mine.navigationController pushViewController:vc animated:YES];
-    
-    
     
     
 }
@@ -125,12 +117,12 @@
     
     NSLog(@"添加缺省图");
     
-    WLNEmptyView *view = [[WLNEmptyView alloc]initWithFrame:[self resetEmptyFrame]];
-    if (!self.tab) {
-        return;
-    }
-    self.tab.tableFooterView = view;
-    
+//    WLNEmptyView *view = [[WLNEmptyView alloc]initWithFrame:[self resetEmptyFrame]];
+//    if (!self.tab) {
+//        return;
+//    }
+//    self.tab.tableFooterView = view;
+//    
     
 }
 - (void)removeEmptyShow{

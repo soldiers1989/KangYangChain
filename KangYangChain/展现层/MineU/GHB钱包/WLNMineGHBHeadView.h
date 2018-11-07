@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNMineGHBHeadView : FlexCustomBaseView
+@interface WLNMineGHBHeadView : FlexCustomBaseView <WLNReloadProtocol>
+
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
+@property (nonatomic, strong) UILabel *balanceLab;
+
+@property (nonatomic, strong) UILabel *rmbLab;
 
 @end
 

@@ -71,7 +71,7 @@
     
     
     WLNMineGForumDetailCtr *vc = [WLNMineGForumDetailCtr new];
-    vc.cardID = _dataArrs[indexPath.row][@"id"];
+    vc.infoDic = _dataArrs[indexPath.row];
     [self push:vc];
     
     
@@ -87,7 +87,8 @@
 - (UIButton *)addBtn{
     if (_addBtn == nil) {
         _addBtn = [[UIButton alloc]initWithFrame:CGRectMake((DEVICEWidth - 50) / 2, DEVICEHEIGHT - 130, 50, 50)];
-        _addBtn.backgroundColor = UIColor.redColor;
+        
+        [_addBtn setBackgroundImage:@"publish".image forState:UIControlStateNormal];
         [_addBtn addTarget:self action:@selector(publishAction) forControlEvents:UIControlEventTouchUpInside];
         
         

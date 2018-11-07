@@ -7,7 +7,7 @@
    Created by edz on 2018/10/24.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-<UIImageView name="img" attr="source:123,bgColor:#1D243D,userInteractionEnabled:true" layout="">
+<UIImageView name="" attr="source:123,bgColor:#1D243D,userInteractionEnabled:true" layout="">
 
     <UIView layout="" attr="">
 
@@ -24,7 +24,7 @@
             <UILabel name="balanceLab" layout="" attr="fontSize:30,color:white,linesNum:0,text:0 GHB"/>
         </UIView>
 
-        <UILabel name="" layout="margin:10,marginTop:0" attr="fontSize:16,color:white,linesNum:0,text:≈ 0 rmb"/>
+        <UILabel name="rmbLab" layout="margin:10,marginTop:0" attr="fontSize:16,color:white,linesNum:0,text:≈ 0 rmb"/>
     
     </UIView>
 
