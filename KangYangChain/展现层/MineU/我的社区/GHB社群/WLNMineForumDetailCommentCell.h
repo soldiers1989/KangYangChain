@@ -10,4 +10,11 @@
 
 @interface WLNMineForumDetailCommentCell : FlexBaseTableCell
 
+@property (nonatomic, strong) UILabel *nameLab;
+@property (nonatomic, strong) UILabel *contentLab;
+
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
+
+
 @end

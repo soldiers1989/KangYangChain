@@ -15,6 +15,8 @@
     
 }
 @property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSMutableArray *cardDataArr;
+
 
 @end
 
@@ -33,10 +35,12 @@
     
    
     
-    self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     self.dataArr = [NSMutableArray array];
+    self.cardDataArr = [NSMutableArray array];
+    
 
-    _secitonArrs = @[@[@""],@[@"",@"",@"",@""],@[@"",@"",@"",@""]];
+    _secitonArrs = @[@[@""],@[@"",@"",@"",@""],@[]];
 
     [self.tab registerClass:WLNHomeCountCell.class forCellReuseIdentifier:@"WLNHomeCountCell"];
     [self.tab registerClass:WLNHomeNewCell.class forCellReuseIdentifier:@"WLNHomeNewCell"];
@@ -64,12 +68,13 @@
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStyleDone target:self action:@selector(changeLangage)];
     
+    
+    [self routeTargetName:Handle actionName:@"cardList:"];
+    
+    
 
 }
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-}
+
 - (void)changeLangage{
     
     [SVProgressHUD showErrorWithStatus:@"此功能尚未映射完成"];
@@ -98,8 +103,11 @@
  */
 - (void)result:(id)data sel:(NSString *)sel{
     
-    NSLog(@"result:%@ -- sel:%@",data,sel);
-    
+    if ([sel isEqualToString:@"cardList:"]) {
+        
+        self.cardDataArr = data[@"data"];
+    }
+    [self.tab reloadData];
     
 }
 
@@ -125,9 +133,19 @@
     return 100;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_secitonArrs[section]count];
+    if (section == 0) {
+        
+        return 1;
+        
+    }else if (section == 1){
+        return 4;
+        
+    }else{
+        return self.cardDataArr.count;
+    }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
     return _secitonArrs.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -193,22 +211,19 @@
 - (UITableViewCell *)hot_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     WLNHomeHotCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNHomeHotCell"];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;;
-    cell.headImg.image = [UIImage imageNamed:@"Snip20181002_1"];
-    cell.nameLab.text = @"拖鞋高手";
-    cell.remarkLab.text = @"热爱生活";
-    cell.contentImg.image = [UIImage imageNamed:@"fdsafas"];
-    cell.contentLab.text = @"加密货币加密货币加密货币加密货币加密";
-    cell.ofLab.text = @"#肥宅#";
-    cell.lookLab.text = @"浏览789次";
-    cell.leftLab.text = @"0";
-    cell.centerLab.text = @"123";
-    cell.rightLab.text = @"456";
+   
+    cell.dic = self.cardDataArr[indexPath.row];
+    
     return cell;
   
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
  
+    if (indexPath.section == 2) {
+        
+        
+    }
+    
 }
 
 @end

@@ -9,9 +9,11 @@
 -->
 <UIView layout="" attr="@:css/colors">
 
-    <UIView layout="margin:10,marginTop:0" attr="bgColor:white,borderRadius:5">
+    <UIView name="" layout="margin:10,marginTop:0,flexDirection:row,alignItems:flex-start" attr="bgColor:white,borderRadius:5,@:css/shadows">
 
-        <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:A评论B"/>
+        <UILabel name="nameLab" layout="margin:10" attr="fontSize:11,color:#333333,linesNum:0,text:"/>
+        <UILabel name="contentLab" layout="margin:10,marginLeft:0,flex:1" attr="fontSize:11,color:#333333,linesNum:0,text:"/>
 
     </UIView>
+
 </UIView>

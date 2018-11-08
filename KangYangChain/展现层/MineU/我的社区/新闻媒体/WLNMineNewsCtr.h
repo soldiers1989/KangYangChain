@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNMineNewsCtr : FlexBaseVC
+@interface WLNMineNewsCtr : UIViewController
 
 @end
 

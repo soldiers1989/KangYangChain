@@ -12,8 +12,10 @@
 
 @interface WLNHTMLCtr ()<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
 
-@property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) WLNHTMLProgressView *progressView;
+
+@property (nonatomic, strong) WKWebView *webView;
+
 
 @end
 
@@ -25,7 +27,7 @@
     [self.view addSubview:self.webView];
     [self.view addSubview:self.progressView];
 
-    NSString *str = [NSString stringWithFormat:@"http://kylvue.cpyu8.com/#/mine/identity/uid=%@",self.userModel.userid];
+    NSString *str = (NSString *)self.box;
     
     [self.webView loadRequest:[self myLoadWithURL:str]];
      

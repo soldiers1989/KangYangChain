@@ -102,7 +102,7 @@
 - (__kindof UICollectionViewCell *)top_collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     WLNShopIntegralCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WLNShopIntegralCell" forIndexPath:indexPath];
-    
+    [cell.headImg sd_setImageWithURL:self.userModel.avatar.url];
     
     weakSelf(self);
     

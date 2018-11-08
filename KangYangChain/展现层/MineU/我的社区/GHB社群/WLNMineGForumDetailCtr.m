@@ -10,12 +10,15 @@
 
 @interface WLNMineGForumDetailCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 @property (nonatomic, strong) NSMutableArray *commentArrs;
-@property (nonatomic, strong) LTInputAccessoryView *inputView;
+@property (nonatomic, strong) WLNInputView *myInputView;
 
 @end
 
 @implementation WLNMineGForumDetailCtr
 
+- (CGRect)resetTabFrame{
+    return CGRectMake(0, 0, DEVICEWidth, DEVICEHEIGHT - 64 - 46);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"社区详情".Intl;
@@ -26,6 +29,7 @@
     self.tab.dataSource = self;
     [self tabType:1];
     
+    [self.view addSubview:self.myInputView];
     
     [self.tab registerClass:WLNMineForumDetailCommentCell.class forCellReuseIdentifier:@"WLNMineForumDetailCommentCell"];
     [self.tab registerClass:WLNMineGForumDetailCell.class forCellReuseIdentifier:@"WLNMineGForumDetailCell"];
@@ -41,9 +45,17 @@
     
     if ([sel isEqualToString:@"commentList:"]){
         
-        self.commentArrs = data;
+        self.commentArrs = data[@"data"];
+        
+    }else if([sel isEqualToString:@"commentAction:"]){
+        
+        
+        
         
     }
+    
+    
+    
     [self.tab reloadData];
     
 }
@@ -57,7 +69,7 @@
     return 2;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return section == 0 ? 1 : 3;
+    return section == 0 ? 1 : self.commentArrs.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -71,6 +83,7 @@
 - (UITableViewCell *)info_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     WLNMineGForumDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineGForumDetailCell"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     cell.dic = self.infoDic;
     
@@ -78,7 +91,39 @@
 }
 - (UITableViewCell *)comment_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     WLNMineForumDetailCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineForumDetailCommentCell"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    cell.dic = self.commentArrs[indexPath.row];
+    
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+}
+- (WLNInputView *)myInputView{
+    if (_myInputView == nil) {
+        _myInputView = [[WLNInputView alloc]initWithFrame:CGRectMake(0, DEVICEHEIGHT - 64 - 46, DEVICEWidth, 46)];
+        
+    }
+    
+    weakSelf(self);
+    [_myInputView setDidInputStr:^(NSString * _Nonnull str) {
+        
+        
+        NSMutableDictionary *dic = @{}.mutableCopy;
+        dic[@"id"] = weakself.infoDic[@"id"];
+        dic[@"content"] = str;
+    
+        [weakself routeTargetName:Handle actionName:@"commentAction:" param: dic];
+        
+    }];
+    
+    return _myInputView;
+    
+}
+
+
 
 @end

@@ -30,7 +30,7 @@
             <UILabel name="" layout="" attr="fontSize:14,color:white,linesNum:0,text:@忘记密码?"/>
         </FlexTouchView>
         
-        <UIView layout="flexDirection:row" attr="">
+        <UIView layout="flexDirection:row" attr="hidden:true">
             
             <FlexTouchView>
                 <UILabel name="" layout="" attr="fontSize:14,color:white,linesNum:0,text:@没有账号?"/>

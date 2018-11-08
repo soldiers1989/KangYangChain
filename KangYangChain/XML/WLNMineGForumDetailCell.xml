@@ -25,7 +25,7 @@
        </UIView>
 
 
-        <UIImageView name="contentImg" attr="source:" layout="@:css/contentImg,margin:10,marginTop:0" />
+        <UIImageView name="contentImg" attr="source:" layout="width:150,height:150,margin:10,marginTop:0" />
 
      
         <UILabel name="contentLab" layout="margin:10,marginTop:0" attr="font:14,color:black,linesNum:0"/>

@@ -79,10 +79,11 @@
     return self;
 
 }
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    self.tabBar.hidden = YES;
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     
+    self.tabBar.hidden =  _islog ? NO :YES;
+
 }
 - (void)isLog:(BOOL)bol{
     

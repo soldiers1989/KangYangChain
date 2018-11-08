@@ -154,4 +154,36 @@
     [self __requestWith:UserInfo dic:dic sel:_cmd isPost:YES];
     
 }
+- (void)commentAction:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:Comment dic:dic sel:_cmd isPost:YES];
+    
+    
+}
+- (void)myCardList:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:MyCardList dic:dic sel:_cmd isPost:YES];
+    
+}
+- (void)myCardDelete:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:MyCardDelete dic:dic sel:_cmd isPost:YES];
+}
+
+- (void)newsCategory:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:NewsCategory dic:dic sel:_cmd isPost:YES];
+}
+- (void)newsList:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:NewsList dic:dic sel:_cmd isPost:YES];
+    
+}
+
+- (void)shequHome:(NSMutableDictionary *)dic{
+    
+    [self __requestWith:ShequHome dic:dic sel:_cmd isPost:YES];
+    
+    
+}
 @end

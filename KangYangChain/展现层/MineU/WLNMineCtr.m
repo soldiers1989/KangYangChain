@@ -348,6 +348,10 @@ WLNReqstProtocol
 }
 - (NSArray *)t_p_a_Arr{
     if (!_t_p_a_Arr) {
+        
+        NSString *str = [NSString stringWithFormat:@"http://kylvue.cpyu8.com/#/mine/identity/uid=%@",self.userModel.userid];
+        
+        
         _t_p_a_Arr = @[
                        @[@{}],
                        @[@{TK:@"币币账户".Intl,PK:@"account",BK:^{[self push:@"WLNWalletCtr".instance];}},
@@ -357,10 +361,10 @@ WLNReqstProtocol
                        @[@{TK:@"扫码赠送".Intl,PK:@"tuiguang",BK:^{[self push:@"WLNMineScavengingCtr".instance];}},
                          @{TK:@"算力挖矿".Intl,PK:@"fenxiang",BK:^{[self push:@"WLNMineExtensionCtr".instance];}}],
                        
-                       @[@{TK:@"身份认证".Intl,PK:@"identity",BK:^{[self push:@"WLNHTMLCtr".instance];}},
-                         @{TK:@"账户安全".Intl,PK:@"suotou",BK:^{[self push:@"WLNHTMLCtr".instance];}},
-                         @{TK:@"支付设置".Intl,PK:@"pay",BK:^{[self push:@"WLNHTMLCtr".instance];}},
-                         @{TK:@"手续费等级".Intl,PK:@"charge",BK:^{[self push:@"WLNHTMLCtr".instance];}}]];
+                       @[@{TK:@"身份认证".Intl,PK:@"identity",BK:^{[self push:@"WLNHTMLCtr".instance box:str];}},
+                         @{TK:@"账户安全".Intl,PK:@"suotou",BK:^{[self push:@"WLNHTMLCtr".instance box:str];}},
+                         @{TK:@"支付设置".Intl,PK:@"pay",BK:^{[self push:@"WLNHTMLCtr".instance box:str];}},
+                         @{TK:@"手续费等级".Intl,PK:@"charge",BK:^{[self push:@"WLNHTMLCtr".instance box:str];}}]];
         
     }
     

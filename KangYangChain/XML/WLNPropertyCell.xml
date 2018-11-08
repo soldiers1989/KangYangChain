@@ -2,7 +2,7 @@
 
 <UIView layout="" attr="@:css/colors">
     
-    <UIView layout="margin:10" attr="bgColor:white,borderRadius:10,clipsToBounds:true">
+    <UIView layout="margin:10" attr="bgColor:white,borderRadius:10,clipsToBounds:true,@:css/shadows">
 
         <UILabel name="" layout="margin:20" attr="fontSize:16,color:#333333,linesNum:0,text:交易账户"/>
 

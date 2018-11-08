@@ -11,5 +11,11 @@
 @interface WLNMineCommunityHeadView : FlexCustomBaseView
 @property (nonatomic, strong) void (^didIntegralBLock)(void);
 
+@property (nonatomic, strong) UIImageView *headImg;
+@property (nonatomic, strong) UILabel *nameLab;
+@property (nonatomic, strong) UILabel *scoreLab;
+
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
 
 @end

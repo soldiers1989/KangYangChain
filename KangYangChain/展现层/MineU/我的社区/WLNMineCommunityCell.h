@@ -14,4 +14,7 @@
 @property (nonatomic, strong) UIImageView *img;
 @property (nonatomic, strong) UILabel *contentLab;
 
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
+
 @end

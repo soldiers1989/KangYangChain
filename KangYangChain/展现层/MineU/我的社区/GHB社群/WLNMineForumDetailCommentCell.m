@@ -20,5 +20,14 @@
 
     // Configure the view for the selected state
 }
-
+- (void)setDic:(NSMutableDictionary *)dic{
+    
+    
+    self.nameLab.text = [NSString stringWithFormat:@"%@ :",dic[@"nickname"]];
+    self.contentLab.text = dic[@"content"];
+    
+    
+    
+    
+}
 @end

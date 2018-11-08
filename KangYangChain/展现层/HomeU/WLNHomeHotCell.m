@@ -27,11 +27,10 @@
     }
     
     self.nameLab.text = dic[@"user"][@"nickname"];
-   
-    self.contentLab.text = dic[@"content"];
-    
     [self.headImg sd_setImageWithURL:[NSURL URLWithString:dic[@"user"][@"avatar"]] placeholderImage:HolderImage];
     
+    
+    self.contentLab.text = dic[@"content"];
     [self.contentImg sd_setImageWithURL:[NSURL URLWithString:dic[@"image1"]] placeholderImage:HolderImage];
     
     self.leftLab.text = dic[@""];

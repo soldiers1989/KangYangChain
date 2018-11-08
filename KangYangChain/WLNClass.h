@@ -22,7 +22,6 @@
 #import <FlexLib/FlexLib.h>
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
-#import <BTCPack/BTCWrapper.h>
 #import "ETHPack/HSEther.h"
 #import "UIImageView+WebCache.h"
 /**
@@ -74,7 +73,8 @@
 #import "GalenPayPasswordView.h"
 #import "WLNEmptyView.h"
 #import "HXPhotoPicker.h"
-#import "LTInputAccessoryView.h"
+#import "WLNInputView.h"
+
 
 
 

@@ -8,7 +8,8 @@
 
 #import "WLNMineNewsCtr.h"
 
-@interface WLNMineNewsCtr ()
+@interface WLNMineNewsCtr ()<WLNReqstProtocol,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) NSMutableArray *dataArr;
 
 @end
 
@@ -16,17 +17,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"新闻媒体";
+    self.dataArr = [NSMutableArray array];
+    
+    
+    self.tab.delegate = self;
+    self.tab.dataSource = self;
+    
+    [self tabType:1];
+    [self.tab registerClass:WLNMineCommunityCell.class forCellReuseIdentifier:@"WLNMineCommunityCell"];
+    
+    
+    [self routeTargetName:Handle actionName:@"newsCategory:"];
+    
 }
-- (void)GHBAbout{
+- (void)result:(id)data sel:(NSString *)sel{
     
+    self.dataArr = data;
+    [self.tab reloadData];
+}
+- (void)faild:(id)data sel:(NSString *)sel{
+    
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArr.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    WLNMineCommunityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineCommunityCell"];
+    cell.dic = self.dataArr[indexPath.row];
+    
+    return cell;
     
     
 }
-- (void)huobiAbout{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
+    NSString *str = [NSString stringWithFormat:@"%@?id=%@",NewDetailHtml,self.dataArr[indexPath.row][@"id"]];
+    NSString *title = self.dataArr[indexPath.row][@"name"];
+    
+    [self push:@"WLNHTMLCtr".instance box:str title:title];
+    
+  
     
 }
-
 @end

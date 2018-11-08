@@ -11,6 +11,7 @@
 @interface WLNMineGForumCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 
 @property (nonatomic, strong) UIButton *addBtn;
+@property (nonatomic, strong) UIButton *myCenterBtn;
 @property (nonatomic, strong) NSMutableArray *dataArrs;
 
 
@@ -30,6 +31,8 @@
     [self.tab registerClass:WLNHomeHotCell.class forCellReuseIdentifier:@"WLNHomeHotCell"];
 
     [self.view addSubview:self.addBtn];
+    [self.view addSubview:self.myCenterBtn];
+    
 
     
     [self routeTargetName:Handle actionName:@"cardList:"];
@@ -79,14 +82,15 @@
 - (void)publishAction{
     
     [self push:@"WLNMineCardPublishCtr".instance];
+ 
+}
+- (void)myCenterAction{
     
-    
-    
-    
+    [self push:@"WLNMineGForumMineCtr".instance];
 }
 - (UIButton *)addBtn{
     if (_addBtn == nil) {
-        _addBtn = [[UIButton alloc]initWithFrame:CGRectMake((DEVICEWidth - 50) / 2, DEVICEHEIGHT - 130, 50, 50)];
+        _addBtn = [[UIButton alloc]initWithFrame:CGRectMake((DEVICEWidth - 40) / 2, DEVICEHEIGHT - 130, 40, 40)];
         
         [_addBtn setBackgroundImage:@"publish".image forState:UIControlStateNormal];
         [_addBtn addTarget:self action:@selector(publishAction) forControlEvents:UIControlEventTouchUpInside];
@@ -94,5 +98,17 @@
         
     }
     return _addBtn;
+}
+- (UIButton *)myCenterBtn{
+    if (_myCenterBtn == nil) {
+        _myCenterBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEVICEWidth - 50, DEVICEHEIGHT - 200, 40, 40)];
+        [_myCenterBtn setBackgroundImage:@"shuibo".image forState:UIControlStateNormal];
+        [_myCenterBtn addTarget:self action:@selector(myCenterAction) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+    return _myCenterBtn;
+    
+    
 }
 @end

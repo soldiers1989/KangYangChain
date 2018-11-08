@@ -2,7 +2,7 @@
 
 <UIView layout="flex:1" attr="@:css/colors">
 
-   <UIView layout="margin:10,marginTop:0" attr="bgColor:white,borderRadius:5,clipsToBounds:true">
+   <UIView layout="margin:10,marginTop:0" attr="bgColor:white,borderRadius:7,@:css/shadows">
 
        <UIView layout="flexDirection:row,margin:15" attr="">
 
@@ -18,8 +18,10 @@
        </UIView>
 
         <UIView layout="flexDirection:row" attr="">
+            <UIView layout="alignItems:flex-start,flex:1,marginLeft:10,marginRight:10,height:100" attr="@:css/colors">
 
-            <UILabel name="contentLab" layout="flex:1,marginLeft:10,marginRight:10" attr="fontSize:14,color:#333333,linesNum:0,@:css/colors"/>
+                <UILabel name="contentLab" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,@:css/colors"/>
+            </UIView>
             <UIImageView name="contentImg" attr="source:" layout="@:css/contentImg,marginRight:10" />
 
         </UIView>
@@ -34,13 +36,25 @@
 
             <UIView layout="flexDirection:row" attr="">
 
-                <UIImageView attr="source:exceptional" layout="marginRight:5"/>
-                <UILabel name="leftLab" layout="marginRight:5" attr="fontSize:12,color:#D0D0D0,linesNum:0,text:"/>
-                <UIImageView attr="source:givealike" layout="marginRight:5"/>
-                <UILabel name="centerLab" layout="marginRight:5" attr="fontSize:12,color:#D0D0D0,linesNum:0,text:"/>
-                <UIImageView attr="source:comment" layout="marginRight:5"/>
-                <UILabel name="rightLab" layout="" attr="fontSize:12,color:#D0D0D0,linesNum:0,text:"/>
+                <FlexTouchView onPress="" layout="marginRight:5,flexDirection:row" attr="underlayColor:darkGray">
+                    <UIImageView attr="source:exceptional" layout="marginRight:5"/>
+                    <UILabel name="leftLab" layout="" attr="fontSize:12,color:#D0D0D0,linesNum:0,text:"/>
+                </FlexTouchView>
 
+                <FlexTouchView onPress="" layout="marginRight:5,flexDirection:row" attr="underlayColor:darkGray">
+                
+                    <UIImageView attr="source:givealike" layout="marginRight:5"/>
+                    <UILabel name="centerLab" layout="" attr="fontSize:12,color:#D0D0D0,linesNum:0,text:"/>
+                </FlexTouchView>
+
+                <FlexTouchView onPress="" layout="marginRight:5,flexDirection:row" attr="underlayColor:darkGray">
+                    <UIImageView attr="source:comment" layout="marginRight:5"/>
+                    <UILabel name="rightLab" layout="" attr="fontSize:12,color:#D0D0D0,linesNum:0,text:"/>
+
+                </FlexTouchView>
+
+
+             
             </UIView>
 
         </UIView>

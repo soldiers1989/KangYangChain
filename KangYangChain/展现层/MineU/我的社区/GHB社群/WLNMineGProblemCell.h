@@ -11,6 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNMineGProblemCell : FlexBaseTableCell
+@property (nonatomic, strong) UILabel *questionLab;
+@property (nonatomic, strong) UILabel *answerLab;
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
 
 @end
 

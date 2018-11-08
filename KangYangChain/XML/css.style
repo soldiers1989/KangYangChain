@@ -47,6 +47,15 @@
 
     </style>
     
+    <style name="shadows">
+        
+        <attr name="shadowOpacity">0.2</attr>
+        <attr name="shadowColor">gray</attr>
+        <attr name="shadowRadius">2</attr>
+        <attr name="shadowOffset">0/0</attr>
+        
+
+    </style>
     
     
 </styles>

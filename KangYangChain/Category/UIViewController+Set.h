@@ -23,11 +23,17 @@ typedef NS_ENUM(NSInteger, TAB_FRAME_TYPE) {
  属性
  */
 @property (nonatomic, strong) UITableView *tab;
+@property (nonatomic, strong) id box;
+
 
 @property (nonatomic, assign) TAB_FRAME_TYPE type;
 
 
 - (void)push:(UIViewController *)vc;
+
+- (void)push:(UIViewController *)vc box:(id)box;
+
+- (void)push:(UIViewController *)vc box:(id)box title:(NSString *)title;
 
 - (void)tabType:(TAB_FRAME_TYPE)type;
 

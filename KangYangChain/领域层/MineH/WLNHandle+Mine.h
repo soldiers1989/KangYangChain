@@ -64,6 +64,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)userInfo:(NSMutableDictionary *)dic;
 
+- (void)commentAction:(NSMutableDictionary *)dic;
+
+- (void)myCardList:(NSMutableDictionary *)dic;
+
+- (void)myCardDelete:(NSMutableDictionary *)dic;
+
+- (void)newsCategory:(NSMutableDictionary *)dic;
+
+- (void)newsList:(NSMutableDictionary *)dic;
+
+
+- (void)shequHome:(NSMutableDictionary *)dic;
+
 
 @end
 

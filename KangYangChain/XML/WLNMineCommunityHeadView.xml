@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
-<UIView layout="height:300" attr="bgColor:red">
+<UIView layout="" attr="bgColor:red">
 
     <UIImageView attr="source:Snip20181004_37,userInteractionEnabled:true" layout="flex:1">
 
@@ -11,11 +11,11 @@
 
                 <UIView layout="flexDirection:row,marginTop:30" attr="">
 
-                    <UIImageView attr="source:Snip20181007_53,borderRadius:40,clipsToBounds:true" layout="width:80,height:80"/>
+                    <UIImageView name="headImg" attr="source:,borderRadius:40,clipsToBounds:true" layout="width:80,height:80"/>
 
                     <UIView layout="justifyContent:center,marginLeft:15" attr="">
-                        <UILabel name="" layout="height:25" attr="fontSize:14,color:white,linesNum:0,text:一级代理"/>
-                        <UILabel name="" layout="height:25" attr="fontSize:14,color:white,linesNum:0,text:积分666"/>
+                        <UILabel name="nameLab" layout="height:25" attr="fontSize:12,color:white,linesNum:0,text:一级代理"/>
+                        <UILabel name="scoreLab" layout="height:25" attr="fontSize:12,color:white,linesNum:0,text:积分666"/>
 
                         <FlexTouchView onPress="integralAction" layout="" attr="underlayColor:darkGray,bgColor:#FF5452,borderRadius:12.5,clipsToBounds:true">
 
@@ -32,7 +32,7 @@
 
             </UIView>
 
-            <UIView layout="" attr="bgColor:yellow">
+            <UIView layout="margin:20,height:100" attr="bgColor:white,borderRadius:7">
                     
 
             </UIView>

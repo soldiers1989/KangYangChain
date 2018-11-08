@@ -14,6 +14,7 @@
 + (WLNTradeHeadView *)shared{
     
     WLNTradeHeadView *view = [[WLNTradeHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 85)];
+    [view shadow];
     view.backgroundColor = maingray;
     view.topArr = @[].mutableCopy;
     view.bottomArr = @[].mutableCopy;

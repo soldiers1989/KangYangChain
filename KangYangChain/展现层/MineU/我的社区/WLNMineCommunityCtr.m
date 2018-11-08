@@ -8,7 +8,9 @@
 
 #import "WLNMineCommunityCtr.h"
 
-@interface WLNMineCommunityCtr ()<UITableViewDelegate,UITableViewDataSource>
+@interface WLNMineCommunityCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
+
+@property (nonatomic, strong) WLNMineCommunityHeadView*headView;
 
 @end
 
@@ -26,23 +28,31 @@
     
     [self.tab registerClass:WLNMineCommunityCell.class forCellReuseIdentifier:@"WLNMineCommunityCell"];
     
-    WLNMineCommunityHeadView *view  = [[WLNMineCommunityHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 300)];
-    
-    weakSelf(self);
-    
-    [view setDidIntegralBLock:^{
+    self.headView  = [[WLNMineCommunityHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 250)];
+    self.tab.tableHeaderView = self.headView;
+
+    weakSelf(self);  
+    [self.headView setDidIntegralBLock:^{
     
         [weakself.navigationController pushViewController:@"WLNMineIntegralCtr".instance animated:YES];
         
     }];
     
     
+    [self routeTargetName:Handle actionName:@"shequHome:"];
+    
+  
+}
+
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    self.headView.dic = data;
     
     
     
     
-    
-    self.tab.tableHeaderView = view;
+}
+- (void)faild:(id)data sel:(NSString *)sel{
     
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{

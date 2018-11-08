@@ -107,6 +107,8 @@
 #import "WLNMineGForumDetailCtr.h"
 #import "WLNMineForumDetailCommentCell.h"
 #import "WLNMineGForumDetailCell.h"
+#import "WLNMineGForumMineCtr.h"
+
 
 
 #endif /* WLNMineUHeader_h */

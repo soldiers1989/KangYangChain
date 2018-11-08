@@ -2,13 +2,13 @@
 
 <UIView layout="" attr="@:css/colors">
 
-    <UIView layout="margin:10,marginBottom:0,flexDirection:row,alignItems:center" attr="bgColor:white,borderRadius:7">
+    <UIView layout="margin:10,marginBottom:0,flexDirection:row,alignItems:center" attr="bgColor:white,borderRadius:7,@:css/shadows">
         <UIImageView attr="source:gonggao" layout="marginLeft:10"/>
         <UILabel name="" layout="margin:10" attr="fontSize:14,color:red,linesNum:0,text:公告:近期比特币再次涨出新高度"/>
     </UIView>
 
-    <UIView layout="flexDirection:row,margin:10,marginBottom:0,justifyContent:space-around" attr="bgColor:white,
-    borderRadius:7">
+    <UIView layout="flexDirection:row,margin:10,marginBottom:5,justifyContent:space-around" attr="bgColor:white,
+    borderRadius:7,@:css/shadows">
 
 
         <FlexTouchView onPress="click:" layout="margin:10,justifyContent:center,alignItems:center,flex:1" attr="underlayColor:darkGray,

@@ -21,7 +21,7 @@
     self.dataArr = [NSMutableArray array];
     self.tab.dataSource = self;
     self.tab.delegate = self;
-    self.tab.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [self tabType:1];
     
     
@@ -33,6 +33,11 @@
 }
 - (void)result:(id)data sel:(NSString *)sel{
     
+    
+    self.dataArr = data[@"data"];
+    [self.tab reloadData];
+    
+    
 }
 - (void)faild:(id)data sel:(NSString *)sel{
     
@@ -41,11 +46,12 @@
     return 100;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return self.dataArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     WLNMineGProblemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineGProblemCell"];
+    cell.dic = self.dataArr[indexPath.row];
     
     return cell;
     

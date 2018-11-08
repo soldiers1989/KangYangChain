@@ -10,6 +10,8 @@
 
 @interface WLNHomeHotCell : FlexBaseTableCell
 
+@property (nonatomic, strong) NSIndexPath *index;
+
 @property (nonatomic, strong) UIImageView *headImg;
 @property (nonatomic, strong) UILabel *nameLab;
 @property (nonatomic, strong) UILabel *remarkLab;

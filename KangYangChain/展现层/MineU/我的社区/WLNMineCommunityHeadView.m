@@ -19,5 +19,17 @@
     
     
 }
+- (void)setDic:(NSMutableDictionary *)dic{
+    
+    _dic = dic;
+    
+    [self.headImg sd_setImageWithURL:self.userModel.avatar.url];
+    
+    self.nameLab.text = [NSString stringWithFormat:@"%@级代理",dic[@"membership_grade"]];
+    
+    self.scoreLab.text = [NSString stringWithFormat:@"积分:%@",dic[@"integral"]];
+    
+    
+}
 
 @end

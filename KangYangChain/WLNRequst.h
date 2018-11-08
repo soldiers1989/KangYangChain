@@ -8,11 +8,12 @@
 
 
 
-//192.168.0.106/index/user/setAvatar
-#define Address_Domain "http://kyl.wlnxx.top"
+
+//#define Address_Domain "http://kyl.wlnxx.top"
+
+#define Address_Domain "http://kylvue.cpyu8.com"
+
 #define BaseUrl Address_Domain"/adminServer/public/index.php/"
-
-
 
 
 
@@ -64,7 +65,7 @@
 
 #define CommentList @BaseUrl"/index/community/userArticleCommentList"
 
-#define ProblemList @BaseUrl"/index/community/agreeUserArticle"
+#define ProblemList @BaseUrl"/index/community/questionList"
 
 #define HeadUpdate @BaseUrl"/index/user/setAvatar"
 
@@ -77,5 +78,19 @@
 #define GHBCharge @BaseUrl"/index/pay/recharge"
 
 #define UserInfo @BaseUrl"/index/user/info"
+
+#define Comment @BaseUrl"/index/community/commentUserArticle"
+
+#define MyCardList @BaseUrl"/index/community/userPublishArticleList"
+
+#define MyCardDelete @BaseUrl"/index/community/delUserArticle"
+
+#define NewsCategory @BaseUrl"/index/community_article/cate"
+
+#define NewsList @BaseUrl"/index/community_article/articleList"
+
+#define NewDetailHtml @BaseUrl"/index/community_article/articleDetailContent"
+
+#define ShequHome @BaseUrl"/index/community/index"
 
 

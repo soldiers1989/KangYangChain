@@ -10,7 +10,30 @@
 
 @implementation UIViewController (Set)
 
-
+- (void)push:(UIViewController *)vc box:(id)box title:(NSString *)title{
+    
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    vc.title = title;
+    
+    vc.box = box;
+    
+    UIViewController *mine = (UIViewController *)self;
+    
+    [mine.navigationController pushViewController:vc animated:YES];
+    
+}
+- (void)push:(UIViewController *)vc box:(id)box{
+    
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    vc.box = box;
+    
+    UIViewController *mine = (UIViewController *)self;
+    
+    [mine.navigationController pushViewController:vc animated:YES];
+    
+}
 - (void)push:(UIViewController *)vc{
    
     vc.hidesBottomBarWhenPushed = YES;
@@ -19,6 +42,15 @@
     
     [mine.navigationController pushViewController:vc animated:YES];
     
+    
+}
+- (id)box{
+    return  objc_getAssociatedObject(self, @selector(box));
+    
+}
+- (void)setBox:(id)box{
+    
+    objc_setAssociatedObject(self, @selector(box), box, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
 }
 -(void)setTab:(UITableView *)tab{

@@ -49,10 +49,10 @@
      
      查询交易记录
      */
-    [BTCWrapper getTxlistWithAddress:@"" withPage:1 block:^(NSArray *array, BOOL suc) {
-        
-        
-    }];
+//    [BTCWrapper getTxlistWithAddress:@"" withPage:1 block:^(NSArray *array, BOOL suc) {
+//        
+//        
+//    }];
     
     
 //

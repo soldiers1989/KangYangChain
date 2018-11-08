@@ -20,5 +20,12 @@
 
     // Configure the view for the selected state
 }
-
+- (void)setDic:(NSMutableDictionary *)dic{
+    
+    self.questionLab.text = dic[@"question"];
+    self.answerLab.text = dic[@"answer"];
+    
+    
+    
+}
 @end
