@@ -14,4 +14,6 @@
 
 @property (nonatomic, assign) SEL sel;
 
+- (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel isPost:(BOOL)isPost;
+
 @end

@@ -24,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)judgeNet;
 
-
 - (void)saveUserDic:(NSMutableDictionary*)dic;
 
 - (void)deleteUserDic;

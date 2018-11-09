@@ -10,12 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNTradeTradeHeadView : FlexCustomBaseView<UITableViewDelegate,UITableViewDataSource>
+@interface WLNTradeTradeHeadView : FlexCustomBaseView<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 
 @property (nonatomic, strong) UITableView *tab;
 
 @property (nonatomic, strong) UIView *backView;
 
+@property (nonatomic, strong) void (^didClickBlock)();
+
+@property (nonatomic, strong) NSMutableArray *dataArrs;
 
 
 

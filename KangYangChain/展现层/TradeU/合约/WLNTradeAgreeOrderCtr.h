@@ -1,8 +1,8 @@
 //
-//  WLNTradeBBCtr.h
+//  WLNTradeAgreeOrderCtr.h
 //  KangYangChain
 //
-//  Created by edz on 2018/10/25.
+//  Created by edz on 2018/11/9.
 //  Copyright © 2018 furao. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WLNTradeBBCtr : UIViewController
+@interface WLNTradeAgreeOrderCtr : UIViewController
 
 @end
 

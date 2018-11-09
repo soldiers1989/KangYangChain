@@ -20,13 +20,7 @@
  */
 - (void)result:(id)data sel:(NSString *)sel{
     
-    
-    if ([NSStringFromSelector(self.sel) isEqualToString:@"rmbPrice:"]) {
-    
-        [self rmbBackWith:data];
-        return;
-        
-    }
+   
     
     if ([data[@"code"] integerValue] == 200) {
         
@@ -84,32 +78,28 @@
     if ([data isKindOfClass:[NSError class]]) {
         
         NSError *error = (NSError *)data;
-        NSLog(@"-----------------------------------%ld",error.code);
+        NSLog(@"-----------------------------------%@",error.userInfo);
         
         
     }
     
 }
 
-
-
-- (void)rmbBackWith:(id)data{
+- (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel isPost:(BOOL)isPost{
     
     
-    NSNumber *last = data[@"1"][@"last"];
+    self.sel = sel;
     
-    NSNumber *USD = data[@"currencies_rate"][@"USD"];
+    NSMutableDictionary *dicp = @{}.mutableCopy;
     
-    double rmb = last.doubleValue / USD.doubleValue / 100;
-    
-    if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
-        
-        [self.reqDelegate result:@(rmb) sel:NSStringFromSelector(self.sel)];
-        
+    if (url) {
+        dicp[URLS] = url;
     }
+    dicp[PRAMAS] = dic == nil ? @{}.mutableCopy:dic;
+    
+    [self routeTargetName:@"WLNData" actionName:isPost ? @"postWithDic:":@"getWithDic:" param:dicp];
     
     
 }
-
 
 @end

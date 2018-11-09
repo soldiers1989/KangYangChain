@@ -33,7 +33,11 @@ typedef NS_ENUM(NSInteger, TAB_FRAME_TYPE) {
 
 - (void)push:(UIViewController *)vc box:(id)box;
 
+- (void)push:(UIViewController *)vc title:(NSString *)title;
+
 - (void)push:(UIViewController *)vc box:(id)box title:(NSString *)title;
+
+
 
 - (void)tabType:(TAB_FRAME_TYPE)type;
 

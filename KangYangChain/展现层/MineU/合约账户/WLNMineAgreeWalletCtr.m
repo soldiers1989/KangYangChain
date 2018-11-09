@@ -8,8 +8,10 @@
 
 #import "WLNMineAgreeWalletCtr.h"
 
-@interface WLNMineAgreeWalletCtr ()<UITableViewDelegate,UITableViewDataSource>
+@interface WLNMineAgreeWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol>
 
+@property (nonatomic, strong) NSMutableDictionary *info;
+@property (nonatomic, strong) WLNMineAgreeWalletHeadView *headView;
 @end
 
 @implementation WLNMineAgreeWalletCtr
@@ -18,34 +20,46 @@
     [super viewDidLoad];
     self.title = @"合约账户".Intl;
     
+    self.info = [NSMutableDictionary dictionary];
+    
     self.tab.delegate = self;
     self.tab.dataSource = self;
     
     [self tabType:1];
     
     
-    
-    [self.tab registerClass:WLNWalletBodyCell.class forCellReuseIdentifier:@"WLNWalletBodyCell"];
-    
-    [self.tab registerClass:WLNWalletHeadCell.class forCellReuseIdentifier:@"WLNWalletHeadCell"];
+    [self.tab registerClass:WLNMineAgreeWalletCell.class forCellReuseIdentifier:@"WLNMineAgreeWalletCell"];
     
     
     
-    WLNMineAgreeWalletHeadView *view = [[WLNMineAgreeWalletHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 250)];
-    view.forwarder = self;
-    self.tab.tableHeaderView = view;
+    self.headView = [[WLNMineAgreeWalletHeadView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWidth, 250)];
+    self.headView.forwarder = self;
+    self.tab.tableHeaderView = self.headView;
     
     
+    
+    
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    dic[@"uid"] = self.userModel.userid;
+    [self routeTargetName:Handle actionName:@"agreeAccount:" param:dic];
+    
+    
+}
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    self.info = data;
+    self.headView.dic = data;
+    [self.tab reloadData];
     
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return section == 0 ? 40 : 0.1;
+    return 40;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
     WLNMineSmallView *view = [[WLNMineSmallView alloc]init];
-    return section == 0 ? view : nil;
+    return view;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -54,48 +68,27 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
-}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.section == 0) {
-        return [self head_tableView:tableView cellForRowAtIndexPath:indexPath];
-    }
     
-    return [self body_tableView:tableView cellForRowAtIndexPath:indexPath];
-    
-    
-}
-- (UITableViewCell *)head_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    WLNWalletHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNWalletHeadCell"];
-    
-    cell.forwarder = self;
+    WLNMineAgreeWalletCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNMineAgreeWalletCell"];
+    cell.dic = self.info;
     
     
     return cell;
     
 }
-- (UITableViewCell *)body_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    WLNWalletBodyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNWalletBodyCell"];
-    
-    
-    return cell;
-    
-}
-- (void)changeBiAction{
-    NSLog(@"1");
-    
-}
+
+
 - (void)clickAction:(UITapGestureRecognizer *)tap{
 
-    UIViewController *vc = @[[WLNChangeCtr new],[WLNOrderCtr new]][tap.view.tag];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
     
+    NSArray *arr = @[@"WLNChangeCtr".instance,@"WLNTradeAgreeOrderCtr".instance];
+    NSArray *titleArr = @[@"资金转化",@"账单"];
+    
+    [self push:arr[tap.view.tag] title:titleArr[tap.view.tag]];
+ 
     
 }
 

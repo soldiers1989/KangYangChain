@@ -1,14 +1,14 @@
 //
-//  WLNTradeHangCell.m
+//  WLNTradeBBBodyCell.m
 //  KangYangChain
 //
-//  Created by edz on 2018/10/22.
+//  Created by edz on 2018/11/9.
 //  Copyright © 2018 furao. All rights reserved.
 //
 
-#import "WLNTradeHangCell.h"
+#import "WLNTradeBBBodyCell.h"
 
-@implementation WLNTradeHangCell
+@implementation WLNTradeBBBodyCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -19,11 +19,6 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-}
-- (void)setDic:(NSMutableDictionary *)dic{
-    
-    
-    
 }
 
 @end

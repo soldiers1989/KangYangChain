@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNMineAgreeWalletHeadView : FlexCustomBaseView
 
+@property (nonatomic, strong) UILabel *balanceLab;
+@property (nonatomic, strong) UILabel *rmbLab;
+
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

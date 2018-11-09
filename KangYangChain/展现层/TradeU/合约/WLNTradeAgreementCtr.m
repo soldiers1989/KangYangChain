@@ -35,30 +35,37 @@
     [self.view addSubview:_vcArr.firstObject];
     
     
-
-    
     WLNSimpleHeadView *view = [[WLNSimpleHeadView alloc]initWithDelegate:self titleArr:@[@"交易",@"挂单",@"持仓"]];
 
     [self.view addSubview:view];
-    
-    
-    WLNTradeTradeHeadView *viewb = [[WLNTradeTradeHeadView alloc]initWithFrame:CGRectMake(0, 46, DEVICEWidth, 40)];
-    
-    [self.view addSubview:viewb];
-    
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:@"add".image style:UIBarButtonItemStyleDone target:self action:@selector(menuAciton)];
+  
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:@"catogry".image style:UIBarButtonItemStyleDone target:self action:@selector(menuAciton)];
     
     
     
 }
 - (void)menuAciton{
     
+    NSArray *arr = @[@"",@"WLNTradeAgreeCloseCtr",@"WLNTradeAgreeOrderCtr"];
+    
+    WLNTradeAgreeCategoryView *view = [WLNTradeAgreeCategoryView shared];
+    [view show];
+    
+    weakSelf(self);
+    [view setDidClickBLock:^(NSInteger row, NSString * _Nonnull title) {
+        
+        NSString *vc = arr[row];
+        
+        [weakself push:vc.instance title:title];
+        
+        
+    }];
+    
     
 }
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    self.leftVc.view.frame = CGRectMake(0, 84, DEVICEWidth, DEVICEHEIGHT - 84 - 64);
+    self.leftVc.view.frame = CGRectMake(0, 44, DEVICEWidth, DEVICEHEIGHT - 84 - 64);
     self.centerVc.view.frame = CGRectMake(0, 84, DEVICEWidth, DEVICEHEIGHT - 84 - 64);
     self.rightVc.view.frame = CGRectMake(0, 84, DEVICEWidth, DEVICEHEIGHT - 84 - 64);
 }

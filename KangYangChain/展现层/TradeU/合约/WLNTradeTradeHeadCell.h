@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIView *backView;
 
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
 
 @end
 

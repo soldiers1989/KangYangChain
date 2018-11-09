@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-   WLNTradeBBCtr.xml
+   WLNTradeBBHeadCell.xml
    KangYangChain
 
-   Created by edz on 2018/10/25.
+   Created by edz on 2018/11/9.
    Copyright (c) 2018 furao. All rights reserved.
 -->
-
 <UIView layout="flex:1,marginTop:30" attr="@:css/colors">
     
-    <UIView layout="flexDirection:row,justifyContent:space-around" attr="bgColor:white">
-        <FlexTouchView onPress="" layout="flex:1" attr="underlayColor:darkGray">
-            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:币币,textAlign:center"/>
-        </FlexTouchView>
-        <FlexTouchView onPress="" layout="flex:1" attr="underlayColor:darkGray">
-            <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:杠杆,textAlign:center"/>
-        </FlexTouchView>
-    </UIView>
-    
-    <UIView layout="height:40,marginTop:10,flexDirection:row" attr="bgColor:white">
+    <UIView layout="marginTop:10,flexDirection:row" attr="bgColor:red">
         
         <FlexTouchView onPress="openAction:" layout="flexDirection:row,alignItems:center" attr="underlayColor:darkGray">
             <UILabel name="" layout="margin:10" attr="fontSize:14,color:#333333,linesNum:0,text:BTC/USDT"/>
@@ -127,7 +117,7 @@
         </UIView>
         
     </UIView>
-    
-    
-    
+
 </UIView>
+
+    

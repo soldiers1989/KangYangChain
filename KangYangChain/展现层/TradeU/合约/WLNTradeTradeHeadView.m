@@ -10,6 +10,25 @@
 
 @implementation WLNTradeTradeHeadView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        self.dataArrs = [NSMutableArray array];
+        
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+        dic[@"uid"] = @"1";
+        
+        [self routeTargetName:Handle actionName:@"cionChooseList:" param:dic];
+    }
+    return self;
+}
+- (void)result:(id)data sel:(NSString *)sel{
+    
+    self.dataArrs = data;
+    [self.tab reloadData];
+    
+}
 
 - (void)headClickAction:(UITapGestureRecognizer *)tap{
     
@@ -20,10 +39,6 @@
     [self.tab shadow];
 
     [[UIApplication sharedApplication].keyWindow addSubview:self.backView];
-    
-    
-    
-    
     
 }
 
@@ -60,14 +75,23 @@
     return 100;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.dataArrs.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
     WLNTradeTradeHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeTradeHeadCell"];
+    
+    cell.dic = self.dataArrs[indexPath.row];
+    
     return cell;
     
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (_didClickBlock) {
+        _didClickBlock();
+        
+    }
 }
 - (UITableView *)tab{
     if (_tab == nil) {
@@ -84,7 +108,7 @@
 - (UIView *)backView{
     if (_backView == nil) {
         _backView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-        _backView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.00];
+        _backView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.1];
         [_backView addSubview:self.tab];
         
         

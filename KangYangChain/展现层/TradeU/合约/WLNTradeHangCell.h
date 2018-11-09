@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WLNTradeHangCell : FlexBaseTableCell
+@property (nonatomic, strong) NSMutableDictionary *dic;
 
 @end
 

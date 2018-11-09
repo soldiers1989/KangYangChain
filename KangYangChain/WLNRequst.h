@@ -93,4 +93,22 @@
 
 #define ShequHome @BaseUrl"/index/community/index"
 
+#define AgreeOrder @BaseUrl"/index/contract/bill.html" //合约账单
+
+#define CloseAgreeLog @BaseUrl"/index/contract/close_log.html" //平仓记录
+
+#define CreateAgree @BaseUrl"/index/contract/receive.html" //建仓
+
+#define HoldAgreeLog @BaseUrl"/index/contract/position" //持仓记录
+
+#define AgreeTradeList @BaseUrl"/index/contract/index.html"   //合约交易列表
+
+#define CionChooseList @BaseUrl"/index/contract/changedate.html" //币种选择列表
+
+#define AgreeAccount @BaseUrl"/index/contract/account.html" //合约账户
+
+#define CloseAgree @BaseUrl"/index/contract/close.html" //平仓
+
+#define YingSunSet @BaseUrl"/index/contract/changenum.html" //调整止盈止损
+
 

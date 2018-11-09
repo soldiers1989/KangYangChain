@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   WLNTradeBBBodyCell.xml
+   KangYangChain
+
+   Created by edz on 2018/11/9.
+   Copyright (c) 2018 furao. All rights reserved.
+-->
+<UIView layout="" attr="@:css/colors">
+
+
+    <UIView layout="marginTop:10" attr="bgColor:white">
+    
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:限单价"/>
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:全部撤单"/>
+        </UIView>
+
+        <UILabel name="" layout="height:0.3" attr="fontSize:12,@:css/colors,linesNum:0,text:"/>
+
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
+
+            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:买入BTC"/>
+            <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:12:12:00"/>
+            <FlexTouchView onPress="" layout="justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#5F9FEB,
+            borderRadius:5">
+                <UILabel name="" layout="" attr="fontSize:12,color:white,linesNum:0,text:撤单"/>
+            </FlexTouchView>
+
+        </UIView>
+
+        <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
+
+            <UIView layout="margin:10,marginTop:0" attr="">
+                <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:委托量"/>
+                <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:0.12"/>
+            </UIView>
+
+            <UIView layout="margin:10,marginTop:0" attr="">
+                <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:成交量"/>
+                <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:0.12"/>
+            </UIView>
+
+            <UIView layout="margin:10,marginTop:0" attr="">
+
+                <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:委托价格"/>
+                <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:$5444"/>
+            
+            </UIView>
+
+        </UIView>
+    </UIView>
+</UIView>
+
