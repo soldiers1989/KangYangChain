@@ -57,8 +57,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "-result:sel:"
-            landmarkType = "7">
+            landmarkName = "WLNMineCtr"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -73,52 +73,37 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "228"
             endingLineNumber = "228"
-            landmarkName = "-updatePicWithDic:"
+            landmarkName = "-getWithDic:"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[WLNData(Net) updatePicWithDic:]"
+                  symbolName = "__27-[WLNData(Net) getWithDic:]_block_invoke.120"
                   moduleName = "KangYangChain"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/furao/Desktop/KangYangChain/KangYangChain/%E6%95%B0%E6%8D%AE%E5%B1%82/NetD/WLNData+Net.m"
-                  timestampString = "563215435.244965"
+                  timestampString = "563375239.7039731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "228"
                   endingLineNumber = "228"
-                  offsetFromSymbolStart = "57">
+                  offsetFromSymbolStart = "356">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__33-[WLNData(Net) updatePicWithDic:]_block_invoke"
+                  symbolName = "__copy_helper_block_.123"
                   moduleName = "KangYangChain"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/furao/Desktop/KangYangChain/KangYangChain/%E6%95%B0%E6%8D%AE%E5%B1%82/NetD/WLNData+Net.m"
-                  timestampString = "563215435.25054"
+                  timestampString = "563375239.711274"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "228"
-                  endingLineNumber = "228"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.139"
-                  moduleName = "KangYangChain"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/furao/Desktop/KangYangChain/KangYangChain/%E6%95%B0%E6%8D%AE%E5%B1%82/NetD/WLNData+Net.m"
-                  timestampString = "563215435.254632"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "228"
-                  endingLineNumber = "228"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
