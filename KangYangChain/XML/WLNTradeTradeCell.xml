@@ -12,28 +12,38 @@
     <UIView layout="width:50%" attr="">
         <UIView layout="flexDirection:row,justifyContent:space-between" attr="">
 
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:限价单"/>
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:20X"/>
 
+            <FlexTouchView onPress="danChooseAction:" layout="flexDirection:row,alignItems:center" attr="underlayColor:darkGray">
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:限价单"/>
+                <UIImageView attr="source:Arrow_down"/>
+            </FlexTouchView>
+            
+            <FlexTouchView onPress="chooseAction:" layout="flexDirection:row,alignItems:center" attr="underlayColor:darkGray">
+
+                <UILabel name="" layout="margin:10,marginRight:5" attr="fontSize:12,color:#333333,linesNum:0,text:20X"/>
+                <UIImageView attr="source:Arrow_down"/>
+
+            </FlexTouchView>
         </UIView>
 
-        <UIView layout="flexDirection:row,margin:10,justifyContent:space-around" attr="borderColor:gray,borderWidth:1">
-            <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:数量"/>
-            <UILabel name="" layout="" attr="fontSize:12,color:#333333,linesNum:0,text:BTC"/>
+        <UIView layout="flexDirection:row,margin:10,justifyContent:space-around" attr="borderColor:gray,borderWidth:0.3,
+        borderRadius:5">
+            <UITextField name="" layout="margin:5,flex:1" attr="fontSize:14,color:black,textAlign:left,placeholder:买入数量,text:"/>
+            <UILabel name="" layout="marginRight:5" attr="fontSize:12,color:#333333,linesNum:0,text:BTC"/>
         </UIView>
 
         <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止盈止损设置"/>
 
         <UIView layout="flexDirection:row,margin:10" attr="">
 
-            <UIView layout="flex:1" attr="borderColor:gray,borderWidth:1">
-                <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:>USDT,
-                textAlign:center"/>
+            <UIView layout="flex:1,justifyContent:center" attr="borderColor:gray,borderWidth:0.3,borderRadius:5,">
+                <UITextField name="" layout="marginLeft:5" attr="fontSize:14,color:black,textAlign:left,placeholder:止盈,text:"/>
             </UIView>
+
             <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:或"/>
-            <UIView layout="flex:1" attr="borderColor:gray,borderWidth:1">
-                <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:USDT,
-                textAlign:center"/>
+
+            <UIView layout="flex:1,justifyContent:center" attr="borderColor:gray,borderWidth:0.3,borderRadius:5">
+                <UITextField name="" layout="marginLeft:5" attr="fontSize:14,color:black,textAlign:left,placeholder:止损,text:"/>
             </UIView>
 
         </UIView>
@@ -55,12 +65,12 @@
 
         </UIView>
 
-        <FlexTouchView onPress="" layout="margin:10,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:green,
+        <FlexTouchView onPress="maizhangAction" layout="margin:10,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#51B873,
         ,borderRadius:7">
             <UILabel name="" layout="margin:5" attr="fontSize:12,color:white,linesNum:0,text:买涨/做多"/>
         </FlexTouchView>
 
-        <FlexTouchView onPress="" layout="margin:10,marginTop:0,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:red,
+        <FlexTouchView onPress="maidieAction" layout="margin:10,marginTop:0,justifyContent:center,alignItems:center" attr="underlayColor:darkGray,bgColor:#EB6661,
         borderRadius:7">
             <UILabel name="" layout="margin:5" attr="fontSize:12,color:white,linesNum:0,text:买跌/做空"/>
         </FlexTouchView>

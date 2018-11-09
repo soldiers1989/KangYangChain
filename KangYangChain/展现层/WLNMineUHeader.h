@@ -68,7 +68,7 @@
 #import "WLNMineLawWalletCtr.h"
 #import "WLNMineAgreeWalletCtr.h"
 
-#import "WLNMineAgreeWalletHeadCell.h"
+
 #import "WLNMineLawWalletHeadCell.h"
 
 #import "WLNOrderHeadView.h"
@@ -108,6 +108,7 @@
 #import "WLNMineForumDetailCommentCell.h"
 #import "WLNMineGForumDetailCell.h"
 #import "WLNMineGForumMineCtr.h"
+#import "WLNMineAgreeWalletCell.h"
 
 
 

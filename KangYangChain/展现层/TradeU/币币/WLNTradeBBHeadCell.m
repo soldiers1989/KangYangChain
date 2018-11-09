@@ -1,14 +1,14 @@
 //
-//  WLNMineAgreeWalletHeadCell.m
+//  WLNTradeBBHeadCell.m
 //  KangYangChain
 //
-//  Created by edz on 2018/10/23.
+//  Created by edz on 2018/11/9.
 //  Copyright © 2018 furao. All rights reserved.
 //
 
-#import "WLNMineAgreeWalletHeadCell.h"
+#import "WLNTradeBBHeadCell.h"
 
-@implementation WLNMineAgreeWalletHeadCell
+@implementation WLNTradeBBHeadCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

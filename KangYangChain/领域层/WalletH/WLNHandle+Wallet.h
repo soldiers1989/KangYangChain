@@ -10,10 +10,9 @@
 
 @interface WLNHandle (Wallet) <WLNReqstProtocol>
 
-/**
- 人民币数值
- */
-- (void)rmbPrice:(NSMutableDictionary *)dic;
 
+- (void)bbAcount:(NSMutableDictionary*)dic;
+
+- (void)bbTypeList:(NSMutableDictionary *)dic;
 
 @end

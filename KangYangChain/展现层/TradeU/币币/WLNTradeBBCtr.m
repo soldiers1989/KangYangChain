@@ -8,7 +8,7 @@
 
 #import "WLNTradeBBCtr.h"
 
-@interface WLNTradeBBCtr ()
+@interface WLNTradeBBCtr ()<UITableViewDelegate,UITableViewDataSource,WLNSimpleHeadViewDelegate>
 {
     BOOL _isOpen;
     
@@ -23,17 +23,93 @@
     [super viewDidLoad];
     
     self.title = @"币币".Intl;
+    
+    
+    self.tab.delegate = self;
+    self.tab.dataSource = self;
+    
+    [self tabType:1];
+    
+    [self.tab registerClass:WLNTradeBBHeadCell.class forCellReuseIdentifier:@"WLNTradeBBHeadCell"];
+    [self.tab registerClass:WLNTradeBBBodyCell.class forCellReuseIdentifier:@"WLNTradeBBBodyCell"];
+    
+    
     [self.view addSubview:self.openView];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"币币订单" style:UIBarButtonItemStyleDone target:self action:@selector(bibiOrder)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:@"catogry".image style:UIBarButtonItemStyleDone target:self action:@selector(menuAciton)];
+    
+    
+    WLNSimpleHeadView *view = [[WLNSimpleHeadView alloc]initWithDelegate:self titleArr:@[@"币币",@"杠杆"]];
+    self.tab.tableHeaderView = view;
+    
+}
+- (void)simpleClickBack:(UIButton *)button tag:(NSInteger)tag{
     
     
 }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 1;
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == 0) {
+    
+        return [self head_tableView:tableView cellForRowAtIndexPath:indexPath];
+        
+        
+    }
+    return [self body_tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    
+    
+}
+- (UITableViewCell *)head_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-- (void)bibiOrder{
+    WLNTradeBBHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeBBHeadCell"];
     
-    [self push:@"WLNTradeBBOrderCtr".instance];
+    cell.forwarder = self;
     
+    return cell;
+    
+}
+
+- (UITableViewCell *)body_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    WLNTradeBBBodyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WLNTradeBBBodyCell"];
+    
+    cell.forwarder = self;
+    
+    return cell;
+    
+    
+}
+- (void)menuAciton{
+    
+    
+    NSArray *arr = @[@"",@"WLNTradeAgreeCloseCtr",@"WLNTradeBBDelegateListCtr",@""];
+    
+    NSArray *titleArr = @[@"资金划转",@"我的挂单",@"委托历史",@"币币账单"];
+    
+    WLNTradeAgreeCategoryView *view = [[WLNTradeAgreeCategoryView alloc]initWithArr:titleArr];
+    [view show];
+    
+    weakSelf(self);
+    [view setDidClickBLock:^(NSInteger row, NSString * _Nonnull title) {
+        
+        NSString *vc = arr[row];
+        
+        [weakself push:vc.instance title:title];
+        
+        
+    }];
     
 }
 - (void)openAction:(UITapGestureRecognizer *)tap{

@@ -11,22 +11,7 @@
 @implementation WLNHandle (Mine)
 
 
-- (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel isPost:(BOOL)isPost{
-    
-    
-    self.sel = sel;
-    
-    NSMutableDictionary *dicp = @{}.mutableCopy;
-        
-    if (url) {
-        dicp[URLS] = url;
-    }
-    dicp[PRAMAS] = dic == nil ? @{}.mutableCopy:dic;
-    
-    [self routeTargetName:@"WLNData" actionName:isPost ? @"postWithDic:":@"getWithDic:" param:dicp];
 
-    
-}
 - (void)sellGHB:(NSMutableDictionary *)dic{
     
 }

@@ -12,6 +12,8 @@
 
 @interface WLNWalletCtr ()<UITableViewDelegate,UITableViewDataSource,WLNReqstProtocol,WLNFloatViewDelegate>
 
+@property (nonatomic, strong) NSMutableArray *biListArr;
+
 @property (nonatomic, strong) WLNWalletHeadView *headView;
 
 @end
@@ -21,7 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"币币账户".Intl;
-        
+    
+    
+    self.biListArr = [NSMutableArray array];
+    
     [self tabType:2];
     
     self.tab.delegate = self;
@@ -30,8 +35,6 @@
     [self.tab registerClass:WLNWalletBodyCell.class forCellReuseIdentifier:@"WLNWalletBodyCell"];
 
     [self.tab registerClass:WLNWalletHeadCell.class forCellReuseIdentifier:@"WLNWalletHeadCell"];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearAction)];
     
 
     self.headView.model = [WLNSingle shared].current_model;
@@ -44,47 +47,25 @@
     
     [self routeTargetName:Handle actionName:action];
 
+    /***/
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    dic[@"uid"] = self.userModel.userid;
+    dic[@"cid"] = @"1";
+    [self routeTargetName:Handle actionName:@"bbAcount:" param:dic];
+    
+    /***/
+    
+ 
+    [self routeTargetName:Handle actionName:@"bbTypeList:"];
+    
     
 }
 
-- (void)clearAction{
-    
-    [WLNKeyChain deleteKeychainValue:@"BTC"];
-    [WLNKeyChain deleteKeychainValue:@"USDT"];
-
-    
-    
-}
 - (void)result:(id)data sel:(NSString *)sel{
     
-    [SVProgressHUD dismiss];
-    
-    
-    Money *model = [WLNSingle shared].current_model;
-    
-    if ([sel isEqualToString:@"rmbPrice:"]){
+    if ([sel isEqualToString:@"bbTypeList:"]) {
         
-        
-        
-        model.rmb = data;
-        
-        [self.tab reloadData];
-        
-        [self.headView reloadData];
-        
-        
-    }else{
-        
-        
-        model.balance = data;
-        
-        [self.tab reloadData];
-        
-        [self.headView reloadData];
-        
-        
-        [self routeTargetName:Handle actionName:@"rmbPrice:"];
-        
+        self.biListArr = data;
         
     }
     
@@ -147,7 +128,7 @@
 - (void)changeBiAction:(UITapGestureRecognizer *)tap{
     
     
-    WLNFloatView *view = [[WLNFloatView alloc]initFather:tap.view delegate:self ButtonTitles:BI_TITLE_ARR, nil];
+    WLNFloatView *view = [[WLNFloatView alloc]initFather:tap.view delegate:self ButtonTitles:_biListArr, nil];
     
     
     [view show];

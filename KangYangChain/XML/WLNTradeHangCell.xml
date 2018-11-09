@@ -11,39 +11,39 @@
 <UIView layout="" attr="@:css/colors">
 
 
-    <UIView layout="margin:5" attr="bgColor:white">
+    <UIView layout="margin:5" attr="bgColor:white,borderRadius:7,@:css/shadows">
     
     
-    <UIView layout="margin:5" attr="bgColor:white">
-        <UILabel name="" layout="" attr="fontSize:12,color:green,linesNum:0,text:买涨/开多(BTC/USDT 20X)"/>
-    </UIView>
-
-    <UILabel name="" layout="height:0.5" attr="fontSize:12,@:css/colors,linesNum:0,text:"/>
-    
-    <UIView layout="flexDirection:row" attr="">
-        <UIView layout="" attr="">
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:数量:"/>
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:挂单价:"/>
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止盈:"/>
+        <UIView layout="margin:5" attr="bgColor:white">
+            <UILabel name="typeLab" layout="" attr="fontSize:12,color:green,linesNum:0,text:买涨/开多(BTC/USDT 20X)"/>
         </UIView>
 
-        <UIView layout="" attr="">
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:盈亏:"/>
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:冻结:"/>
-            <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止损:"/>
+        <UILabel name="" layout="height:0.5" attr="fontSize:12,@:css/colors,linesNum:0,text:"/>
+        
+        <UIView layout="flexDirection:row" attr="">
+            <UIView layout="" attr="">
+                <UILabel name="numLab" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:数量:"/>
+                <UILabel name="" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:挂单价:"/>
+                <UILabel name="maxlineLab" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止盈:"/>
+            </UIView>
+
+            <UIView layout="" attr="">
+                <UILabel name="accessLab" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:盈亏:"/>
+                <UILabel name="amountLab" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:冻结:"/>
+                <UILabel name="minlineLab" layout="margin:10" attr="fontSize:12,color:#333333,linesNum:0,text:止损:"/>
+
+            </UIView>
+
 
         </UIView>
 
+        <UILabel name="" layout="height:0.5" attr="fontSize:12,@:css/colors,linesNum:0,text:"/>
 
-    </UIView>
+        <UIView layout="alignItems:flex-end,flex:1" attr="">
 
-    <UILabel name="" layout="height:0.5" attr="fontSize:12,@:css/colors,linesNum:0,text:"/>
+            <UILabel name="timeLab" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:2018-9-9"/>
 
-    <UIView layout="alignItems:flex-end,flex:1" attr="">
-
-        <UILabel name="" layout="margin:5" attr="fontSize:12,color:#333333,linesNum:0,text:2018-9-9"/>
-
-    </UIView>
+        </UIView>
 
     </UIView>
 

@@ -11,63 +11,42 @@
 
 @implementation WLNHandle (Log)
 
-- (void)__requestWith:(NSString *)url dic:(NSMutableDictionary *)dic sel:(SEL)sel{
-    
-    
-    self.sel = sel;
-    
-    
-    NSMutableDictionary *dicp = @{}.mutableCopy;
-    
-    if (url) {
-        dicp[URLS] = url;
-        
-    }
-    if (dic) {
-        dicp[PRAMAS] = dic;
-        
-    }
-    [self routeTargetName:@"WLNData" actionName:@"postWithDic:" param:dicp];
-
- 
-}
-
 - (void)log:(NSMutableDictionary *)dic{
     
-    [self __requestWith:Logurl dic:dic sel:_cmd];
+    [self __requestWith:Logurl dic:dic sel:_cmd isPost:YES];
     
 }
 - (void)registers:(NSMutableDictionary *)dic{
     
-    [self __requestWith:Register dic:dic sel:_cmd];
+    [self __requestWith:Register dic:dic sel:_cmd isPost:YES];
     
 }
 - (void)getCode:(NSMutableDictionary *)dic{
     
-    [self __requestWith:Getcode dic:dic sel:_cmd];
+    [self __requestWith:Getcode dic:dic sel:_cmd isPost:YES];
     
 }
 - (void)fafdasfdasfds:(NSMutableDictionary *)dic{
     
     
-    [self __requestWith:fdsfdsf dic:dic sel:_cmd];
+    [self __requestWith:fdsfdsf dic:dic sel:_cmd isPost:YES];
     
 }
 - (void)forGet:(NSMutableDictionary *)dic{
     
-    [self __requestWith:ForGet dic:dic sel:_cmd];
+    [self __requestWith:ForGet dic:dic sel:_cmd isPost:YES];
     
 }
 
 - (void)logout:(NSMutableDictionary *)dic{
     
     
-    [self __requestWith:OutLog dic:dic sel:_cmd];
+    [self __requestWith:OutLog dic:dic sel:_cmd isPost:YES];
     
 }
 - (void)judgeNet{
     
-    [self __requestWith:@"http://www.baidu.com" dic:nil sel:_cmd];
+    [self __requestWith:@"http://www.baidu.com" dic:nil sel:_cmd isPost:YES];
     
 }
 - (NSMutableDictionary *)readUserDic{

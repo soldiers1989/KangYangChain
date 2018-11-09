@@ -10,8 +10,6 @@
 
 @implementation WLNData (Net)
 
-
-
 - (BOOL)__judgeUrl:(NSString *)url{
     
     if (url.length == 0) {
@@ -117,7 +115,7 @@
     
     
 }
-- (void)__getDataWithUrl:(NSString *)url resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
+- (void)__getDataWithUrl:(NSString *)url params:(NSDictionary *)params resultBlock:(void(^)(id result))block failureBlock:(void(^)( NSError * _Nonnull error))failureblock{
     
     
    
@@ -133,7 +131,7 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSUTF8StringEncoding];
     [manager.responseSerializer setAcceptableContentTypes: [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/css", nil]];
     
-    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (responseObject) {
             
             if (block) {
@@ -203,11 +201,7 @@
 }
 - (void)getWithDic:(NSMutableDictionary *)dic{
     
-    
-//    NSString *url = [NSString stringWithFormat:@"%@?token=%@",dic[URLS],self.userModel.token];
-    
-    
-    [self __getDataWithUrl:dic[URLS] resultBlock:^(id result) {
+    [self __getDataWithUrl:dic[URLS] params:dic[PRAMAS] resultBlock:^(id result) {
         
         if (self.reqDelegate && [self.reqDelegate respondsToSelector:@selector(result:sel:)]) {
             

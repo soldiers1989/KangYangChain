@@ -50,5 +50,14 @@
 #import "WLNTradeAgreementCenterCtr.h"
 #import "WLNTradeTradeBodyCell.h"
 #import "WLNTradeAgreementLeftHeadView.h"
+#import "WLNTradeAgreeCategoryView.h"
+#import "WLNTradeAgreeOrderCtr.h"
+#import "WLNTradeAgreeCloseCtr.h"
+#import "WLNTradeAgreeOrderCell.h"
+#import "WLNYingSunView.h"
+#import "WLNTradeBBHeadCell.h"
+#import "WLNTradeBBBodyCell.h"
+#import "WLNTradeBBDelegateListCtr.h"
+
 
 #endif /* WLNTradeUHeader_h */

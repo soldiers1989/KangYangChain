@@ -19,6 +19,8 @@
 
 #define maingray rgba(245,245,245,1)
 #define mainblue rgba(30,37,61,1)
+#define cusgreen rgba(41,185,114,1)
+#define cusred rgba(246,102,99,1)
 
 #define rgba(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a] //宏定义颜色
 #define weakSelf(type)  __weak typeof(type) weak##type = type

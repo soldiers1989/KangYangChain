@@ -9,7 +9,17 @@
 #import "UIViewController+Set.h"
 
 @implementation UIViewController (Set)
+- (void)push:(UIViewController *)vc title:(NSString *)title{
 
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    vc.title = title;
+    
+    UIViewController *mine = (UIViewController *)self;
+    
+    [mine.navigationController pushViewController:vc animated:YES];
+    
+}
 - (void)push:(UIViewController *)vc box:(id)box title:(NSString *)title{
     
     vc.hidesBottomBarWhenPushed = YES;

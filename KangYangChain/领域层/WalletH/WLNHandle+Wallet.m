@@ -14,20 +14,16 @@
 @implementation WLNHandle (Wallet)
 
 
-
-
-- (void)rmbPrice:(NSMutableDictionary *)dic{
+- (void)bbAcount:(NSMutableDictionary *)dic{
     
-    self.sel = @selector(rmbPrice:);
+    [self __requestWith:BBAcount dic:dic sel:_cmd isPost:NO];
     
     
-    NSMutableDictionary *dicp = @{}.mutableCopy;
-        
-    dicp[URLS] = UpdateTicker;
-
+}
+- (void)bbTypeList:(NSMutableDictionary *)dic{
     
-    [self routeTargetName:@"WLNData" actionName:@"getWithDic:" param:dicp];
-  
+    [self __requestWith:BBTypeList dic:dic sel:_cmd isPost:NO];
+    
     
 }
 
